@@ -1,0 +1,165 @@
+# Lomissifil — Design Index
+
+> **Lomissifil is the PROJECT name, not the language name.** The language itself is still unnamed.
+
+Single source of truth for the constructed language's design. Written so a future
+session/agent can catch up quickly.
+
+## Status snapshot
+
+| Area | State |
+|---|---|
+| Phonology (inventory, phonotactics, stress) | **LOCKED** (P5 changed `st`; P4d stress-on-compounds is **PROVISIONAL**) |
+| Orthography + expressive notation | **LOCKED** (H8 adds the emotion/VOC/article device — partial) |
+| Morphology | **ACTIVE** — M1 (PROVISIONAL: suffixes), M2 (order principle), M2c (outermost suffix = the word's chord), M3a/M3b (seam + one-syllable suffix), M4/M4a (case table) all decided; **M4b (inner-suffix grades) is the next question**; M5–M7 open |
+| The vowel-colour ("grade") system | **H1–H8 DECIDED** — see the terminology warning below and `../draft/brainstorm.md` §3–§9 |
+| Syntax | **OPENED** — S1 (negator `mei`, postposed), S2 (free scrambling + verb-final default) decided; negation scope + scrambling limits open |
+| Lexicon + neutrality rules | not started (**only 6 reference words exist**) |
+| Prosody <-> melody mapping | not started — but the grade system now supplies its input |
+| Rhyme (押韻) | **not started** (a stated goal, still undesigned) |
+| Textbook | not started (blocked on the lexicon) |
+
+> **➡️ Where to look next: `03-open-questions.md` §0 "OPEN ITEMS — canonical list".** That list is the
+> single authority for what is still pending; the rest of this file is the decision log.
+
+> **PROVISIONAL** = accepted as a working assumption to build on, but expected to be
+> re-tested once more grammar exists. Currently: **M1** (affix direction = suffixes) and
+> **P4d** (compound stress). The author has accepted the resulting rebuild risk.
+
+> **⚠️ TERMINOLOGY WARNING (author's clarification) — read before using this file.** The language has
+> **NO tone/pitch**: vowels are not distinguished by pitch, and the language **never sounds chords**.
+> The names **tonic / subdominant / dominant** ("I / IV / V") are **only a mnemonic metaphor**, borrowed
+> from music theory, for three **relational vowel-colour classes**. What physically exists is:
+> (a) each vowel has a **colour** (the locked bright↔dark palette, `01-phonology.md` §2), and
+> (b) a suffix vowel stands in a **relational degree of contrast** to the root's last vowel —
+> operational definition: **same vowel = "tonic" · the class's central vowel = "subdominant" · the
+> opposite pole = "dominant"**. Never read "chord", "harmony" or "cadence" in this file as acoustics;
+> they are **grammar-level labels**. Whether they ever become real harmony is the composer's choice and
+> belongs to the (not started) prosody ↔ melody area.
+
+Files:
+- `00-README.md` (this) — index + decision log + action items
+- `01-phonology.md` — inventory, phonotactics, stress, rationale, evidence
+- `02-notation.md` — spelling policy + stress/length/vibrato notation
+- `03-open-questions.md` — what is NOT decided yet
+- `04-lexicon-capacity.md` — how many 2-syllable roots the phonology allows (answer: ~2.1M)
+- `05-root-shape-limit.md` — capacity under the tighter root-shape rule + distance>=2 (updated: ~3.0k → **>=16.1k** after diphthongs + `s` coda were allowed)
+- `../draft/handoff.md` — discussion background, tooling, how to continue
+- `../draft/brainstorm.md` — the scratch record of the whole vowel-colour ("grade") discussion,
+  §1–§9h. **Sections 4–9 are decided** (see the H/M rows above); §1–§2 hold the original brainstorm.
+  The file opens with a **status map**.
+
+## Goals (priority order, from `.clinerules/colang.md`)
+
+1. Beautiful to hear — suited for music, poetry, novel.
+   Specifically must work in: **epic/powerful power metal · emotionally delicate
+   post-rock · resonant symphonic vocals · ethereal nostalgic folk**.
+2. Neutral — may be inspired by many languages, but must not resemble any one too
+   much; **avoid loanwords**.
+3. Typable on an English keyboard, **no custom symbols** (letters only).
+4. See goals file for the rest.
+
+## Quick reference (LOCKED)
+
+| Layer | Decision |
+|---|---|
+| Vowels (7) | `a` /ɑ/ · `ae` /æ/ · `e` /e/ · `o` /o/ · `i` /i/ · `u` /u/ · `y` /y/ |
+| Diphthongs (8) | `ai au ei eu oi ou aei aeu` = nucleus {a,ae,e,o} + off-glide {i,u} |
+| Hiatus (4) | `iu yu ia ya` (front-high {i,y} x extreme-back {u,a}); 2 syllables = a "leap" |
+| Consonants (**16 phonemes / 19 letters**: stops = 3 phonemes `b d g`, each with a free hard realisation `[p t k]`) | `p b t d k g` · `m n ng`(/ŋ/) · `r`([ɾ]) · `l` · `f w s sh th h` · `c`(/t͡ʃ/) · `j`(/j/) — the last two were added later |
+| Spelling of sounds | `w`=/v/ · `sh`=/ʃ/ · `th`=/θ/ · `v` is NOT a normal letter (see notation) |
+| Geminates | `ss nn ll mm rr ww` — **intervocalic only**, never word-final |
+| Syllable | `(C)V(C)`; onset clusters `pr br tr dr kr gr` (any onset) + `fm fn hm hn wm wn jm jn` (VCV only); coda `m n l r s`. **`st` is NOT a cluster** — it is coda `s` + onset `t/d` (P5) |
+| Stress (default) | 2nd syllable **of the root**; affixes never move it; mono = on itself; compounds keep only the LAST root's stress (**P4d — PROVISIONAL**) |
+| Notation | CAPITAL = stress · doubled vowel = length · `v` = vibrato · dictionary form voiced (`b d g`) |
+
+## Decision log
+
+| # | Topic | Decision |
+|---|---|---|
+| V1 | vowel system shape | keep lone `/y/`; no `/ø/` (French minimalism) |
+| V2 | low vowels | keep `/æ/` + `/ɑ/` (bright vs dark) |
+| V3 | mid vowels | `/e/` + `/o/`, both close-mid (symmetric) |
+| V4 | vowel length | NOT phonemic; a performance choice only |
+| V5 | expressive notation | letters-only: CAPITAL=stress, doubled vowel=length, `v`=vibrato; two registers (plain text vs notation text) |
+| V6 | capitalization policy | capital = stress ONLY; proper nouns unmarked (Chinese-style); plain text is ~all lowercase |
+| V7–V9 | diphthongs & hiatus | nuclei {a,ae,e,o} + glide {i,u}; no `/j/` `/w/` phonemes; hiatus = {iu, yu, ia, ya} |
+| V10 | `/æ/` spelling | keep `ae`; length = repeat last letter → `aee` |
+| C1 | consonant scope | stops `p b t d k g`; sonorants; fricatives (rich-but-controlled) |
+| C2 | canonical voicing | dictionary form = VOICED `b d g`. **CLARIFIED (author): the stops are 3 PHONEMES `/b d g/`**, each with a free voiceless realisation `[p t k]` — voicing is **not** a phoneme contrast, so the inventory is **16 phonemes / 19 letters**, not "19 phonemes". Written up, with the three boundary rules (R-a domain = the stops only; R-b base forms voiced-only; R-c plain text = voiced only), in `01-phonology.md` §1 |
+| C2b | voicing vs stress | decoupled; voiceless = "hard"; unstressed hard (`k`) legal but marked/rare. It is a **phonation (voice-quality) setting** in the performance/notation register, **not** a phonological process — which is why it may be **free and unconditioned** (cf. whispering: every stop goes voiceless and no word is lost). **Proper names are exempt from C2** (author's ruling) — hence `austareus` keeps its voiceless `t` |
+| C3 | `w` | `w` = /v/ (German-style); dissolves the /w/ vs /u/-off-glide clash |
+| C4 | `r` | `r` = tap [ɾ]; `tr dr kr gr pr br` are stop+`/r/` CLUSTERS, not phonemes |
+| P1 | syllable skeleton | `(C)V(C)` + whitelisted onset clusters |
+| P2 | onset clusters | `pr br tr dr kr gr` any onset (no adjacent consonants, never word-final); `fm fn hm hn wm wn jm jn` VCV-only; `sp`/`sk` excluded; list extensible — **`st` has been REMOVED from this list: see P5** |
+| P3 | coda | `m n l r s` only |
+| P4 | stress default | 2nd syllable; mono = itself; overwritable in notation |
+| P4c | stress basis | counted from the ROOT; affixes do not move it |
+| P4d | compound stress | only the LAST root keeps stress (head-final tendency) — **PROVISIONAL, to be re-tested** |
+| P5 | status of `st` | **`st` is NOT an onset cluster.** It is the ordinary sequence **coda `s` + onset `t`/`d`** (`losdo` = `los-do`). Consequences: no syllable ever *begins* with `st`; the old "VCV-only / must not touch another consonant" clause is now automatic (a word cannot start with a coda, and 3 consonants between vowels are not a legal shape); the voicing knob applies normally (`losdo` ~ `losto`); the capacity counts are unchanged, because the capacity tables already treated `st` as a coda+onset fill. Chosen over "`st` is a cluster, permanently voiceless" (which would have made `losdo` illegal, made that root knob-inert, and needed a rule exception for a single cluster) |
+| N1 | capital position | on the **first letter** of the stressed syllable |
+| A1 | word-final (assumed — ⚠️ **CONTRADICTED**) | `01-phonology.md` says the coda set `m n l r s`; but `R1`/`05` say the word-final `(C)` is `∅ / f / v / h`, and **M3a's seam rules assume the `f/v/h` finals exist**. Unresolved — see `03-open-questions.md` §0 item 12 |
+| A2 | fricative asymmetry (assumed) | kept: among fricatives only `/v/` is voiced |
+| R1 | bare-root shape policy | **ROOT LENGTH BY FREQUENCY (author):** **1 syllable = frequent** (`roi`), **2 syllables = the core**, **3 syllables = rare** (`argonna`). ⚠️ The five shapes below enumerate the **2-syllable core only**; the 1- and 3-syllable enumerations are **still to be written**. Shapes: `VCV(C)` / `{C}CVCV(C)` / `VCCV(C)` / `{C}CVCCV(C)` / `CVV(C)`; the word-initial `{C}C` = a single consonant or a **stop+`r` cluster** (`pr br tr dr kr gr`) — those are the ONLY clusters allowed word-initially; medial `CC` = (coda `m n l r s` + onset) or any permitted cluster (`pr br tr dr kr gr` + `fm fn hm hn wm wn jm jn`); `CVV(C)` = any **legal** VV, i.e. a diphthong (`roi`) **or** one of the 4 hiatus pairs `iu yu ia ya`; the word-final `(C)` follows a **hard** area rule (pick one of `{f,v}`; pick one of `{h, no-final}`) |
+| R2 | lexicon target | 1000–3000 bare roots. "Differ by only one consonant" is a **soft guideline**; the word-final area rule is **hard**. Effective space ≈ **461,760** base forms (≤923,520 with finals) — capacity is a non-issue, but ⚠️ **these figures are unverified** (see `03-open-questions.md` §0 item 11) |
+| M1 | affix direction | **SUFFIXES** (agglutinative) — accepted as a **working assumption**, not as a settled fact. ⚠️ The rationale offered was **circular**: `draft/handoff.md` justified suffixes by the "head-final hint", i.e. by P4d, which is itself provisional. So M1 currently has **no independent evidence**. Reversal cost is **asymmetric**: P4d is cheap (notation/performance layer only), M1 is expensive (M2–M7, epenthesis, affix shapes). A "position-neutral affix shape" insurance policy was **considered and rejected** by the author. |
+
+| M2 | morpheme order | **Ordering PRINCIPLE only — density deferred** (author's choice D). Principle: **closer to the root = more lexical, farther = more syntactic; agreement/case-like slots last.** The *number* of slots a word may carry (density) and the concrete slot inventory are **deferred to the syntax phase**, so no per-word suffix budget is fixed yet. Note: vowel harmony (see `../draft/brainstorm.md`) would put the meaning of any suffix on its **consonants alone**, which argues for keeping the slot count low |
+
+| H1 | vowel harmony — SCOPE | **Suffixes only; roots stay internally free** (author's choice A). Therefore **no locked asset is invalidated** — all 8 diphthongs and all 6 reference words survive, and harmony makes *no* claim about root-internal vowel mixing. ~~Still to pin: (i) the allomorph strategy, (ii) the trigger vowel~~ — **BOTH DECIDED SINCE**: the strategy is the three-grade system (see H3/H7), and the trigger is the root's last syllable nucleus (H4). Consequence if harmonic variants are used: a suffix's vowel becomes predictable, so suffix meaning rides on **consonants alone** (~16-consonant effective affix alphabet, since voicing is non-distinctive per C2b). ⚠️ **A 3-grade proposal is on the table (RAW)** — tonic / subdominant / dominant (functional-harmony analogue), i.e. suffix = consonant (category) x vowel (grade) ≈ 48 shapes; it would *repair* the consonant-only problem. The author has since supplied the full picture: a **case system whose consonants carry identity and whose vowels realise the grade**, so that **word order determines the clause's chord progression** (`lati latina latiri` = I-V-I) — see `../draft/brainstorm.md` §4. **Both forks are now closed**: H2 fixed the grade to the *category* (not a clause-level mode), and S2 committed the language to **case marking + free word order** (verb-final default with free scrambling) |
+
+| H2 | harmonic function — BINDING | **The grade is bound to the grammatical CATEGORY** (author's choice A), **not** to a clause-level mode: ACC/GEN are always dominant, DAT/LOC always subdominant, NOM and verbs always tonic. Therefore **a clause's progression is determined purely by word order** — which makes **free word order load-bearing**: it is the poet's *only* way to choose a progression (so "case marking + free word order" is now a hard requirement, not a nice-to-have). Accepted consequence: **a clause containing no dominant-category word cannot end on V** and so cannot half-cadence; the author accepts this. Open next: how the grade VOWELS are derived (see H1's notes and `../draft/brainstorm.md` §4b) |
+
+| H3 | grade vowel table (FINAL) | **subdominant = the class's CENTRAL vowel, unconditionally: front → `e`, back → `o`.** tonic = the trigger vowel itself (`y` counts as `i`); dominant = the opposite pole (**front trigger → `a`; back trigger → `i`**). Full table (tonic / sub / dom): `i`,`y` → (i, e, a) · `e` → (e, **e**, a) · `ae` → (ae, e, a) · `u` → (u, o, i) · `o` → (o, **o**, i) · `a` → (a, o, i). The table is a clean **mirror** (front: sub `e` / dom `a`; back: sub `o` / dom `i`). Suffix vowel inventory = `i e ae a o u` (6) — **`y` never appears in a suffix**. ⚠️ **Accepted consequence:** for `e`-final and `o`-final roots the **tonic and subdominant vowels coincide**, so I and IV are **not audibly distinct** on those words (no grammatical ambiguity — identity lives in the consonant). **New coining rule implied:** never let two morphemes be distinguished by **tonic-vs-subdominant alone** (it would be inaudible after `e`/`o`-final roots) |
+
+| H4 | grade trigger | **The root's LAST syllable nucleus** (author's choice A). For 1- and 2-syllable roots this is *identical* to "the stressed vowel" (stress is on the 2nd syllable), so the two readings only diverge on the rare **3-syllable** roots (`argonna` → `a`, not the stressed `o`). Preferred also because it is **immune to performance stress rewriting**: P4 makes stress a performance choice, so a stressed-vowel trigger would let a performer recolour every suffix vowel and destabilise the word form. A **diphthong-final root triggers on its nucleus** (`roi` → `o`, never the glide `i`). **Still unconfirmed: NOM = zero suffix** |
+
+| M3a | seam rules (root ends in `f`/`v`/`h` + consonant-initial suffix) | **Three tiers (author):** **(1) group as a CC** — `f/v/h` + `m`/`n` = the already-whitelisted clusters `fm fn hm hn wm wn`, so nothing changes; **(2) sync (assimilate)** — `{f,v}`+`s` → `ss`, `{f,v}`+`r` → `rr`, whereas `h`+`s` → `s`, `h`+`r` → `r` (the `{f,v}` area merges into a geminate, the `h` area simply drops); **(3) last resort** — insert a vowel **copied from the root's last vowel**. ⚠️ The author's list has **no `l` entry** → proposed completion (pending): `{f,v}`+`l` → `ll`, `h`+`l` → `l`. Result: the area rule's minimal pairs (`X` / `Xf`) **stay distinct in every suffixed form**, and the **suffix-initial inventory is {m,n,l,r,s}**. The grade trigger stays the root's *original* last nucleus (the inserted vowel is not a new trigger) |
+
+| M3b | suffix shape | **One syllable `C V (C)`** (author's choice A): onset ∈ `{m,n,l,r,s}`, then the grade vowel, then an **optional coda** ∈ `{∅,m,n,l,r,s}` → **identity space = 5 x 6 = 30**. Consequences: (a) one suffix = one syllable = one note; (b) **suffix chains can never break phonotactics**, because a suffix's coda + the next suffix's onset is exactly a legal medial CC; (c) the grade vowel is a *cue*, not extra identity — H3's coining rule still applies (two identities may share a consonant shape only if their grades differ, e.g. the demo's ACC `n`+dominant vs V2 `n`+tonic). **The 30 shapes are the morphological budget for M4–M6** |
+
+| H5 | unresolved clauses (questions / negation / non-final) | Author's choice B: **a set of freestanding FUNCTION WORDS assigned to the dominant grade (V)**. They are **word-level — they take no suffixes** — and are what any clause can end on to half-cadence. Consequences: a clause with no case-marked dominant word can still end on V, and a plain statement can be ordered so its **last word carries the same-colour marker** (the "tonic" label) — the default order gives a zero-contrast ending. And because word order is free, a poet may keep a negator at the end (a maximum-contrast ending) or move it earlier. **This introduces a second word class (function words), which the lexicon must list separately**; they may be single syllables, since 1-syllable words are legitimate. ⚠️ Follow-up **decided as H6**: a particle has **no vowel-colour marker** at all — its grade is a grammar-level label only (see the terminology warning at the top of this file) |
+
+| H6 | particle grade — audibility | Author's choice C: **a particle does NOT sound its grade.** Its shape is fixed; the grade lives in the grammar (the harmonic blueprint) and realizing the chord is the composer's job. Honest consequence (corrected by the author's terminology warning at the top of this file): a particle has **no vowel-colour marker at all** — it carries only a grammar-level label. Suffixes, by contrast, always expose a contrast marker (their own vowel). (An optional extension to consider later, by analogy with the voicing knob that performers may flip freely: let the performer **re-colour a particle's vowel** as a performance choice.) |
+| S1 | negation | **Negator = `mei`** (temp example word; a legal 1-syllable shape = `m` + diphthong `ei`), **postposed to the word it negates** (constituent negation). Harmonic consequence: negating a **noun** puts a V-function word **mid-clause** (a passing dominant), while negating the **verb** puts it last → the clause half-cadences. So **any negative clause contains a V chord**, and because word order is free the poet still chooses whether the clause resolves |
+
+| S2 | word order | Author's choice B: **free scrambling + a PREFERRED default order that is verb-final.** Prose/speech uses the default, so a plain transitive declarative runs NOM-ACC-VERB = **I-V-I** — i.e. the author's very first example, a perfect cadence — while poetry may permute freely (`latiri lati latisa latina` = I-I-IV-V is the scrambled version of the same content). Particles are **not** permuted away from their host: **`mei` stays immediately after the word it negates**. ⚠️ Keep in mind for sung text: the case suffix is the only decoder, so it must stay audible (see `03-open-questions.md` §F) |
+
+| M2c | which suffix sounds the word's chord | Author's choice A: **the outermost (rightmost) suffix decides the word's chord** — one word = one chord, consistent with M2's "farther = more syntactic". In a noun the outermost slot is the CASE, so **a noun's chord is its case's function**. Inner suffixes keep their grade vowels **as redundant cues** — deliberately, because H3 already established that the grade vowel carries no independent information, and that redundancy directly mitigates the sung-intelligibility risk in `03-open-questions.md` §F. **Author's clarification: the chord colour is RELATIONAL** — it is the *contrast* between the suffix's vowel and the **bare root's last vowel** (H4's trigger), not an absolute vowel property. Hence `-na` is *dominant* after an `i`-root (front trigger → `a`) but *tonic* after an `a`-root (`a` = the same vowel). Parsing is unaffected (identity lives in the consonant, and the grade is derivable from the category), so the system is **doubly redundant** — by design |
+
+| H7 | the root's class = the word's "MODE" | **The author's design intent:** the absolute colour of a grade flipping with the root's class is **intentional** — exactly as a real dominant chord has different *content* in a major vs a minor key (the mode changes the material, the function stays). So: **class (front/back) ≈ the mode/key of the word; grade ≈ the function.** Practical split: for the **composer** the grade *label* is what matters (choose the function's chord — the absolute vowel is irrelevant); for the **listener/singer** what is perceptible is the **contrast relative to each word's own centre**. Note the one place the music analogy diverges: in music the key is set per piece/section, whereas here **every word carries its own key**, so a clause is a sequence of *local* contrasts and a naive listener cannot reconstruct one global progression. The payoff is therefore a **written guide for composer and singer**, not an audible-for-all harmonic layer |
+| M4 | noun morphology — where the grammatical load lives | Author's choice A: **keep the relations in the CASE PARADIGM** (suffixes) rather than in particles. Reason (corrected form): every suffix exposes a **colour-contrast marker**, whereas a particle exposes **none** (H6) — outsourcing a relation to a particle would leave no colour trace in the word form, and a particle-marked noun would be colour-identical to a bare root. Working set (author's list, 7): **NOM / ACC / GEN / DAT / LOC / INS / OBL** — where **OBL is the DEFAULT/else case**: a noun (and the adjectives describing it) that is classified by none of the other six takes OBL. **ABL was dropped**: DAT never carried "from", and "from" / "towards (go-to)" get a **separate mechanism** (still to design). VOC is **not** a case (see H8). ⚠️ Open: each case's **grade label** (the demo fixes only NOM = tonic and ACC/GEN = dominant; DAT/LOC/INS/OBL still need theirs), whether **NUMBER** is suffixed, and the grade labels of the non-role categories (M4b) |
+| H8 | VOC & the article — by VOWEL COLOUR | VOC is **not a case**: VOC *and* the article (a/an/the) are expressed by **vowel colour**, the speaker/poet choosing an **emotional** colour. Emotional division (author's example list): **A** angry/brave/energetic · **AE** disgust/hate · **O** surprise/awe · **E** joy/searching/pride · **I** sad/depression/lonely · **U** calm/mercy · **Y** fear/mysterious/confusing. **RESOLVED (author's design):** the device is a **lone VOWEL WORD** — **lowercase = the article** (`a`, `e`, `o`, `i`, `u`, `ae`, `y`) and **the same word with its initial capital = VOC** (`A`, `E`, `Ae`, `Y`…). This is plain ASCII; the agent had misread "small capital" as typographic *small caps* and raised a non-issue — **withdrawn**. Consequences: (a) the emotional vowel attaches to **its own word**, so it never collides with the root's identity or with a suffix's grade (H3) — the "where does the vowel attach" conflict dissolves; (b) one residual rule is needed: **a one-letter word written with a capital is read as VOC, not as stress** (otherwise `A` could be an emphatic article). See `../draft/brainstorm.md` §9 |
+
+| M4a | the case table (shapes + grades) | **FINAL (author)**, grades verified against H3/H4 (front trigger `i` → tonic `i`, sub `e`, dom `a`): **NOM** I · zero suffix (`lati`) · **ACC** V · `n` → `-na` · **GEN** V · `s` → `-sa` · **DAT** IV · `m` → `-me` (changed from `-nem`) · **LOC** IV · `n`+coda `r` → `-ner` · **INS** IV · `s`+coda `r` → `-ser` · **OBL** IV · `l` → `-le` (DAT/OBL collision fixed by using the free onset `l`). Verbs: **V1** I · `r` → `-ri` · **V2** I · `n` → `-ni` (same skeleton as ACC, distinguished by **grade alone**: tonic vs dominant — allowed because dominant and tonic never coincide, per H3's coining rule). **Identity budget: 6 skeletons of 30 used → 24 left** for number/TAM/… ⚠️ Adopted by necessity: the **`l` row of the M3a seam** (`{f,v}`+`l` → `ll`, `h`+`l` → `l`), because `-le` exists now. ⚠️ Grade balance — **CORRECTED after the author's challenge.** Distribution is **1·2·4** (I·V·IV). An earlier agent claim that OBL is *high*-frequency was **unfounded and is withdrawn**: with six cases covering the normal noun roles, OBL (the else-case) is plausibly **low**-frequency. Nor is the skeleton flat in practice — the **most frequent** cases (NOM/ACC/GEN = subject / object / possessor) already carry the **I vs V** contrast. **RESERVED CONTINGENCY (author):** keep **1·2·4** for now, but hold **"move INS → dominant"** in reserve in case future corpus/music work shows too many IV in a clause (a one-line change; also yields 1·3·3). Recorded so it never needs re-litigating |
+
+## Action items arising from decisions
+
+1. ~~`reference/example.md` spellings need review~~ — **DONE** (`losdo (happy)`,
+   `aurorius`, `austareus`). The side effect (the `sd`/`st` clash) was settled by **P5**:
+   `st` is no longer a cluster, so `losdo` = `los-do` is plainly legal.
+2. Notation edge cases still undefined (length on a diphthong, `rr` as a trill, etc.)
+   — see `03-open-questions.md`.
+3. **~~Next decisions~~ — superseded:** M3 (M3a/M3b), M4/M4a, H1–H8 and S1/S2 are **all done** (see the
+   log above). **The next question is M4b** (grade labels for the inner/non-role categories), then
+   M5a/M5–M7 and the rest of syntax. ➡️ **Everything still pending now lives ONLY in
+   `03-open-questions.md` §0** — do not maintain pending items in this file any more.
+4. **`05-root-shape-limit.md` arithmetic needs a recompute (script, not by hand).** Its two
+   "current rules" tables disagree: VCCV 20,475 vs 20,700, CVCCV 368,550 vs 372,600,
+   CVV 60 vs the formula's 72 — i.e. `|CC| = 91` vs `92` and `|Ci| = 18` vs `15`. **P5
+   confirms 91 is right** (the 92 version double-counts `st`, which is already inside
+   "coda + onset"), so the base-form figure in `R2` above (461,760) is probably wrong and
+   the **457,485**-family is right. The conclusion ("capacity is a non-issue") is
+   unaffected either way.
+5. ~~`reference/example.md` — second soundness check~~ — **DONE.** `austareus` is read
+   `aus-ta-reus` (diphthong `eu`, 3 syllables, **no leap**); only the docs changed
+   (`01-phonology.md` §4/§7). **All six reference entries are now sound**, so the lexicon
+   can start growing.
+6. ~~`roi` vs the R1 shape list~~ — **CLARIFIED by the author:** the shape list was about the
+   **2-syllable core**; **1-syllable roots are frequent** (`roi`) and **3-syllable roots are
+   rare** (`argonna`). Two follow-ups remain:
+   - `CVV(C)` is now read as "any **legal** VV" (diphthong or hiatus) — that is what makes
+     `roi` legal. **Done** (R1 + `01-phonology.md` updated).
+   - the **1-syllable and 3-syllable enumerations are still to be written**, and the capacity
+     counts in `05` cover the 2-syllable core only → **fold the missing classes into the
+     recompute of action item 4** (the totals there are lower bounds).
