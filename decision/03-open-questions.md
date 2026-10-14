@@ -167,11 +167,18 @@ every future decision must add its rows. Two halves are still open:
     those — they would *feel* borrowed); **soft warn** = homophony with an unrelated meaning (record,
     never reject). ⚠️ **Missing input:** the reference word list (which languages count as "others").
     **Owner:** the meaning-assignment step, which does not exist yet.
-27. **A statistical sound fingerprint — parked on a DECISION, not on work.** The ledger is
-    qualitative, and it says the exposure sits on the **sound axis, especially the spelling**. A
-    measured profile of the candidate set (phoneme frequency, syllable shapes, cluster rate, word
-    length) against a reference list would police that — but the author must first name the
-    **reference languages**. Until then there is nothing to compare against.
+27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
+    (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
+    the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**
+    as the non-donor group. Full results: `06-neutrality.md` → "Measurement (2026-10-14)". Headlines:
+    (a) the **closest** matches are **Old English 0.857 and Albanian 0.846** — i.e. the profile reads
+    "archaic European" and **no familiar language owns our sound** (German 0.714, Turkish 0.692,
+    Finnish 0.643 sit mid-pack); (b) the feared accidental CV-only resemblance is **refuted** —
+    Māori 0.143, Hawaiian 0.071, Cantonese 0.267, Mandarin 0.357, with the 26.2% open-syllable rate
+    and 25.2% cluster rate as the separating evidence; (c) **143 of 105,936 forms (0.135%) are
+    literally English words** (Webster's 2nd, 234,428 entries) — the ~28 recognisable ones are listed
+    as a blocklist for the meaning step. ⚠️ The 16 reference vectors are **hand-coded**, not corpus
+    data: audit or correct them in `tools/fingerprint.py` (`REF`).
 25. ~~**Scope of the P6 devoicing**~~ — **DECIDED (author, 2026-10-14): the full natural class.**
     Any stop `/b d g/` after a **nasal coda** `/m/` or `/n/` is obligatorily `[p t k]`, and **the
     spelling shows it**: `mb`→`mp`, `nb`→`np`, `md`→`mt`, `nd`→`nt`, `mg`→`mk`, `ng`→`nk`. Chosen over

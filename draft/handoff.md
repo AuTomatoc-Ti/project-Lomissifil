@@ -59,6 +59,14 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
     exists, goal i ("beautiful to hear") cannot be tested at all.
 - `say`, `ffmpeg`, `python3` are present. The audition `.wav` files are git-ignored (`*.wav`);
   `/tmp/lomissifil-audition/` is **not** canonical.
+- **Root legality, syllables + stress:** `python3 tools/syllabify.py --check` (verifies the splitter
+  against the reference words), `--sheet` (writes `../lists/picks-sheet.md`), `--stats` (histogram of a
+  pool: syllable counts, digraph-stress rate, P6 hard spellings, P6-illegal forms).
+- **Goal-2 measurement:** `python3 tools/fingerprint.py --profile | --similarity | --english` — the
+  measured half of `../decision/06-neutrality.md`: structural profile of the candidate material,
+  Jaccard similarity against **16 hand-coded reference languages**, and coincidence with the real
+  English dictionary `/usr/share/dict/words`. ⚠️ The reference vectors are hand-coded; audit them in
+  the tool (`REF`).
 
 ## Where it stands / exact next step
 

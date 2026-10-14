@@ -131,7 +131,88 @@ un-donated material (the `/θ/` + `c` + geminate profile, the `fm`-class cluster
 the area-rule `-f/-w/-h` finals) into the **first example sentences and lyrics**, so that no single
 guess sticks. That is a usable instruction for the textbook and for the first verse.
 
-## What this ledger does NOT cover (and who owns each gap)
+## Measurement (2026-10-14): the sound axis, checked — `tools/fingerprint.py`
+
+The ledger above is qualitative. This section is the **measured** half, produced by
+`python3 tools/fingerprint.py --profile | --similarity | --english` on
+`lists/roots-bases-current.txt` (all four area-rule sibling forms, 105,936 forms).
+
+### The reference set (author's ruling, 2026-10-14)
+
+- **donors (10):** Finnish · Turkish · Japanese · German · Polish · Latin · Italian · English ·
+  Albanian · Old English
+- **non-donors (6), the "did we accidentally land near something we never borrowed from?" set:**
+  **Mandarin (pinyin) · Cantonese (Jyutping)** · Indonesian/Malay · Māori · Hawaiian · Quechua
+
+### Measured structural profile (no external data involved)
+
+| measure | value | reads as |
+|---|---|---|
+| mean length | **7.42** letters | long-ish (the area-rule finals add a letter) |
+| vowel letters | **46.7%** | vowel-rich (Romance-ish; English ≈ 39%) |
+| syllables per word | 100% two | the pool is the 2-syllable core (§0 item 22) |
+| **open-syllable rate** | **26.2%** (closed 73.8%) | **low** — decisively not a CV-only language |
+| forms containing an onset cluster | **25.2%** | clusters are a *mainstream* feature here, not a garnish |
+| word-final | **75.0% `f`/`w`/`h`** (area rule), 25.0% vowel | the area rule dominates the sound of the word's end |
+| digraph spelling (`sh`/`th`/`ng`) | **24.0%** | a quarter of all candidates |
+| P6 hard spelling (`mp np mt nt mk nk`) | **8.1%** | matches the 6-of-90-fills estimate |
+| inventory actually used | onsets **30** · nuclei **15/15** · codas **5/5** (+`f/w/h` finals) | nothing in the locked palette is starved; `k`/`p`/`t` appear **only** as P6 hard spellings |
+
+### Similarity to the 16 reference languages (Jaccard over 15 typological features)
+
+Order: `Old English 0.857 > Albanian 0.846` (both above mean+1sd) `> German 0.714 > Turkish 0.692 >
+Finnish 0.643 > English · Indonesian · Italian · Polish · Quechua 0.615 > Latin 0.571 > Japanese 0.400
+> Mandarin 0.357 > Cantonese 0.267 > Māori 0.143 > Hawaiian 0.071` (mean 0.540, sd 0.223).
+
+Three things follow, and the first one is the surprise:
+
+1. **The fingerprint and the ledger measure DIFFERENT things, and disagree on purpose.** The ledger
+   weighs *anatomy* (where the vowel system, the agglutination and the case inventory came from) and
+   names Finnish/Turkish/Latin. The fingerprint weighs the **phonological + spelling profile** and
+   names **Old English and Albanian** — both of which the ledger lists as *minor* donors at best.
+   Neither is wrong; together they say: *we borrowed our machinery from Finnish/Turkish/Latin, but we
+   SOUND like an archaic European language.* For a fantasy project that is the **good** outcome: the
+   closest match is a **dead or unfamiliar** language, not a recognisable one — nobody hears a song
+   and says "that is Albanian". The recognisable donors (German 0.714, Turkish 0.692, Finnish 0.643)
+   sit mid-pack, i.e. no *familiar* language owns our sound.
+2. **The accidental-resemblance fear about CV-only languages is REFUTED by measurement.** The worry
+   was that our vowel-rich, `ng`/`sh`/`ae` spelling would read as Japanese-romanisation / Indonesian.
+   Measured: **Māori 0.143 · Hawaiian 0.071 · Cantonese 0.267 · Mandarin 0.357** — the four lowest in
+   the set. The **26.2% open-syllable rate and 25.2% cluster rate** are what separate us: they are
+   impossible for a CV-only language. Only **Indonesian (0.615)** sits mid-pack (it shares word-final
+   consonants, initial clusters and agglutination) — a mild flag, not a dominance.
+3. **"Distinctive matches" are the actionable column** (a Jaccard number compresses because many
+   features are shared by almost everyone): we match Old English on `y` + `/θ/` + geminates + initial
+   clusters + case marking; Albanian on `y` + `/θ/` + initial clusters + case; Finnish/Turkish on `y` +
+   geminates + case + agglutination. Those are exactly the ledger's A1/A2/C1/M1/M4 rows — the two
+   instruments agree about **which** levers create the resemblance, and disagree only about which
+   language is "closest".
+
+### Coincidence with a real English dictionary (`/usr/share/dict/words`, 234,428 entries)
+
+- **exact matches: 143 of 105,936 (0.135%)** — and most are archaic/technical because Webster's 2nd
+  is huge (`aba`, `agrah`, `branta`, `brolga`, `cothy`, `cumshaw`, `gade`, `galga`, `inro`, `lemna`,
+  `mabi`, `nummi`, `rompu`, `thonga`…). The ones that a listener would actually recognise as English
+  words — `age · bounce · carry · dine · dome · elbow · fishy · follow · geisha · granny · grassy ·
+  holly · horse · hurrah · lady · louse · lube · male · mainly · mana · more · none · ode · only ·
+  onto · rude · silly · wince` — are worth a **blocklist** when meanings are assigned (per the
+  precedence rule: a collision with a *different* meaning is a soft warning; the same meaning is a
+  hard reject — §0 item 26).
+- **1-substitution: 3.38% vs a 0.72% same-length random baseline.** ⚠️ **Do not overread this ratio:**
+  the uniform-letter baseline is a **weak null** (any vowel-rich string beats it), so 3.38% only says
+  "our strings are word-like, not letter-soup". The number to act on is the exact list above.
+
+### Caveats that must travel with these numbers
+
+- the 16 reference vectors are **hand-coded** from well-known typology, not corpus data; a wrong cell
+  changes only that language's score, and the table is deliberately compact so the author can audit
+  and correct it (`tools/fingerprint.py`, `REF`);
+- Jaccard over booleans is a **coarse** similarity; the *distinctive matches* list is the substantive
+  output;
+- the English dictionary is a **spelling** test, not a sound test (our orthography ≠ IPA);
+- this checks **sound + spelling only** — the word-level loanword question still belongs to §0
+  item 26 and needs meanings.
+
 
 - **Loanwords — the word level.** A word is only a "loanword" *relative to a meaning*, and coining is
   currently **sound-only** (R3 parked), so **this check cannot run yet**. It must be *specified* now
