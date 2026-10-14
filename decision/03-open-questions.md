@@ -277,9 +277,9 @@ every future decision must add its rows. Two halves are still open:
     **local ambiguity** in scrambled orders, which is the poet's own choice. ⚠️ Consequence to keep in
     view: the chord label is *relational to each word's own root* (the standing caveat in `00-README`),
     so a phrase is **audibly** one colour while the analytic labels stay per-word;
-    ⚠️ **open:** is the cased form *always* available (free variation) or *required* when the adjective
-    is separated from its head? The author's wording says "only need adding when sequence is mixed",
-    which reads as **required-when-mixed**;
+    ✅ **SETTLED from the author's own wording: the cased form is REQUIRED when the adjective is
+    separated from its head** ("only need adding when sequence is mixed"), and freely available
+    otherwise as a stylistic choice (veto allowed);
     (ii) the **lexicon gains a part-of-speech field**, because a NOM adjective and a NOM noun are
     shape-identical — word class is a lexical fact here (as in Latin), not an audible shape;
     (iii) two locked rules are **amended**: **`M3b`** gains a second sanctioned suffix shape —

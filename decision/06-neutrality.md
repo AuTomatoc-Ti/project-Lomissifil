@@ -67,7 +67,7 @@ Until 2026-10-14 this goal had **no mechanism at all** — only the goal stateme
 | B7 | no articles | Latin, Russian, Finnish, Japanese, Chinese… | same pattern | too widespread to be a donor |
 | B8 | **article & VOC are an emotional VOWEL WORD** (H8) | none | no donor | |
 | B9 | VOC is **not** a case (H8) | none | no donor | Latin has a vocative case |
-| B10 | no gender, no **grammatical** agreement | English-ish / Japanese-ish | same pattern | not distinctive. ⚠️ **UPDATED 2026-10-14 (item 29):** the language now HAS agreement — but of a kind no reference language has: an **adjective copies the vowel of its head's outermost suffix** (colour agreement). Gender/number agreement is still absent |
+| B10 | no gender, no **grammatical** agreement | English-ish / Japanese-ish | same pattern | not distinctive. ⚠️ **UPDATED 2026-10-14 (item 29):** the language now HAS agreement — but of a kind no reference language has: an **adjective copies the vowel of its head's outermost suffix** (colour agreement). Gender/number agreement is still absent. ⚠️ **UPDATED once more (`M5b`, same session): the verb will carry NO person marking either** — person agreement needs a *privileged subject*, and `S3` makes the leading slot a **topic** instead (the NOM case identifies the doer). So the only agreement in the language is the adjective's **colour** agreement, and our resemblance to Japanese/Chinese grows in precisely this respect |
 | B11 | …questions, pronouns, tense/aspect/mood | **not designed yet** (M5, M5a, M6) | — | **rows to be added when decided** |
 
 ## C. Word-building — how a word is put together
