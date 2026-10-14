@@ -12,9 +12,11 @@
 # NOTE (2026-10-14): entries below are NOUNS unless their gloss says otherwise. `os` / `res` are
 # VERB-related (R6), `ar` / `mer` / `mei` are FUNCTION WORDS (R5). An **adjective** has no audible
 # shape of its own in NOM (item 29): a vowel-final adjective is coined as an **`h`-class root**
-# (`hosda`→`hosdah` "certain") and takes the agreeing `-Vs` ending + the case when it modifies a
-# case-marked head (`hosdahasna sefmehna`). So a lexicon entry needs a PART OF SPEECH, and this file
-# should grow one.
+# (`hosda`→`hosdah` "certain") and takes the agreeing `-Vs` ending when it modifies a case-marked
+# head (`hosdahas sefmehna`). ⚠️ The case suffix on the adjective is a KNOB (author's refinement,
+# 2026-10-14): it is NOT written in the default order and is added only when the order is mixed
+# (`hosdahasna sefmehna`), where it re-links the adjective to its noun. So a lexicon entry needs a
+# PART OF SPEECH, and this file should grow one.
 
 # function word (class: takes NO suffixes — R5; shape = A1's "any word" layer)
 - ar (from) — postposed by default: `X ar` = "from X" (the R5 mechanism that replaced ABL)

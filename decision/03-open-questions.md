@@ -263,12 +263,47 @@ every future decision must add its rows. Two halves are still open:
     **Implied by this ruling, with proposed defaults (author may veto any):**
     (i) **adjective position = BEFORE its noun** (`hosdah sefmeh`), following the modifier-head /
     head-final tendency of S2/P4d;
+    ✅ **REFINED by the author (2026-10-14, same session): the adjective's CASE SUFFIX IS OPTIONAL — a
+    KNOB, not a requirement.** In the default order (adjective immediately before its head) the
+    adjective carries **only the agreeing ending**, never a case suffix: `orGi hosDahas sefMehna
+    thyMAri` = "the heart thinks the certain world". The case suffix appears on the adjective **only
+    when the order is mixed** (a poetic scrambling), where it is what lets the listener re-pair the
+    words: `sefMehna hosDahasna thyMAri orGi`. Reasons given by the author: case on the adjective is
+    **too redundant for poetry and music**. Why this is *better* than plain B: (1) it turns **free word
+    order into an economy** — mark only what the order does not already say; (2) it is the **second
+    "knob"** in the language, exactly parallel to C2's voicing knob (a canonical dictionary form + a
+    free performance variant); (3) the *audible* effect the mechanism exists for (colour agreement) is
+    carried by the **vowel**, not by the case consonant, so nothing is lost; (4) its only cost is a
+    **local ambiguity** in scrambled orders, which is the poet's own choice. ⚠️ Consequence to keep in
+    view: the chord label is *relational to each word's own root* (the standing caveat in `00-README`),
+    so a phrase is **audibly** one colour while the analytic labels stay per-word;
+    ⚠️ **open:** is the cased form *always* available (free variation) or *required* when the adjective
+    is separated from its head? The author's wording says "only need adding when sequence is mixed",
+    which reads as **required-when-mixed**;
     (ii) the **lexicon gains a part-of-speech field**, because a NOM adjective and a NOM noun are
     shape-identical — word class is a lexical fact here (as in Latin), not an audible shape;
     (iii) two locked rules are **amended**: **`M3b`** gains a second sanctioned suffix shape —
     the **derivational ending `V s`** (vowel first), because `-sV` would collide with GEN's `-sa`;
     **`H2`** gains an explicit **agreement exception** (the adjective ending's vowel is copied from its
     head, not computed from its own category).
+
+**I. Raised by the FIRST INTEGRATION TEST (2026-10-14) — see `../textbook/01-first-lines.md`**
+
+Five clauses were assembled from the 42-word lexicon and **every form was checked mechanically**. The
+test did **not** fail: case marking, the grade/chord progression, the `M3a` seam, adjective agreement
+and negation all worked as designed (line 2 lands the signature **I–V–I**; line 5 ends on **V** because
+`H5` gives function words the dominant grade). What it exposed is the **shape of what is missing** — a
+10-row gap list lives in the textbook file. Most gaps already have owners (`M4b` number = item 6,
+`M5a`/tense = item 7, the copula and verb valency = `M5`, pronouns/questions = `M6`, "towards" and
+negation scope = item 8). **Two gaps had no owner at all:**
+30. **Do FUNCTION WORDS carry a performance STRESS?** `P4` speaks only of *roots*; `H5`/`H6` say a
+    particle's grade is a label that is not sounded. So `mei` (one syllable) has **no defined stress** —
+    small, but it appears in every negative clause. Options: stress it like a root (the 2nd-syllable
+    rule is meaningless for a one-syllable word), never stress it, or leave it to the composer.
+31. **There is no CLAUSE-LEVEL tool.** The five lines of the integration test were assembled **by hand**
+    and verified word by word; nothing composes a clause, checks its chord progression (`I–V–I`), or
+    verifies agreement across words. A `tools/clause.py` would be the natural next tool — and it is what
+    would let the author write **hundreds** of demo lines instead of five.
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**
