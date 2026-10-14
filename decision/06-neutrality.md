@@ -67,7 +67,7 @@ Until 2026-10-14 this goal had **no mechanism at all** — only the goal stateme
 | B7 | no articles | Latin, Russian, Finnish, Japanese, Chinese… | same pattern | too widespread to be a donor |
 | B8 | **article & VOC are an emotional VOWEL WORD** (H8) | none | no donor | |
 | B9 | VOC is **not** a case (H8) | none | no donor | Latin has a vocative case |
-| B10 | no gender, no agreement | English-ish / Japanese-ish | same pattern | not distinctive |
+| B10 | no gender, no **grammatical** agreement | English-ish / Japanese-ish | same pattern | not distinctive. ⚠️ **UPDATED 2026-10-14 (item 29):** the language now HAS agreement — but of a kind no reference language has: an **adjective copies the vowel of its head's outermost suffix** (colour agreement). Gender/number agreement is still absent |
 | B11 | …questions, pronouns, tense/aspect/mood | **not designed yet** (M5, M5a, M6) | — | **rows to be added when decided** |
 
 ## C. Word-building — how a word is put together
@@ -85,6 +85,7 @@ Until 2026-10-14 this goal had **no mechanism at all** — only the goal stateme
 | C9 | the concrete case shapes `-na -sa -me -ner -ser -le` (M4a) | none | no donor | the *concept* of case suffixes is Latin's; the shapes are invented |
 | C10 | the class marker is **lexical, not productive** (R3) | none | no donor | agglutinative languages are typically productive — ours deliberately is not |
 | C11 | the **agreeing adjective ending** `-Vs` (item 29, author's design 2026-10-14) | Latin / Slavic | loose | inflectional **agreement** has donors everywhere in IE; what does **not** is agreement in **vowel COLOUR (grade)** — the mechanism borrows the *idea* of agreement and the *payload* is entirely ours (`H3`). ⚠️ This is also the row where the B and C axes interact most: a suffix whose vowel comes from **outside its own word** |
+| B12 | **information structure / topic** (raised by the author 2026-10-14, not yet designed) | — | — | ⚠️ **The author's point is measured and correct:** the B axis's donors are 3 rows of Latin/IE + 1 Turkish (`B1`, `B4`, `B5`), so the clause axis IS IE-heavy. Their proposal: make the language **topic-prominent**. Finding to weigh: "topic-driven order + pro-drop + case marking" is **exactly Russian/Slavic** — which is *already* the B4 donor — so full topic-prominence would **strengthen an existing donor** rather than add a no-donor subsystem. What would be genuinely un-donated: (a) topic-prominence **as a structural type** (no IE language is one, though Slavic *uses* topic-comment), and (b) **H8's emotion-vowel article doubling as the topic marker** (zero new morphemes, no donor) |
 
 ## The dominance check
 
