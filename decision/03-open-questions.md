@@ -304,6 +304,40 @@ negation scope = item 8). **Two gaps had no owner at all:**
     and verified word by word; nothing composes a clause, checks its chord progression (`I–V–I`), or
     verifies agreement across words. A `tools/clause.py` would be the natural next tool — and it is what
     would let the author write **hundreds** of demo lines instead of five.
+32. **CASE ALIGNMENT (格配列) — never explicitly decided; the design is de facto NOMINATIVE–ACCUSATIVE.**
+    Raised by the author 2026-10-14 ("what is our language using? what if we use 南島型?"). **Evidence for the
+    status quo:** in `M4a` NOM is the **zero** suffix and ACC is `-na`; the S of an intransitive and the A of a
+    transitive both take NOM (`orgi thyMAri` / `orgi sefmehna thyMAri`), and only P takes ACC ⇒ S = A ≠ P =
+    **accusative**. Because `M5b` forbids person marking, alignment rides **only on the case suffix** (the
+    Japanese profile). ⚠️ **Settling this also settles item 3** (`NOM = zero suffix`), since zero-NOM is what
+    *makes* the system accusative.
+    ⚠️ **Why it is not a side detail here:** `H2` binds the grade to the category (NOM → tonic I; ACC & GEN →
+    dominant V; DAT/LOC/INS/OBL → IV) ⇒ **the I–V–I signature cadence IS the accusative alignment made
+    audible.** Changing alignment changes what the signature *means*.
+    **Three alternatives, with measured costs:**
+    - **(a) Philippine-type / "Austronesian" symmetric voice** (Tagalog: actor / patient / locative voice, a
+      **pivot** in the `ang`-case, the non-pivot core argument in the **genitive**, the rest oblique). Our
+      *inventory* already fits (pivot = NOM ✓, non-pivot core = GEN ✓, oblique = OBL ✓) and voice affixes are
+      affordable (one syllable each; 23 skeletons free per `M4a`) — **but**: (i) the ACC/GEN contrast, the
+      commonest I-vs-V pair, would collapse into a single genitive; (ii) the typical Austronesian order is
+      **verb-initial**, and since `H2` makes verbs tonic, a verb-initial clause can no longer **end on I** ⇒
+      **I–V–I dies**; (iii) if we keep verb-final instead, the listener hears the voice affix *after* both
+      nouns ⇒ **retroactive decoding** at song speed (§F). So this option trades the signature cadence for
+      the machinery.
+    - **(b) Active–stative (split-S)** — also an Austronesian pattern (Acehnese). **Cheapest: zero new
+      morphemes.** Intransitive subjects split by the verb's class: an agentive S takes NOM, a
+      patientive/stative S takes ACC ⇒ i.e. **`V1` vs `V2` stops being a free-floating class and *becomes*
+      the alignment** — which is exactly the choice `reference/example.md` still lists as open ("⚠️ their
+      verb class (V1 `-ri` / V2 `-ni`) is not decided yet", for `os` / `res`). Harmonic payoff: a stative
+      clause opens on the dominant (the ACC-marked subject) and ends on the tonic verb ⇒ a **V–I** perfect
+      cadence *without* the opening tonic.
+    - **(c) Ergative** — equally cheap: keep zero for S/P and re-point `-na` from P to A. `H2`'s chord
+      mapping survives untouched, and the *meaning of the dominant chord flips*: the **doer** becomes the
+      tension (apt for epic / power metal), not the affected thing.
+    **Agent's recommendation:** keep NOM-ACC (it *is* the cadence) and take the Austronesian idea in its cheap
+    form — (b) to settle `V1`/`V2`, or a **single** patient-promoting suffix (one syllable) if a morphological
+    "spotlight any argument" is wanted; note that `S3`'s topic slot plus free order **already provide that
+    function pragmatically, at zero cost**. **Author decision needed.**
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**

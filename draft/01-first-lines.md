@@ -2,8 +2,8 @@
 
 **What this is.** The first *integrated* test of the locked layers: NOM/ACC case marking (`M4a`), the
 grade/chord system (`H1`–`H8`), the `M3a` seam, the `M2b`/`M2c` suffix rules, adjective agreement
-(item 29) and negation (`S1`). Every clause below uses **only** words from `../reference/example.md`
-(the project's rule), and **every FORM was checked mechanically** with
+(item 29), the topic slot (`S3`) and negation (`S1`). Every clause below uses **only** words from
+`../reference/example.md` (the project's rule), and **every FORM was checked mechanically** with
 `python3 ../tools/check_roots.py --forms …` — all of them pass the locked rules (none needed a repair
 except the seam, which is by design).
 
@@ -34,7 +34,7 @@ thinks" does not resolve anywhere.
 
 | form | syllables | what happens |
 |---|---|---|
-| `sefmehna` | se-fme-**hna** | **the `M3a` seam, tier 1**: `sefmeh` (an `h`-final root) + `-na` ⇒ the `hn` **VCV cluster**, i.e. the two consonants become ONE onset — no repair, no extra vowel |
+| `sefmehna` | se-fme-**hna** | **the `M3a` seam, tier 1**: `sefmeh` (an `h`-final root) + `-na` ⇒ the `hn` **VCV cluster**: the two consonants become ONE onset — no repair, no extra vowel |
 | `thymari` | thy-ma-ri | V1, tonic, as above |
 
 Chords: I → **V** (ACC = dominant) → I ⇒ **I–V–I, the perfect cadence** the whole design was aimed at
@@ -60,10 +60,10 @@ Chords: I → **V** (ACC = dominant) → I ⇒ **I–V–I, the perfect cadence*
     world-ACC certain-AGR-ACC think-V1 heart
     "the world — the certain one — the heart thinks" (the same statement, poetically re-ordered)
 
-Both the noun and the adjective now carry ACC, so the listener can **re-pair** them across the
-scramble. This is the author's own pattern `a b-na A B-na`: marking appears exactly where the order
-stops carrying the information. ⚠️ Cost, stated honestly: in a heavily scrambled line the pairing can
-stay locally ambiguous — that is the poet's choice, not a defect.
+Both the noun and the adjective now carry ACC, so the listener can **re-pair** them across the scramble.
+This is the author's own pattern `a b-na A B-na`: marking appears exactly where the order stops carrying
+the information. ⚠️ Cost, stated honestly: in a heavily scrambled line the pairing can stay locally
+ambiguous — that is the poet's choice, not a defect.
 
 ## Line 5 — negation (chord I–I–V, deliberately unresolved)
 
@@ -75,27 +75,50 @@ stay locally ambiguous — that is the poet's choice, not a defect.
 negative clause always **ends on V** — it cannot sound finished, which is exactly what negation means
 musically. (Whether a *function word* carries a performance stress at all is **undefined** — see gap 9.)
 
+## Line 6 — the topic slot (`S3`) and the absent person (`M5b`), ruled 2026-10-14
+
+    a orGi sefMehna thyMAri
+    (article, colour `a`) heart world-ACC think-V1
+    "as for the heart — it thinks the world" (colour `a` = brave / energetic / angry)
+
+`H8`'s emotion-vowel article doubles as an **optional topic marker**: it costs no new morpheme, and the
+colour it carries shades the whole clause. The topic **keeps its case** (NOM here) — we deliberately do
+not copy the Japanese behaviour where the topic particle *replaces* the case, because the case suffix is
+our only decoder (§F).
+
+Two things this line shows about what is **not** needed:
+
+- a **subjectless** clause such as `sefMehna thyMAri` ("…thinks the world") was **always legal** —
+  `S2`'s verb-final order is a *preferred* default, not a requirement, and with no verb agreement
+  nothing forces a subject to be spoken. `S3` rule (2) merely writes down what an omitted argument
+  refers to;
+- per **`M5b`** the verb will **never** carry person, so *who does it* is never on the verb: it is a
+  **pronoun**'s job (`M6`) or the **topic convention**'s. That is exactly the Japanese/Chinese profile —
+  and it is why pronouns are now the most urgent missing piece.
+
 ## What this test EXPOSED (the honest gap list)
 
 | # | gap | why the demo hit it | owner |
 |---|---|---|---|
-| 1 | **pronouns** — `I` / `you` / `it` | the most song-useful sentence ("I love you") is currently **impossible** | `M6` (open) |
-| 2 | **number** (singular/plural) | "hearts" / "worlds" have no marking at all | `M4b` (open) |
+| 1 | **pronouns** — `I` / `you` / `it` | the most song-useful sentence ("I love you") is currently **impossible** — and since `M5b` forbids person marking on the verb, pronouns are now the **only** way to name a participant | `M6` (open) |
+| 2 | **number** (singular/plural) | "hearts" / "worlds" have no marking at all | `M4b` (open — and now **smaller**, because `M5b` removed person from the budget) |
 | 3 | **tense / aspect** | every line above is present/imperfect only; `ima` (now) is a root, but there is **no tense morphology** | `M5`/`M5a` (open) |
 | 4 | **noun predicate / copula** | "the world is certain" — `res` (be) exists as a root, but how a predicate is built is undefined (`Resri`? a bare noun?) | `M5`/`M6` (open) |
 | 5 | **questions** | nothing exists yet | `M6` (open) |
 | 6 | **verb valency** | line 1 uses `thymari` intransitively, line 2 transitively; nothing says which is legal | `M5` (open) |
 | 7 | **"towards / go-to"** | `ar` (from) exists; the other half of `03` §0 item 8 has no word | §0 item 8 (half open) |
 | 8 | **negation scope** | "does not think" ✓ vs "it is not the heart that thinks" ✗ | §0 item 8 (open) |
-| 9 | **stress on function words** | `mei` is one syllable and `P4` speaks only of *roots*, so a particle's stress is undefined | new small item |
-| 10 | **a clause tool** | these lines were assembled **by hand** (word-by-word verified); nothing composes or checks whole clauses yet | tooling |
+| 9 | **stress on function words** | `mei` is one syllable and `P4` speaks only of *roots*, so a particle's stress is undefined | §0 item 30 |
+| 10 | **a clause tool** | these lines were assembled **by hand** (word-by-word verified); nothing composes or checks whole clauses yet | §0 item 31 |
 
 ## What this test does NOT say
 
 It is a **grammatical** demonstration, not an aesthetic verdict. **Nobody has heard any of it**: the
 synthesiser was rejected (`03` §0 item 19) and the audition method is the author **reading the written
-forms aloud**. So the next audible step is literally this: read lines 1–5 out loud and see whether the
-seam (`sefMehna`), the agreement (`hosDahas`) and the negation ending (`… thyMAri mei`) sound like what
-you want. If they do not, the failure will be **in the seam or in the colour system**, not in the word
-order — and that is precisely what this test was built to find out.
+forms aloud**. So the next audible step is literally this: read lines 1–6 out loud and see whether the
+seam (`sefMehna`), the agreement (`hosDahas`), the topic marker (`a orGi …`) and the negation ending
+(`… thyMAri mei`) sound like what you want. If they do not, the failure will be **in the seam or in the
+colour system**, not in the word order — and that is precisely what this test was built to find out.
+
+
 
