@@ -99,6 +99,32 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     only**: the **M3a seam** (root-final `f`/`v`/`h` + a case suffix, always *unstressed*) is **not**
     covered by that round, so it stays unjudged by ear.
 
+**G. NEW — raised by running the first audition material (2026-10-14, needs a ruling)**
+21. **`sh` and `ng` are HOMOGRAPHIC and both readings are legal.** `a-sha` /ʃ/ vs `as-ha` (coda `s` +
+    onset `h`), and `so-nga` /ŋ/ vs `son-ga` (coda `n` + onset `g`). The phoneme sequences differ, so a
+    single spelling covers two different words. Measured on the current pack
+    (`tools/syllabify.py --stats`): **2,630 of 26,751 bases (9.8%)**; in the 192-row audition sheet,
+    **16 rows**. `th` is NOT affected (a coda can never be `t`), and `ae` is NOT affected (adjacent
+    nuclei are illegal). Options: (a) a **coining rule** — never coin a root that needs one of the two
+    readings (loses ~10% of the pool); (b) **fix the reading** — declare that medial `sh`/`ng` is
+    ALWAYS the single phoneme (`lists/picks-sheet.md` already reads it that way, following
+    `01-phonology.md`'s `songa`); (c) a notation/orthography change (needs a symbol → hits goal 3).
+    ⚠️ Until this is ruled, a picked form containing `sh`/`ng` is a **sound-string whose phoneme
+    sequence is not yet fixed**.
+22. **The first coining batch contains NO 1-syllable root — and R1 says 1-syllable roots are
+    frequent.** `--stats` over `lists/roots-bases-current.txt`: **26,751 forms, 100.0% two-syllable,
+    0 illegal**. The pack covers the **2-syllable core** (the 4 main shapes + the 4 hiatus leaps); the
+    diphthong `CVV` class (`roi`, the documented example of a frequent short root) is **not in it**,
+    although `05`'s UPDATE §6 counted the 1-syllable class separately. Consequence: the batch cannot
+    judge the **short** roots, which are exactly what a chorus hook / power-metal chant wants.
+    Also measured: **17.0%** of the pack has the default stress landing on a **digraph-initial**
+    syllable (the N1-open case the sheet flags).
+23. **New tooling (not a decision):** `tools/syllabify.py` computes the syllable split + default
+    stress for any spelling, with `--check` (verified against `se-li` / `los-do` / `roi` /
+    `ar-gon-na` / `aus-ta-reus`), `--sheet` (the audition sheet) and `--stats`. It reproduces every
+    split the docs state; the one bug it caught was an onset set missing the hard spellings
+    `p t k` (needed because `austareus` is C2-exempt).
+
 ## A. M1 — affix direction (DECIDED, **PROVISIONAL**)
 
 **M1 = SUFFIXES** (agglutinative, Turkish/Finnish/Japanese style). Recorded as a

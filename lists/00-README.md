@@ -48,6 +48,31 @@ python3 tools/enumerate_roots.py --pairs 20        # samples 20 bases, 4 forms e
 > so **coinage is SOUND-ONLY for now** — do not assign pair semantics
 > (`decision/03-open-questions.md` §0 item 14).
 
+## `picks-sheet.md` — the readable form of the same audition (generated `.md`)
+
+The synthesiser is rejected (`../decision/03-open-questions.md` §0 item 19), so the audition signal is
+now the **written form** — and the raw index (`../audio/roots-index.txt`) shows neither the syllable
+split nor the stress. `picks-sheet.md` adds both, computed by `tools/syllabify.py` from the locked
+rules (nothing new is invented in that script):
+
+```
+python3 tools/syllabify.py --sheet > lists/picks-sheet.md
+python3 tools/syllabify.py --check          # verifies the splitter against the reference words
+python3 tools/syllabify.py --stats          # histogram of a whole list: syllables + both flags
+```
+
+`--stats` on the current pack (2026-10-14): **26,751 forms, 100% two-syllable, 0 illegal, 17.0%
+stressed on a digraph, 9.8% `sh`/`ng`-ambiguous**. ⚠️ The 100% is a finding, not a detail — read
+`../decision/03-open-questions.md` §0 items 21-22.
+
+It is the **same 48 bases with the same numbering** as `../audio/roots-index.txt`. It is generated, so
+**never annotate it** — the picks belong in `picks.md`. Two things it flags, both genuine open/undecided
+points rather than script opinions:
+
+- a **stressed syllable that begins with a digraph** (`sh` / `th` / `ng` / `ae`) — N1 has no rule for
+  that case yet;
+- **`sh` / `ng` where the coda+onset reading is also legal** (`a-sha` vs `as-ha`, `so-nga` vs `son-ga`).
+
 ### What is deliberately NOT here
 
 - The `legacy-mono4` / `legacy-diph4` / `legacy-core` configs reproduce `decision/05`'s own figures
