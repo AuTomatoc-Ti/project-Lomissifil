@@ -10,7 +10,7 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
    as `{f,v}`+`l` → `ll`, `h`+`l` → `l`. *Veto if wrong.*
 2. **tier-3 `y` copy.** When the root's last vowel is `y` and tier 3 inserts a copied vowel, does it come
    out as `y` (putting `y` outside a root, against H3) or as `i`?
-3. **`NOM = zero suffix`** (the demo implies it; never explicitly confirmed).
+3. **`NOM = zero suffix`** (the demo implies it; never explicitly confirmed) ✅ **CONFIRMED (S4, 2026-10-14).**
 4. **One-letter capital rule (H8).** A one-letter vowel word with a capital is read as **VOC**, not as a
    stress mark — confirm.
 5. **Emotional vowel table (H8)** is still an *example* list, not a locked one — confirm or revise.
@@ -287,13 +287,13 @@ every future decision must add its rows. Two halves are still open:
     **`H2`** gains an explicit **agreement exception** (the adjective ending's vowel is copied from its
     head, not computed from its own category).
 
-**I. Raised by the FIRST INTEGRATION TEST (2026-10-14) — see `../textbook/01-first-lines.md`**
+**I. Raised by the FIRST INTEGRATION TEST (2026-10-14) — see `../draft/01-first-lines.md`**
 
 Five clauses were assembled from the 42-word lexicon and **every form was checked mechanically**. The
 test did **not** fail: case marking, the grade/chord progression, the `M3a` seam, adjective agreement
 and negation all worked as designed (line 2 lands the signature **I–V–I**; line 5 ends on **V** because
 `H5` gives function words the dominant grade). What it exposed is the **shape of what is missing** — a
-10-row gap list lives in the textbook file. Most gaps already have owners (`M4b` number = item 6,
+10-row gap list lives in `../draft/01-first-lines.md`. Most gaps already have owners (`M4b` number = item 6,
 `M5a`/tense = item 7, the copula and verb valency = `M5`, pronouns/questions = `M6`, "towards" and
 negation scope = item 8). **Two gaps had no owner at all:**
 30. **Do FUNCTION WORDS carry a performance STRESS?** `P4` speaks only of *roots*; `H5`/`H6` say a
@@ -304,7 +304,7 @@ negation scope = item 8). **Two gaps had no owner at all:**
     and verified word by word; nothing composes a clause, checks its chord progression (`I–V–I`), or
     verifies agreement across words. A `tools/clause.py` would be the natural next tool — and it is what
     would let the author write **hundreds** of demo lines instead of five.
-32. **CASE ALIGNMENT (格配列) — never explicitly decided; the design is de facto NOMINATIVE–ACCUSATIVE.**
+32. **CASE ALIGNMENT (格配列) — never explicitly decided; the design is de facto NOMINATIVE–ACCUSATIVE — ✅ **DECIDED (S4, 2026-10-14): active–stative / split-S, chosen as option (B) below.**
     Raised by the author 2026-10-14 ("what is our language using? what if we use 南島型?"). **Evidence for the
     status quo:** in `M4a` NOM is the **zero** suffix and ACC is `-na`; the S of an intransitive and the A of a
     transitive both take NOM (`orgi thyMAri` / `orgi sefmehna thyMAri`), and only P takes ACC ⇒ S = A ≠ P =

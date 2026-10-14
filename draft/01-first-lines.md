@@ -1,4 +1,4 @@
-# textbook/01 — the first lines (integration test, 2026-10-14)
+# draft/01-first-lines.md — the first lines (integration test, 2026-10-14)
 
 **What this is.** The first *integrated* test of the locked layers: NOM/ACC case marking (`M4a`), the
 grade/chord system (`H1`–`H8`), the `M3a` seam, the `M2b`/`M2c` suffix rules, adjective agreement
@@ -96,6 +96,29 @@ Two things this line shows about what is **not** needed:
   **pronoun**'s job (`M6`) or the **topic convention**'s. That is exactly the Japanese/Chinese profile —
   and it is why pronouns are now the most urgent missing piece.
 
+## Line 7 — the split-S pair (`M5c` + `S4`, ruled 2026-10-14)
+
+    orgi thyMAri                 heart-AG think-V1        "the heart thinks"
+    orgina Resne                 heart-PT be-V2           "the heart is"
+
+The **same noun in two different cases**, because the **verb form** says whether there is an
+instigator: `V1` (`-ri`) = there IS one, `V2` (`-ne`, since `res` is `e`-final) = there is NONE. So
+`orgi` is the **AG**(ent) and `orgina` the **PT**(atient) — active–stative, **split-S** (`S4`). Both
+forms pass `tools/check_roots.py` (`--forms orgi,orgina,resne,thymari`), and stress is root-based:
+`orGi` · `ORgina` · `thyMAri` · `RESne` (a one-syllable root keeps its own stress).
+
+⚠️ **This is not a grammar curiosity — it is a chord choice.** `H2` makes the AG/NOM word **tonic
+(I)** and the PT/ACC word **dominant (V)**, so:
+
+| the poet writes | the clause sounds |
+|---|---|
+| `orgi thyMAri` (V1) | **I–I** — no dominant anywhere, so it cannot half-cadence |
+| `orgina Resne` (V2) | **V–I** — it *opens* on the tension and resolves; a perfect cadence with no opening tonic |
+| `orGi sefMehna thyMAri` (V1, transitive) | **I–V–I** — the signature cadence |
+
+Picking `-ri` or `-ne`/`-ni` is therefore picking how the line **starts** harmonically — the cheapest
+expressive tool in the language, and it costs **one suffix the language already owns**.
+
 ## What this test EXPOSED (the honest gap list)
 
 | # | gap | why the demo hit it | owner |
@@ -105,7 +128,7 @@ Two things this line shows about what is **not** needed:
 | 3 | **tense / aspect** | every line above is present/imperfect only; `ima` (now) is a root, but there is **no tense morphology** | `M5`/`M5a` (open) |
 | 4 | **noun predicate / copula** | "the world is certain" — `res` (be) exists as a root, but how a predicate is built is undefined (`Resri`? a bare noun?) | `M5`/`M6` (open) |
 | 5 | **questions** | nothing exists yet | `M6` (open) |
-| 6 | **verb valency** | line 1 uses `thymari` intransitively, line 2 transitively; nothing says which is legal | `M5` (open) |
+| 6 | **verb valency** | line 1 uses `thymari` intransitively, line 2 transitively; *partly* answered by `M5c`/`S4` (`V1` = agentive, may be transitive; `V2` = patientive, no A) - but **which roots may appear in which form** is still open | `M5` (open) |
 | 7 | **"towards / go-to"** | `ar` (from) exists; the other half of `03` §0 item 8 has no word | §0 item 8 (half open) |
 | 8 | **negation scope** | "does not think" ✓ vs "it is not the heart that thinks" ✗ | §0 item 8 (open) |
 | 9 | **stress on function words** | `mei` is one syllable and `P4` speaks only of *roots*, so a particle's stress is undefined | §0 item 30 |
@@ -115,7 +138,7 @@ Two things this line shows about what is **not** needed:
 
 It is a **grammatical** demonstration, not an aesthetic verdict. **Nobody has heard any of it**: the
 synthesiser was rejected (`03` §0 item 19) and the audition method is the author **reading the written
-forms aloud**. So the next audible step is literally this: read lines 1–6 out loud and see whether the
+forms aloud**. So the next audible step is literally this: read lines 1–7 out loud and see whether the
 seam (`sefMehna`), the agreement (`hosDahas`), the topic marker (`a orGi …`) and the negation ending
 (`… thyMAri mei`) sound like what you want. If they do not, the failure will be **in the seam or in the
 colour system**, not in the word order — and that is precisely what this test was built to find out.

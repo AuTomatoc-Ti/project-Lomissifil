@@ -33,8 +33,11 @@
   author's design 2026-10-14, Georgian-inspired): V1 = "there IS an instigator", V2 = "there is NO
   instigator"**, so V1/V2 are two forms of the SAME root (a mediopassive alternation), not classes a
   root belongs to. `os` / `res` denote states ⇒ no instigator ⇒ **V2**. The remaining sub-question is
-  whether a V2 clause's participant keeps NOM (⇒ plain accusative, V2 is a voice) or takes ACC
-  (⇒ split-S / active-stative, see `03-open-questions.md` item 32(b))
+  **DECIDED (S4, 2026-10-14): a V2 clause's participant takes ACC** ⇒ the language is **active–stative
+  (split-S)**: NOM (zero suffix) = the agent-like case (AG), ACC (`n` + dominant) = the patient-like
+  case (PT). So `os` / `res` are `V2`, and their participant carries ACC — e.g. `orgina Resne`
+  ("the heart is" = heart-PT + be-V2), both forms verified with `../tools/check_roots.py`; contrast
+  the `V1` clause `orgi thyMAri` ("the heart thinks" = heart-AG + think-V1)
 
 # bare root — batch 1 (author's own roots, 2026-10-14; checked by `../tools/check_roots.py`)
 # ⚠️ Spelling follows C2/R-b: the DICTIONARY form uses the VOICED stop, so a hard realisation is

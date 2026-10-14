@@ -5,7 +5,7 @@
 - A **constructed language**. **"Lomissifil" is only the PROJECT name**; the language
   itself is unnamed.
 - Layout: `decision/` = locked design + open questions, `draft/` = scratch,
-  `reference/example.md` = the only words allowed in examples, `textbook/` = future,
+  `reference/example.md` = the only words allowed in examples, `textbook/` = FINAL publication-ready docs only (working notes go in `draft/` - author convention 2026-10-14),
   `tools/` = scripts (`enumerate_roots.py` = counts + distance>=2 packer + root emitter;
   `audition_m1.py` = the M1 A/B WAVs).
 - The repo **is** a git repo (branch `main`, remote `origin`); one commit so far (`62960c8`).
@@ -172,3 +172,9 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   **"type 3"** = adjacent vowels split across two syllables (hiatus) = the "leaps".
 - **硬 / 軟** = *hard* (voiceless stop `p t k`) / *soft* (voiced stop `b d g`), chosen
   freely by the performer via the voicing knob.
+
+## Location convention (author, 2026-10-14)
+
+- **`textbook/` = FINAL, publication-ready documentation only.**
+- **Working / integration-test material lives in `draft/`** — e.g. `draft/01-first-lines.md` (the integration test: Lines 1–6 plus the split-S pair).
+- ⚠️ **Process correction (agent, same day):** two agent commits (e.g. `d5feae9`) carry a PROCESS NOTE claiming the integration-test file was never committed and was then overwritten — **that was wrong and is withdrawn.** The file had simply been moved to `draft/` by the author, so the agent's edit was a *creation at the vacated path*. **No content was ever lost.** The lesson that does stand: after a file moves, check its tracked state with `git ls-files` / `git status`; and prefer python or insert_line edits (they fail loudly) over blind whole-file replaces.
