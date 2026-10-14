@@ -151,6 +151,26 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     run **before** the pick round started, exactly as required. The old numbering is gone;
     `../audio/roots-index.txt` is a separate, **frozen** record of the pre-P6 pool and its numbers do
     not map onto the new sheet.
+
+**H. Neutrality (goal 2) — the donor ledger and its two remaining halves**
+
+The design-level mechanism now exists: **`06-neutrality.md`** (three axes — sound / grammar /
+word-building — one row per sub-area, each mapped to its closest single donor or marked *no donor*,
+plus a **dominance check**). Result: **PASS** — top donor Finnish ≈20%, **~48% of sub-areas have no
+donor**, and the grammar's centre (the grade/chord system) is entirely original. ⚠️ **Living rule:**
+every future decision must add its rows. Two halves are still open:
+26. **The loanword mechanism (word level) — spec only; execution is blocked on meanings.** A word is a
+    "loanword" only *relative to a meaning*, and coining is sound-only (R3 parked), so this **cannot
+    run yet**. Freeze the spec now: **hard reject** = a coined word whose meaning coincides with a
+    natural-language word within one edit distance (*beauty outranks neutrality* does **not** protect
+    those — they would *feel* borrowed); **soft warn** = homophony with an unrelated meaning (record,
+    never reject). ⚠️ **Missing input:** the reference word list (which languages count as "others").
+    **Owner:** the meaning-assignment step, which does not exist yet.
+27. **A statistical sound fingerprint — parked on a DECISION, not on work.** The ledger is
+    qualitative, and it says the exposure sits on the **sound axis, especially the spelling**. A
+    measured profile of the candidate set (phoneme frequency, syllable shapes, cluster rate, word
+    length) against a reference list would police that — but the author must first name the
+    **reference languages**. Until then there is nothing to compare against.
 25. ~~**Scope of the P6 devoicing**~~ — **DECIDED (author, 2026-10-14): the full natural class.**
     Any stop `/b d g/` after a **nasal coda** `/m/` or `/n/` is obligatorily `[p t k]`, and **the
     spelling shows it**: `mb`→`mp`, `nb`→`np`, `md`→`mt`, `nd`→`nt`, `mg`→`mk`, `ng`→`nk`. Chosen over
@@ -380,8 +400,12 @@ Two things that listening did **not** settle, and the author has not commented o
   **length** if the composer wants a suffix sustained.
 
 - **Lexicon generation strategy + a neutrality check** (avoid loanwords / not too much like any one
-  language) — goal 2 still has **no mechanism**. ⚠️ Only **6 reference words** exist, which now blocks
-  the textbook.
+  language) — ~~goal 2 has no mechanism~~ → **the design-level mechanism now EXISTS (2026-10-14):
+  `06-neutrality.md`, the donor ledger** (three axes — sound / grammar / word-building — one row per
+  sub-area, + a dominance check; result: PASS, top donor Finnish ≈20%, **~48% of sub-areas have no
+  donor**). Two halves remain open and are listed as §0 items 26–27: **loanwords** (needs meanings;
+  spec written, execution scheduled) and a **statistical sound fingerprint** (needs the author's
+  reference-language list). ⚠️ Only **6 reference words** exist, which still blocks the textbook.
 - **Prosody ↔ melody mapping** — *material now exists*: the grade system (H1–H7) plus the
   composer/listener split. Hard rule it must respect: map **contrast relative to each word's own
   centre**, never absolute colour.

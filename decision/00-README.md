@@ -14,7 +14,7 @@ session/agent can catch up quickly.
 | Morphology | **ACTIVE** — M1 (PROVISIONAL: suffixes), M2 (order principle), M2c (outermost suffix = the word's chord), M3a/M3b (seam + one-syllable suffix), M4/M4a (case table) all decided; **M4b (inner-suffix grades) is the next question**; M5–M7 open |
 | The vowel-colour ("grade") system | **H1–H8 DECIDED** — see the terminology warning below and `../draft/brainstorm.md` §3–§9 |
 | Syntax | **OPENED** — S1 (negator `mei`, postposed), S2 (free scrambling + verb-final default) decided; negation scope + scrambling limits open |
-| Lexicon + neutrality rules | **round 1 in progress** — 26,751 mutually-far bases packed (`lists/roots-bases-current.txt`) and 48 sampled for audition; **picks pending in `lists/picks.md`**. Goal 2 (**neutrality / no loanwords**) still has **NO mechanism**, and only 6 reference words exist |
+| Lexicon + neutrality rules | **round 1 in progress** — 26,484 mutually-far bases packed (`lists/roots-bases-current.txt`) and 48 sampled into `lists/picks-sheet.md`; **picks pending in `lists/picks.md`**. **Neutrality (goal 2) now HAS a mechanism at the design level** — the donor ledger in `06-neutrality.md` (dominance check PASSES: top donor Finnish ≈20%, ~48% of sub-areas have no donor) — but the **word-level** half (loanwords) is blocked until meanings exist, and a statistical sound fingerprint needs the author's reference-language list. Only 6 reference words exist |
 | Prosody <-> melody mapping | not started — but the grade system now supplies its input |
 | Rhyme (押韻) | **not started** (a stated goal, still undesigned) |
 | Textbook | not started (blocked on the lexicon) |
@@ -44,6 +44,7 @@ Files:
 - `03-open-questions.md` — what is NOT decided yet
 - `04-lexicon-capacity.md` — how many 2-syllable roots the phonology allows (answer: ~2.1M)
 - `05-root-shape-limit.md` — capacity under the tighter root-shape rule + distance>=2 (updated: ~3.0k → **>=16.1k** after diphthongs + `s` coda were allowed)
+- `06-neutrality.md` — the **donor ledger** for goal 2: sound / grammar / word-building, each sub-area mapped to its closest single donor (or "no donor"), with a **dominance check** and a **living rule** (every new decision must add its rows)
 - `../draft/handoff.md` — discussion background, tooling, how to continue
 - `../lists/00-README.md` — the generated candidate-root data (**not** vocabulary) + `picks.md`, the hand-written audition picks
 - `../audio/00-README.md` — **frozen** audition material from the (now rejected) synthesiser; read the banner before using the `.wav` files or `tools/audition_*.py`
