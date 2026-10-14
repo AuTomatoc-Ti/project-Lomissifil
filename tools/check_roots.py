@@ -192,6 +192,9 @@ def report(forms, pool, words):
     print("  breaking R-b            : %d" % stats["rb"])
     print("  English-word collision  : %d   (soft warning)" % stats["en"])
     print("  s-final (R4, keep rare) : %d (%.1f%%)" % (stats["s"], 100.0 * stats["s"] / n))
+    print("  NOTE on the stress column: it is the analyser's BARE-ROOT default. For a SUFFIXED form the")
+    print("  stress must be counted from the ROOT (P4c), which `tools/seam.py` does correctly -- e.g. a")
+    print("  1-syllable root keeps its own stress (`sym`+`-as` is `SYmas`, NOT `syMas`).")
 
 
 
@@ -202,7 +205,7 @@ def main():
     ap.add_argument("--forms", default=None, help="check these instead (comma separated)")
     a = ap.parse_args()
     if a.forms:
-        forms = [(f.strip(), "") for f in a.forms.split(",") if f.strip()]
+        forms = [(f.strip(), "", "ad-hoc") for f in a.forms.split(",") if f.strip()]
     else:
         forms = parse(a.src)
     pool = [ln.strip() for ln in open(a.pool, encoding="utf-8")

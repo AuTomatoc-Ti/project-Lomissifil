@@ -227,6 +227,26 @@ every future decision must add its rows. Two halves are still open:
     `onla`+`-s`+`a`?). **A mechanical check is needed and does not exist yet.**
     ⚠️ Also open: is `-Vs` an **affix** or a **separate particle** (`H5`-style)? A particle would avoid
     (a) and (b) entirely, at the cost of one more free word per modification.
+    ✅ **DECIDED by the author (2026-10-14): the AFFIX `-Vs`.** The draft below is the agent's proposal
+    built from their note 1; the two cells marked ⚠️ are what still needs their word.
+    **DRAFT — the mechanism, verified legal through `tools/check_roots.py` (`--forms`):**
+    *Shape*: adjective/adverb = `root` + **`h`** (only if the root is vowel-final — the buffer) +
+    **[agreeing vowel]** + **`s`**. Verified: `onla`→`onlahis/onlahas/onlahes/onlahos` ·
+    `hosda`→`hosdahas` · `sym`→`symas` · `esgim`→`esgimis` · `sefmeh`→`sefmehis` — every one passes the
+    locked rules. ⚠️ **NOTE (agent error found by that check):** a **1-syllable root keeps its own
+    stress** (P4c), so `sym`+`-as` is `SYmas`, not `syMas` — `syllabify.py`'s stress column is only the
+    *bare-root* default, and `seam.py` is the tool that counts from the root.
+    *The agreeing vowel*: it copies **the vowel of the WORD's outermost suffix that the adjective
+    modifies** (the author's note 1), which — because every suffix vowel is a grade relative to its own
+    host — yields exactly the author's four vowels:
+
+    | the modified word's outer suffix | its vowel | adjective ending |
+    |---|---|---|
+    | ACC / GEN (grade V, dominant) | `a` if the host root is front, `i` if back | `-as` / `-is` |
+    | DAT / LOC / INS / OBL (grade IV) | `e` if front, `o` if back | `-es` / `-os` |
+    | verb V1 / V2 (grade I, tonic) | the verb root's own last vowel (any of the 7) | that vowel + `s` |
+    | **NOM (zero suffix)** ⚠️ | **no vowel exists to copy** | ⚠️ **the open cell** — three candidates: (i) copy the modified ROOT's own last vowel, (ii) a fixed default (`e`), (iii) **take no ending at all**, i.e. the `h`-class root itself is the NOM form (this is what `R6`'s `h` rule already implies, and it would explain the author's `onla(h)` notation) |
+    | **declension** ⚠️ | — | **A: the adjective never takes a case suffix** (`hosdahas sefmehna`) — short; its chord would be inherited from the host, so a phrase still sounds as one chord. **B: the adjective also takes the case** (`hosdahasna sefmehna`) — the case cue is DOUBLED, which is what the sung-intelligibility risk (§F) wants; the case consonant agrees while the vowel is computed from the adjective's own root |
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**
