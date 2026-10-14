@@ -84,6 +84,7 @@ Until 2026-10-14 this goal had **no mechanism at all** — only the goal stateme
 | C8 | the **M3a seam**: a 3-tier repair (`CC` group → syncope → copied vowel) for roots ending in `f/v/h` before a suffix | none | no donor | |
 | C9 | the concrete case shapes `-na -sa -me -ner -ser -le` (M4a) | none | no donor | the *concept* of case suffixes is Latin's; the shapes are invented |
 | C10 | the class marker is **lexical, not productive** (R3) | none | no donor | agglutinative languages are typically productive — ours deliberately is not |
+| C11 | the **agreeing adjective ending** `-Vs` (item 29, author's design 2026-10-14) | Latin / Slavic | loose | inflectional **agreement** has donors everywhere in IE; what does **not** is agreement in **vowel COLOUR (grade)** — the mechanism borrows the *idea* of agreement and the *payload* is entirely ours (`H3`). ⚠️ This is also the row where the B and C axes interact most: a suffix whose vowel comes from **outside its own word** |
 
 ## The dominance check
 

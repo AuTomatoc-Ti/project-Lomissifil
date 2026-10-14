@@ -247,6 +247,28 @@ every future decision must add its rows. Two halves are still open:
     | verb V1 / V2 (grade I, tonic) | the verb root's own last vowel (any of the 7) | that vowel + `s` |
     | **NOM (zero suffix)** ⚠️ | **no vowel exists to copy** | ⚠️ **the open cell** — three candidates: (i) copy the modified ROOT's own last vowel, (ii) a fixed default (`e`), (iii) **take no ending at all**, i.e. the `h`-class root itself is the NOM form (this is what `R6`'s `h` rule already implies, and it would explain the author's `onla(h)` notation) |
     | **declension** ⚠️ | — | **A: the adjective never takes a case suffix** (`hosdahas sefmehna`) — short; its chord would be inherited from the host, so a phrase still sounds as one chord. **B: the adjective also takes the case** (`hosdahasna sefmehna`) — the case cue is DOUBLED, which is what the sung-intelligibility risk (§F) wants; the case consonant agrees while the vowel is computed from the adjective's own root |
+
+    ✅ **RESOLVED (author, 2026-10-14): (iii) + B.** The two cells become:
+    - **NOM: no ending.** The bare root itself is the adjective's NOM form — so a **vowel-final
+      adjective is simply an `h`-class root** (`hosdah` = "certain", `onlah` = "leaving"), which is what
+      the author's `onla(h)` notation meant, and it gives `R6`'s `h` rule a grammatical meaning: **the
+      `h` class IS the adjective's unagreed form.** A consonant-final root (`sym`) is its own NOM form
+      too (`sym` = "divine").
+    - **Declension: YES.** The adjective takes the agreement ending **and then the same case suffix as
+      its head**: `hosdahasna sefmehna` = "the certain-ACC world-ACC". Consequences: (a) the **case cue
+      is doubled** — exactly what the §F sung-intelligibility risk asks for; (b) M2c (outermost suffix
+      = the word's chord) makes **the whole noun phrase one chord**: both words carry the same grade
+      label, though their vowels may differ when their root classes differ — the **case consonant** is
+      what agrees.
+    **Implied by this ruling, with proposed defaults (author may veto any):**
+    (i) **adjective position = BEFORE its noun** (`hosdah sefmeh`), following the modifier-head /
+    head-final tendency of S2/P4d;
+    (ii) the **lexicon gains a part-of-speech field**, because a NOM adjective and a NOM noun are
+    shape-identical — word class is a lexical fact here (as in Latin), not an audible shape;
+    (iii) two locked rules are **amended**: **`M3b`** gains a second sanctioned suffix shape —
+    the **derivational ending `V s`** (vowel first), because `-sV` would collide with GEN's `-sa`;
+    **`H2`** gains an explicit **agreement exception** (the adjective ending's vowel is copied from its
+    head, not computed from its own category).
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**
