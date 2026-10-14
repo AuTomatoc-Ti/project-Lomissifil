@@ -35,15 +35,22 @@ roots, so pick **at most one** from the `{+f, +w}` pair and **at most one** from
 > Sound-only. R3 is PARKED, so assign **no meanings** (decision/03-open-questions.md section 0
 > item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
 
-## Reading rule (P6) - and the one flag left
+## Reading rules (P6) - and the two flags left
 
-**`sh` and `ng` are ALWAYS one phoneme** (`sh` = the *sh* of *ship*, `ng` = the *ng* of *sing*) - that
-is `P6`, ruled 2026-10-14. So a row containing `ng` never means "n then g": the sequence **coda `n` +
-/g/** is written **`nk`** instead, and nothing below needs a guess.
+**`sh` and `ng` are ALWAYS one phoneme** (`sh` = the *sh* of *ship*, `ng` = the *ng* of *sing*),
+and **a stop after a nasal coda is obligatorily hard**: `/m/` or `/n/` + `/b d g/` is written
+`mp np mt nt mk nk` and sung `[p t k]`. That is `P6` (ruled 2026-10-14), so a row containing `ng`
+never means "n then g" and nothing below needs a guess about the reading.
 
-The one flag left is **`stress capital lands on a DIGRAPH`**: the stressed syllable starts with
-`sh` / `th` / `ng` / `ae` - one sound written with two letters - and N1 has no rule for that case yet
-(it is an open item). The `stress` column capitalises the first letter; treat it as provisional.
+Two flags can appear:
+
+- **`stress capital lands on a DIGRAPH`** - the stressed syllable starts with `sh` / `th` / `ng` / `ae`
+  (one sound, two letters) and N1 has no rule for that case yet. The `stress` column capitalises the
+  first letter; treat it as provisional.
+- **`ILLEGAL under P6`** - the form spells a nasal coda + **soft** stop (`mb nb md nd mg`), which P6
+  forbids: it must be respelled with the hard letter (`namgae` -> `namkae`). ⚠️ **A pick on such a row
+  is still valid as a SOUND** - only the spelling changes, and the pool regeneration (which respells
+  these) is a separate, later step.
 
 Also: `stress` is only the DEFAULT (P4). A composer may overwrite it in notation - that is
 performance, not a different word.
@@ -61,18 +68,18 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 | 2 | thastho | thasthow | thas-thow | thasThow | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
 | 3 | thastho | thasthoh | thas-thoh | thasThoh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
 | 4 | thastho | thastho | thas-tho | thasTho | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 5 | namgae | namgaef | nam-gaef | namGaef |  |
-| 6 | namgae | namgaew | nam-gaew | namGaew |  |
-| 7 | namgae | namgaeh | nam-gaeh | namGaeh |  |
-| 8 | namgae | namgae | nam-gae | namGae |  |
+| 5 | namgae | namgaef | nam-gaef | namGaef | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 6 | namgae | namgaew | nam-gaew | namGaew | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 7 | namgae | namgaeh | nam-gaeh | namGaeh | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 8 | namgae | namgae | nam-gae | namGae | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
 | 9 | dobrae | dobraef | do-braef | doBraef |  |
 | 10 | dobrae | dobraew | do-braew | doBraew |  |
 | 11 | dobrae | dobraeh | do-braeh | doBraeh |  |
 | 12 | dobrae | dobrae | do-brae | doBrae |  |
-| 13 | sumtho | sumthof | sum-thof | sumThof | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 14 | sumtho | sumthow | sum-thow | sumThow | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 15 | sumtho | sumthoh | sum-thoh | sumThoh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 16 | sumtho | sumtho | sum-tho | sumTho | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 13 | sumtho | sumthof | sum-thof | sumThof | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 14 | sumtho | sumthow | sum-thow | sumThow | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 15 | sumtho | sumthoh | sum-thoh | sumThoh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 16 | sumtho | sumtho | sum-tho | sumTho | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
 | 17 | ujmu | ujmuf | u-jmuf | uJmuf |  |
 | 18 | ujmu | ujmuw | u-jmuw | uJmuw |  |
 | 19 | ujmu | ujmuh | u-jmuh | uJmuh |  |
@@ -102,10 +109,10 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 | 38 | maeijnei | maeijneiw | maei-jneiw | maeiJneiw |  |
 | 39 | maeijnei | maeijneih | maei-jneih | maeiJneih |  |
 | 40 | maeijnei | maeijnei | maei-jnei | maeiJnei |  |
-| 41 | graemdae | graemdaef | graem-daef | graemDaef |  |
-| 42 | graemdae | graemdaew | graem-daew | graemDaew |  |
-| 43 | graemdae | graemdaeh | graem-daeh | graemDaeh |  |
-| 44 | graemdae | graemdae | graem-dae | graemDae |  |
+| 41 | graemdae | graemdaef | graem-daef | graemDaef | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 42 | graemdae | graemdaew | graem-daew | graemDaew | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 43 | graemdae | graemdaeh | graem-daeh | graemDaeh | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 44 | graemdae | graemdae | graem-dae | graemDae | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
 | 45 | rouswaei | rouswaeif | rous-waeif | rousWaeif |  |
 | 46 | rouswaei | rouswaeiw | rous-waeiw | rousWaeiw |  |
 | 47 | rouswaei | rouswaeih | rous-waeih | rousWaeih |  |
@@ -192,10 +199,10 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 | 118 | sheucou | sheucouw | sheu-couw | sheuCouw |  |
 | 119 | sheucou | sheucouh | sheu-couh | sheuCouh |  |
 | 120 | sheucou | sheucou | sheu-cou | sheuCou |  |
-| 121 | gomthou | gomthouf | gom-thouf | gomThouf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 122 | gomthou | gomthouw | gom-thouw | gomThouw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 123 | gomthou | gomthouh | gom-thouh | gomThouh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 124 | gomthou | gomthou | gom-thou | gomThou | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 121 | gomthou | gomthouf | gom-thouf | gomThouf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 122 | gomthou | gomthouw | gom-thouw | gomThouw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 123 | gomthou | gomthouh | gom-thouh | gomThouh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 124 | gomthou | gomthou | gom-thou | gomThou | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
 | 125 | seinsoi | seinsoif | sein-soif | seinSoif |  |
 | 126 | seinsoi | seinsoiw | sein-soiw | seinSoiw |  |
 | 127 | seinsoi | seinsoih | sein-soih | seinSoih |  |
@@ -225,10 +232,10 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 | 146 | rora | roraw | ro-raw | roRaw |  |
 | 147 | rora | rorah | ro-rah | roRah |  |
 | 148 | rora | rora | ro-ra | roRa |  |
-| 149 | hoindu | hoinduf | hoin-duf | hoinDuf |  |
-| 150 | hoindu | hoinduw | hoin-duw | hoinDuw |  |
-| 151 | hoindu | hoinduh | hoin-duh | hoinDuh |  |
-| 152 | hoindu | hoindu | hoin-du | hoinDu |  |
+| 149 | hoindu | hoinduf | hoin-duf | hoinDuf | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 150 | hoindu | hoinduw | hoin-duw | hoinDuw | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 151 | hoindu | hoinduh | hoin-duh | hoinDuh | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
+| 152 | hoindu | hoindu | hoin-du | hoinDu | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
 | 153 | gonny | gonnyf | gon-nyf | gonNyf |  |
 | 154 | gonny | gonnyw | gon-nyw | gonNyw |  |
 | 155 | gonny | gonnyh | gon-nyh | gonNyh |  |

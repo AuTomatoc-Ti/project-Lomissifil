@@ -379,6 +379,30 @@ Two consequences:
 - For the packing this is good news: the pack's unit is the **base**, so the `20,025` mutually-far
   bases on the locked inventory yield **~40,050 coined roots** — far above the 3,000 target.
 
+## UPDATE — P6 (author's rulings 2026-10-14): what changed in the CURRENT figures
+
+Two P6 rulings move the **current** config's arithmetic. The `legacy-*` / `singles-*` configs are
+deliberately **not** updated: they exist to reproduce this file's published figures, so they still
+report 48,020 / 220,500 / 264,600 (model `p6=False` in `tools/enumerate_roots.py`).
+
+1. **A stop after a nasal coda is spelled with its HARD letter** (`mb`→`mp`, `nd`→`nt`, …): the
+   *count does not change* — every coda+stop fill still has exactly one spelling, only its letters do
+   (**34,200 of the 453,226 forms now carry a hard letter**).
+2. **`/s/` + `/h/` has no spelling at all** (`sh` is always /ʃ/), so that fill is **excluded**:
+   `|CC|` 80 → **79**, VCCV `18,000 → 17,775`, CVCCV `324,000 → 319,950`.
+
+| layer | figure |
+|---|---|
+| 4 main shapes | **453,150** (was 457,425; −4,275 = 0.93%) |
+| + the 4 leaps with an onset (76) | **453,226** (was 457,501) |
+| script cross-check | **MATCH** (453,226) — before this change it printed a 4,275 **MISMATCH** |
+| 1-syllable raw / vowel-final | 1,140 / 285 (unchanged) |
+| 3-syllable `CVCVCV` | 44,286,750 (unchanged) |
+| coined roots (2 per base) | ≤ **906,452** (was ≤ 914,970) |
+
+The old `457,xxx` family was not wrong *for its time*: it predates the `/s/`+`/h/` ruling. The
+conclusion (capacity is a non-issue) is untouched.
+
 
 
 

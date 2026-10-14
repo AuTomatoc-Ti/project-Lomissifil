@@ -19,7 +19,7 @@ these files are machine-produced, whereas everything else here is prose (`.md`).
 | sha256 | `57f683f25c5521eaead632005c9fb5a9714fd7bd9c87686ddbe31938d4c08205` |
 | encoding | ASCII, lowercase `a`–`z` only, one base per line, **sorted** |
 | config | `current` — 15 nuclei · O1=18 · O2=27 · O2c=16 · codas `m n l r s` |
-| base space | 457,425 (4 main shapes) + 76 leaps = **457,501** |
+| base space | **453,150** (4 main shapes) + 76 leaps = **453,226** — P6 (2026-10-14); the older `457,425 / 457,501` family predates the `/s/`+`/h/` exclusion, see `../decision/05-root-shape-limit.md` P6 UPDATE |
 | selection | greedy packing, pairwise **segment-distance ≥ 2**, best of 4 seeds |
 | ⇒ coined roots | **~53,502** — each base yields exactly **2** roots (see below) |
 
@@ -62,9 +62,13 @@ python3 tools/syllabify.py --stats          # histogram of a whole list: syllabl
 ```
 
 `--stats` on the current pack (2026-10-14): **26,751 forms, 100% two-syllable, 0 illegal, 17.0%
-stressed on a digraph, 11.0% read as ONE phoneme (`sh`/`ng`, P6), and 0 `nk` spellings**. Three of
-those are findings, not details — read `../decision/03-open-questions.md` §0 items 21-24 (21 is now
-**DECIDED = P6**; the `0 nk` line is what item 24 is about).
+stressed on a digraph, 11.0% read as ONE phoneme (`sh`/`ng`, P6), 534 with a P6 hard spelling, and
+1,338 (5.0%) ILLEGAL under P6 — they spell a nasal coda + soft stop (`mb nb md nd mg`) and must be
+respelled (`namgae` → `namkae`)**. ⚠️ **The pack PREDATES P6 and is due for regeneration** (§0 items
+21-24): besides those 1,338 spellings it also contains **267 duplicate lines** (two different phoneme
+sequences that shared one spelling — `manga` was both /maŋa/ and /man.ga/, i.e. distance 0 in a pack
+that claims pairwise ≥ 2). **Both defects are fixed in `tools/enumerate_roots.py`**; the file just has
+not been re-emitted yet.
 
 It is the **same 48 bases with the same numbering** as `../audio/roots-index.txt`. It is generated, so
 **never annotate it** — the picks belong in `picks.md`. Two things it flags, both genuine open/undecided

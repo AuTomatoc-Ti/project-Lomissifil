@@ -129,23 +129,34 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     `ar-gon-na` / `aus-ta-reus`), `--sheet` (the audition sheet) and `--stats`. It reproduces every
     split the docs state; the one bug it caught was an onset set missing the hard spellings
     `p t k` (needed because `austareus` is C2-exempt).
-24. **Pool regeneration after P6** (`enumerate_roots.py` must emit coda `n` + onset `/g/` as **`nk`**,
-    otherwise the candidate space is missing a whole (small) class of legal roots, and its `ng` strings
-    are the only spelling that class ever gets). ⚠️ **Timing:** this changes the pack's sha *and* the
-    audition sheet's 48-base sample, so run it **either before the pick round starts, or after it
-    finishes** — never in the middle, or the author's pick numbers stop matching the sheet.
-25. **Scope of the P6 devoicing (NEW, 2026-10-14 — it decides the pool's spelling).** P6 + C2b now say
-    `/g/` after a coda `n` is obligatorily `[k]`. But `/b/` and `/d/` after a nasal coda are equally
-    legal and common in the pool (`mb` `nb` `md` `nd` `mg` — e.g. the sheet's `namgae` = `nam-gaef`),
-    so either (a) the rule is **idiosyncratic to `/g/`** (minimal, but phonetically odd: a learner asks
-    why `/g/` and not `/d/`), or (b) the natural class is **stop after a nasal coda** (`m`/`n` +
-    `b d g` → `[p t k]`), in which case ⚠️ **the spelling must show it too** (`namgae` → `namkae`,
-    `anda` → `anta`), otherwise the spelling stops predicting the sound, which breaks R-c's promise
-    that a lookup never misses. **Cost to weigh in either case:** a blocked position is a position
-    where the composer's hard/soft knob does **nothing** — and nasal + stop is a *frequent* cluster, so
-    the language's main genre control (power-metal hard vs post-rock soft) loses exactly there.
-    ⚠️ **Blocker:** item 24's pool regeneration must **not** run before this is answered — the answer
-    fixes the spelling of those 6 coda + stop combinations.
+24. **Pool regeneration after P6** — the emitter is **already fixed and verified**; only the re-emission
+    is pending. What `enumerate_roots.py` now does on the P6 configs (and only there: `legacy-*` /
+    `singles-*` keep `p6=False` so they still reproduce `05`'s 48,020 / 220,500 / 264,600):
+    (i) a **nasal coda + stop is emitted with the HARD letter** (`mb`→`mp`, `nb`→`np`, `md`→`mt`,
+    `nd`→`nt`, `mg`→`mk`, `ng`→`nk`); (ii) the **`/s/` + `/h/` fill is excluded** (no spelling exists);
+    (iii) `dist1` uses a distance alphabet that **includes `p t k`**, or a pair differing by `b`~`p`
+    after a nasal would still look like distance ≥ 2.
+    **Verified:** 453,226 forms = 453,226 distinct spellings (**injective**), 34,200 hard spellings,
+    **0 violations**, and the script's own cross-check now says **MATCH** for all five configs (it used
+    to print a 4,275 MISMATCH). Space: 457,501 → **453,226**; `|CC|` 80 → 79 (`05`'s P6 UPDATE).
+    ⚠️ **A REAL DEFECT FOUND IN THE COMMITTED PACK:** it contains **267 duplicate lines** — two
+    different phoneme sequences that shared one spelling (`manga` was both /maŋa/ and /man.ga/), i.e.
+    **pairs at distance 0** in a pack that advertises pairwise distance ≥ 2, plus **1,338 (5.0%)**
+    P6-illegal spellings. Both vanish on re-emission.
+    ⚠️ **Timing:** re-emission changes the pack's sha *and* the audition sheet's 48-base sample, so run
+    it **either before the pick round starts, or after it finishes** — never in the middle, or the
+    author's pick numbers stop matching the sheet.
+25. ~~**Scope of the P6 devoicing**~~ — **DECIDED (author, 2026-10-14): the full natural class.**
+    Any stop `/b d g/` after a **nasal coda** `/m/` or `/n/` is obligatorily `[p t k]`, and **the
+    spelling shows it**: `mb`→`mp`, `nb`→`np`, `md`→`mt`, `nd`→`nt`, `mg`→`mk`, `ng`→`nk`. Chosen over
+    the `/g/`-only reading because it is consistent and teachable, and because it keeps R-c's promise
+    that the spelling always predicts the sound. **Cost, measured and accepted:** the composer loses the
+    hard/soft knob in those **6 of the 90 medial (coda × onset) combinations (~7%)** — and nasal + stop
+    is a *frequent* cluster, so the main genre control (power-metal hard vs post-rock soft) is weaker
+    exactly there. **Effect on the pool (item 24):** the *voiced* spellings `mb nb md nd mg` are now
+    **illegal for coining**, and `/n/`+`/g/` gains `nk` — so regeneration both respells and **enlarges**
+    the candidate space: a string like `manga` was previously doing double duty for /maŋa/ and /man.ga/,
+    and after P6 those are **two** bases (`manga`, `manka`).
 
 ## A. M1 — affix direction (DECIDED, **PROVISIONAL**)
 

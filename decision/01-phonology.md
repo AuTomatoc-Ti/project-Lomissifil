@@ -23,26 +23,27 @@ Status: locked. Numbering (`V*`, `C*`, `P*`, `N1`) matches the original discussi
 > **performance/notation-register** device, NOT a phonological process — which is exactly why it
 > may be **free and unconditioned**, unlike the *conditioned* voicing alternations of natural
 > languages (word-final devoicing, sandhi assimilation, rendaku). ⚠️ **AMENDED by P6 (2026-10-14):
-> there is now exactly ONE conditioned environment** — the phoneme `/g/` after a coda `n` is
-> obligatorily `[k]`, written `nk` — so the knob is free everywhere *except* there. The author
-> deliberately wanted this first taste of a natural-language-style devoicing (清化); whether `/b/`
-> and `/d/` after a nasal coda follow it is still open (`03-open-questions.md` §0 item 25).
+> the knob is blocked on a full natural class** — any stop `/b d g/` after a **nasal coda** `/m/` or
+> `/n/` is obligatorily `[p t k]`, and **the spelling shows it**: `mb`→`mp`, `nb`→`np`, `md`→`mt`,
+> `nd`→`nt`, `mg`→`mk`, `ng`→`nk`. The author deliberately wanted this first taste of a
+> natural-language-style devoicing (清化). Those six sequences are coda + onset (**not** clusters),
+> read as P5 reads `st`; and the knob is free everywhere else.
 > Three boundaries apply:
 > - **(R-a) Domain = the 3 stops only.** `w` (=/v/) is a **real phoneme** and must **never** be
 >   hardened: `f` vs `w` is a true contrast, so devoicing `w` -> `f` would destroy words. `c`
 >   (/t͡ʃ/) has no partner; fricatives, nasals and sonorants are untouched.
 > - **(R-b) Base forms always use the voiced letter.** No root may be coined with `p t k` in its
 >   base form, or its soft form would collide with another root's hard form (a homophone). This
->   also protects the ~16-consonant affix-identity alphabet. ⚠️ **AMENDED by P6:** the fixed sequence
->   **`nk`** (= coda `n` + the `/g/` phoneme) is a **required** hard spelling inside a base form. The
->   collision this rule guards against cannot occur there (`nka` = /n.g…/ vs `nga` = /ŋ…/ are
->   different phoneme sequences).
+>   also protects the ~16-consonant affix-identity alphabet. ⚠️ **AMENDED by P6:** the six
+>   **nasal + stop** sequences (`mp` `np` `mt` `nt` `mk` `nk` = coda `m`/`n` + `/b d g/`) are
+>   **required** hard spellings inside a base form. The collision this rule guards against cannot occur
+>   there (`nka` = /n.g…/ vs `nga` = /ŋ…/ are different phoneme sequences).
 > - **(R-c) Register boundary.** Plain text and the dictionary are voiced **only**; hard spellings
 >   live in notation/performance text and in actual singing. A lookup therefore never misses:
->   `losdo` is the headword, `losto` its hard realisation (P5). ⚠️ **AMENDED by P6:** `nk` is a
->   *required* hard spelling, so the letter `k` may appear in the dictionary form — but only inside
->   that fixed sequence, and it is a **spelling rule**, not a register choice (the performer still
->   chooses freely how to voice it, unless P6's open sub-question is settled the other way).
+>   `losdo` is the headword, `losto` its hard realisation (P5). ⚠️ **AMENDED by P6:** the six hard
+>   spellings `mp np mt nt mk nk` may appear in a base/dictionary form — and there they are **not** a
+>   register choice: P6 makes `[p t k]` **obligatory**, so the performer has **no** soft option in
+>   those positions. Everywhere else the knob stays free.
 > **Count consistency:** **16** is the figure already used in `05` (`|C| = 16 distinctive
 > consonants`; and `pr br tr dr kr gr` = **3** distinctive clusters, since `p/b`, `t/d`, `k/g` are
 > one phoneme each), and `04`'s "14" is the same rule on the older 17-letter inventory. **No
@@ -91,10 +92,12 @@ the sound /v/ is written `w`.
 >    **unspellable (illegal)** — no suffix begins with `h`, so morphology can never need it.
 >    ⚠️ **R-b / R-c are amended** (see §1): `nk` is a required hard spelling, so it appears in the
 >    dictionary too — a *spelling rule*, not a register choice. ⚠️ **DECIDED (author, 2026-10-14):
->    the devoicing is REAL, not spelling-only** — `/g/` after a coda `n` is obligatorily `[k]`, so
->    C2b's "free and unconditioned" knob is **blocked in that one environment** (the language's first
->    genuine phonological process). Full consequences: `00-README.md` **P6**; its scope for `/b/`,
->    `/d/` is open (`03-open-questions.md` §0 item 25).
+>    the devoicing is REAL and covers the WHOLE natural class** — any stop `/b d g/` after a nasal
+>    coda `/m/` or `/n/` is obligatorily `[p t k]` and is **spelled with the hard letter**
+>    (`mb`→`mp`, `nb`→`np`, `md`→`mt`, `nd`→`nt`, `mg`→`mk`, `ng`→`nk`), so C2b's "free and
+>    unconditioned" knob is blocked in those six sequences (the language's first genuine phonological
+>    process). The **voiced spellings of those six are illegal for coining**. Full consequences:
+>    `00-README.md` **P6**; the pool must be regenerated (`03-open-questions.md` §0 item 24).
 
 ## 2. Vowels — 7 phonemes
 

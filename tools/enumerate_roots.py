@@ -45,7 +45,11 @@ CODA5 = ("m", "n", "l", "r", "s")
 ADDED_LATER = ("c", "j")
 STOP_R = ("br", "dr", "gr")               # distinctive stop+/r/ clusters (canonical voiced form)
 NONSTOP = ("fm", "fn", "hm", "hn", "wm", "wn", "jm", "jn")   # VCV-only (no stop involved)
-ALPHA = NUCLEI + CONS + (NG,)
+ALPHA = NUCLEI + CONS + (NG,)                # what a base form itself may contain (R-b: voiced)
+HARD_STOP = ("p", "t", "k")                  # P6-2: legal in a base form after a nasal coda only
+ALPHA_DIST = ALPHA + HARD_STOP               # ... but the DISTANCE alphabet must know them, or a
+                                             # pair differing by b~p after a nasal would look >= 2
+P6_MAP = {"b": "p", "d": "t", "g": "k"}      # P6-2: the hard letter of each stop phoneme
 
 
 def onset_sets(legacy, clusters=False):
@@ -64,11 +68,15 @@ def onset_sets(legacy, clusters=False):
     return ini + STOP_R, med + STOP_R + NONSTOP, med
 
 
-def make_config(nuclei, codas, legacy, clusters=False):
+def make_config(nuclei, codas, legacy, clusters=False, p6=False):
     o1, o2, oc = onset_sets(legacy, clusters)
     return {"nuclei": nuclei, "codas": codas,
             "initial": o1, "after_open": o2, "after_coda": oc,
-            "medial": o2}                      # kept as an alias for older call sites
+            "medial": o2,                      # kept as an alias for older call sites
+            # `p6` = model the 2026-10-14 rulings (hard spelling after a nasal coda, and the
+            # unspellable /s/+/h/ fill excluded).  OFF for the legacy/singles configs on purpose:
+            # those exist to reproduce 05's published figures, so they must keep its arithmetic.
+            "p6": p6}
 
 
 CONFIGS = {
@@ -80,10 +88,10 @@ CONFIGS = {
     "singles-mono4": make_config(MONO, CODA4, False),
     "singles-diph4": make_config(NUCLEI, CODA4, False),
     "singles-core": make_config(NUCLEI, CODA5, False),     # 345,600
-    # locked inventory + clusters in roots (author's ruling A) <-- CURRENT RULE
-    "current-mono4": make_config(MONO, CODA4, False, clusters=True),
-    "current-diph4": make_config(NUCLEI, CODA4, False, clusters=True),
-    "current": make_config(NUCLEI, CODA5, False, clusters=True),
+    # locked inventory + clusters in roots (author's ruling A) + P6 <-- CURRENT RULE
+    "current-mono4": make_config(MONO, CODA4, False, clusters=True, p6=True),
+    "current-diph4": make_config(NUCLEI, CODA4, False, clusters=True, p6=True),
+    "current": make_config(NUCLEI, CODA5, False, clusters=True, p6=True),
 }
 
 
@@ -92,7 +100,11 @@ def formula(cfg):
     o1 = len(cfg["initial"])
     o2 = len(cfg["after_open"])
     oc = len(cfg["after_coda"])
-    cc = len(cfg["codas"]) * oc
+    # P6: a coda + onset fill only counts if it HAS a spelling. `/s/` + `/h/` has none
+    # (`sh` is always /ʃ/), so that one fill is excluded on the P6 configs only -- it is the
+    # 4,275 difference the enumerated cross-check used to report as MISMATCH.
+    excl = 1 if (cfg.get("p6") and "s" in cfg["codas"] and "h" in cfg["after_coda"]) else 0
+    cc = len(cfg["codas"]) * oc - excl
     vcv = n * o2 * n
     cvcv = o1 * n * o2 * n
     vccv = n * cc * n
@@ -105,6 +117,17 @@ def formula(cfg):
             "total_all": vcv + cvcv + vccv + cvccv + cvv + vv,
             "|nuclei|": n, "|ini|": o1, "|med|": o2, "|oc|": oc,
             "|codas|": len(cfg["codas"])}
+
+
+def p6_respell(coda, onset):
+    """P6-2 (author's ruling 2026-10-14): a stop /b d g/ after a nasal coda /m/ or /n/ is
+    obligatorily [p t k] AND is written with the HARD letter, so `man-ga` can never be coined --
+    only `man-ka`. A cluster counts by its first element (`bra` -> `pra`). Non-nasal codas
+    (`l r s`) are untouched, and `ng` is unaffected (it is the phoneme /N/, not n + g).
+    """
+    if coda in ("m", "n") and onset[0] in P6_MAP:
+        return P6_MAP[onset[0]] + onset[1:]
+    return onset
 
 
 def iter_forms(cfg):
@@ -125,14 +148,18 @@ def iter_forms(cfg):
     for v1 in nuc:
         for c1 in codas:
             for o2 in oc:
+                if cfg.get("p6") and c1 == "s" and o2 == "h":
+                    continue            # P6: /s/ + /h/ has no spelling (`sh` is always /S/)
                 for v2 in nuc:
-                    yield (v1, c1, o2, v2)                      # VCCV
+                    yield (v1, c1, p6_respell(c1, o2), v2)      # VCCV (P6-2 hard spelling)
     for o1 in ini:
         for v1 in nuc:
             for c1 in codas:
                 for o2 in oc:
+                    if cfg.get("p6") and c1 == "s" and o2 == "h":
+                        continue        # P6: unspellable -> not a legal form
                     for v2 in nuc:
-                        yield (o1, v1, c1, o2, v2)              # CVCCV
+                        yield (o1, v1, c1, p6_respell(c1, o2), v2)   # CVCCV (P6-2)
     for o1 in ini:
         for h in HIATUS:
             yield (o1, h[0], h[1])                              # CVV -- a "leap"
@@ -146,11 +173,11 @@ def dist1(t):
     L = len(t)
     for i in range(L):
         head, tail = t[:i], t[i + 1:]
-        for a in ALPHA:
+        for a in ALPHA_DIST:
             if a != t[i]:
                 out.append(head + (a,) + tail)
     for i in range(L + 1):
-        for a in ALPHA:
+        for a in ALPHA_DIST:
             out.append(t[:i] + (a,) + t[i:])
     for i in range(L):
         out.append(t[:i] + t[i + 1:])
@@ -207,7 +234,7 @@ def report(cfg, name):
     print("config: %s" % name)
     print("  nuclei=%d  O1(initial)=%d  O2(after a vowel)=%d  O2c(after a coda)=%d  codas=%s"
           % (c["|nuclei|"], c["|ini|"], c["|med|"], c["|oc|"], ",".join(cfg["codas"])))
-    print("  |CC| (medial 'CC' letter-pattern fill) = |codas| x |O2c| = %d" % c["|CC|"])
+    print("  |CC| (medial 'CC' fill; P6 excludes the unspellable /s/+/h/) = %d" % c["|CC|"])
     print("  VCV   = |V|x|O2|x|V|         = %10s" % format(c["VCV"], ","))
     print("  CVCV  = |O1|x|V|x|O2|x|V|    = %10s" % format(c["CVCV"], ","))
     print("  VCCV  = |V|x|CC|x|V|         = %10s" % format(c["VCCV"], ","))

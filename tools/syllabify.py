@@ -163,21 +163,43 @@ def parse(word):
     return sylls
 
 
-def analyse(word):
-    """-> dict(syllables, stressed, stress_syllable, p6, illegal).
+def p6_pairs(sylls):
+    """-> (hard, illegal): counts of 'nasal coda + stop onset' across syllable boundaries.
 
-    `p6` marks the P6 sequence `nk` (= coda `n` + the /g/ phoneme). Worth showing on a sheet:
-    that `k` is a spelling rule, not the performance voicing knob.
+    P6-2 (author's ruling 2026-10-14): a stop /b d g/ after a nasal coda /m/ or /n/ is
+    obligatorily [p t k] AND is written with the hard letter -- so `man-ka` is the legal
+    spelling and `man-ga` is illegal. A cluster counts by its first element (`am-pra` legal,
+    `am-bra` not). `ng` is not affected: it is the one phoneme /N/, never n + g.
+    """
+    hard = illegal = 0
+    for i in range(len(sylls) - 1):
+        if sylls[i][-1] not in ("m", "n"):
+            continue
+        first = sylls[i + 1][0]
+        if first in ("p", "t", "k"):
+            hard += 1
+        elif first in ("b", "d", "g"):
+            illegal += 1
+    return hard, illegal
+
+
+def analyse(word):
+    """-> dict(syllables, stressed, stress_syllable, p6, p6_illegal, illegal).
+
+    `p6` = the form contains a legal P6 hard spelling (`mp np mt nt mk nk`);
+    `p6_illegal` = it contains the voiced spelling of one of those (`mb nb md nd mg`), which
+    P6 makes illegal -- the form must be respelled before it can be coined.
     """
     sylls = parse(word)
     if sylls is None:
         return {"syllables": None, "stressed": None, "stress_syllable": None,
-                "p6": False, "illegal": True}
+                "p6": False, "p6_illegal": 0, "illegal": True}
     si = 0 if len(sylls) == 1 else 1                 # P4: 2nd syllable of the root
     out = list(sylls)
     out[si] = out[si][0].upper() + out[si][1:]       # N1: capital on the syllable's 1st letter
+    hard, bad = p6_pairs(sylls)
     return {"syllables": sylls, "stressed": "".join(out), "stress_syllable": si,
-            "p6": "nk" in word, "illegal": False}
+            "p6": hard > 0, "p6_illegal": bad, "illegal": False}
 
 
 def note_for(an):
@@ -185,8 +207,11 @@ def note_for(an):
     if an["syllables"] and an["syllables"][an["stress_syllable"]].startswith(
             ("sh", "th", "ng", "ae")):
         notes.append("stress capital lands on a DIGRAPH (convention OPEN: 03 section C)")
-    if an["p6"]:
-        notes.append("`nk` = coda n + /g/, obligatorily [k] (P6: the soft/hard knob does not apply here)")
+    if an["p6_illegal"]:
+        notes.append("ILLEGAL under P6: a stop after a nasal coda must be written with its hard "
+                     "letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`)")
+    elif an["p6"]:
+        notes.append("P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply)")
     return "; ".join(notes)
 
 
@@ -199,7 +224,7 @@ REFERENCE = [                                        # every split the docs stat
 ]
 REFERENCE_NO_EXPECTATION = ["aurorius"]              # a name; no split is documented
 PROBES = ["shia", "nga", "songa", "thas", "iufa", "pra", "afmara", "asma", "fmara",
-          "manka", "asha", "sangka"]
+          "manka", "asha", "sangka", "manga", "namgae", "anpa", "ampra", "ambra", "anda"]
 
 
 def check():
@@ -263,15 +288,22 @@ roots, so pick **at most one** from the `{+f, +w}` pair and **at most one** from
 > Sound-only. R3 is PARKED, so assign **no meanings** (decision/03-open-questions.md section 0
 > item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
 
-## Reading rule (P6) - and the one flag left
+## Reading rules (P6) - and the two flags left
 
-**`sh` and `ng` are ALWAYS one phoneme** (`sh` = the *sh* of *ship*, `ng` = the *ng* of *sing*) - that
-is `P6`, ruled 2026-10-14. So a row containing `ng` never means "n then g": the sequence **coda `n` +
-/g/** is written **`nk`** instead, and nothing below needs a guess.
+**`sh` and `ng` are ALWAYS one phoneme** (`sh` = the *sh* of *ship*, `ng` = the *ng* of *sing*),
+and **a stop after a nasal coda is obligatorily hard**: `/m/` or `/n/` + `/b d g/` is written
+`mp np mt nt mk nk` and sung `[p t k]`. That is `P6` (ruled 2026-10-14), so a row containing `ng`
+never means "n then g" and nothing below needs a guess about the reading.
 
-The one flag left is **`stress capital lands on a DIGRAPH`**: the stressed syllable starts with
-`sh` / `th` / `ng` / `ae` - one sound written with two letters - and N1 has no rule for that case yet
-(it is an open item). The `stress` column capitalises the first letter; treat it as provisional.
+Two flags can appear:
+
+- **`stress capital lands on a DIGRAPH`** - the stressed syllable starts with `sh` / `th` / `ng` / `ae`
+  (one sound, two letters) and N1 has no rule for that case yet. The `stress` column capitalises the
+  first letter; treat it as provisional.
+- **`ILLEGAL under P6`** - the form spells a nasal coda + **soft** stop (`mb nb md nd mg`), which P6
+  forbids: it must be respelled with the hard letter (`namgae` -> `namkae`). ⚠️ **A pick on such a row
+  is still valid as a SOUND** - only the spelling changes, and the pool regeneration (which respells
+  these) is a separate, later step.
 
 Also: `stress` is only the DEFAULT (P4). A composer may overwrite it in notation - that is
 performance, not a different word.
@@ -298,7 +330,7 @@ def stats(src):
     """Histogram over a whole list: syllable counts + the two flags. Read-only."""
     with open(src, encoding="utf-8") as fh:
         words = [ln.strip() for ln in fh if ln.strip() and not ln.startswith("#")]
-    hist, illegal, dig, nk, reads = {}, 0, 0, 0, 0
+    hist, illegal, dig, hard, bad, reads = {}, 0, 0, 0, 0, 0
     for w in words:
         an = analyse(w)
         if an["illegal"]:
@@ -309,18 +341,21 @@ def stats(src):
         if an["syllables"][an["stress_syllable"]].startswith(("sh", "th", "ng", "ae")):
             dig += 1
         if an["p6"]:
-            nk += 1
+            hard += 1
+        if an["p6_illegal"]:
+            bad += 1
         if "sh" in w[1:] or "ng" in w[1:]:
             reads += 1
     n = float(len(words)) or 1.0
     print("forms: %d   (%s)" % (len(words), src))
     for k in sorted(hist):
         print("  %d syllable(s) %8d  %5.1f%%" % (k, hist[k], 100.0 * hist[k] / n))
-    print("  illegal                            %8d" % illegal)
-    print("  stress on a digraph                %8d  %5.1f%%" % (dig, 100.0 * dig / n))
-    print("  reads as ONE phoneme (sh/ng, P6)   %8d  %5.1f%%" % (reads, 100.0 * reads / n))
-    print("  `nk` spellings (coda n + /g/, P6)  %8d  %5.1f%%   <- 0 = pool predates P6 (03 item 24)"
-          % (nk, 100.0 * nk / n))
+    print("  illegal                                %8d" % illegal)
+    print("  stress on a digraph                    %8d  %5.1f%%" % (dig, 100.0 * dig / n))
+    print("  reads as ONE phoneme (sh/ng, P6)       %8d  %5.1f%%" % (reads, 100.0 * reads / n))
+    print("  P6 hard spelling (mp np mt nt mk nk)   %8d  %5.1f%%" % (hard, 100.0 * hard / n))
+    print("  ILLEGAL under P6 (mb nb md nd mg)      %8d  %5.1f%%   <- respell (03 item 24)"
+          % (bad, 100.0 * bad / n))
     return 1 if illegal else 0
 
 
