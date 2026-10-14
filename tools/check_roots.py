@@ -37,8 +37,9 @@ import syllabify as S                      # noqa: E402
 FORM_RE = re.compile(r"^[a-z]{1,12}$")     # a hand-written file contains prose too: ignore it
 
 VOWELS = set("aeiouy")
-AREA_FINALS = ("f", "w", "h", "s")         # A1 layer 1 after R4 (2026-10-14: `s` was added)
-PROPOSED_FINALS = ("m", "r")               # the author's note 1, still DEFERRED (n/l were never asked for)
+AREA_FINALS = ("f", "w", "h", "s", "m", "r")   # A1 layer 1 after R4 (`s`) and R6 (`m`, `r`)
+PROPOSED_FINALS = ("n", "l")               # still illegal as bare-root finals: nothing has asked for
+                                           # them, and R6's class map gives them no job yet
 HARD = set("ptk")
 
 
@@ -140,6 +141,16 @@ def report(forms, pool, words):
             stats["s"] += 1
             notes.append("`s`-final: **R4 is USAGE-LIMITED** -- the branch is reserved, so an "
                          "`s`-final root should be a deliberate, rare pick")
+        if last in ("m", "r"):
+            toks = S.tokenize(form) or []
+            nuces = [t[1] for t in toks if t[0] == "V"]
+            ln = nuces[-1] if nuces else "?"
+            if last == "m" and ln not in ("i", "e", "y"):
+                notes.append("soft rule **R6**: `-m` is meant for roots whose last vowel is a "
+                             "non-open FRONT vowel (i / e / y); this one ends in `%s`" % ln)
+            if last == "r" and not is_func:
+                notes.append("soft rule **R6**: `-r` is meant for FUNCTION WORDS; a content root in "
+                             "`-r` is a deliberate, rare exception")
         # R-b: no hard stop letter (p t k) in a base form -- but `th` is the FRICATIVE /T/ (one
         # phoneme, not a stop), and a nasal+stop is P6's REQUIRED hard spelling (`nk` = coda n +
         # /g/). Both must be masked before scanning, or the check reports false positives.
@@ -163,7 +174,7 @@ def report(forms, pool, words):
         syl = "-".join(an["syllables"]) if an["syllables"] else "-"
         st = an["stressed"] or "-"
         b = base_of(form)
-        sibs = [b + "f", b + "w", b + "h", b + "s", b]
+        sibs = [b + f for f in AREA_FINALS] + [b]
         d1 = [p for p in pool if lev_at_most(form, p, 1)]
         print("### `%s`%s%s" % (form, ("  -- *%s*" % gloss) if gloss else "",
                                 "   [function word]" if is_func else ""))

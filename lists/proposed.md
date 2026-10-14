@@ -61,6 +61,13 @@ unchanged): `basto`→**`basdo`** · `poih`→**`boih`** · `posga`→**`bosga`*
 bare root may not end in `m`/`r`/`s` (A1 layer 1). Two of them also need the C2 respelling
 (`sakar`→`sagar`, `altem`→`aldem`). `ar`, `mer`, `os` are also literally English words (soft warning).
 
+> ✅ **ALL EIGHT ARE NOW LEGAL (2026-10-14, later the same day).** `R4` legalised `s` (→ `os`, `res`),
+> `R5` admitted `ar` / `mer` as **function words** (they take no suffixes, so the bare-root final rule
+> does not apply), and **`R6` added `m` + `r`** to the bare-root finals (→ `esgim`, `aldem`, `sym`,
+> `sagar`). Five of them are now in `../reference/example.md`: `os` (have), `res` (be), `esgim` (foot),
+> `aldem` (face), `sym` (god). Remaining respellings to respect: `sakar`→**`sagar`**,
+> `altem`→**`aldem`** (C2 voiced stops).
+
 **English-dictionary collisions (soft, per the precedence rule beauty > neutrality)** — these are
 literal words in Webster's 2nd, but with *unrelated* meanings, so they are warnings rather than
 rejects: `aba` · `basto` · `eli` · `ima` · `hu` · `ila` (+ `ar`, `mer`, `os` in the pending batch).

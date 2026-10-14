@@ -112,11 +112,11 @@ verdict - it only means "this form is built from material that many languages sh
 
 `#` is this menu's own numbering. `syllables` and `stress` come from `tools/syllabify.py` (default
 stress = the 2nd syllable of the root, P4/N1; the capital lands on the *first letter* of the stressed
-syllable). **A group of five rows is ONE base**, in the fixed order `+f | +w (/v/) | +h | +s | bare`,
-and a base yields exactly **2** roots - so pick **at most one** from the `{+f, +w}` pair and **at most
-one** from the `{+h, +s, bare}` trio. (`+s` is new in **R4**: the `s` branch is RESERVED for a future
-adjective / adverb / exceptional-case job, so a `+s` pick is an ordinary root whose meaning slot is
-held.)
+syllable). **A group of seven rows is ONE base**, in the fixed order
+`+f | +w (/v/) | +h | +s | +m | +r | bare`, and a base yields exactly **2** roots - so pick **at most
+one** from the `{+f, +w}` pair and **at most one** from the `{+h, +s, +m, +r, bare}` group. (`+s` is
+reserved for adjective/adverb duty, `+m` suits front-vowel roots, `+r` is for function words -- see
+**R4**/**R6** in the decision log; the menu prints a soft-rule note when a form breaks one.)
 
 > Sound-only: R3 is PARKED, so assign **no meanings** (`../decision/03-open-questions.md` section 0
 > item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
@@ -166,7 +166,7 @@ def menu(src, top, per, max_en, group=None, mono_top=12):
     data = []
     for b in bases:
         rows = []
-        for form in (b + "f", b + "w", b + "h", b + "s", b):
+        for form in (b + "f", b + "w", b + "h", b + "s", b + "m", b + "r", b):
             an = S.analyse(form)
             sc, why = score(form, words)
             rows.append((form,

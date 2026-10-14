@@ -203,7 +203,30 @@ every future decision must add its rows. Two halves are still open:
     of our endings dilutes). ⚠️ If (b) is ever taken, the **donor ledger** should get a
     "word-final consonants" row updated, and the fingerprint re-measured.
     A third route for the three nouns: a **+vowel respelling** (`esgima`, `aldema`, `syma`), which keeps
-    them legal today at the cost of their sound.
+    them legal today at the cost of their sound. ✅ **RESOLVED the same day: the author chose the
+    extension (`m` + `r`), and `R6` records the class semantics** — the three nouns are now legal (see
+    item 29 for the one mechanism `R6` opened).
+29. **The ADJECTIVE / ADVERB mechanism `root(+h) + V + s` — NEW, and it needs a ruling before any
+    adjective can exist** (author's design, 2026-10-14, tied to `R6`). Their examples:
+    `onlah` + `is`/`as`/`es`/`os` → `onlahis` / `onlahas` / `onlahes` / `onlahos`, where **the vowel
+    agrees with the case/verb suffix of the word it modifies**. Three collisions, deliberately **not**
+    averaged:
+    (a) ⚠️ **`M3b` says a suffix is one syllable `C V (C)`, onset ∈ `{m,n,l,r,s}`** — `-V s` is
+    **vowel-initial** ✗ ⇒ M3b must be amended, or a separate **derivational-ending** shape class
+    created;
+    (b) ⚠️ **the no-adjacent-vowels rule** forbids a vowel-initial ending after a vowel-final root —
+    which is exactly why the author writes `onla(h)`: **`h` is a BUFFER**. So `R6`'s `h` rule is not
+    only a class marker but a **morphological device** ✅ (it also implies: a vowel-final root *must*
+    take `h` before `-Vs`, and any later vowel-initial ending will need the same trick);
+    (c) ⚠️ **`H2` binds a suffix's grade to its own category**; here the vowel is decided by
+    **agreement with another word** ⇒ this is a **new principle** (and arguably the payoff of the whole
+    colour system: colour agreement). State it as an explicit exception to H2, or reword H2.
+    ⚠️ **Unexamined and unverified:** whether `-Vs` can collide with a case suffix on the same root —
+    GEN is `-sa` (`s` + vowel) and the adjective is `-Vs` (vowel + `s`), which *look* distinct, but the
+    **`h` buffer plus tier-2 sync** could bring them together (`onlah`+GEN → `onlasa`: compare
+    `onla`+`-s`+`a`?). **A mechanical check is needed and does not exist yet.**
+    ⚠️ Also open: is `-Vs` an **affix** or a **separate particle** (`H5`-style)? A particle would avoid
+    (a) and (b) entirely, at the cost of one more free word per modification.
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**

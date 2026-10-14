@@ -43,7 +43,8 @@ SUFFIXES = [("NOM", "zero", ""), ("ACC", "dominant", "na"), ("GEN", "dominant", 
             ("DAT", "subdominant", "me"), ("LOC", "subdominant", "ner"),
             ("INS", "subdominant", "ser"), ("OBL", "subdominant", "le"),
             ("V1", "tonic", "ri"), ("V2", "tonic", "ni")]
-FINALS = ("f", "w", "h", "s")              # R4 added `s` (it is a coda, so no M3a repair is needed)
+FINALS = ("f", "w", "h", "s", "m", "r")    # R4 added `s`; R6 added `m` and `r` -- all are codas,
+                                           # so none of them needs an M3a repair
 TIER1_ONSETS = ("m", "n")                  # + f/w/h = fm fn hm hn wm wn (the VCV-only clusters)
 TIER2 = {("f", "s"): "ss", ("w", "s"): "ss", ("h", "s"): "s",
          ("f", "r"): "rr", ("w", "r"): "rr", ("h", "r"): "r",

@@ -14,6 +14,14 @@
 - mer (with)
 - mei (not; negator — postposed to what it negates, S1)
 
+# bare root — batch 2 (released by R4 / R5 / R6, 2026-10-14)
+- esgim (foot) — R6: `-m` for a front non-open vowel (i / e / y) ✓ this root ends in `i`
+- aldem (face) — author wrote `altem`; voiced per C2 (R-b). R6: `-m` ✓ ends in `e`
+- sym (god) — R6: `-m` ✓ ends in `y`; stays ONE syllable (a chant word)
+- os (have) — R6: an `-s` root for a 1-syllable VERB-related word
+- res (be) — same class as `os` (1-syllable, verb-related). ⚠️ their verb class (V1 `-ri` / V2 `-ni`)
+  is not decided yet
+
 # bare root — batch 1 (author's own roots, 2026-10-14; checked by `../tools/check_roots.py`)
 # ⚠️ Spelling follows C2/R-b: the DICTIONARY form uses the VOICED stop, so a hard realisation is
 # written `basdo` here and may still be sung `basto` (the voicing knob). Glosses are PROVISIONAL
