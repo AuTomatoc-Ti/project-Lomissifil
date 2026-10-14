@@ -52,6 +52,10 @@ def score(form, words):
     if form[-1] in AREA_FINALS:
         sc += 2
         why.append("area-rule final (+2)")
+    if form[-1] == "s":
+        sc -= 1            # R4 is USAGE-LIMITED by the author: the `s` branch is reserved, so an
+        why.append("`s`-final: reserved branch, meant to be RARE (-1)")   # s-final root is a
+                                                                          # deliberate, unusual pick
     for c in VCV_CLUSTERS:
         if c in form:            # legal ONLY intervocalically (P2), so a hit is always the cluster
             sc += 2
@@ -96,7 +100,8 @@ file is lost on regeneration.
 | **+2** | an intervocalic cluster `fm fn hm hn wm wn jm jn` | A13 - near-unattested |
 | **+2** | a hiatus "leap" `iu yu ia ya` | A4 - a designed 2x2, no donor |
 | **+1** | an onset cluster `pr br tr dr kr gr` | A12 - a whitelist, not a copy of any language |
-| **-2** | the form **IS an English word** | measured: 143 of 105,936 forms (0.135%) are in Webster's 2nd |
+| **-1** | an `s`-final form | **R4**: the `s` branch is RESERVED for a future adjective / adverb job, so `s`-final roots are meant to be **RARE** (author's ruling) |
+| **-2** | the form **IS an English word** | measured: 421 of 133,845 forms (0.315%) are in Webster's 2nd |
 
 Every row shows **why** it scored. The weights live in one place: `tools/menu.py`, `score()`.
 

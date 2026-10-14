@@ -19,6 +19,11 @@ entry reports:
                 collide in GEN/INS/OBL/V1, measured in seam-sheet.md)
 
 Nothing here writes to `reference/example.md`: passing is a report, the author decides.
+
+**BUILT-IN SELF-TEST:** `python3 tools/check_roots.py --src ../reference/example.md` audits the real
+lexicon, which is known-good by construction, so it must report **0 breaking A1 layer 1 and 0 breaking
+R-b**; anything else is a bug in this checker (two such bugs were found this way on 2026-10-14: `t`
+inside the fricative `th`, and the P6 hard spellings `mp np mt nt mk nk`).
 """
 
 import argparse
@@ -38,17 +43,36 @@ HARD = set("ptk")
 
 
 def parse(path):
+    """-> [(form, gloss, section)]. A hand-written file contains prose: only real word lines are
+    taken, and the current `# section` is remembered so a *function word* can be judged by R5's
+    rule instead of A1's bare-root rule."""
     out = []
+    section = ""
     for ln in open(path, encoding="utf-8"):
-        s = ln.strip()
-        if not s or s.startswith("#"):
+        if ln[:1] in (" ", "\t"):
+            continue                        # wrapped continuation lines are INDENTED; entries start
+        s = ln.strip()                      # at column 0 (this is what keeps prose out)
+        if not s:
+            continue
+        if s.startswith("#"):
+            section = s.lstrip("# ").strip()
             continue
         if s.startswith("- "):
             s = s[2:].strip()
-        form, _, gloss = s.partition(",")
-        form = form.strip().lower()
-        if FORM_RE.match(form):            # prose lines are ignored, not misread as forms
-            out.append((form, gloss.strip()))
+        if "," in s:
+            form, gloss = s.split(",", 1)
+            form, gloss = form.strip().lower(), gloss.strip()
+            if FORM_RE.match(form):
+                out.append((form, gloss, section))
+                continue
+            # a comma inside the GLOSS (`basdo (—; author wrote basto, voiced)`) must not eat the
+            # line -- fall through to the token regex instead of dropping it
+        m = re.match(r"^([a-z]{1,12})(.*)$", s)
+        if not m:
+            continue
+        form, rest = m.group(1), m.group(2).strip()
+        if rest == "" or rest.startswith(("(", "\u2014", "-")):   # `lafi (birth)` or a bare token
+            out.append((form, rest, section))
     return out
 
 
@@ -87,43 +111,77 @@ def base_of(form):
 
 
 def report(forms, pool, words):
-    for form, gloss in forms:
+    """Per-form verdicts + a summary. Function words (R5) are judged by A1's 'any word' layer."""
+    stats = {"n": 0, "legal": 0, "a1": 0, "rb": 0, "en": 0, "s": 0}
+    for form, gloss, section in forms:
+        stats["n"] += 1
+        is_func = "function word" in section.lower()
+        is_name = "name" in section.lower()
         an = S.analyse(form)
         notes = []
         if not an["syllables"]:
             notes.append("**ILLEGAL spelling** (phonotactics)")
         last = form[-1]
-        if last in PROPOSED_FINALS:
+        if is_name:
+            notes.append("proper name (**C2 exemption**): the voicing knob does not apply, and a name "
+                         "is a word, not a bare root -- so no A1 layer-1 constraint either")
+        elif is_func:
+            notes.append("function word (**R5**): it takes no suffixes, so the bare-root final rule "
+                         "has no purpose for it -- A1's 'any word' layer applies")
+        elif last in PROPOSED_FINALS:
+            stats["a1"] += 1
             notes.append("**breaks A1 layer 1**: a bare root may not end in `%s` (allowed since R4: "
-                         "a vowel, `f`, `w`, `h`, `s`) -- this is the DEFERRED part of the author's "
-                         "note 1 (03-open-questions.md section 0 item 28)" % last)
+                         "a vowel, `f`, `w`, `h`, `s`) -- the DEFERRED part of the author's note 1 "
+                         "(03-open-questions.md section 0 item 28)" % last)
         elif last not in VOWELS and last not in AREA_FINALS:
+            stats["a1"] += 1
             notes.append("**breaks A1 layer 1**: ends in `%s`" % last)
+        if last == "s":
+            stats["s"] += 1
+            notes.append("`s`-final: **R4 is USAGE-LIMITED** -- the branch is reserved, so an "
+                         "`s`-final root should be a deliberate, rare pick")
         # R-b: no hard stop letter (p t k) in a base form -- but `th` is the FRICATIVE /T/ (one
-        # phoneme, not a stop), so a `t` inside `th` must not be flagged; same for `sh`.
+        # phoneme, not a stop), and a nasal+stop is P6's REQUIRED hard spelling (`nk` = coda n +
+        # /g/). Both must be masked before scanning, or the check reports false positives.
         scan = form.replace("th", "@").replace("sh", "#")
-        for ch in "ptk":
+        for p6 in ("mp", "np", "mt", "nt", "mk", "nk"):
+            scan = scan.replace(p6, "@@")
+        for ch in ("ptk" if not is_name else ""):
             if ch in scan:
                 i = scan.index(ch)
+                stats["rb"] += 1
                 notes.append("**breaks R-b**: base forms are voiced -- write `%s`"
                              % (form[:i] + {"p": "b", "t": "d", "k": "g"}[ch] + form[i + 1:]))
                 break
         if "ng" in form[1:]:
             notes.append("P6: `ng` reads as /N/ (ONE phoneme) -- if you meant n+g, spell it `nk`")
         if words is not None and form in words:
+            stats["en"] += 1
             notes.append("**IS an English word** (-2 in the menu's ranking)")
+        if not notes:
+            stats["legal"] += 1
         syl = "-".join(an["syllables"]) if an["syllables"] else "-"
         st = an["stressed"] or "-"
         b = base_of(form)
         sibs = [b + "f", b + "w", b + "h", b + "s", b]
         d1 = [p for p in pool if lev_at_most(form, p, 1)]
-        print("### `%s`%s" % (form, ("  -- *%s*" % gloss) if gloss else ""))
+        print("### `%s`%s%s" % (form, ("  -- *%s*" % gloss) if gloss else "",
+                                "   [function word]" if is_func else ""))
         print("  syllables %-14s stress %-14s   siblings: %s" % (syl, st, " ".join(sibs)))
         print("  in the pool right now: %s" % ("YES" if form in pool else "no"))
         print("  distance-1 neighbours in the pool: %d%s"
               % (len(d1), ("  e.g. " + " ".join(d1[:6])) if d1 else ""))
         print("  %s" % ("; ".join(notes) if notes else "passes every locked rule checked here"))
         print()
+    n = float(stats["n"]) or 1.0
+    print("# summary")
+    print("  forms checked           : %d" % stats["n"])
+    print("  clean (no note at all)  : %d (%.1f%%)" % (stats["legal"], 100.0 * stats["legal"] / n))
+    print("  breaking A1 layer 1     : %d" % stats["a1"])
+    print("  breaking R-b            : %d" % stats["rb"])
+    print("  English-word collision  : %d   (soft warning)" % stats["en"])
+    print("  s-final (R4, keep rare) : %d (%.1f%%)" % (stats["s"], 100.0 * stats["s"] / n))
+
 
 
 def main():

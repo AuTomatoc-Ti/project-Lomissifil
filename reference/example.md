@@ -9,6 +9,11 @@
 - roi (day)
 - argonna (love)
 
+# function word (class: takes NO suffixes — R5; shape = A1's "any word" layer)
+- ar (from) — postposed by default: `X ar` = "from X" (the R5 mechanism that replaced ABL)
+- mer (with)
+- mei (not; negator — postposed to what it negates, S1)
+
 # bare root — batch 1 (author's own roots, 2026-10-14; checked by `../tools/check_roots.py`)
 # ⚠️ Spelling follows C2/R-b: the DICTIONARY form uses the VOICED stop, so a hard realisation is
 # written `basdo` here and may still be sung `basto` (the voicing knob). Glosses are PROVISIONAL
