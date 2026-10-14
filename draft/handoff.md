@@ -71,6 +71,11 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   onset and first vowel, **ranked by an auditable bias** (+2 for the un-donated features: area-rule
   final, the `fm`-class cluster, a hiatus leap; +1 for an onset cluster; −2 if the form is a real
   English word). `--group th --per 6` browses one sound in depth. Weights: `score()` in the tool.
+- **M3a seam, read aloud:** `python3 tools/seam.py > ../lists/seam-sheet.md` — a root + all 9 suffixes
+  with the seam tier that fired and the root-based stress. This is the **audition method that replaced
+  the synthesiser** (the author reads the written forms aloud): tier 3 is dormant for the current
+  suffix set, and the within-branch alternatives collide in GEN/INS/OBL/V1 — which is why `picks.md`'s
+  "at most 2 roots per base" rule is correctness, not style.
 
 ## Where it stands / exact next step
 

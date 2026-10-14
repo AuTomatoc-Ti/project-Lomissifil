@@ -104,6 +104,26 @@ Every row shows its reasons, so the ordering can be audited; the weights live in
 never hit a real English word by accident. It is generated: **picks go in `picks.md`** (record the
 form TEXT, not just the menu's number).
 
+## `seam-sheet.md` — the M3a seam, to be read ALOUD (generated)
+
+The seam (a root ending in `f`/`w`/`h` + a suffix) fires for **3 of every 4** coined roots, lands
+**unstressed**, and has never been judged by ear — and the synthesiser is rejected. The author's
+method (2026-10-14) is therefore **reading the written forms aloud**, and this file is that material:
+
+```
+python3 tools/seam.py > lists/seam-sheet.md          # 6 bases x (3 finals + bare) x 9 suffixes
+python3 tools/seam.py --bases 12 --seed 7            # more material, another sample
+```
+
+Each table shows a root with all 9 suffixes (7 cases + 2 verb classes), the **seam tier** that fired,
+and the stress **counted from the root** (P4c — so a suffix never steals the stress). The closing
+section, "Do the siblings stay distinct?", is the reason the `<= 2 per base` rule in `picks.md` is a
+**correctness** rule: the two alternatives inside one branch collide in GEN/INS/OBL/V1.
+
+⚠️ It also **verifies** M3a: **tier 3 (the copied vowel) never fires** for the current suffix set,
+because all 9 suffixes start with `m n l r s` and tiers 1-2 cover all 15 combinations — so the seam is
+fully determined today, and tier 3 is future-proofing for suffixes that do not exist yet.
+
 ### What is deliberately NOT here
 
 - The `legacy-mono4` / `legacy-diph4` / `legacy-core` configs reproduce `decision/05`'s own figures

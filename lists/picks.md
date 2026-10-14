@@ -20,8 +20,16 @@ the generated `.txt` data files must stay machine-produced (`00-README.md`).
   **say/sing it yourself** (the orthography is 1:1: `y`=/y/, `ae`=/æ/, `a`=/ɑ/, `o`=/o/, `u`=/u/,
   `e`=/e/, `i`=/i/, `w`=/v/, `sh`=/ʃ/, `th`=/θ/, `c`=/t͡ʃ/).
 - Each **group of 4 = one base**, in a fixed order: `+f` | `+w` (/v/) | `+h` | bare.
-- By **R1/R3** a base yields **exactly 2** roots: **at most one** from the `{+f, +w}` column and
-  **at most one** from the `{+h, bare}` column. Marking more than two in a group is taste, not coining.
+- By **R1/R3** a base yields **exactly 2** roots: **at most one** from the `{+f, +w}` pair and
+  **at most one** from the `{+h, bare}` pair. ⚠️ **This is a CORRECTNESS rule, not a style
+  preference.** The two members of a *branch* are alternatives for one slot, and their suffixed forms
+  **collide**: `+f` vs `+w` (and `+h` vs bare) become **identical in GEN, INS, OBL and V1** — measured
+  in `seam-sheet.md` ("Do the siblings stay distinct?"), because tier 2 syncs `f`/`w` into `ss`/`rr`/
+  `ll` and drops `h` entirely. Cross-branch pairs always stay distinct in all 9 forms ✓. So coining
+  one root per branch is what keeps the paradigm unambiguous.
+- **Before you read the menu, read `seam-sheet.md` once aloud**: it is the only material that shows
+  what a *paradigm* looks like (root + 7 cases + 2 verb classes), and the seam is the one layer that
+  has never been judged by ear.
 - `w` = /v/. The letter **`v` is the vibrato mark**, never a letter, so a /v/-final form is written `...w`.
 - Citation forms carry **no stress mark** (P4: the dictionary form is unstressed).
 

@@ -89,15 +89,21 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     WAVs — it must be done **live** (the author reads / sings the written forms);
     (b) the roots audition's evidence is now the **written list** (`audio/roots-index.txt`), not the
     WAVs — picks go to `lists/picks.md`;
-    (c) ⚠️ **a replacement method for judging beauty is OPEN.** Until it exists, **goal i ("beautiful
-    to hear") cannot be tested at all**, which arguably makes this the most blocking open item in this
-    file. Candidate methods: the author **reads the written forms aloud** (the orthography is 1:1, so
-    spelling -> sound needs no engine), a single **hand-picked human speaker**, or **print-only**
-    judgement (no audio at all).
+    (c) ✅ **RESOLVED (author, 2026-10-14): the replacement method is the author READING THE WRITTEN
+    FORMS ALOUD** (the orthography is 1:1, so spelling -> sound needs no engine). First application:
+    `../lists/seam-sheet.md`, the M3a seam sheet (`tools/seam.py`). No synthesiser, ever again.
 20. **`lists/picks.md`** is the hand-written home for audition picks (the `.txt` files must stay
-    machine-generated — `lists/00-README.md`). ⚠️ Picks from the existing material are **bare roots
-    only**: the **M3a seam** (root-final `f`/`v`/`h` + a case suffix, always *unstressed*) is **not**
-    covered by that round, so it stays unjudged by ear.
+    machine-generated — `lists/00-README.md`). ⚠️ The **M3a seam** is not covered by the bare-root
+    round — but it now has its own material: ✅ **`../lists/seam-sheet.md`** (`tools/seam.py`), which
+    the author reads aloud (item 19c). Two things that tool **verified** while generating it:
+    (a) **tier 3 (the copied vowel) NEVER fires** for the current 9 suffixes — all of them start with
+    `m n l r s` and tiers 1-2 cover all 15 combinations — so M3a is **fully determined today**, and
+    tier 3 is future-proofing for suffixes that do not exist yet;
+    (b) ⚠️ **the two alternatives inside one branch collide**: `+f` vs `+w` (and `+h` vs bare) become
+    **identical in GEN, INS, OBL and V1** (`thaeumtof` / `thaeumtow` → both `thaeumtossa`), because
+    tier 2 syncs `f`/`w` into `ss`/`rr`/`ll` and drops `h`. Cross-branch pairs stay distinct in all 9
+    forms. ⇒ the "**at most 2 roots per base**" rule in `picks.md` is a **CORRECTNESS requirement**,
+    not a style preference: coining both members of one branch would make the paradigm ambiguous.
 
 **G. NEW — raised by running the first audition material (2026-10-14, needs a ruling)**
 21. ~~**`sh` and `ng` are HOMOGRAPHIC and both readings are legal.**~~ — **DECIDED = `P6` (author,
