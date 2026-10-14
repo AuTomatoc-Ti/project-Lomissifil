@@ -28,17 +28,43 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
 10. **M5 verb morphology, M6 (pronouns? questions?), M7 compounding** — not started.
 
 **C. Documentation / data debt**
-11. **Capacity recompute by script** (`05`): its two "current rules" tables disagree (`|CC|` 91 vs 92,
-    `|Ci|` 18 vs 15) and the **1-syllable and 3-syllable root classes are not counted at all** → the
-    totals there and `R2`'s "461,760" are lower bounds / possibly wrong.
-12. **`A1` vs `R1`/`05` contradiction:** word-final set = `m n l r s` (A1) vs `∅ / f / v / h` (R1, 05).
-    M3a *implicitly* assumes the `f/v/h` finals — resolve explicitly.
+11. ~~**Capacity recompute by script** (`05`)~~ — **DONE** (`tools/enumerate_roots.py`, 2026-10-14);
+    full findings in `05`'s UPDATE section. In short: `|CC| = 91` is confirmed but is a
+    *letter-pattern* count (the syllable reading is 80); the last inconsistency is the `CVV` row
+    (60 vs 72 → family total 457,485 vs 457,497, so `R2`'s "461,760" is the rejected `92` family);
+    **every count in `05` used a pre-`c`/`j` onset set (13/14)**, so on the locked inventory the
+    figures rise 264,600 → 345,600 (single onsets) → **457,425** (clusters allowed, same-day
+    ruling A); greedy 16,108 → 20,025 → **26,751**; the 1- and 3-syllable classes are now counted
+    (1-syllable bare root: **285** vowel-final / **1,140** with an area-rule final —
+    the earlier 1,350 used the *coda* set, which the author's 2026-10-14 ruling excludes; 3-syllable
+    `CVCVCV`: 44,286,750 lower bound, clusters allowed). **Still open inside item 11:** `05`
+    conclusion 4 — per-segment vs per-feature distance.
+12. ~~**`A1` vs `R1`/`05` contradiction**~~ — **RESOLVED (author's ruling, 2026-10-14): they are
+    TWO LAYERS, not a contradiction.** A **bare root** may end in `∅` (a vowel) or `f`/`v`/`h`
+    (that is `R1`'s area rule) and may **not** end in `m n l r s`; **any word** (every
+    suffixed/derived form) may end in `∅`, `f`, `v`, `h` **or** `m n l r s`. So `los` is not a
+    legal bare root but `laf` is, and `-ner` / `-ser` are legal because they are *word*-final.
+    **Consequences:** M3a stays **load-bearing** (bare roots really do end in `f/v/h`), so items 1
+    and 2 above **stay open**; and the bare-root coining rule for the first batch is
+    **vowel-final, or `f`/`v`/`h`-final**. `01-phonology.md` §5 now states this explicitly.
 13. **Notation edge cases still open** (§C): length on a diphthong, `rr` as a trill, capital on the `ae`
     digraph, multiple capitals in a word, whether stress marks are allowed in the poetry register.
 14. **Lexicon is still only 6 items** (`reference/example.md`) → real sentences are impossible, which
     blocks the textbook. Coining rules to obey: R1/R2 shapes, R5-area finals, H3's coining rule
-    (never distinguish two morphemes by tonic-vs-subdominant alone), and the identity budget (24 of 30
-    suffix shapes still free).
+    (never distinguish two morphemes by tonic-vs-subdominant alone), and the identity budget (**23 of 30**
+    suffix shapes still free: 7 used). **NEW (2026-10-14, after the area-rule mechanism was pinned):** what do
+    the **two siblings of an area-rule pair** mean to each other? The pair differs by **one segment
+    only**, so if their meanings are unrelated the lexicon acquires near-minimal pairs *by
+    construction* — which is exactly what the distance-`>= 2` guideline exists to avoid (it is
+    "soft", and the area rule is "hard", so the collision is deliberate — but the **semantics** of a
+    pair: ⏸️ **PARKED BY THE AUTHOR (2026-10-14).** The author's direction is **C — the branches carry
+    grammatical meaning** (`00-README.md` **R3**), but the content question was then **explicitly
+    dropped**: *"skip this first, drop it as open question"*. So R3 is **decided in shape, OPEN in
+    content, and must not be built on**. **Practical consequence for step 3 (important):** provisional
+    coinage stays **SOUND-ONLY — assign no pair semantics yet** (exactly what `tools/audition_roots.py`
+    does). Two costs already recorded under R3: the class is **lexical, not productive** (it cannot
+    behave like an English derivational suffix), and once the content *is* fixed, coining happens
+    **in pairs** (1,000–3,000 roots ≈ 500–1,500 bases × 2).
 
 **D. Big areas not started (material now exists for two of them)**
 15. **Prosody ↔ melody mapping.** Now has real input: the grade system (H1–H7), the composer/listener
@@ -52,6 +78,26 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
 **E. Reserved contingency (decided, not active)**
 18. Keep the case grades at **1·2·4**; if future corpus/music work shows too many IV in a clause, the
     one-line fix is **INS → dominant** (yields 1·3·3).
+
+**F. Tooling / process (decided)**
+19. **Synthesiser auditioning is REJECTED (author, 2026-10-14) — and it leaves a REAL GAP.**
+    `espeak-ng -v fi` output is judged **rough and unneutral** (it forces a Finnish voice onto the
+    language), so **no further WAVs are to be generated — this round or in future**. `audio/` is now a
+    **frozen historical record**, and `tools/audition_m1.py` / `tools/audition_roots.py` are
+    **historical — do not re-run** (see `draft/handoff.md`, tooling section). Consequences:
+    (a) **M1's full re-test** ("real suffixed vs prefixed words", §A.2) can **no longer** be done from
+    WAVs — it must be done **live** (the author reads / sings the written forms);
+    (b) the roots audition's evidence is now the **written list** (`audio/roots-index.txt`), not the
+    WAVs — picks go to `lists/picks.md`;
+    (c) ⚠️ **a replacement method for judging beauty is OPEN.** Until it exists, **goal i ("beautiful
+    to hear") cannot be tested at all**, which arguably makes this the most blocking open item in this
+    file. Candidate methods: the author **reads the written forms aloud** (the orthography is 1:1, so
+    spelling -> sound needs no engine), a single **hand-picked human speaker**, or **print-only**
+    judgement (no audio at all).
+20. **`lists/picks.md`** is the hand-written home for audition picks (the `.txt` files must stay
+    machine-generated — `lists/00-README.md`). ⚠️ Picks from the existing material are **bare roots
+    only**: the **M3a seam** (root-final `f`/`v`/`h` + a case suffix, always *unstressed*) is **not**
+    covered by that round, so it stays unjudged by ear.
 
 ## A. M1 — affix direction (DECIDED, **PROVISIONAL**)
 
@@ -69,8 +115,57 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
   either prefix or suffix) was **considered and rejected** — the author chose to assume
   suffixes rather than pay that design cost.
 - **Re-test trigger:** once M2–M5 give enough material to audition real suffixed words
-  against prefixed ones (recipe: `espeak-ng -v fi` in `draft/handoff.md`). Note that a
-  direction smoke-test is possible *now* with non-semantic sound-strings.
+  against prefixed ones. ⚠️ The 2026-10-14 recipe (`espeak-ng -v fi`) is **no longer usable** — the
+  engine is rejected (§0 item 19) — so this re-test must now be **live**. Note that a direction
+  smoke-test *is* possible with non-semantic sound-strings; it was run — see §A.1/§A.2.
+
+### A.1 RE-TEST EVIDENCE — the M1 audition, run 2026-10-14
+
+Tool: `tools/audition_m1.py` (recipe `espeak-ng -v fi -s 130`) — ⚠️ that engine was **later rejected**
+as rough and unneutral (§0 item 19), so the script is now **historical: do not re-run**. The WAVs it
+produced are kept in `../audio/` (`01`–`05`). Method: the SAME M4a case morphemes (M3b shape, H3/H4
+grade vowels) placed once AFTER the root and once BEFORE it — non-semantic sound-strings.
+
+**STATUS: the author LISTENED on 2026-10-14 and judged it good → §A.2 (M1 stays SUFFIXES).** The
+files were `01` suffix chain · `02` prefix chain · `03` an A/B alternation on `seli` · `04` the rhyme
+probes · `05` the vowel-initial seam. The two hard facts below are what the script proves *without*
+ears:
+
+1. **Prefixing has its own seam, and it is not obviously cheaper.** A prefix is vowel-final (coda
+   `∅`) or `V`+`C`, so with a **vowel-initial root** the four vowel-final morphemes break the
+   "no adjacent vowels" rule: `niarGonna · siarGonna · moarGonna · loarGonna` are **illegal**; only
+   the two `C`-final ones survive (`norarGonna · sorarGonna`). Scale: vowel-initial roots are
+   `VCV + VCCV = 21,600 / 345,600` base forms ≈ **6.3%**, but they lose **4 of the 6** case
+   morphemes. Suffixing's seam (M3a) is the mirror image: it hits `f/v/h`-final roots (which exist
+   only under the word-final area rule) but is **already solved**, with three tiers.
+2. **Where the weight sits.** Suffixes keep the root's stress at the front (`seLi-na`) and end in an
+   unstressed tail; prefixes push the stressed root later (`na-seLi`). Since rhyme lives at the
+   END, that is the axis the ear is judging: a suffix tail carries the rhyme vowel **by rule**; a
+   prefix tail carries the root's own vowel (**lexical**).
+3. **The rhyme consequence is class-local, not global** (feeds §0 item 16): ACC across classes =
+   `seLina · losDoni · Roini · arGonnani` → front roots take `-na`, back roots `-ni`; DAT =
+   `seLime · losDomo · Roimo · arGonnamo`. So "suffix vowels make rhyme automatic" holds only
+   *within one root class* — which turns the root's class into a **rhyming device**. (Observation,
+   not a decision.)
+
+### A.2 SMOKE-TEST RESULT (2026-10-14): **PASSED — M1 stays SUFFIXES**
+
+The author listened to the audition (`tools/audition_m1.py`; the six WAVs in
+`/tmp/lomissifil-audition/`) and judged it **good**, so the suffix direction survives its first
+perceptual test. ⚠️ **Do not overread the strength:** this is an *early* test on **non-semantic
+sound-strings**, so it clears the **direction itself**, not the morphological system that gets built
+on it. Section A's own **re-test trigger stands** — once M2–M5 supply enough material, real suffixed
+words must be auditioned against real prefixed ones.
+
+Two things that listening did **not** settle, and the author has not commented on either:
+
+- the **prefix-side seam** (`niarGonna · siarGonna · moarGonna · loarGonna` are illegal; §A.1 item 1);
+- the **class-local rhyme** (same case does not rhyme across root classes; §A.1 item 3).
+
+> ⚠️ **Caveat added 2026-10-14:** the engine used for this test (`espeak-ng`) was **later rejected** as
+> rough and unneutral (§0 item 19). The *direction* verdict is a coarse A/B comparison, which such an
+> engine can still carry — but this evidence is **weaker than "PASSED" suggests**, and the **live
+> re-test** (§0 item 19a) is what actually settles M1.
 
 ## B. Morphology queue (after M1)
 
@@ -95,8 +190,7 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
 - **M4 — the case inventory: DECIDED + table complete (M4a).** **NOM** I · zero · `lati` / **ACC** V · `n` ·
   `-na` / **GEN** V · `s` · `-sa` / **DAT** IV · `m` · `-me` / **LOC** IV · `n`+`r` · `-ner` / **INS** IV ·
   `s`+`r` · `-ser` / **OBL** IV · `l` · `-le`. Verbs: **V1** I · `r` · `-ri` / **V2** I · `n` · `-ni` (same
-  skeleton as ACC — distinguished by grade alone, which H3's coining rule allows). **6 of 30 identities
-  used.** ⚠️ The OBL choice forces the **`l` row of the M3a seam** (`{f,v}`+`l` → `ll`, `h`+`l` → `l`) —
+  skeleton as ACC — distinguished by grade alone, which H3's coining rule allows). **7 of 30 identities used** (the 6 noun cases + V1`r`; V2 re-uses ACC's `n`). ⚠️ The OBL choice forces the **`l` row of the M3a seam** (`{f,v}`+`l` → `ll`, `h`+`l` → `l`) —
   adopted by necessity. ⚠️ **Grade balance — CORRECTED (author's challenge):** 1·2·4 (I·V·IV), and the
   agent's "OBL is high-frequency" claim is **withdrawn** — with six cases covering the normal roles, the
   else-case is plausibly low-frequency; and the *frequent* cases (NOM/ACC/GEN) already carry the I-vs-V
@@ -229,8 +323,9 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
   centre**, never absolute colour.
 - **Rhyme (押韻)** — a stated design goal and **still undesigned**; the automatic-rhyme tension
   (grade-determined endings rhyme by rule) is noted in H3/H6.
-- ~~An auditioning workflow for real listening~~ — **DONE**: the `espeak-ng -v fi` recipe is verified
-  and recorded in `../draft/handoff.md`.
+- ~~An auditioning workflow for real listening~~ — **first attempt DONE, then REJECTED** (author,
+  2026-10-14): the `espeak-ng -v fi` recipe works mechanically but sounds rough and **unneutral**, so
+  it is **no longer the method** — see §0 item 19 (the replacement is still open).
 
 ## G. The vowel-colour ("grade") system — raised by the author
 

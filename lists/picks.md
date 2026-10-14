@@ -1,0 +1,45 @@
+# lists/picks.md — audition picks (HAND-WRITTEN; never regenerate this file)
+
+Step 3 of the agreed path (`../draft/handoff.md`, "Where it stands"): pick the forms that **sound
+beautiful**; the picks become the **first coined bare roots**. This file is the home for that, because
+the generated `.txt` data files must stay machine-produced (`00-README.md`).
+
+> ⚠️ **Sound-only. Assign NO meanings.** `R3` (what the two area-rule siblings mean to each other) is
+> **PARKED** — `../decision/03-open-questions.md` §0 item 14 — so do not build on pair semantics.
+> A pick is **not** a word, and `../reference/example.md` remains the only source for examples.
+
+## How to pick
+
+- **Source:** `../audio/roots-index.txt` — 48 bases x 4 forms, numbered **1-192** (continuous across
+  the six WAV files).
+- **Signal = the written forms, not the audio.** The synthesised WAVs were **rejected** by the author
+  on 2026-10-14 as rough and unneutral, and no further WAVs will be generated
+  (`../decision/03-open-questions.md` §0 item 19). So read the list; if you want to hear a form,
+  **say/sing it yourself** (the orthography is 1:1: `y`=/y/, `ae`=/æ/, `a`=/ɑ/, `o`=/o/, `u`=/u/,
+  `e`=/e/, `i`=/i/, `w`=/v/, `sh`=/ʃ/, `th`=/θ/, `c`=/t͡ʃ/).
+- Each **group of 4 = one base**, in a fixed order: `+f` | `+w` (/v/) | `+h` | bare.
+- By **R1/R3** a base yields **exactly 2** roots: **at most one** from the `{+f, +w}` column and
+  **at most one** from the `{+h, bare}` column. Marking more than two in a group is taste, not coining.
+- `w` = /v/. The letter **`v` is the vibrato mark**, never a letter, so a /v/-final form is written `...w`.
+- Citation forms carry **no stress mark** (P4: the dictionary form is unstressed).
+
+## Picks (empty — the author fills this in)
+
+| # | form | base | why it sounds good | note |
+|---|---|---|---|---|
+|  |  |  |  |  |
+
+## Why write down "why"
+
+The reason is real data: it is the **only** record of the author's beauty judgement, and it is what a
+future **neutrality pass (goal 2, still has no mechanism)** has to work against. Picking by ear alone
+biases the lexicon toward the picker's L1 phonotactics — recording the reason is what makes that
+bias inspectable later.
+
+## ⚠️ What this round does NOT test
+
+All four forms are **bare roots**. The **M3a seam** — a root-final `f`/`v`/`h` followed by a case
+suffix (`-na`, `-sa`, `-me`, `-ner`, `-ser`, `-le`), which is **always unstressed** — is **not**
+covered here, and M3a fires for **3 of every 4** coined roots. That layer is where the
+sung-intelligibility risk (`../decision/03-open-questions.md` §F) and the beauty goal meet, and it
+currently has **no test method at all** (§0 item 19c).

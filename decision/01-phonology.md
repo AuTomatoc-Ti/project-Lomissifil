@@ -147,7 +147,28 @@ read as stressed.)*
 - **Coda (P3):** only `m n l r s`.
 - **Geminates:** `ss nn ll mm rr ww` — **intervocalic only**, never word-final
   (`argonna` OK, `argonn` NO). `argonna` = `ar-gon-na` is valid.
-- **Word-final (A1, assumed):** `m n l r s`. Voiceless/voiced stops never end a word.
+- **Word-final — TWO layers (author's ruling 2026-10-14; A1 and R1 are NOT in conflict):**
+  - a **bare root** may end in `∅` (a vowel) **or** `f` / `v` / `h` — this is `R1`'s **area rule**;
+    it may **not** end in `m n l r s`. **Mechanism (author's ruling 2026-10-14):** the area rule is
+    **two independent binary choices** — one picks a **fricative** from `{f, v}`, the other picks
+    **either `h` or nothing** — so every base yields **exactly 2** bare roots: one from the
+    `{f,v}` branch and one from the `{h,∅}` branch (base `lafi` → `lafif`/`lafiw`, and `lafih`/`lafi`).
+    **Spelling:** the `/v/` member is written `w` — `v` is the *vibrato* mark and not a letter, so a
+    /v/-final root is `…w` (e.g. `lafiw`), never `…v` (see `02-notation.md`).
+    The raw *form* space is therefore 4 per base, while the **coined** space is **2 per base**.
+    The two siblings differ in one segment only, so a pair is **exempt** from the
+    distance-`>= 2` guideline (R2: the area rule is *hard*, the consonant-distance guideline *soft*).
+    **The branch choice is NOT free texture (author's ruling, 2026-10-14 = `R3`):** the branch
+    carries **grammatical meaning** — the root's final consonant marks a **class** whose content is
+    still to be defined (`00-README.md` R3; `03-open-questions.md` §0 item 14). The only *free* choice
+    left is within a branch (`f` vs `w`; `h` vs no final). Note the two siblings **share the same H4
+    trigger** (a coda never changes the last-syllable nucleus), so a pair is grammatically identical
+    except for the class;
+  - **any word** (i.e. including every suffixed / derived form) may end in `∅`, `f`, `v`, `h`
+    **or** `m n l r s` (the P3 coda set);
+  - voiced/voiceless stops never end a word (`p t k` are performance spellings of `b d g` anyway — C2);
+  - consequence: `los` is **not** a legal bare root while `laf` is, and `-ner` / `-ser` are legal
+    because they are *word*-final, not *bare-root*-final.
 - **No adjacent vowels** beyond sections 3 and 4: if two vowels would meet illegally,
   a consonant must separate them. (This is a hard constraint that morphology must
   satisfy — see the morphology open questions.)

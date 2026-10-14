@@ -1,0 +1,59 @@
+auditioning 48 bases from 26751 (lists/roots-bases-current.txt) -> audio
+  roots-01.wav
+  thastho      1 thasthof   |   2 thasthow   |   3 thasthoh   |   4 thastho   
+  namgae       5 namgaef    |   6 namgaew    |   7 namgaeh    |   8 namgae    
+  dobrae       9 dobraef    |  10 dobraew    |  11 dobraeh    |  12 dobrae    
+  sumtho      13 sumthof    |  14 sumthow    |  15 sumthoh    |  16 sumtho    
+  ujmu        17 ujmuf      |  18 ujmuw      |  19 ujmuh      |  20 ujmu      
+  daehno      21 daehnof    |  22 daehnow    |  23 daehnoh    |  24 daehno    
+  woursaeu    25 woursaeuf  |  26 woursaeuw  |  27 woursaeuh  |  28 woursaeu  
+  leubraei    29 leubraeif  |  30 leubraeiw  |  31 leubraeih  |  32 leubraei  
+  roots-02.wav
+  oillo       33 oillof     |  34 oillow     |  35 oilloh     |  36 oillo     
+  maeijnei    37 maeijneif  |  38 maeijneiw  |  39 maeijneih  |  40 maeijnei  
+  graemdae    41 graemdaef  |  42 graemdaew  |  43 graemdaeh  |  44 graemdae  
+  rouswaei    45 rouswaeif  |  46 rouswaeiw  |  47 rouswaeih  |  48 rouswaei  
+  grortheu    49 grortheuf  |  50 grortheuw  |  51 grortheuh  |  52 grortheu  
+  goumneu     53 goumneuf   |  54 goumneuw   |  55 goumneuh   |  56 goumneu   
+  meuneu      57 meuneuf    |  58 meuneuw    |  59 meuneuh    |  60 meuneu    
+  grinngeu    61 grinngeuf  |  62 grinngeuw  |  63 grinngeuh  |  64 grinngeu  
+  roots-03.wav
+  wifeu       65 wifeuf     |  66 wifeuw     |  67 wifeuh     |  68 wifeu     
+  daeilfeu    69 daeilfeuf  |  70 daeilfeuw  |  71 daeilfeuh  |  72 daeilfeu  
+  nalne       73 nalnef     |  74 nalnew     |  75 nalneh     |  76 nalne     
+  jeijau      77 jeijauf    |  78 jeijauw    |  79 jeijauh    |  80 jeijau    
+  wurshi      81 wurshif    |  82 wurshiw    |  83 wurshih    |  84 wurshi    
+  gildu       85 gilduf     |  86 gilduw     |  87 gilduh     |  88 gildu     
+  jinci       89 jincif     |  90 jinciw     |  91 jincih     |  92 jinci     
+  jausgae     93 jausgaef   |  94 jausgaew   |  95 jausgaeh   |  96 jausgae   
+  roots-04.wav
+  foljy       97 foljyf     |  98 foljyw     |  99 foljyh     | 100 foljy     
+  eimlaeu    101 eimlaeuf   | 102 eimlaeuw   | 103 eimlaeuh   | 104 eimlaeu   
+  bysseu     105 bysseuf    | 106 bysseuw    | 107 bysseuh    | 108 bysseu    
+  shefaeu    109 shefaeuf   | 110 shefaeuw   | 111 shefaeuh   | 112 shefaeu   
+  joibri     113 joibrif    | 114 joibriw    | 115 joibrih    | 116 joibri    
+  sheucou    117 sheucouf   | 118 sheucouw   | 119 sheucouh   | 120 sheucou   
+  gomthou    121 gomthouf   | 122 gomthouw   | 123 gomthouh   | 124 gomthou   
+  seinsoi    125 seinsoif   | 126 seinsoiw   | 127 seinsoih   | 128 seinsoi   
+  roots-05.wav
+  mangi      129 mangif     | 130 mangiw     | 131 mangih     | 132 mangi     
+  wenci      133 wencif     | 134 wenciw     | 135 wencih     | 136 wenci     
+  roldai     137 roldaif    | 138 roldaiw    | 139 roldaih    | 140 roldai    
+  nurfeu     141 nurfeuf    | 142 nurfeuw    | 143 nurfeuh    | 144 nurfeu    
+  rora       145 roraf      | 146 roraw      | 147 rorah      | 148 rora      
+  hoindu     149 hoinduf    | 150 hoinduw    | 151 hoinduh    | 152 hoindu    
+  gonny      153 gonnyf     | 154 gonnyw     | 155 gonnyh     | 156 gonny     
+  waulny     157 waulnyf    | 158 waulnyw    | 159 waulnyh    | 160 waulny    
+  roots-06.wav
+  feisna     161 feisnaf    | 162 feisnaw    | 163 feisnah    | 164 feisna    
+  thowai     165 thowaif    | 166 thowaiw    | 167 thowaih    | 168 thowai    
+  jaeilleu   169 jaeilleuf  | 170 jaeilleuw  | 171 jaeilleuh  | 172 jaeilleu  
+  neunca     173 neuncaf    | 174 neuncaw    | 175 neuncah    | 176 neunca    
+  draibrai   177 draibraif  | 178 draibraiw  | 179 draibraih  | 180 draibrai  
+  braisshei  181 braissheif | 182 braissheiw | 183 braissheih | 184 braisshei 
+  sheiga     185 sheigaf    | 186 sheigaw    | 187 sheigah    | 188 sheiga    
+  graeuco    189 graeucof   | 190 graeucow   | 191 graeucoh   | 192 graeuco   
+
+  each group of 4 = one base: +f | +w(/v/) | +h | bare (no final)
+  exactly TWO of the four may be coined (one from {f,w}, one from {h,bare}).
+  pick by number; ~4-6 favourites per file is plenty to start.

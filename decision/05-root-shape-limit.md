@@ -235,5 +235,150 @@ Result (greedy, best of several orders — a constructive lower bound):
 > **461,760** quoted in `00-README.md` is probably too high. The *conclusion* (the lexicon
 > target is a tiny fraction of the space) holds either way.
 
+---
+
+## UPDATE — recomputed BY SCRIPT (`tools/enumerate_roots.py`)
+
+The script re-derives every figure below from the locked phonology and prints its own rule
+set. **Verification: it reproduces this file's own three headline numbers exactly** —
+
+| config | this file | script |
+|---|---|---|
+| 7 mono nuclei, codas `m n l r` | 48,020 | **48,020** ✓ |
+| + diphthong nuclei | 220,500 | **220,500** ✓ |
+| + coda `s` ("current rule") | 264,600 | **264,600** ✓ |
+
+and the packing the same way: **greedy max = 16,148** here vs this file's 16,034–16,108
+(the spread is only the seed/iteration order, as the file itself notes), and the PREVIOUS
+configuration reproduces **3,017** vs this file's ~3,010 — the same validation this file used.
+
+### 1. Every count in this file used a PRE-`c`/`j` onset set
+
+The only way to reproduce 48,020 / 220,500 / 264,600 is with **13 initial / 14 medial
+onsets** — i.e. the current 15/16 **minus the two consonants added later (`c`, `j`)**. The
+rule set is self-consistent, but the inventory is not the locked one. Same rules, locked
+19-letter inventory:
+
+| config | pre-`c`/`j` (this file) | locked inventory (15/16) |
+|---|---|---|
+| mono nuclei, 4 codas | 48,020 | **62,720** |
+| 15 nuclei, 4 codas | 220,500 | **288,000** |
+| 15 nuclei, 5 codas (current rule) | 264,600 | **345,600** |
+| greedy max, pairwise segment-distance >= 2 | 16,108 | **20,025** |
+
+The conclusion is unchanged (the space got *bigger*), but headroom over the 3,000 target is
+**~6.7x**, not ~5.4x.
+
+### 2. `|CC| = 91` is right — but it is a LETTER-PATTERN count, not a syllable count
+
+The 11 "extra" fills are the cluster onsets (`br dr gr` + the 8 VCV-only clusters). Per P2 a
+cluster "must not touch another consonant", so a coda may only precede a **single** onset →
+the syllable reading is `5 x 16 = 80`, the letter-pattern reading is `5 x 16 + 11 = 91`. Both
+are legitimate; they simply count different things, which is exactly why the tables looked
+mutually inconsistent. **`92` stays wrong** (P5: it double-counts `st`).
+
+### 3. The `CVV` row is the last inconsistency, and it is pinned
+
+`457,485` uses `CVV = 60 = 15 x 4`, i.e. it **excludes cluster onsets** from `CVV`, while the
+formula in the same file, `|Ci| x |H| = 18 x 4`, gives **72**. On the file's own `|CC| = 91`:
+family total = **457,485** (with `CVV = 60`) or **457,497** (with `CVV = 72`). So the
+**`461,760`** figure in `00-README.md` belongs to the rejected `|CC| = 92` family and should be
+dropped; the `457,485`–`457,497` family is the right one.
+
+### 4. The missing 1- and 3-syllable classes are now counted
+
+- **1-syllable bare root** = `(1 + |ini|) x |nuclei| x |{∅, f, v, h}|` = **960** on the locked
+  inventory (240 of them vowel-final, i.e. `V` / `CV`). This follows the author's **2026-10-14
+  ruling** that a bare root may end in a vowel or `f`/`v`/`h` but **not** in the coda set
+  `m n l r s` (an earlier revision of this UPDATE printed 1,350 / 1,170 by wrongly using the
+  coda set — **withdrawn**). *(`04`'s 1,530 / 1,710 rows use a THIRD onset count — 17/19 — so
+  they are not comparable; `04` stays historical.)*
+- **3-syllable `CVCVCV`** (no codas) = **12,960,000** on the locked inventory — a lower bound
+  only; not materialised (3-syllable roots are "rare").
+
+### Honest caveat — one statistic does NOT reproduce
+
+The neighbour statistic differs: the script reports **avg 64.7 / min 63 / max 79** (locked
+inventory; 60.7 pre-`c`/`j`) against this file's **49.4 / 43 / 88**. Cause: the script counts
+insert/delete neighbours as well (a distance-1 neighbour need not have the same length),
+whereas this file's figure appears to count same-length substitutions only. The packing result
+is not affected (the 20.0k vs 16.1k gap is the onset-set change, not this metric). Conclusion 4
+of this file — **per-segment vs per-feature distance** — is **still open** and is NOT settled
+by this recompute.
+
+### 6. Clusters inside bare roots were ALLOWED (author's ruling A, 2026-10-14) — the current rule
+
+`R1`'s own text always said the word-initial onset may be *"a single consonant **or a stop+`r`
+cluster**"*, and `P2` allows clusters in **any** onset position — yet **every figure in this file**
+(and the script's first model) counted **single onsets only**. The author ratified R1/P2, so the
+script now models **three onset sets**, which is what the rule actually says:
+
+| set | definition | size |
+|---|---|---|
+| **O1** | word-initial onset: single consonants (no `ng`) **+ `br dr gr`** | 15 → **18** |
+| **O2** | a non-initial syllable's onset **after an OPEN syllable**: singles **+ `br dr gr` + the 8 VCV-only clusters** | 16 → **27** |
+| **O2c** | onset **after a coda**: SINGLE onsets only (a cluster may never touch another consonant — P2) | **16** |
+
+Locked-inventory figures (`--config current`; `--config singles-core` reproduces the pre-ruling ones):
+
+| | single onsets (before) | **clusters (current rule)** |
+|---|---|---|
+| VCV | 3,600 | **6,075** |
+| CVCV | 54,000 | **109,350** |
+| VCCV | 18,000 | 18,000 *(unchanged — an onset after a coda)* |
+| CVCCV | 270,000 | **324,000** |
+| **4 main shapes** | 345,600 | **457,425** |
+| **CVV** (`\|O1\| x 4 leaps`) | 60 | **72** |
+| onset-less `VV` | 4 | 4 |
+| **TOTAL + leaps** | 345,664 | **457,501** |
+| greedy max, pairwise segment-distance >= 2 | 20,025 | **26,751** (best of 4 seeds) |
+| ⇒ coined roots (2 per base, §5) | 40,050 | **53,502** |
+| 1-syllable (vowel-final / raw 4 finals) | 240 / 960 | **285 / 1,140** |
+| 3-syllable `CVCVCV` (lower bound) | 12,960,000 | **44,286,750** |
+
+Two things this closes:
+
+- **the `CVV` 60-vs-72 dispute is settled by rule → 72.** `CVV = |O1| x 4 leaps`, and with clusters
+  allowed `|O1| = 18` → 72, exactly what this file's own formula gave. The `60` row was the
+  no-cluster reading.
+- **the two independent derivations now agree.** This file's formula family reached 457,485–457,497
+  through the **letter-pattern** `|CC| = 91`; the script reaches **457,425** through the **syllable**
+  `|CC| = 80`. The residual gap (~0.015%) is *exactly* that reading difference, so the earlier
+  "the tables disagree" problem is now fully explained rather than patched.
+
+**Verification:** `legacy-*` still reproduces 48,020 / 220,500 / 264,600 exactly, `singles-core`
+reproduces 345,600, and every enumerated cross-check reports `MATCH`. ⚠️ **Consequence for the
+lexicon work:** the first candidate batch had to be **regenerated** — the earlier menu (20,025 bases)
+contained **no clusters at all**, so `pra / tri / kro` were silently absent.
+
+### 5. The area-rule mechanism was pinned (author's ruling, same day) — "≤ 2" is EXACT
+
+This file's "**with final (hard rule, `<= 2/base`)**" is now exact: `R1`'s parenthetical
+*"(pick one of `{f,v}`; pick one of `{h, no-final}`)"* is **two independent binary choices**, so
+**every base yields exactly 2 bare roots** — one from the `{f,v}` branch, one from the `{h,∅}` branch.
+(**Spelling:** the `/v/` member is written `w` — `v` is the vibrato mark, not a letter
+(`02-notation.md`), so the /v/-final root is `…w`, e.g. `lafiw`, never `…v`. The `f/v/h` in the
+tables above is *phoneme* notation.)
+
+| | bases (2-syllable core) | raw form space (4 finals) | **coined roots** (2 per base) |
+|---|---|---|---|
+| locked inventory | 345,600 | 1,382,400 | **691,200** |
+| pre-`c`/`j` (this file's own figures) | 264,600 | 1,058,400 | **529,200** |
+| formula family (`|CC| = 91`) | 457,485 | — | **914,970** ✓ = this file's cap |
+
+(The 1-syllable class follows the same rule: its "960 with an `f`/`v`/`h` final" is the *raw*
+space; the *coined* figure is 2 × 240 = **480**.)
+
+Two consequences:
+
+- the two siblings of a pair differ by **one segment**, so a pair is **exempt** from the
+  distance-`>= 2` guideline — which is exactly why `R2` calls the area rule *hard* and the
+  consonant-distance guideline *soft*;
+- **`M3a` is triggered for 3 of every 4 coined roots** (the whole `{f,v}` branch, plus the `h`
+  branch) — confirming `03` §B's "NOT an edge case".
+- For the packing this is good news: the pack's unit is the **base**, so the `20,025` mutually-far
+  bases on the locked inventory yield **~40,050 coined roots** — far above the 3,000 target.
+
+
 
 
