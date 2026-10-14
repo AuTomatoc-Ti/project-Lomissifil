@@ -202,6 +202,14 @@ Three things follow, and the first one is the surprise:
   the uniform-letter baseline is a **weak null** (any vowel-rich string beats it), so 3.38% only says
   "our strings are word-like, not letter-soup". The number to act on is the exact list above.
 
+### This measurement ranks the coining menu
+
+`tools/menu.py` (output: `lists/menu.md`) orders the candidate pool by exactly the un-donated
+features this section measured: **+2** for an area-rule final (A15), an `fm`-class cluster (A13) or a
+hiatus leap (A4), **+1** for an onset cluster (A12), and **−2** if the form is a real English word.
+So the shortlist the author browses is biased toward material that no reference language has — the
+measurement is not just a report, it is the menu's ranking function (`score()` in the tool).
+
 ### Caveats that must travel with these numbers
 
 - the 16 reference vectors are **hand-coded** from well-known typology, not corpus data; a wrong cell

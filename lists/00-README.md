@@ -81,6 +81,29 @@ points rather than script opinions:
   that case yet;
 - **`sh` / `ng` where the coda+onset reading is also legal** (`a-sha` vs `as-ha`, `so-nga` vs `son-ga`).
 
+## `menu.md` — the coining menu (generated; deliberately BIASED)
+
+The author's ruling (2026-10-14): the menu ranks the pool so that **material nobody else has floats
+to the top**, using the measurement in `../decision/06-neutrality.md` ("Measurement"):
+
+```
+python3 tools/menu.py > lists/menu.md                 # top 20 + every onset + every first vowel
+python3 tools/menu.py --group th --per 6              # browse one sound in depth
+```
+
+| points | trigger | why it counts as ours |
+|---|---|---|
+| **+2** | word-final `f`/`w`/`h` | the area rule (A15) — no donor |
+| **+2** | an intervocalic cluster `fm fn hm hn wm wn jm jn` | A13 — near-unattested |
+| **+2** | a hiatus leap `iu yu ia ya` | A4 — no donor |
+| **+1** | an onset cluster `pr br tr dr kr gr` | A12 — a whitelist, not a copy |
+| **-2** | the form **IS an English word** | 143 of 105,936 forms (0.135%) are |
+
+Every row shows its reasons, so the ordering can be audited; the weights live in one place
+(`tools/menu.py`, `score()`). The menu also ends with the **English collision list**, so a pick can
+never hit a real English word by accident. It is generated: **picks go in `picks.md`** (record the
+form TEXT, not just the menu's number).
+
 ### What is deliberately NOT here
 
 - The `legacy-mono4` / `legacy-diph4` / `legacy-core` configs reproduce `decision/05`'s own figures

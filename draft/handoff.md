@@ -67,6 +67,10 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   Jaccard similarity against **16 hand-coded reference languages**, and coincidence with the real
   English dictionary `/usr/share/dict/words`. ⚠️ The reference vectors are hand-coded; audit them in
   the tool (`REF`).
+- **Coining menu:** `python3 tools/menu.py > ../lists/menu.md` — the candidate pool grouped by initial
+  onset and first vowel, **ranked by an auditable bias** (+2 for the un-donated features: area-rule
+  final, the `fm`-class cluster, a hiatus leap; +1 for an onset cluster; −2 if the form is a real
+  English word). `--group th --per 6` browses one sound in depth. Weights: `score()` in the tool.
 
 ## Where it stands / exact next step
 
