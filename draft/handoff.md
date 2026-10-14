@@ -36,8 +36,11 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   if the grammar produces audible harmony — see the terminology warning at the top of
   `decision/00-README.md`.
 - **ASCII letters only, no custom symbols**, anywhere (goal 3).
-- Examples may **only** use words already in `reference/example.md` (currently just
-  2 names + 4 roots) — so real sentences are not possible yet.
+- Examples may **only** use words already in `reference/example.md` — which is **no longer a blocker**:
+  it holds 2 names + **31 roots** since 2026-10-14 (batch 1, the author's own list, checked by
+  `../tools/check_roots.py`). Real sentences still need the **verb morphology** (M5/M5a), the
+  **function words** (H5's separate class — the 8 in `../lists/proposed.md` await the area-rule
+  ruling), and the case/number slots (M4b).
 - Goal 2: avoid loanwords; do not let the language resemble any single natural language
   too closely.
 

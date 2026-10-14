@@ -174,13 +174,18 @@ plus a **dominance check**). Result: **PASS** — top donor Finnish at 8/38 rows
 (11%) strict, so **no language comes near the 1/3 ceiling**; **42% of the counted rows have no donor
 at all**; and the grammar's centre (the grade/chord system) is entirely original. ⚠️ **Living rule:**
 every future decision must add its rows. Two halves are still open:
-26. **The loanword mechanism (word level) — spec only; execution is blocked on meanings.** A word is a
-    "loanword" only *relative to a meaning*, and coining is sound-only (R3 parked), so this **cannot
-    run yet**. Freeze the spec now: **hard reject** = a coined word whose meaning coincides with a
-    natural-language word within one edit distance (*beauty outranks neutrality* does **not** protect
-    those — they would *feel* borrowed); **soft warn** = homophony with an unrelated meaning (record,
-    never reject). ⚠️ **Missing input:** the reference word list (which languages count as "others").
-    **Owner:** the meaning-assignment step, which does not exist yet.
+26. **The loanword mechanism (word level)** — **partially RUNNABLE since 2026-10-14, because the author
+    started assigning meanings** (`../reference/example.md` batch 1, 31 roots). Spec: **hard reject** =
+    a coined word whose meaning coincides with a natural-language word within one edit distance
+    (*beauty outranks neutrality* does **not** protect those — they would *feel* borrowed);
+    **soft warn** = homophony with an unrelated meaning (record, never reject).
+    ✅ **The English channel has RUN** (`/usr/share/dict/words`, 234,428 entries) on batch 1: 7 of the
+    27 roots are literally English words (`aba`, `basto`→`basdo`, `eli`, `ima`, `hu`, `ila`), all with
+    *unrelated* meanings ⇒ **soft warnings, kept** (results in `../lists/proposed.md`).
+    ⚠️ **Still missing:** the **multilingual** reference word list — the author must name which
+    languages count as "others" (the same list the sound fingerprint would use; `06-neutrality.md`
+    already names 16 for the *sound* side, but a word list is a different input).
+    **Owner:** ongoing — run it whenever a batch of meanings is assigned.
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**
