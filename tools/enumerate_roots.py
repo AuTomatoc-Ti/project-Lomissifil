@@ -246,8 +246,9 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="cap the packing input (debug)")
     ap.add_argument("--pairs", type=int, default=0,
                     help="step 3: print N packed bases with their 4 area-rule sibling forms")
-    ap.add_argument("--src", default="/tmp/lomissifil-roots-current.txt",
-                    help="packed-base list used by --pairs")
+    ap.add_argument("--src", default="lists/roots-bases-current.txt",
+                    help="packed-base list used by --pairs (the committed canonical list; "
+                         "the old /tmp default was wiped on reboot)")
     a = ap.parse_args()
     random.seed(20261014)
 
