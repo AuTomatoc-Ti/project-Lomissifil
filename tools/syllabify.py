@@ -24,8 +24,9 @@ RULES IMPLEMENTED (all already locked; nothing new is invented here)
 
 READING (P6, author's ruling 2026-10-14)
     Medial `sh` and `ng` are ALWAYS ONE phoneme: /S/ and /N/. The sequence **coda `n` + onset
-    /g/** is written **`nk`** (the hard letter), so `manka` = man-ka, while a form containing
-    `ng` means /N/ there. `nk` is NOT a cluster: coda `n` + onset `k`, read exactly as P5
+    /g/** is written **`nk`** (the hard letter). That `k` is not free texture: `/g/` after a coda
+    `n` is **obligatorily [k]** (P6, the language's first conditioned process), so the soft/hard
+    knob does not apply there. `nk` is NOT a cluster: coda `n` + onset `k`, read exactly as P5
     reads `st`. Because the coda+onset reading of `sh` is gone, **/s/ + /h/ has no spelling
     at all** and is illegal by ruling. (`th` was never ambiguous -- a coda can never be `t`;
     `ae` is not either -- adjacent nuclei are illegal.)
@@ -185,7 +186,7 @@ def note_for(an):
             ("sh", "th", "ng", "ae")):
         notes.append("stress capital lands on a DIGRAPH (convention OPEN: 03 section C)")
     if an["p6"]:
-        notes.append("`nk` = coda n + /g/ (P6 spelling rule, not the voicing knob)")
+        notes.append("`nk` = coda n + /g/, obligatorily [k] (P6: the soft/hard knob does not apply here)")
     return "; ".join(notes)
 
 

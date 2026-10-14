@@ -106,11 +106,12 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     `00-README.md` P6 (bijective spelling again; `/s/`+`/h/` becomes unspellable; `nk` = coda `n` +
     onset `k`, **not** a cluster; **R-b/R-c amended**; no locked asset affected — none of the six
     reference words contains `sh`/`ng`, and no suffix onset is `h` or `g`, so neither affected
-    sequence can ever arise in morphology). **The one open sub-question:** is the `k` of `nk`
-    **spelling-only** (the soft/hard knob stays free there, so `[n.ga]` is still singable) or a real
-    **conditioned devoicing** (only `[n.ka]`)? C2b says the knob is *free and unconditioned*; the
-    author's stated motive ("make our k-g pair work like 濁音清化 in real languages") points at the
-    conditioned reading. **Do not build on either reading until it is settled.**
+    sequence can ever arise in morphology). **The sub-question that was left open:** is the `k` of `nk`
+    **spelling-only** (the soft/hard knob stays free there) or a real **conditioned devoicing**?
+    → **SETTLED (author, 2026-10-14): a REAL conditioned devoicing.** `/g/` after a coda `n` is
+    obligatorily `[k]`, so C2b's "free and unconditioned" knob is **blocked in that one environment**
+    (the language's first genuine phonological process). ⚠️ Its **scope** for `/b/` and `/d/` after a
+    nasal coda is the next question (item 25), and it blocks the pool regeneration (item 24).
     ⚠️ **Data consequence (do not miss):** the current pack (`lists/roots-bases-current.txt`) contains
     **no `nk` spelling at all**, so the `/n/`+`/g/` sequences P6 legalises are **absent from the
     candidate pool**, and its 1,071 `ng` strings now all mean `/ŋ/`. Regenerating the pool (the sha in
@@ -133,6 +134,18 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     are the only spelling that class ever gets). ⚠️ **Timing:** this changes the pack's sha *and* the
     audition sheet's 48-base sample, so run it **either before the pick round starts, or after it
     finishes** — never in the middle, or the author's pick numbers stop matching the sheet.
+25. **Scope of the P6 devoicing (NEW, 2026-10-14 — it decides the pool's spelling).** P6 + C2b now say
+    `/g/` after a coda `n` is obligatorily `[k]`. But `/b/` and `/d/` after a nasal coda are equally
+    legal and common in the pool (`mb` `nb` `md` `nd` `mg` — e.g. the sheet's `namgae` = `nam-gaef`),
+    so either (a) the rule is **idiosyncratic to `/g/`** (minimal, but phonetically odd: a learner asks
+    why `/g/` and not `/d/`), or (b) the natural class is **stop after a nasal coda** (`m`/`n` +
+    `b d g` → `[p t k]`), in which case ⚠️ **the spelling must show it too** (`namgae` → `namkae`,
+    `anda` → `anta`), otherwise the spelling stops predicting the sound, which breaks R-c's promise
+    that a lookup never misses. **Cost to weigh in either case:** a blocked position is a position
+    where the composer's hard/soft knob does **nothing** — and nasal + stop is a *frequent* cluster, so
+    the language's main genre control (power-metal hard vs post-rock soft) loses exactly there.
+    ⚠️ **Blocker:** item 24's pool regeneration must **not** run before this is answered — the answer
+    fixes the spelling of those 6 coda + stop combinations.
 
 ## A. M1 — affix direction (DECIDED, **PROVISIONAL**)
 

@@ -22,7 +22,12 @@ Status: locked. Numbering (`V*`, `C*`, `P*`, `N1`) matches the original discussi
 > realised voiceless, in every position, and no word is lost). Hence it is a
 > **performance/notation-register** device, NOT a phonological process — which is exactly why it
 > may be **free and unconditioned**, unlike the *conditioned* voicing alternations of natural
-> languages (word-final devoicing, sandhi assimilation, rendaku). Three boundaries apply:
+> languages (word-final devoicing, sandhi assimilation, rendaku). ⚠️ **AMENDED by P6 (2026-10-14):
+> there is now exactly ONE conditioned environment** — the phoneme `/g/` after a coda `n` is
+> obligatorily `[k]`, written `nk` — so the knob is free everywhere *except* there. The author
+> deliberately wanted this first taste of a natural-language-style devoicing (清化); whether `/b/`
+> and `/d/` after a nasal coda follow it is still open (`03-open-questions.md` §0 item 25).
+> Three boundaries apply:
 > - **(R-a) Domain = the 3 stops only.** `w` (=/v/) is a **real phoneme** and must **never** be
 >   hardened: `f` vs `w` is a true contrast, so devoicing `w` -> `f` would destroy words. `c`
 >   (/t͡ʃ/) has no partner; fricatives, nasals and sonorants are untouched.
@@ -85,9 +90,11 @@ the sound /v/ is written `w`.
 >    onset `k`, read exactly as P5 reads `st`. `/s/` + `/h/` has no such escape and is therefore
 >    **unspellable (illegal)** — no suffix begins with `h`, so morphology can never need it.
 >    ⚠️ **R-b / R-c are amended** (see §1): `nk` is a required hard spelling, so it appears in the
->    dictionary too — a *spelling rule*, not a register choice. ⚠️ **Still open:** whether that `k`
->    is spelling-only (the soft/hard knob stays free there) or a real conditioned devoicing.
->    Full consequences + the open sub-question: `00-README.md` **P6**.
+>    dictionary too — a *spelling rule*, not a register choice. ⚠️ **DECIDED (author, 2026-10-14):
+>    the devoicing is REAL, not spelling-only** — `/g/` after a coda `n` is obligatorily `[k]`, so
+>    C2b's "free and unconditioned" knob is **blocked in that one environment** (the language's first
+>    genuine phonological process). Full consequences: `00-README.md` **P6**; its scope for `/b/`,
+>    `/d/` is open (`03-open-questions.md` §0 item 25).
 
 ## 2. Vowels — 7 phonemes
 
