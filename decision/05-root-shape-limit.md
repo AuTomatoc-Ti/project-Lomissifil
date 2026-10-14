@@ -396,7 +396,7 @@ report 48,020 / 220,500 / 264,600 (model `p6=False` in `tools/enumerate_roots.py
 | 4 main shapes | **453,150** (was 457,425; −4,275 = 0.93%) |
 | + the 4 leaps with an onset (76) | **453,226** (was 457,501) |
 | script cross-check | **MATCH** (453,226) — before this change it printed a 4,275 **MISMATCH** |
-| 1-syllable raw / vowel-final | 1,140 / 285 (unchanged) |
+| 1-syllable raw / vowel-final | 1,140 / 285 — **and since 2026-10-14 the 285 are IN the pack** (they were counted but never enumerated before); the space is now **453,511** |
 | 3-syllable `CVCVCV` | 44,286,750 (unchanged) |
 | coined roots (2 per base) | ≤ **906,452** (was ≤ 914,970) |
 

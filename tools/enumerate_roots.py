@@ -68,7 +68,7 @@ def onset_sets(legacy, clusters=False):
     return ini + STOP_R, med + STOP_R + NONSTOP, med
 
 
-def make_config(nuclei, codas, legacy, clusters=False, p6=False):
+def make_config(nuclei, codas, legacy, clusters=False, p6=False, mono=False):
     o1, o2, oc = onset_sets(legacy, clusters)
     return {"nuclei": nuclei, "codas": codas,
             "initial": o1, "after_open": o2, "after_coda": oc,
@@ -76,7 +76,11 @@ def make_config(nuclei, codas, legacy, clusters=False, p6=False):
             # `p6` = model the 2026-10-14 rulings (hard spelling after a nasal coda, and the
             # unspellable /s/+/h/ fill excluded).  OFF for the legacy/singles configs on purpose:
             # those exist to reproduce 05's published figures, so they must keep its arithmetic.
-            "p6": p6}
+            "p6": p6,
+            # `mono` = ALSO enumerate the 1-syllable roots (R1: "1 syllable = frequent", `roi`).
+            # They were counted but never packed until 2026-10-14; OFF for legacy/singles so their
+            # cross-checks keep matching.
+            "mono": mono}
 
 
 CONFIGS = {
@@ -88,10 +92,10 @@ CONFIGS = {
     "singles-mono4": make_config(MONO, CODA4, False),
     "singles-diph4": make_config(NUCLEI, CODA4, False),
     "singles-core": make_config(NUCLEI, CODA5, False),     # 345,600
-    # locked inventory + clusters in roots (author's ruling A) + P6 <-- CURRENT RULE
-    "current-mono4": make_config(MONO, CODA4, False, clusters=True, p6=True),
-    "current-diph4": make_config(NUCLEI, CODA4, False, clusters=True, p6=True),
-    "current": make_config(NUCLEI, CODA5, False, clusters=True, p6=True),
+    # locked inventory + clusters in roots (author's ruling A) + P6 + 1-syllable roots <-- CURRENT RULE
+    "current-mono4": make_config(MONO, CODA4, False, clusters=True, p6=True, mono=True),
+    "current-diph4": make_config(NUCLEI, CODA4, False, clusters=True, p6=True, mono=True),
+    "current": make_config(NUCLEI, CODA5, False, clusters=True, p6=True, mono=True),
 }
 
 
@@ -105,6 +109,8 @@ def formula(cfg):
     # 4,275 difference the enumerated cross-check used to report as MISMATCH.
     excl = 1 if (cfg.get("p6") and "s" in cfg["codas"] and "h" in cfg["after_coda"]) else 0
     cc = len(cfg["codas"]) * oc - excl
+    # 1-syllable roots (R1: frequent): (optional word-initial onset) x nucleus.
+    mono = (1 + o1) * n if cfg.get("mono") else 0
     vcv = n * o2 * n
     cvcv = o1 * n * o2 * n
     vccv = n * cc * n
@@ -112,9 +118,9 @@ def formula(cfg):
     cvv = o1 * len(HIATUS)                 # the 4 leaps WITH an onset = 05's CVV row
     vv = len(HIATUS)                       # onset-less leaps (05 never counted these)
     return {"VCV": vcv, "CVCV": cvcv, "VCCV": vccv, "CVCCV": cvccv,
-            "CVV": cvv, "VV": vv,
+            "CVV": cvv, "VV": vv, "MONO": mono,
             "|CC|": cc, "total": vcv + cvcv + vccv + cvccv,
-            "total_all": vcv + cvcv + vccv + cvccv + cvv + vv,
+            "total_all": vcv + cvcv + vccv + cvccv + cvv + vv + mono,
             "|nuclei|": n, "|ini|": o1, "|med|": o2, "|oc|": oc,
             "|codas|": len(cfg["codas"])}
 
@@ -128,6 +134,20 @@ def p6_respell(coda, onset):
     if coda in ("m", "n") and onset[0] in P6_MAP:
         return P6_MAP[onset[0]] + onset[1:]
     return onset
+
+
+def mono_forms(cfg):
+    """The 1-syllable roots (R1: "1 syllable = frequent"): (optional WORD-INITIAL onset) x nucleus.
+    No coda (a bare root ends in a vowel or f/w/h, and the area-rule final is added downstream).
+    ⚠️ These are EXEMPT from the distance >= 2 guideline: that guideline is SOFT (R2), and for
+    2-3 letter forms it would admit only ~15 of the 285 candidates."""
+    if not cfg.get("mono"):
+        return []
+    out = []
+    for o1 in ("",) + tuple(cfg["initial"]):
+        for v1 in cfg["nuclei"]:
+            out.append((o1, v1) if o1 else (v1,))
+    return out
 
 
 def iter_forms(cfg):
@@ -165,6 +185,9 @@ def iter_forms(cfg):
             yield (o1, h[0], h[1])                              # CVV -- a "leap"
     for h in HIATUS:
         yield (h[0], h[1])                                      # VV  -- onset-less leap
+    if cfg.get("mono"):
+        for t in mono_forms(cfg):
+            yield t                                             # the 1-syllable class (R1)
 
 
 def dist1(t):
@@ -242,7 +265,11 @@ def report(cfg, name):
     print("  CVV   = |O1| x 4 leaps       = %10s   (+%s onset-less VV)"
           % (format(c["CVV"], ","), c["VV"]))
     print("  TOTAL (4 main shapes)        = %10s" % format(c["total"], ","))
-    print("  TOTAL + leaps                = %10s" % format(c["total_all"], ","))
+    print("  TOTAL + leaps (2-syllable)   = %10s" % format(c["total_all"] - c["MONO"], ","))
+    print("  1-syllable bases %s = %10s   (R1: '1 syllable = frequent')"
+          % ("IN the enumeration " if c["MONO"] else "counted, not enumerated", format(c["MONO"], ",")))
+    print("  TOTAL + leaps + 1-syllable   = %10s   <- what the pack is drawn from"
+          % format(c["total_all"], ","))
     # enumerated cross-check
     t0 = time.time()
     n = sum(1 for _ in iter_forms(cfg))
@@ -257,7 +284,7 @@ def report(cfg, name):
     # R1 area rule (author's ruling 2026-10-14): two INDEPENDENT binary choices --
     # a fricative from {f,v}, and {h, nothing} -- so a base yields exactly 2 bare roots.
     print("  area rule: raw finals space = 4 x bases = %s ;  COINED roots = 2 x bases = %s"
-          % (format(4 * c["total"], ","), format(2 * c["total"], ",")))
+          % (format(4 * c["total_all"], ","), format(2 * c["total_all"], ",")))
     print()
     return c
 
@@ -303,6 +330,12 @@ def main():
         results[nm] = report(cfg, nm)
         if a.pack:
             forms = list(iter_forms(cfg))
+            # The 1-syllable class is appended AFTER the pack instead of competing inside it:
+            # pairwise distance >= 2 is a SOFT guideline (R2) and it would keep only ~15 of the 285.
+            mono = mono_forms(cfg)
+            mono_set = set(mono)
+            if mono:
+                forms = [t for t in forms if t not in mono_set]
             if a.limit:
                 forms = forms[:a.limit]
             space = set(forms)
@@ -322,6 +355,17 @@ def main():
                 if len(chosen) > best:
                     best, best_order = len(chosen), sorted(chosen)
             print("  BEST over %d seeds: %s roots" % (a.seeds, format(best, ",")))
+            if mono and best_order:
+                already = set(best_order)
+                extra = [t for t in mono if t not in already]
+                best, best_order = best + len(extra), sorted(list(best_order) + extra)
+                near = sum(1 for t in extra
+                           if any(g in already for g in dist1(t)))
+                print("  + %d one-syllable roots appended (exempt from the SOFT distance>=2 rule)"
+                      % len(extra))
+                print("    of those, %d have a distance-1 neighbour in the pack (all pairs involve a "
+                      "1-syllable root)" % near)
+                print("  FINAL: %s roots" % format(best, ","))
             if a.emit and best_order:
                 with open(a.emit, "w", encoding="utf-8") as fh:
                     for t in best_order:

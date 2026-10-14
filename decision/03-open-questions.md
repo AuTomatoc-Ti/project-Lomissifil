@@ -122,14 +122,22 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     **no `nk` spelling at all**, so the `/n/`+`/g/` sequences P6 legalises are **absent from the
     candidate pool**, and its 1,071 `ng` strings now all mean `/ŋ/`. Regenerating the pool (the sha in
     `lists/00-README.md` and the sheet's sample both change) is a follow-up — see §0 item 24.
-22. **The first coining batch contains NO 1-syllable root — and R1 says 1-syllable roots are
-    frequent.** `--stats` over `lists/roots-bases-current.txt`: **26,751 forms, 100.0% two-syllable,
-    0 illegal**. The pack covers the **2-syllable core** (the 4 main shapes + the 4 hiatus leaps); the
-    diphthong `CVV` class (`roi`, the documented example of a frequent short root) is **not in it**,
-    although `05`'s UPDATE §6 counted the 1-syllable class separately. Consequence: the batch cannot
-    judge the **short** roots, which are exactly what a chorus hook / power-metal chant wants.
-    Also measured: **17.0%** of the pack has the default stress landing on a **digraph-initial**
-    syllable (the N1-open case the sheet flags).
+22. ~~**The first coining batch contains NO 1-syllable root — and R1 says 1-syllable roots are
+    frequent.**~~ — ✅ **FIXED (2026-10-14, author's ruling ①).** The emitter now enumerates the
+    **1-syllable class** (`mono_forms()`; (optional word-initial onset) × nucleus = **285** vowel-final
+    bases) and the pack contains **all 285**. Verified: `--stats` shows **1 syllable: 285 (1.1%) /
+    2 syllables: 26,484 (98.9%)**, 0 illegal, 0 duplicates; the space becomes **453,511**
+    (453,226 + 285) and the script's cross-check says **MATCH**.
+    ⚠️ **The mono class is EXEMPT from the pairwise distance ≥ 2 guideline** — and that was measured,
+    not assumed: inside the greedy pack only **15 of the 285** survive that rule, because 2-3 letter
+    forms differ by one segment almost by definition. R2 calls the guideline *soft* (only the area
+    rule is *hard*), so the 2-syllable core keeps its exact ≥ 2 guarantee (26,484, unchanged) and the
+    short class is appended. Honest cost: **256 of the 285** have a distance-1 neighbour in the pack
+    (all such pairs involve a 1-syllable root). **Author may veto** — the alternative is losing 95% of
+    the short roots.
+    Consequence for the menu: short roots no longer vanish behind the higher-scoring 2-syllable bases —
+    `lists/menu.md` has a dedicated `roi`-class section **and** guarantees one short root inside every
+    by-sound group (`--mono N` controls the section size).
 23. **New tooling (not a decision):** `tools/syllabify.py` computes the syllable split + default
     stress for any spelling, with `--check` (verified against `se-li` / `los-do` / `roi` /
     `ar-gon-na` / `aus-ta-reus`), `--sheet` (the audition sheet) and `--stats`. It reproduces every

@@ -14,14 +14,14 @@ these files are machine-produced, whereas everything else here is prose (`.md`).
 
 | | |
 |---|---|
-| lines | **26,484** bases |
-| sha1 | `f532e58e3cfe45e66835a615eebc7a3b0f1a38e0` |
-| sha256 | `7404a917639955801aea18d195070ad8f68b0cb19ebcb04150478d530906dab3` |
+| lines | **26,769** bases = **26,484** two-syllable + **285** one-syllable (the `roi` class) |
+| sha1 | `92c4d630ca72ff78c758dec3b2516faea848e61c` |
+| sha256 | `2cfb2dfd37b8f0c2ed377aa6cde7a178ddf07decd0d9f923044d64c7a36135e3` |
 | encoding | ASCII, lowercase `a`–`z` only, one base per line, **sorted** |
 | config | `current` — 15 nuclei · O1=18 · O2=27 · O2c=16 · codas `m n l r s` |
-| base space | **453,150** (4 main shapes) + 76 leaps = **453,226** — P6 (2026-10-14); the older `457,425 / 457,501` family predates the `/s/`+`/h/` exclusion, see `../decision/05-root-shape-limit.md` P6 UPDATE |
+| base space | **453,511** = 453,226 (2-syllable core + leaps) + **285** (1-syllable) — P6 + the 1-syllable class (2026-10-14); the older `457,425 / 457,501` family predates the `/s/`+`/h/` exclusion, see `../decision/05-root-shape-limit.md` P6 UPDATE |
 | selection | greedy packing, pairwise **segment-distance ≥ 2**, best of 4 seeds |
-| ⇒ coined roots | **~52,968** — each base yields exactly **2** roots (see below) |
+| ⇒ coined roots | **~53,538** — each base yields exactly **2** roots (see below) |
 
 Regenerate with exactly:
 
@@ -64,14 +64,19 @@ python3 tools/syllabify.py --check          # verifies the splitter against the 
 python3 tools/syllabify.py --stats          # histogram of a whole list: syllables + both flags
 ```
 
-`--stats` on the current pack (re-emitted 2026-10-14, after P6): **26,484 forms, 100% two-syllable,
-0 illegal, 15.1% stressed on a digraph, 9.1% read as ONE phoneme (`sh`/`ng`, P6), 2,142 (8.1%) with a
-P6 hard spelling (`mp np mt nt mk nk`), and 0 ILLEGAL under P6**. The pack is **clean**: no duplicate
-spellings, no P6-illegal forms. (The *previous* file — `26,751` bases, sha1 `2cedb3f5…` — predated P6:
-it held **1,338** P6-illegal spellings and **267 duplicate lines** = pairs at distance 0, which
-contradicted the "pairwise ≥ 2" claim below. Both defects are gone; the old file is in git history.)
-⚠️ It is still **100% two-syllable**: the pack covers the 2-syllable core only, so it contains **no
-`roi`-class short root** — see `../decision/03-open-questions.md` §0 item 22.
+`--stats` on the current pack (re-emitted 2026-10-14, after P6 **and** with the 1-syllable class):
+**26,769 forms — 285 one-syllable (1.1%) + 26,484 two-syllable (98.9%)**, 0 illegal, 15.1% stressed on
+a digraph, 9.0% read as ONE phoneme (`sh`/`ng`, P6), 2,142 (8.0%) with a P6 hard spelling, and 0
+ILLEGAL under P6. **The pack is clean**: no duplicate spellings, no P6-illegal forms. (The *previous*
+file — `26,751` bases, sha1 `2cedb3f5…` — predated P6: it held **1,338** P6-illegal spellings and
+**267 duplicate lines** = pairs at distance 0. Both defects are gone; the old file is in git history.)
+
+⚠️ **The 1-syllable class is EXEMPT from the pairwise distance ≥ 2 guideline.** That guideline is
+**soft** by R2's own text, and for 2-3 letter forms it would admit only **15 of the 285** candidates —
+measured, not assumed. The 2-syllable core still satisfies it exactly (26,484 bases, unchanged by the
+addition). Honest cost: **256 of the 285** short roots do have a distance-1 neighbour inside the pack
+(all such pairs involve a one-syllable root). `R1` says 1-syllable roots are *frequent*, so the
+alternative — keeping the guideline and losing 95% of them — was not acceptable.
 
 It is the **same 48 bases with the same numbering** as `../audio/roots-index.txt`. It is generated, so
 **never annotate it** — the picks belong in `picks.md`. Two things it flags, both genuine open/undecided

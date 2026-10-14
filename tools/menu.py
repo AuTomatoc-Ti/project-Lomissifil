@@ -152,7 +152,7 @@ def _syl_parts(s):
     return "".join(on), nuc, "".join(cod)
 
 
-def menu(src, top, per, max_en, group=None):
+def menu(src, top, per, max_en, group=None, mono_top=12):
     words = load_english()
     bases = [ln.strip() for ln in open(src, encoding="utf-8")
              if ln.strip() and not ln.startswith("#")]
@@ -166,13 +166,15 @@ def menu(src, top, per, max_en, group=None):
                          "-".join(an["syllables"]) if an["syllables"] else "ILLEGAL",
                          an["stressed"] or "-", sc, "; ".join(why) if why else "-"))
         on = nuc = "(none)"
+        is_mono = False
         syl = S.analyse(b)["syllables"]
         if syl:
+            is_mono = len(syl) == 1
             sp = _syl_parts(syl[0])
             if sp:
                 on, nuc = sp[0] or "(none)", sp[1]
         data.append({"base": b, "rows": rows, "best": max(r[3] for r in rows),
-                     "on": on, "nuc": nuc})
+                     "on": on, "nuc": nuc, "mono": is_mono})
     counter = [0]
 
     def section(title, items):
@@ -195,11 +197,24 @@ def menu(src, top, per, max_en, group=None):
         section("`%s` (%d bases; top %d)" % (group, len(sel), per), rank(sel)[:per])
     else:
         section('Top %d bases - the most "ours" material' % top, rank(data)[:top])
+        monos = rank([d for d in data if d["mono"]])
+        section("one-syllable roots (the `roi` class): top %d of %d - they are EXEMPT from the soft "
+                "distance>=2 rule, so they resemble each other by nature" % (mono_top, len(monos)),
+                monos[:mono_top])
         for g in sorted(set(d["on"] for d in data)):
-            section("bases starting with `%s`" % g, rank([d for d in data if d["on"] == g])[:per])
+            items = [d for d in data if d["on"] == g]
+            sel = rank(items)[:per]
+            for d in rank([x for x in items if x["mono"]])[:1]:      # guarantee one short root
+                if d not in sel:
+                    sel.append(d)
+            section("bases starting with `%s`" % g, sel)
         for g in sorted(set(d["nuc"] for d in data)):
-            section("bases whose first vowel is `%s`" % g,
-                    rank([d for d in data if d["nuc"] == g])[:per])
+            items = [d for d in data if d["nuc"] == g]
+            sel = rank(items)[:per]
+            for d in rank([x for x in items if x["mono"]])[:1]:
+                if d not in sel:
+                    sel.append(d)
+            section("bases whose first vowel is `%s`" % g, sel)
     hits = [f for d in data for (f, _, _, _, why) in d["rows"] if "IS an English word" in why]
     out.append("## English collisions (measured - avoid or accept knowingly)\n\n")
     out.append("%d forms are literally in `/usr/share/dict/words`, so a pick can never hit one by "
@@ -219,8 +234,10 @@ def main():
     ap.add_argument("--max-en", type=int, default=200, help="cap on the English-collision list")
     ap.add_argument("--group", default=None,
                     help="print only this group, in depth (an initial onset like `th`, or a vowel)")
+    ap.add_argument("--mono", type=int, default=12,
+                    help="bases in the one-syllable (roi-class) section")
     a = ap.parse_args()
-    menu(a.src, a.top, a.per, a.max_en, a.group)
+    menu(a.src, a.top, a.per, a.max_en, a.group, a.mono)
 
 
 if __name__ == "__main__":

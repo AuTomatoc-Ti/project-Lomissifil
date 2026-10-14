@@ -50,307 +50,307 @@ doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) 
 > collide. Sound-only: assign **no meanings** (R3 parked).
 
 ---
-## base `thaeumto`
+## base `tharri`
 
 | root | suffix | form | syllables | stress | seam |
 |---|---|---|---|---|---|
-| `thaeumtof` | NOM `-` (zero) | `thaeumtof` | thaeum-tof | thaeumTof | NOM = zero suffix |
-| `thaeumtof` | ACC `-na` (dominant) | `thaeumtofna` | thaeum-to-fna | thaeumTofna | tier 1: `fn` is a legal VCV cluster |
-| `thaeumtof` | GEN `-sa` (dominant) | `thaeumtossa` | thaeum-tos-sa | thaeumTossa | tier 2 sync: f+s -> ss |
-| `thaeumtof` | DAT `-me` (subdominant) | `thaeumtofme` | thaeum-to-fme | thaeumTofme | tier 1: `fm` is a legal VCV cluster |
-| `thaeumtof` | LOC `-ner` (subdominant) | `thaeumtofner` | thaeum-to-fner | thaeumTofner | tier 1: `fn` is a legal VCV cluster |
-| `thaeumtof` | INS `-ser` (subdominant) | `thaeumtosser` | thaeum-tos-ser | thaeumTosser | tier 2 sync: f+s -> ss |
-| `thaeumtof` | OBL `-le` (subdominant) | `thaeumtolle` | thaeum-tol-le | thaeumTolle | tier 2 sync: f+l -> ll |
-| `thaeumtof` | V1 `-ri` (tonic) | `thaeumtorri` | thaeum-tor-ri | thaeumTorri | tier 2 sync: f+r -> rr |
-| `thaeumtof` | V2 `-ni` (tonic) | `thaeumtofni` | thaeum-to-fni | thaeumTofni | tier 1: `fn` is a legal VCV cluster |
-| `thaeumtow` | NOM `-` (zero) | `thaeumtow` | thaeum-tow | thaeumTow | NOM = zero suffix |
-| `thaeumtow` | ACC `-na` (dominant) | `thaeumtowna` | thaeum-to-wna | thaeumTowna | tier 1: `wn` is a legal VCV cluster |
-| `thaeumtow` | GEN `-sa` (dominant) | `thaeumtossa` | thaeum-tos-sa | thaeumTossa | tier 2 sync: w+s -> ss |
-| `thaeumtow` | DAT `-me` (subdominant) | `thaeumtowme` | thaeum-to-wme | thaeumTowme | tier 1: `wm` is a legal VCV cluster |
-| `thaeumtow` | LOC `-ner` (subdominant) | `thaeumtowner` | thaeum-to-wner | thaeumTowner | tier 1: `wn` is a legal VCV cluster |
-| `thaeumtow` | INS `-ser` (subdominant) | `thaeumtosser` | thaeum-tos-ser | thaeumTosser | tier 2 sync: w+s -> ss |
-| `thaeumtow` | OBL `-le` (subdominant) | `thaeumtolle` | thaeum-tol-le | thaeumTolle | tier 2 sync: w+l -> ll |
-| `thaeumtow` | V1 `-ri` (tonic) | `thaeumtorri` | thaeum-tor-ri | thaeumTorri | tier 2 sync: w+r -> rr |
-| `thaeumtow` | V2 `-ni` (tonic) | `thaeumtowni` | thaeum-to-wni | thaeumTowni | tier 1: `wn` is a legal VCV cluster |
-| `thaeumtoh` | NOM `-` (zero) | `thaeumtoh` | thaeum-toh | thaeumToh | NOM = zero suffix |
-| `thaeumtoh` | ACC `-na` (dominant) | `thaeumtohna` | thaeum-to-hna | thaeumTohna | tier 1: `hn` is a legal VCV cluster |
-| `thaeumtoh` | GEN `-sa` (dominant) | `thaeumtosa` | thaeum-to-sa | thaeumTosa | tier 2 sync: h+s -> s |
-| `thaeumtoh` | DAT `-me` (subdominant) | `thaeumtohme` | thaeum-to-hme | thaeumTohme | tier 1: `hm` is a legal VCV cluster |
-| `thaeumtoh` | LOC `-ner` (subdominant) | `thaeumtohner` | thaeum-to-hner | thaeumTohner | tier 1: `hn` is a legal VCV cluster |
-| `thaeumtoh` | INS `-ser` (subdominant) | `thaeumtoser` | thaeum-to-ser | thaeumToser | tier 2 sync: h+s -> s |
-| `thaeumtoh` | OBL `-le` (subdominant) | `thaeumtole` | thaeum-to-le | thaeumTole | tier 2 sync: h+l -> l |
-| `thaeumtoh` | V1 `-ri` (tonic) | `thaeumtori` | thaeum-to-ri | thaeumTori | tier 2 sync: h+r -> r |
-| `thaeumtoh` | V2 `-ni` (tonic) | `thaeumtohni` | thaeum-to-hni | thaeumTohni | tier 1: `hn` is a legal VCV cluster |
-| `thaeumto` | NOM `-` (zero) | `thaeumto` | thaeum-to | thaeumTo | NOM = zero suffix |
-| `thaeumto` | ACC `-na` (dominant) | `thaeumtona` | thaeum-to-na | thaeumTona | vowel-final root: nothing to repair |
-| `thaeumto` | GEN `-sa` (dominant) | `thaeumtosa` | thaeum-to-sa | thaeumTosa | vowel-final root: nothing to repair |
-| `thaeumto` | DAT `-me` (subdominant) | `thaeumtome` | thaeum-to-me | thaeumTome | vowel-final root: nothing to repair |
-| `thaeumto` | LOC `-ner` (subdominant) | `thaeumtoner` | thaeum-to-ner | thaeumToner | vowel-final root: nothing to repair |
-| `thaeumto` | INS `-ser` (subdominant) | `thaeumtoser` | thaeum-to-ser | thaeumToser | vowel-final root: nothing to repair |
-| `thaeumto` | OBL `-le` (subdominant) | `thaeumtole` | thaeum-to-le | thaeumTole | vowel-final root: nothing to repair |
-| `thaeumto` | V1 `-ri` (tonic) | `thaeumtori` | thaeum-to-ri | thaeumTori | vowel-final root: nothing to repair |
-| `thaeumto` | V2 `-ni` (tonic) | `thaeumtoni` | thaeum-to-ni | thaeumToni | vowel-final root: nothing to repair |
+| `tharrif` | NOM `-` (zero) | `tharrif` | thar-rif | tharRif | NOM = zero suffix |
+| `tharrif` | ACC `-na` (dominant) | `tharrifna` | thar-ri-fna | tharRifna | tier 1: `fn` is a legal VCV cluster |
+| `tharrif` | GEN `-sa` (dominant) | `tharrissa` | thar-ris-sa | tharRissa | tier 2 sync: f+s -> ss |
+| `tharrif` | DAT `-me` (subdominant) | `tharrifme` | thar-ri-fme | tharRifme | tier 1: `fm` is a legal VCV cluster |
+| `tharrif` | LOC `-ner` (subdominant) | `tharrifner` | thar-ri-fner | tharRifner | tier 1: `fn` is a legal VCV cluster |
+| `tharrif` | INS `-ser` (subdominant) | `tharrisser` | thar-ris-ser | tharRisser | tier 2 sync: f+s -> ss |
+| `tharrif` | OBL `-le` (subdominant) | `tharrille` | thar-ril-le | tharRille | tier 2 sync: f+l -> ll |
+| `tharrif` | V1 `-ri` (tonic) | `tharrirri` | thar-rir-ri | tharRirri | tier 2 sync: f+r -> rr |
+| `tharrif` | V2 `-ni` (tonic) | `tharrifni` | thar-ri-fni | tharRifni | tier 1: `fn` is a legal VCV cluster |
+| `tharriw` | NOM `-` (zero) | `tharriw` | thar-riw | tharRiw | NOM = zero suffix |
+| `tharriw` | ACC `-na` (dominant) | `tharriwna` | thar-ri-wna | tharRiwna | tier 1: `wn` is a legal VCV cluster |
+| `tharriw` | GEN `-sa` (dominant) | `tharrissa` | thar-ris-sa | tharRissa | tier 2 sync: w+s -> ss |
+| `tharriw` | DAT `-me` (subdominant) | `tharriwme` | thar-ri-wme | tharRiwme | tier 1: `wm` is a legal VCV cluster |
+| `tharriw` | LOC `-ner` (subdominant) | `tharriwner` | thar-ri-wner | tharRiwner | tier 1: `wn` is a legal VCV cluster |
+| `tharriw` | INS `-ser` (subdominant) | `tharrisser` | thar-ris-ser | tharRisser | tier 2 sync: w+s -> ss |
+| `tharriw` | OBL `-le` (subdominant) | `tharrille` | thar-ril-le | tharRille | tier 2 sync: w+l -> ll |
+| `tharriw` | V1 `-ri` (tonic) | `tharrirri` | thar-rir-ri | tharRirri | tier 2 sync: w+r -> rr |
+| `tharriw` | V2 `-ni` (tonic) | `tharriwni` | thar-ri-wni | tharRiwni | tier 1: `wn` is a legal VCV cluster |
+| `tharrih` | NOM `-` (zero) | `tharrih` | thar-rih | tharRih | NOM = zero suffix |
+| `tharrih` | ACC `-na` (dominant) | `tharrihna` | thar-ri-hna | tharRihna | tier 1: `hn` is a legal VCV cluster |
+| `tharrih` | GEN `-sa` (dominant) | `tharrisa` | thar-ri-sa | tharRisa | tier 2 sync: h+s -> s |
+| `tharrih` | DAT `-me` (subdominant) | `tharrihme` | thar-ri-hme | tharRihme | tier 1: `hm` is a legal VCV cluster |
+| `tharrih` | LOC `-ner` (subdominant) | `tharrihner` | thar-ri-hner | tharRihner | tier 1: `hn` is a legal VCV cluster |
+| `tharrih` | INS `-ser` (subdominant) | `tharriser` | thar-ri-ser | tharRiser | tier 2 sync: h+s -> s |
+| `tharrih` | OBL `-le` (subdominant) | `tharrile` | thar-ri-le | tharRile | tier 2 sync: h+l -> l |
+| `tharrih` | V1 `-ri` (tonic) | `tharriri` | thar-ri-ri | tharRiri | tier 2 sync: h+r -> r |
+| `tharrih` | V2 `-ni` (tonic) | `tharrihni` | thar-ri-hni | tharRihni | tier 1: `hn` is a legal VCV cluster |
+| `tharri` | NOM `-` (zero) | `tharri` | thar-ri | tharRi | NOM = zero suffix |
+| `tharri` | ACC `-na` (dominant) | `tharrina` | thar-ri-na | tharRina | vowel-final root: nothing to repair |
+| `tharri` | GEN `-sa` (dominant) | `tharrisa` | thar-ri-sa | tharRisa | vowel-final root: nothing to repair |
+| `tharri` | DAT `-me` (subdominant) | `tharrime` | thar-ri-me | tharRime | vowel-final root: nothing to repair |
+| `tharri` | LOC `-ner` (subdominant) | `tharriner` | thar-ri-ner | tharRiner | vowel-final root: nothing to repair |
+| `tharri` | INS `-ser` (subdominant) | `tharriser` | thar-ri-ser | tharRiser | vowel-final root: nothing to repair |
+| `tharri` | OBL `-le` (subdominant) | `tharrile` | thar-ri-le | tharRile | vowel-final root: nothing to repair |
+| `tharri` | V1 `-ri` (tonic) | `tharriri` | thar-ri-ri | tharRiri | vowel-final root: nothing to repair |
+| `tharri` | V2 `-ni` (tonic) | `tharrini` | thar-ri-ni | tharRini | vowel-final root: nothing to repair |
 
-## base `naeilrou`
-
-| root | suffix | form | syllables | stress | seam |
-|---|---|---|---|---|---|
-| `naeilrouf` | NOM `-` (zero) | `naeilrouf` | naeil-rouf | naeilRouf | NOM = zero suffix |
-| `naeilrouf` | ACC `-na` (dominant) | `naeilroufna` | naeil-rou-fna | naeilRoufna | tier 1: `fn` is a legal VCV cluster |
-| `naeilrouf` | GEN `-sa` (dominant) | `naeilroussa` | naeil-rous-sa | naeilRoussa | tier 2 sync: f+s -> ss |
-| `naeilrouf` | DAT `-me` (subdominant) | `naeilroufme` | naeil-rou-fme | naeilRoufme | tier 1: `fm` is a legal VCV cluster |
-| `naeilrouf` | LOC `-ner` (subdominant) | `naeilroufner` | naeil-rou-fner | naeilRoufner | tier 1: `fn` is a legal VCV cluster |
-| `naeilrouf` | INS `-ser` (subdominant) | `naeilrousser` | naeil-rous-ser | naeilRousser | tier 2 sync: f+s -> ss |
-| `naeilrouf` | OBL `-le` (subdominant) | `naeilroulle` | naeil-roul-le | naeilRoulle | tier 2 sync: f+l -> ll |
-| `naeilrouf` | V1 `-ri` (tonic) | `naeilrourri` | naeil-rour-ri | naeilRourri | tier 2 sync: f+r -> rr |
-| `naeilrouf` | V2 `-ni` (tonic) | `naeilroufni` | naeil-rou-fni | naeilRoufni | tier 1: `fn` is a legal VCV cluster |
-| `naeilrouw` | NOM `-` (zero) | `naeilrouw` | naeil-rouw | naeilRouw | NOM = zero suffix |
-| `naeilrouw` | ACC `-na` (dominant) | `naeilrouwna` | naeil-rou-wna | naeilRouwna | tier 1: `wn` is a legal VCV cluster |
-| `naeilrouw` | GEN `-sa` (dominant) | `naeilroussa` | naeil-rous-sa | naeilRoussa | tier 2 sync: w+s -> ss |
-| `naeilrouw` | DAT `-me` (subdominant) | `naeilrouwme` | naeil-rou-wme | naeilRouwme | tier 1: `wm` is a legal VCV cluster |
-| `naeilrouw` | LOC `-ner` (subdominant) | `naeilrouwner` | naeil-rou-wner | naeilRouwner | tier 1: `wn` is a legal VCV cluster |
-| `naeilrouw` | INS `-ser` (subdominant) | `naeilrousser` | naeil-rous-ser | naeilRousser | tier 2 sync: w+s -> ss |
-| `naeilrouw` | OBL `-le` (subdominant) | `naeilroulle` | naeil-roul-le | naeilRoulle | tier 2 sync: w+l -> ll |
-| `naeilrouw` | V1 `-ri` (tonic) | `naeilrourri` | naeil-rour-ri | naeilRourri | tier 2 sync: w+r -> rr |
-| `naeilrouw` | V2 `-ni` (tonic) | `naeilrouwni` | naeil-rou-wni | naeilRouwni | tier 1: `wn` is a legal VCV cluster |
-| `naeilrouh` | NOM `-` (zero) | `naeilrouh` | naeil-rouh | naeilRouh | NOM = zero suffix |
-| `naeilrouh` | ACC `-na` (dominant) | `naeilrouhna` | naeil-rou-hna | naeilRouhna | tier 1: `hn` is a legal VCV cluster |
-| `naeilrouh` | GEN `-sa` (dominant) | `naeilrousa` | naeil-rou-sa | naeilRousa | tier 2 sync: h+s -> s |
-| `naeilrouh` | DAT `-me` (subdominant) | `naeilrouhme` | naeil-rou-hme | naeilRouhme | tier 1: `hm` is a legal VCV cluster |
-| `naeilrouh` | LOC `-ner` (subdominant) | `naeilrouhner` | naeil-rou-hner | naeilRouhner | tier 1: `hn` is a legal VCV cluster |
-| `naeilrouh` | INS `-ser` (subdominant) | `naeilrouser` | naeil-rou-ser | naeilRouser | tier 2 sync: h+s -> s |
-| `naeilrouh` | OBL `-le` (subdominant) | `naeilroule` | naeil-rou-le | naeilRoule | tier 2 sync: h+l -> l |
-| `naeilrouh` | V1 `-ri` (tonic) | `naeilrouri` | naeil-rou-ri | naeilRouri | tier 2 sync: h+r -> r |
-| `naeilrouh` | V2 `-ni` (tonic) | `naeilrouhni` | naeil-rou-hni | naeilRouhni | tier 1: `hn` is a legal VCV cluster |
-| `naeilrou` | NOM `-` (zero) | `naeilrou` | naeil-rou | naeilRou | NOM = zero suffix |
-| `naeilrou` | ACC `-na` (dominant) | `naeilrouna` | naeil-rou-na | naeilRouna | vowel-final root: nothing to repair |
-| `naeilrou` | GEN `-sa` (dominant) | `naeilrousa` | naeil-rou-sa | naeilRousa | vowel-final root: nothing to repair |
-| `naeilrou` | DAT `-me` (subdominant) | `naeilroume` | naeil-rou-me | naeilRoume | vowel-final root: nothing to repair |
-| `naeilrou` | LOC `-ner` (subdominant) | `naeilrouner` | naeil-rou-ner | naeilRouner | vowel-final root: nothing to repair |
-| `naeilrou` | INS `-ser` (subdominant) | `naeilrouser` | naeil-rou-ser | naeilRouser | vowel-final root: nothing to repair |
-| `naeilrou` | OBL `-le` (subdominant) | `naeilroule` | naeil-rou-le | naeilRoule | vowel-final root: nothing to repair |
-| `naeilrou` | V1 `-ri` (tonic) | `naeilrouri` | naeil-rou-ri | naeilRouri | vowel-final root: nothing to repair |
-| `naeilrou` | V2 `-ni` (tonic) | `naeilrouni` | naeil-rou-ni | naeilRouni | vowel-final root: nothing to repair |
-
-## base `donwoi`
+## base `naljau`
 
 | root | suffix | form | syllables | stress | seam |
 |---|---|---|---|---|---|
-| `donwoif` | NOM `-` (zero) | `donwoif` | don-woif | donWoif | NOM = zero suffix |
-| `donwoif` | ACC `-na` (dominant) | `donwoifna` | don-woi-fna | donWoifna | tier 1: `fn` is a legal VCV cluster |
-| `donwoif` | GEN `-sa` (dominant) | `donwoissa` | don-wois-sa | donWoissa | tier 2 sync: f+s -> ss |
-| `donwoif` | DAT `-me` (subdominant) | `donwoifme` | don-woi-fme | donWoifme | tier 1: `fm` is a legal VCV cluster |
-| `donwoif` | LOC `-ner` (subdominant) | `donwoifner` | don-woi-fner | donWoifner | tier 1: `fn` is a legal VCV cluster |
-| `donwoif` | INS `-ser` (subdominant) | `donwoisser` | don-wois-ser | donWoisser | tier 2 sync: f+s -> ss |
-| `donwoif` | OBL `-le` (subdominant) | `donwoille` | don-woil-le | donWoille | tier 2 sync: f+l -> ll |
-| `donwoif` | V1 `-ri` (tonic) | `donwoirri` | don-woir-ri | donWoirri | tier 2 sync: f+r -> rr |
-| `donwoif` | V2 `-ni` (tonic) | `donwoifni` | don-woi-fni | donWoifni | tier 1: `fn` is a legal VCV cluster |
-| `donwoiw` | NOM `-` (zero) | `donwoiw` | don-woiw | donWoiw | NOM = zero suffix |
-| `donwoiw` | ACC `-na` (dominant) | `donwoiwna` | don-woi-wna | donWoiwna | tier 1: `wn` is a legal VCV cluster |
-| `donwoiw` | GEN `-sa` (dominant) | `donwoissa` | don-wois-sa | donWoissa | tier 2 sync: w+s -> ss |
-| `donwoiw` | DAT `-me` (subdominant) | `donwoiwme` | don-woi-wme | donWoiwme | tier 1: `wm` is a legal VCV cluster |
-| `donwoiw` | LOC `-ner` (subdominant) | `donwoiwner` | don-woi-wner | donWoiwner | tier 1: `wn` is a legal VCV cluster |
-| `donwoiw` | INS `-ser` (subdominant) | `donwoisser` | don-wois-ser | donWoisser | tier 2 sync: w+s -> ss |
-| `donwoiw` | OBL `-le` (subdominant) | `donwoille` | don-woil-le | donWoille | tier 2 sync: w+l -> ll |
-| `donwoiw` | V1 `-ri` (tonic) | `donwoirri` | don-woir-ri | donWoirri | tier 2 sync: w+r -> rr |
-| `donwoiw` | V2 `-ni` (tonic) | `donwoiwni` | don-woi-wni | donWoiwni | tier 1: `wn` is a legal VCV cluster |
-| `donwoih` | NOM `-` (zero) | `donwoih` | don-woih | donWoih | NOM = zero suffix |
-| `donwoih` | ACC `-na` (dominant) | `donwoihna` | don-woi-hna | donWoihna | tier 1: `hn` is a legal VCV cluster |
-| `donwoih` | GEN `-sa` (dominant) | `donwoisa` | don-woi-sa | donWoisa | tier 2 sync: h+s -> s |
-| `donwoih` | DAT `-me` (subdominant) | `donwoihme` | don-woi-hme | donWoihme | tier 1: `hm` is a legal VCV cluster |
-| `donwoih` | LOC `-ner` (subdominant) | `donwoihner` | don-woi-hner | donWoihner | tier 1: `hn` is a legal VCV cluster |
-| `donwoih` | INS `-ser` (subdominant) | `donwoiser` | don-woi-ser | donWoiser | tier 2 sync: h+s -> s |
-| `donwoih` | OBL `-le` (subdominant) | `donwoile` | don-woi-le | donWoile | tier 2 sync: h+l -> l |
-| `donwoih` | V1 `-ri` (tonic) | `donwoiri` | don-woi-ri | donWoiri | tier 2 sync: h+r -> r |
-| `donwoih` | V2 `-ni` (tonic) | `donwoihni` | don-woi-hni | donWoihni | tier 1: `hn` is a legal VCV cluster |
-| `donwoi` | NOM `-` (zero) | `donwoi` | don-woi | donWoi | NOM = zero suffix |
-| `donwoi` | ACC `-na` (dominant) | `donwoina` | don-woi-na | donWoina | vowel-final root: nothing to repair |
-| `donwoi` | GEN `-sa` (dominant) | `donwoisa` | don-woi-sa | donWoisa | vowel-final root: nothing to repair |
-| `donwoi` | DAT `-me` (subdominant) | `donwoime` | don-woi-me | donWoime | vowel-final root: nothing to repair |
-| `donwoi` | LOC `-ner` (subdominant) | `donwoiner` | don-woi-ner | donWoiner | vowel-final root: nothing to repair |
-| `donwoi` | INS `-ser` (subdominant) | `donwoiser` | don-woi-ser | donWoiser | vowel-final root: nothing to repair |
-| `donwoi` | OBL `-le` (subdominant) | `donwoile` | don-woi-le | donWoile | vowel-final root: nothing to repair |
-| `donwoi` | V1 `-ri` (tonic) | `donwoiri` | don-woi-ri | donWoiri | vowel-final root: nothing to repair |
-| `donwoi` | V2 `-ni` (tonic) | `donwoini` | don-woi-ni | donWoini | vowel-final root: nothing to repair |
+| `naljauf` | NOM `-` (zero) | `naljauf` | nal-jauf | nalJauf | NOM = zero suffix |
+| `naljauf` | ACC `-na` (dominant) | `naljaufna` | nal-jau-fna | nalJaufna | tier 1: `fn` is a legal VCV cluster |
+| `naljauf` | GEN `-sa` (dominant) | `naljaussa` | nal-jaus-sa | nalJaussa | tier 2 sync: f+s -> ss |
+| `naljauf` | DAT `-me` (subdominant) | `naljaufme` | nal-jau-fme | nalJaufme | tier 1: `fm` is a legal VCV cluster |
+| `naljauf` | LOC `-ner` (subdominant) | `naljaufner` | nal-jau-fner | nalJaufner | tier 1: `fn` is a legal VCV cluster |
+| `naljauf` | INS `-ser` (subdominant) | `naljausser` | nal-jaus-ser | nalJausser | tier 2 sync: f+s -> ss |
+| `naljauf` | OBL `-le` (subdominant) | `naljaulle` | nal-jaul-le | nalJaulle | tier 2 sync: f+l -> ll |
+| `naljauf` | V1 `-ri` (tonic) | `naljaurri` | nal-jaur-ri | nalJaurri | tier 2 sync: f+r -> rr |
+| `naljauf` | V2 `-ni` (tonic) | `naljaufni` | nal-jau-fni | nalJaufni | tier 1: `fn` is a legal VCV cluster |
+| `naljauw` | NOM `-` (zero) | `naljauw` | nal-jauw | nalJauw | NOM = zero suffix |
+| `naljauw` | ACC `-na` (dominant) | `naljauwna` | nal-jau-wna | nalJauwna | tier 1: `wn` is a legal VCV cluster |
+| `naljauw` | GEN `-sa` (dominant) | `naljaussa` | nal-jaus-sa | nalJaussa | tier 2 sync: w+s -> ss |
+| `naljauw` | DAT `-me` (subdominant) | `naljauwme` | nal-jau-wme | nalJauwme | tier 1: `wm` is a legal VCV cluster |
+| `naljauw` | LOC `-ner` (subdominant) | `naljauwner` | nal-jau-wner | nalJauwner | tier 1: `wn` is a legal VCV cluster |
+| `naljauw` | INS `-ser` (subdominant) | `naljausser` | nal-jaus-ser | nalJausser | tier 2 sync: w+s -> ss |
+| `naljauw` | OBL `-le` (subdominant) | `naljaulle` | nal-jaul-le | nalJaulle | tier 2 sync: w+l -> ll |
+| `naljauw` | V1 `-ri` (tonic) | `naljaurri` | nal-jaur-ri | nalJaurri | tier 2 sync: w+r -> rr |
+| `naljauw` | V2 `-ni` (tonic) | `naljauwni` | nal-jau-wni | nalJauwni | tier 1: `wn` is a legal VCV cluster |
+| `naljauh` | NOM `-` (zero) | `naljauh` | nal-jauh | nalJauh | NOM = zero suffix |
+| `naljauh` | ACC `-na` (dominant) | `naljauhna` | nal-jau-hna | nalJauhna | tier 1: `hn` is a legal VCV cluster |
+| `naljauh` | GEN `-sa` (dominant) | `naljausa` | nal-jau-sa | nalJausa | tier 2 sync: h+s -> s |
+| `naljauh` | DAT `-me` (subdominant) | `naljauhme` | nal-jau-hme | nalJauhme | tier 1: `hm` is a legal VCV cluster |
+| `naljauh` | LOC `-ner` (subdominant) | `naljauhner` | nal-jau-hner | nalJauhner | tier 1: `hn` is a legal VCV cluster |
+| `naljauh` | INS `-ser` (subdominant) | `naljauser` | nal-jau-ser | nalJauser | tier 2 sync: h+s -> s |
+| `naljauh` | OBL `-le` (subdominant) | `naljaule` | nal-jau-le | nalJaule | tier 2 sync: h+l -> l |
+| `naljauh` | V1 `-ri` (tonic) | `naljauri` | nal-jau-ri | nalJauri | tier 2 sync: h+r -> r |
+| `naljauh` | V2 `-ni` (tonic) | `naljauhni` | nal-jau-hni | nalJauhni | tier 1: `hn` is a legal VCV cluster |
+| `naljau` | NOM `-` (zero) | `naljau` | nal-jau | nalJau | NOM = zero suffix |
+| `naljau` | ACC `-na` (dominant) | `naljauna` | nal-jau-na | nalJauna | vowel-final root: nothing to repair |
+| `naljau` | GEN `-sa` (dominant) | `naljausa` | nal-jau-sa | nalJausa | vowel-final root: nothing to repair |
+| `naljau` | DAT `-me` (subdominant) | `naljaume` | nal-jau-me | nalJaume | vowel-final root: nothing to repair |
+| `naljau` | LOC `-ner` (subdominant) | `naljauner` | nal-jau-ner | nalJauner | vowel-final root: nothing to repair |
+| `naljau` | INS `-ser` (subdominant) | `naljauser` | nal-jau-ser | nalJauser | vowel-final root: nothing to repair |
+| `naljau` | OBL `-le` (subdominant) | `naljaule` | nal-jau-le | nalJaule | vowel-final root: nothing to repair |
+| `naljau` | V1 `-ri` (tonic) | `naljauri` | nal-jau-ri | nalJauri | vowel-final root: nothing to repair |
+| `naljau` | V2 `-ni` (tonic) | `naljauni` | nal-jau-ni | nalJauni | vowel-final root: nothing to repair |
 
-## base `shasgeu`
-
-| root | suffix | form | syllables | stress | seam |
-|---|---|---|---|---|---|
-| `shasgeuf` | NOM `-` (zero) | `shasgeuf` | shas-geuf | shasGeuf | NOM = zero suffix |
-| `shasgeuf` | ACC `-na` (dominant) | `shasgeufna` | shas-geu-fna | shasGeufna | tier 1: `fn` is a legal VCV cluster |
-| `shasgeuf` | GEN `-sa` (dominant) | `shasgeussa` | shas-geus-sa | shasGeussa | tier 2 sync: f+s -> ss |
-| `shasgeuf` | DAT `-me` (subdominant) | `shasgeufme` | shas-geu-fme | shasGeufme | tier 1: `fm` is a legal VCV cluster |
-| `shasgeuf` | LOC `-ner` (subdominant) | `shasgeufner` | shas-geu-fner | shasGeufner | tier 1: `fn` is a legal VCV cluster |
-| `shasgeuf` | INS `-ser` (subdominant) | `shasgeusser` | shas-geus-ser | shasGeusser | tier 2 sync: f+s -> ss |
-| `shasgeuf` | OBL `-le` (subdominant) | `shasgeulle` | shas-geul-le | shasGeulle | tier 2 sync: f+l -> ll |
-| `shasgeuf` | V1 `-ri` (tonic) | `shasgeurri` | shas-geur-ri | shasGeurri | tier 2 sync: f+r -> rr |
-| `shasgeuf` | V2 `-ni` (tonic) | `shasgeufni` | shas-geu-fni | shasGeufni | tier 1: `fn` is a legal VCV cluster |
-| `shasgeuw` | NOM `-` (zero) | `shasgeuw` | shas-geuw | shasGeuw | NOM = zero suffix |
-| `shasgeuw` | ACC `-na` (dominant) | `shasgeuwna` | shas-geu-wna | shasGeuwna | tier 1: `wn` is a legal VCV cluster |
-| `shasgeuw` | GEN `-sa` (dominant) | `shasgeussa` | shas-geus-sa | shasGeussa | tier 2 sync: w+s -> ss |
-| `shasgeuw` | DAT `-me` (subdominant) | `shasgeuwme` | shas-geu-wme | shasGeuwme | tier 1: `wm` is a legal VCV cluster |
-| `shasgeuw` | LOC `-ner` (subdominant) | `shasgeuwner` | shas-geu-wner | shasGeuwner | tier 1: `wn` is a legal VCV cluster |
-| `shasgeuw` | INS `-ser` (subdominant) | `shasgeusser` | shas-geus-ser | shasGeusser | tier 2 sync: w+s -> ss |
-| `shasgeuw` | OBL `-le` (subdominant) | `shasgeulle` | shas-geul-le | shasGeulle | tier 2 sync: w+l -> ll |
-| `shasgeuw` | V1 `-ri` (tonic) | `shasgeurri` | shas-geur-ri | shasGeurri | tier 2 sync: w+r -> rr |
-| `shasgeuw` | V2 `-ni` (tonic) | `shasgeuwni` | shas-geu-wni | shasGeuwni | tier 1: `wn` is a legal VCV cluster |
-| `shasgeuh` | NOM `-` (zero) | `shasgeuh` | shas-geuh | shasGeuh | NOM = zero suffix |
-| `shasgeuh` | ACC `-na` (dominant) | `shasgeuhna` | shas-geu-hna | shasGeuhna | tier 1: `hn` is a legal VCV cluster |
-| `shasgeuh` | GEN `-sa` (dominant) | `shasgeusa` | shas-geu-sa | shasGeusa | tier 2 sync: h+s -> s |
-| `shasgeuh` | DAT `-me` (subdominant) | `shasgeuhme` | shas-geu-hme | shasGeuhme | tier 1: `hm` is a legal VCV cluster |
-| `shasgeuh` | LOC `-ner` (subdominant) | `shasgeuhner` | shas-geu-hner | shasGeuhner | tier 1: `hn` is a legal VCV cluster |
-| `shasgeuh` | INS `-ser` (subdominant) | `shasgeuser` | shas-geu-ser | shasGeuser | tier 2 sync: h+s -> s |
-| `shasgeuh` | OBL `-le` (subdominant) | `shasgeule` | shas-geu-le | shasGeule | tier 2 sync: h+l -> l |
-| `shasgeuh` | V1 `-ri` (tonic) | `shasgeuri` | shas-geu-ri | shasGeuri | tier 2 sync: h+r -> r |
-| `shasgeuh` | V2 `-ni` (tonic) | `shasgeuhni` | shas-geu-hni | shasGeuhni | tier 1: `hn` is a legal VCV cluster |
-| `shasgeu` | NOM `-` (zero) | `shasgeu` | shas-geu | shasGeu | NOM = zero suffix |
-| `shasgeu` | ACC `-na` (dominant) | `shasgeuna` | shas-geu-na | shasGeuna | vowel-final root: nothing to repair |
-| `shasgeu` | GEN `-sa` (dominant) | `shasgeusa` | shas-geu-sa | shasGeusa | vowel-final root: nothing to repair |
-| `shasgeu` | DAT `-me` (subdominant) | `shasgeume` | shas-geu-me | shasGeume | vowel-final root: nothing to repair |
-| `shasgeu` | LOC `-ner` (subdominant) | `shasgeuner` | shas-geu-ner | shasGeuner | vowel-final root: nothing to repair |
-| `shasgeu` | INS `-ser` (subdominant) | `shasgeuser` | shas-geu-ser | shasGeuser | vowel-final root: nothing to repair |
-| `shasgeu` | OBL `-le` (subdominant) | `shasgeule` | shas-geu-le | shasGeule | vowel-final root: nothing to repair |
-| `shasgeu` | V1 `-ri` (tonic) | `shasgeuri` | shas-geu-ri | shasGeuri | vowel-final root: nothing to repair |
-| `shasgeu` | V2 `-ni` (tonic) | `shasgeuni` | shas-geu-ni | shasGeuni | vowel-final root: nothing to repair |
-
-## base `waesgei`
+## base `diwmy`
 
 | root | suffix | form | syllables | stress | seam |
 |---|---|---|---|---|---|
-| `waesgeif` | NOM `-` (zero) | `waesgeif` | waes-geif | waesGeif | NOM = zero suffix |
-| `waesgeif` | ACC `-na` (dominant) | `waesgeifna` | waes-gei-fna | waesGeifna | tier 1: `fn` is a legal VCV cluster |
-| `waesgeif` | GEN `-sa` (dominant) | `waesgeissa` | waes-geis-sa | waesGeissa | tier 2 sync: f+s -> ss |
-| `waesgeif` | DAT `-me` (subdominant) | `waesgeifme` | waes-gei-fme | waesGeifme | tier 1: `fm` is a legal VCV cluster |
-| `waesgeif` | LOC `-ner` (subdominant) | `waesgeifner` | waes-gei-fner | waesGeifner | tier 1: `fn` is a legal VCV cluster |
-| `waesgeif` | INS `-ser` (subdominant) | `waesgeisser` | waes-geis-ser | waesGeisser | tier 2 sync: f+s -> ss |
-| `waesgeif` | OBL `-le` (subdominant) | `waesgeille` | waes-geil-le | waesGeille | tier 2 sync: f+l -> ll |
-| `waesgeif` | V1 `-ri` (tonic) | `waesgeirri` | waes-geir-ri | waesGeirri | tier 2 sync: f+r -> rr |
-| `waesgeif` | V2 `-ni` (tonic) | `waesgeifni` | waes-gei-fni | waesGeifni | tier 1: `fn` is a legal VCV cluster |
-| `waesgeiw` | NOM `-` (zero) | `waesgeiw` | waes-geiw | waesGeiw | NOM = zero suffix |
-| `waesgeiw` | ACC `-na` (dominant) | `waesgeiwna` | waes-gei-wna | waesGeiwna | tier 1: `wn` is a legal VCV cluster |
-| `waesgeiw` | GEN `-sa` (dominant) | `waesgeissa` | waes-geis-sa | waesGeissa | tier 2 sync: w+s -> ss |
-| `waesgeiw` | DAT `-me` (subdominant) | `waesgeiwme` | waes-gei-wme | waesGeiwme | tier 1: `wm` is a legal VCV cluster |
-| `waesgeiw` | LOC `-ner` (subdominant) | `waesgeiwner` | waes-gei-wner | waesGeiwner | tier 1: `wn` is a legal VCV cluster |
-| `waesgeiw` | INS `-ser` (subdominant) | `waesgeisser` | waes-geis-ser | waesGeisser | tier 2 sync: w+s -> ss |
-| `waesgeiw` | OBL `-le` (subdominant) | `waesgeille` | waes-geil-le | waesGeille | tier 2 sync: w+l -> ll |
-| `waesgeiw` | V1 `-ri` (tonic) | `waesgeirri` | waes-geir-ri | waesGeirri | tier 2 sync: w+r -> rr |
-| `waesgeiw` | V2 `-ni` (tonic) | `waesgeiwni` | waes-gei-wni | waesGeiwni | tier 1: `wn` is a legal VCV cluster |
-| `waesgeih` | NOM `-` (zero) | `waesgeih` | waes-geih | waesGeih | NOM = zero suffix |
-| `waesgeih` | ACC `-na` (dominant) | `waesgeihna` | waes-gei-hna | waesGeihna | tier 1: `hn` is a legal VCV cluster |
-| `waesgeih` | GEN `-sa` (dominant) | `waesgeisa` | waes-gei-sa | waesGeisa | tier 2 sync: h+s -> s |
-| `waesgeih` | DAT `-me` (subdominant) | `waesgeihme` | waes-gei-hme | waesGeihme | tier 1: `hm` is a legal VCV cluster |
-| `waesgeih` | LOC `-ner` (subdominant) | `waesgeihner` | waes-gei-hner | waesGeihner | tier 1: `hn` is a legal VCV cluster |
-| `waesgeih` | INS `-ser` (subdominant) | `waesgeiser` | waes-gei-ser | waesGeiser | tier 2 sync: h+s -> s |
-| `waesgeih` | OBL `-le` (subdominant) | `waesgeile` | waes-gei-le | waesGeile | tier 2 sync: h+l -> l |
-| `waesgeih` | V1 `-ri` (tonic) | `waesgeiri` | waes-gei-ri | waesGeiri | tier 2 sync: h+r -> r |
-| `waesgeih` | V2 `-ni` (tonic) | `waesgeihni` | waes-gei-hni | waesGeihni | tier 1: `hn` is a legal VCV cluster |
-| `waesgei` | NOM `-` (zero) | `waesgei` | waes-gei | waesGei | NOM = zero suffix |
-| `waesgei` | ACC `-na` (dominant) | `waesgeina` | waes-gei-na | waesGeina | vowel-final root: nothing to repair |
-| `waesgei` | GEN `-sa` (dominant) | `waesgeisa` | waes-gei-sa | waesGeisa | vowel-final root: nothing to repair |
-| `waesgei` | DAT `-me` (subdominant) | `waesgeime` | waes-gei-me | waesGeime | vowel-final root: nothing to repair |
-| `waesgei` | LOC `-ner` (subdominant) | `waesgeiner` | waes-gei-ner | waesGeiner | vowel-final root: nothing to repair |
-| `waesgei` | INS `-ser` (subdominant) | `waesgeiser` | waes-gei-ser | waesGeiser | vowel-final root: nothing to repair |
-| `waesgei` | OBL `-le` (subdominant) | `waesgeile` | waes-gei-le | waesGeile | vowel-final root: nothing to repair |
-| `waesgei` | V1 `-ri` (tonic) | `waesgeiri` | waes-gei-ri | waesGeiri | vowel-final root: nothing to repair |
-| `waesgei` | V2 `-ni` (tonic) | `waesgeini` | waes-gei-ni | waesGeini | vowel-final root: nothing to repair |
+| `diwmyf` | NOM `-` (zero) | `diwmyf` | di-wmyf | diWmyf | NOM = zero suffix |
+| `diwmyf` | ACC `-na` (dominant) | `diwmyfna` | di-wmy-fna | diWmyfna | tier 1: `fn` is a legal VCV cluster |
+| `diwmyf` | GEN `-sa` (dominant) | `diwmyssa` | di-wmys-sa | diWmyssa | tier 2 sync: f+s -> ss |
+| `diwmyf` | DAT `-me` (subdominant) | `diwmyfme` | di-wmy-fme | diWmyfme | tier 1: `fm` is a legal VCV cluster |
+| `diwmyf` | LOC `-ner` (subdominant) | `diwmyfner` | di-wmy-fner | diWmyfner | tier 1: `fn` is a legal VCV cluster |
+| `diwmyf` | INS `-ser` (subdominant) | `diwmysser` | di-wmys-ser | diWmysser | tier 2 sync: f+s -> ss |
+| `diwmyf` | OBL `-le` (subdominant) | `diwmylle` | di-wmyl-le | diWmylle | tier 2 sync: f+l -> ll |
+| `diwmyf` | V1 `-ri` (tonic) | `diwmyrri` | di-wmyr-ri | diWmyrri | tier 2 sync: f+r -> rr |
+| `diwmyf` | V2 `-ni` (tonic) | `diwmyfni` | di-wmy-fni | diWmyfni | tier 1: `fn` is a legal VCV cluster |
+| `diwmyw` | NOM `-` (zero) | `diwmyw` | di-wmyw | diWmyw | NOM = zero suffix |
+| `diwmyw` | ACC `-na` (dominant) | `diwmywna` | di-wmy-wna | diWmywna | tier 1: `wn` is a legal VCV cluster |
+| `diwmyw` | GEN `-sa` (dominant) | `diwmyssa` | di-wmys-sa | diWmyssa | tier 2 sync: w+s -> ss |
+| `diwmyw` | DAT `-me` (subdominant) | `diwmywme` | di-wmy-wme | diWmywme | tier 1: `wm` is a legal VCV cluster |
+| `diwmyw` | LOC `-ner` (subdominant) | `diwmywner` | di-wmy-wner | diWmywner | tier 1: `wn` is a legal VCV cluster |
+| `diwmyw` | INS `-ser` (subdominant) | `diwmysser` | di-wmys-ser | diWmysser | tier 2 sync: w+s -> ss |
+| `diwmyw` | OBL `-le` (subdominant) | `diwmylle` | di-wmyl-le | diWmylle | tier 2 sync: w+l -> ll |
+| `diwmyw` | V1 `-ri` (tonic) | `diwmyrri` | di-wmyr-ri | diWmyrri | tier 2 sync: w+r -> rr |
+| `diwmyw` | V2 `-ni` (tonic) | `diwmywni` | di-wmy-wni | diWmywni | tier 1: `wn` is a legal VCV cluster |
+| `diwmyh` | NOM `-` (zero) | `diwmyh` | di-wmyh | diWmyh | NOM = zero suffix |
+| `diwmyh` | ACC `-na` (dominant) | `diwmyhna` | di-wmy-hna | diWmyhna | tier 1: `hn` is a legal VCV cluster |
+| `diwmyh` | GEN `-sa` (dominant) | `diwmysa` | di-wmy-sa | diWmysa | tier 2 sync: h+s -> s |
+| `diwmyh` | DAT `-me` (subdominant) | `diwmyhme` | di-wmy-hme | diWmyhme | tier 1: `hm` is a legal VCV cluster |
+| `diwmyh` | LOC `-ner` (subdominant) | `diwmyhner` | di-wmy-hner | diWmyhner | tier 1: `hn` is a legal VCV cluster |
+| `diwmyh` | INS `-ser` (subdominant) | `diwmyser` | di-wmy-ser | diWmyser | tier 2 sync: h+s -> s |
+| `diwmyh` | OBL `-le` (subdominant) | `diwmyle` | di-wmy-le | diWmyle | tier 2 sync: h+l -> l |
+| `diwmyh` | V1 `-ri` (tonic) | `diwmyri` | di-wmy-ri | diWmyri | tier 2 sync: h+r -> r |
+| `diwmyh` | V2 `-ni` (tonic) | `diwmyhni` | di-wmy-hni | diWmyhni | tier 1: `hn` is a legal VCV cluster |
+| `diwmy` | NOM `-` (zero) | `diwmy` | di-wmy | diWmy | NOM = zero suffix |
+| `diwmy` | ACC `-na` (dominant) | `diwmyna` | di-wmy-na | diWmyna | vowel-final root: nothing to repair |
+| `diwmy` | GEN `-sa` (dominant) | `diwmysa` | di-wmy-sa | diWmysa | vowel-final root: nothing to repair |
+| `diwmy` | DAT `-me` (subdominant) | `diwmyme` | di-wmy-me | diWmyme | vowel-final root: nothing to repair |
+| `diwmy` | LOC `-ner` (subdominant) | `diwmyner` | di-wmy-ner | diWmyner | vowel-final root: nothing to repair |
+| `diwmy` | INS `-ser` (subdominant) | `diwmyser` | di-wmy-ser | diWmyser | vowel-final root: nothing to repair |
+| `diwmy` | OBL `-le` (subdominant) | `diwmyle` | di-wmy-le | diWmyle | vowel-final root: nothing to repair |
+| `diwmy` | V1 `-ri` (tonic) | `diwmyri` | di-wmy-ri | diWmyri | vowel-final root: nothing to repair |
+| `diwmy` | V2 `-ni` (tonic) | `diwmyni` | di-wmy-ni | diWmyni | vowel-final root: nothing to repair |
 
-## base `daengou`
+## base `sulsi`
 
 | root | suffix | form | syllables | stress | seam |
 |---|---|---|---|---|---|
-| `daengouf` | NOM `-` (zero) | `daengouf` | dae-ngouf | daeNgouf | NOM = zero suffix |
-| `daengouf` | ACC `-na` (dominant) | `daengoufna` | dae-ngou-fna | daeNgoufna | tier 1: `fn` is a legal VCV cluster |
-| `daengouf` | GEN `-sa` (dominant) | `daengoussa` | dae-ngous-sa | daeNgoussa | tier 2 sync: f+s -> ss |
-| `daengouf` | DAT `-me` (subdominant) | `daengoufme` | dae-ngou-fme | daeNgoufme | tier 1: `fm` is a legal VCV cluster |
-| `daengouf` | LOC `-ner` (subdominant) | `daengoufner` | dae-ngou-fner | daeNgoufner | tier 1: `fn` is a legal VCV cluster |
-| `daengouf` | INS `-ser` (subdominant) | `daengousser` | dae-ngous-ser | daeNgousser | tier 2 sync: f+s -> ss |
-| `daengouf` | OBL `-le` (subdominant) | `daengoulle` | dae-ngoul-le | daeNgoulle | tier 2 sync: f+l -> ll |
-| `daengouf` | V1 `-ri` (tonic) | `daengourri` | dae-ngour-ri | daeNgourri | tier 2 sync: f+r -> rr |
-| `daengouf` | V2 `-ni` (tonic) | `daengoufni` | dae-ngou-fni | daeNgoufni | tier 1: `fn` is a legal VCV cluster |
-| `daengouw` | NOM `-` (zero) | `daengouw` | dae-ngouw | daeNgouw | NOM = zero suffix |
-| `daengouw` | ACC `-na` (dominant) | `daengouwna` | dae-ngou-wna | daeNgouwna | tier 1: `wn` is a legal VCV cluster |
-| `daengouw` | GEN `-sa` (dominant) | `daengoussa` | dae-ngous-sa | daeNgoussa | tier 2 sync: w+s -> ss |
-| `daengouw` | DAT `-me` (subdominant) | `daengouwme` | dae-ngou-wme | daeNgouwme | tier 1: `wm` is a legal VCV cluster |
-| `daengouw` | LOC `-ner` (subdominant) | `daengouwner` | dae-ngou-wner | daeNgouwner | tier 1: `wn` is a legal VCV cluster |
-| `daengouw` | INS `-ser` (subdominant) | `daengousser` | dae-ngous-ser | daeNgousser | tier 2 sync: w+s -> ss |
-| `daengouw` | OBL `-le` (subdominant) | `daengoulle` | dae-ngoul-le | daeNgoulle | tier 2 sync: w+l -> ll |
-| `daengouw` | V1 `-ri` (tonic) | `daengourri` | dae-ngour-ri | daeNgourri | tier 2 sync: w+r -> rr |
-| `daengouw` | V2 `-ni` (tonic) | `daengouwni` | dae-ngou-wni | daeNgouwni | tier 1: `wn` is a legal VCV cluster |
-| `daengouh` | NOM `-` (zero) | `daengouh` | dae-ngouh | daeNgouh | NOM = zero suffix |
-| `daengouh` | ACC `-na` (dominant) | `daengouhna` | dae-ngou-hna | daeNgouhna | tier 1: `hn` is a legal VCV cluster |
-| `daengouh` | GEN `-sa` (dominant) | `daengousa` | dae-ngou-sa | daeNgousa | tier 2 sync: h+s -> s |
-| `daengouh` | DAT `-me` (subdominant) | `daengouhme` | dae-ngou-hme | daeNgouhme | tier 1: `hm` is a legal VCV cluster |
-| `daengouh` | LOC `-ner` (subdominant) | `daengouhner` | dae-ngou-hner | daeNgouhner | tier 1: `hn` is a legal VCV cluster |
-| `daengouh` | INS `-ser` (subdominant) | `daengouser` | dae-ngou-ser | daeNgouser | tier 2 sync: h+s -> s |
-| `daengouh` | OBL `-le` (subdominant) | `daengoule` | dae-ngou-le | daeNgoule | tier 2 sync: h+l -> l |
-| `daengouh` | V1 `-ri` (tonic) | `daengouri` | dae-ngou-ri | daeNgouri | tier 2 sync: h+r -> r |
-| `daengouh` | V2 `-ni` (tonic) | `daengouhni` | dae-ngou-hni | daeNgouhni | tier 1: `hn` is a legal VCV cluster |
-| `daengou` | NOM `-` (zero) | `daengou` | dae-ngou | daeNgou | NOM = zero suffix |
-| `daengou` | ACC `-na` (dominant) | `daengouna` | dae-ngou-na | daeNgouna | vowel-final root: nothing to repair |
-| `daengou` | GEN `-sa` (dominant) | `daengousa` | dae-ngou-sa | daeNgousa | vowel-final root: nothing to repair |
-| `daengou` | DAT `-me` (subdominant) | `daengoume` | dae-ngou-me | daeNgoume | vowel-final root: nothing to repair |
-| `daengou` | LOC `-ner` (subdominant) | `daengouner` | dae-ngou-ner | daeNgouner | vowel-final root: nothing to repair |
-| `daengou` | INS `-ser` (subdominant) | `daengouser` | dae-ngou-ser | daeNgouser | vowel-final root: nothing to repair |
-| `daengou` | OBL `-le` (subdominant) | `daengoule` | dae-ngou-le | daeNgoule | vowel-final root: nothing to repair |
-| `daengou` | V1 `-ri` (tonic) | `daengouri` | dae-ngou-ri | daeNgouri | vowel-final root: nothing to repair |
-| `daengou` | V2 `-ni` (tonic) | `daengouni` | dae-ngou-ni | daeNgouni | vowel-final root: nothing to repair |
+| `sulsif` | NOM `-` (zero) | `sulsif` | sul-sif | sulSif | NOM = zero suffix |
+| `sulsif` | ACC `-na` (dominant) | `sulsifna` | sul-si-fna | sulSifna | tier 1: `fn` is a legal VCV cluster |
+| `sulsif` | GEN `-sa` (dominant) | `sulsissa` | sul-sis-sa | sulSissa | tier 2 sync: f+s -> ss |
+| `sulsif` | DAT `-me` (subdominant) | `sulsifme` | sul-si-fme | sulSifme | tier 1: `fm` is a legal VCV cluster |
+| `sulsif` | LOC `-ner` (subdominant) | `sulsifner` | sul-si-fner | sulSifner | tier 1: `fn` is a legal VCV cluster |
+| `sulsif` | INS `-ser` (subdominant) | `sulsisser` | sul-sis-ser | sulSisser | tier 2 sync: f+s -> ss |
+| `sulsif` | OBL `-le` (subdominant) | `sulsille` | sul-sil-le | sulSille | tier 2 sync: f+l -> ll |
+| `sulsif` | V1 `-ri` (tonic) | `sulsirri` | sul-sir-ri | sulSirri | tier 2 sync: f+r -> rr |
+| `sulsif` | V2 `-ni` (tonic) | `sulsifni` | sul-si-fni | sulSifni | tier 1: `fn` is a legal VCV cluster |
+| `sulsiw` | NOM `-` (zero) | `sulsiw` | sul-siw | sulSiw | NOM = zero suffix |
+| `sulsiw` | ACC `-na` (dominant) | `sulsiwna` | sul-si-wna | sulSiwna | tier 1: `wn` is a legal VCV cluster |
+| `sulsiw` | GEN `-sa` (dominant) | `sulsissa` | sul-sis-sa | sulSissa | tier 2 sync: w+s -> ss |
+| `sulsiw` | DAT `-me` (subdominant) | `sulsiwme` | sul-si-wme | sulSiwme | tier 1: `wm` is a legal VCV cluster |
+| `sulsiw` | LOC `-ner` (subdominant) | `sulsiwner` | sul-si-wner | sulSiwner | tier 1: `wn` is a legal VCV cluster |
+| `sulsiw` | INS `-ser` (subdominant) | `sulsisser` | sul-sis-ser | sulSisser | tier 2 sync: w+s -> ss |
+| `sulsiw` | OBL `-le` (subdominant) | `sulsille` | sul-sil-le | sulSille | tier 2 sync: w+l -> ll |
+| `sulsiw` | V1 `-ri` (tonic) | `sulsirri` | sul-sir-ri | sulSirri | tier 2 sync: w+r -> rr |
+| `sulsiw` | V2 `-ni` (tonic) | `sulsiwni` | sul-si-wni | sulSiwni | tier 1: `wn` is a legal VCV cluster |
+| `sulsih` | NOM `-` (zero) | `sulsih` | sul-sih | sulSih | NOM = zero suffix |
+| `sulsih` | ACC `-na` (dominant) | `sulsihna` | sul-si-hna | sulSihna | tier 1: `hn` is a legal VCV cluster |
+| `sulsih` | GEN `-sa` (dominant) | `sulsisa` | sul-si-sa | sulSisa | tier 2 sync: h+s -> s |
+| `sulsih` | DAT `-me` (subdominant) | `sulsihme` | sul-si-hme | sulSihme | tier 1: `hm` is a legal VCV cluster |
+| `sulsih` | LOC `-ner` (subdominant) | `sulsihner` | sul-si-hner | sulSihner | tier 1: `hn` is a legal VCV cluster |
+| `sulsih` | INS `-ser` (subdominant) | `sulsiser` | sul-si-ser | sulSiser | tier 2 sync: h+s -> s |
+| `sulsih` | OBL `-le` (subdominant) | `sulsile` | sul-si-le | sulSile | tier 2 sync: h+l -> l |
+| `sulsih` | V1 `-ri` (tonic) | `sulsiri` | sul-si-ri | sulSiri | tier 2 sync: h+r -> r |
+| `sulsih` | V2 `-ni` (tonic) | `sulsihni` | sul-si-hni | sulSihni | tier 1: `hn` is a legal VCV cluster |
+| `sulsi` | NOM `-` (zero) | `sulsi` | sul-si | sulSi | NOM = zero suffix |
+| `sulsi` | ACC `-na` (dominant) | `sulsina` | sul-si-na | sulSina | vowel-final root: nothing to repair |
+| `sulsi` | GEN `-sa` (dominant) | `sulsisa` | sul-si-sa | sulSisa | vowel-final root: nothing to repair |
+| `sulsi` | DAT `-me` (subdominant) | `sulsime` | sul-si-me | sulSime | vowel-final root: nothing to repair |
+| `sulsi` | LOC `-ner` (subdominant) | `sulsiner` | sul-si-ner | sulSiner | vowel-final root: nothing to repair |
+| `sulsi` | INS `-ser` (subdominant) | `sulsiser` | sul-si-ser | sulSiser | vowel-final root: nothing to repair |
+| `sulsi` | OBL `-le` (subdominant) | `sulsile` | sul-si-le | sulSile | vowel-final root: nothing to repair |
+| `sulsi` | V1 `-ri` (tonic) | `sulsiri` | sul-si-ri | sulSiri | vowel-final root: nothing to repair |
+| `sulsi` | V2 `-ni` (tonic) | `sulsini` | sul-si-ni | sulSini | vowel-final root: nothing to repair |
+
+## base `thywe`
+
+| root | suffix | form | syllables | stress | seam |
+|---|---|---|---|---|---|
+| `thywef` | NOM `-` (zero) | `thywef` | thy-wef | thyWef | NOM = zero suffix |
+| `thywef` | ACC `-na` (dominant) | `thywefna` | thy-we-fna | thyWefna | tier 1: `fn` is a legal VCV cluster |
+| `thywef` | GEN `-sa` (dominant) | `thywessa` | thy-wes-sa | thyWessa | tier 2 sync: f+s -> ss |
+| `thywef` | DAT `-me` (subdominant) | `thywefme` | thy-we-fme | thyWefme | tier 1: `fm` is a legal VCV cluster |
+| `thywef` | LOC `-ner` (subdominant) | `thywefner` | thy-we-fner | thyWefner | tier 1: `fn` is a legal VCV cluster |
+| `thywef` | INS `-ser` (subdominant) | `thywesser` | thy-wes-ser | thyWesser | tier 2 sync: f+s -> ss |
+| `thywef` | OBL `-le` (subdominant) | `thywelle` | thy-wel-le | thyWelle | tier 2 sync: f+l -> ll |
+| `thywef` | V1 `-ri` (tonic) | `thywerri` | thy-wer-ri | thyWerri | tier 2 sync: f+r -> rr |
+| `thywef` | V2 `-ni` (tonic) | `thywefni` | thy-we-fni | thyWefni | tier 1: `fn` is a legal VCV cluster |
+| `thywew` | NOM `-` (zero) | `thywew` | thy-wew | thyWew | NOM = zero suffix |
+| `thywew` | ACC `-na` (dominant) | `thywewna` | thy-we-wna | thyWewna | tier 1: `wn` is a legal VCV cluster |
+| `thywew` | GEN `-sa` (dominant) | `thywessa` | thy-wes-sa | thyWessa | tier 2 sync: w+s -> ss |
+| `thywew` | DAT `-me` (subdominant) | `thywewme` | thy-we-wme | thyWewme | tier 1: `wm` is a legal VCV cluster |
+| `thywew` | LOC `-ner` (subdominant) | `thywewner` | thy-we-wner | thyWewner | tier 1: `wn` is a legal VCV cluster |
+| `thywew` | INS `-ser` (subdominant) | `thywesser` | thy-wes-ser | thyWesser | tier 2 sync: w+s -> ss |
+| `thywew` | OBL `-le` (subdominant) | `thywelle` | thy-wel-le | thyWelle | tier 2 sync: w+l -> ll |
+| `thywew` | V1 `-ri` (tonic) | `thywerri` | thy-wer-ri | thyWerri | tier 2 sync: w+r -> rr |
+| `thywew` | V2 `-ni` (tonic) | `thywewni` | thy-we-wni | thyWewni | tier 1: `wn` is a legal VCV cluster |
+| `thyweh` | NOM `-` (zero) | `thyweh` | thy-weh | thyWeh | NOM = zero suffix |
+| `thyweh` | ACC `-na` (dominant) | `thywehna` | thy-we-hna | thyWehna | tier 1: `hn` is a legal VCV cluster |
+| `thyweh` | GEN `-sa` (dominant) | `thywesa` | thy-we-sa | thyWesa | tier 2 sync: h+s -> s |
+| `thyweh` | DAT `-me` (subdominant) | `thywehme` | thy-we-hme | thyWehme | tier 1: `hm` is a legal VCV cluster |
+| `thyweh` | LOC `-ner` (subdominant) | `thywehner` | thy-we-hner | thyWehner | tier 1: `hn` is a legal VCV cluster |
+| `thyweh` | INS `-ser` (subdominant) | `thyweser` | thy-we-ser | thyWeser | tier 2 sync: h+s -> s |
+| `thyweh` | OBL `-le` (subdominant) | `thywele` | thy-we-le | thyWele | tier 2 sync: h+l -> l |
+| `thyweh` | V1 `-ri` (tonic) | `thyweri` | thy-we-ri | thyWeri | tier 2 sync: h+r -> r |
+| `thyweh` | V2 `-ni` (tonic) | `thywehni` | thy-we-hni | thyWehni | tier 1: `hn` is a legal VCV cluster |
+| `thywe` | NOM `-` (zero) | `thywe` | thy-we | thyWe | NOM = zero suffix |
+| `thywe` | ACC `-na` (dominant) | `thywena` | thy-we-na | thyWena | vowel-final root: nothing to repair |
+| `thywe` | GEN `-sa` (dominant) | `thywesa` | thy-we-sa | thyWesa | vowel-final root: nothing to repair |
+| `thywe` | DAT `-me` (subdominant) | `thyweme` | thy-we-me | thyWeme | vowel-final root: nothing to repair |
+| `thywe` | LOC `-ner` (subdominant) | `thywener` | thy-we-ner | thyWener | vowel-final root: nothing to repair |
+| `thywe` | INS `-ser` (subdominant) | `thyweser` | thy-we-ser | thyWeser | vowel-final root: nothing to repair |
+| `thywe` | OBL `-le` (subdominant) | `thywele` | thy-we-le | thyWele | vowel-final root: nothing to repair |
+| `thywe` | V1 `-ri` (tonic) | `thyweri` | thy-we-ri | thyWeri | vowel-final root: nothing to repair |
+| `thywe` | V2 `-ni` (tonic) | `thyweni` | thy-we-ni | thyWeni | vowel-final root: nothing to repair |
+
+## base `daefno`
+
+| root | suffix | form | syllables | stress | seam |
+|---|---|---|---|---|---|
+| `daefnof` | NOM `-` (zero) | `daefnof` | dae-fnof | daeFnof | NOM = zero suffix |
+| `daefnof` | ACC `-na` (dominant) | `daefnofna` | dae-fno-fna | daeFnofna | tier 1: `fn` is a legal VCV cluster |
+| `daefnof` | GEN `-sa` (dominant) | `daefnossa` | dae-fnos-sa | daeFnossa | tier 2 sync: f+s -> ss |
+| `daefnof` | DAT `-me` (subdominant) | `daefnofme` | dae-fno-fme | daeFnofme | tier 1: `fm` is a legal VCV cluster |
+| `daefnof` | LOC `-ner` (subdominant) | `daefnofner` | dae-fno-fner | daeFnofner | tier 1: `fn` is a legal VCV cluster |
+| `daefnof` | INS `-ser` (subdominant) | `daefnosser` | dae-fnos-ser | daeFnosser | tier 2 sync: f+s -> ss |
+| `daefnof` | OBL `-le` (subdominant) | `daefnolle` | dae-fnol-le | daeFnolle | tier 2 sync: f+l -> ll |
+| `daefnof` | V1 `-ri` (tonic) | `daefnorri` | dae-fnor-ri | daeFnorri | tier 2 sync: f+r -> rr |
+| `daefnof` | V2 `-ni` (tonic) | `daefnofni` | dae-fno-fni | daeFnofni | tier 1: `fn` is a legal VCV cluster |
+| `daefnow` | NOM `-` (zero) | `daefnow` | dae-fnow | daeFnow | NOM = zero suffix |
+| `daefnow` | ACC `-na` (dominant) | `daefnowna` | dae-fno-wna | daeFnowna | tier 1: `wn` is a legal VCV cluster |
+| `daefnow` | GEN `-sa` (dominant) | `daefnossa` | dae-fnos-sa | daeFnossa | tier 2 sync: w+s -> ss |
+| `daefnow` | DAT `-me` (subdominant) | `daefnowme` | dae-fno-wme | daeFnowme | tier 1: `wm` is a legal VCV cluster |
+| `daefnow` | LOC `-ner` (subdominant) | `daefnowner` | dae-fno-wner | daeFnowner | tier 1: `wn` is a legal VCV cluster |
+| `daefnow` | INS `-ser` (subdominant) | `daefnosser` | dae-fnos-ser | daeFnosser | tier 2 sync: w+s -> ss |
+| `daefnow` | OBL `-le` (subdominant) | `daefnolle` | dae-fnol-le | daeFnolle | tier 2 sync: w+l -> ll |
+| `daefnow` | V1 `-ri` (tonic) | `daefnorri` | dae-fnor-ri | daeFnorri | tier 2 sync: w+r -> rr |
+| `daefnow` | V2 `-ni` (tonic) | `daefnowni` | dae-fno-wni | daeFnowni | tier 1: `wn` is a legal VCV cluster |
+| `daefnoh` | NOM `-` (zero) | `daefnoh` | dae-fnoh | daeFnoh | NOM = zero suffix |
+| `daefnoh` | ACC `-na` (dominant) | `daefnohna` | dae-fno-hna | daeFnohna | tier 1: `hn` is a legal VCV cluster |
+| `daefnoh` | GEN `-sa` (dominant) | `daefnosa` | dae-fno-sa | daeFnosa | tier 2 sync: h+s -> s |
+| `daefnoh` | DAT `-me` (subdominant) | `daefnohme` | dae-fno-hme | daeFnohme | tier 1: `hm` is a legal VCV cluster |
+| `daefnoh` | LOC `-ner` (subdominant) | `daefnohner` | dae-fno-hner | daeFnohner | tier 1: `hn` is a legal VCV cluster |
+| `daefnoh` | INS `-ser` (subdominant) | `daefnoser` | dae-fno-ser | daeFnoser | tier 2 sync: h+s -> s |
+| `daefnoh` | OBL `-le` (subdominant) | `daefnole` | dae-fno-le | daeFnole | tier 2 sync: h+l -> l |
+| `daefnoh` | V1 `-ri` (tonic) | `daefnori` | dae-fno-ri | daeFnori | tier 2 sync: h+r -> r |
+| `daefnoh` | V2 `-ni` (tonic) | `daefnohni` | dae-fno-hni | daeFnohni | tier 1: `hn` is a legal VCV cluster |
+| `daefno` | NOM `-` (zero) | `daefno` | dae-fno | daeFno | NOM = zero suffix |
+| `daefno` | ACC `-na` (dominant) | `daefnona` | dae-fno-na | daeFnona | vowel-final root: nothing to repair |
+| `daefno` | GEN `-sa` (dominant) | `daefnosa` | dae-fno-sa | daeFnosa | vowel-final root: nothing to repair |
+| `daefno` | DAT `-me` (subdominant) | `daefnome` | dae-fno-me | daeFnome | vowel-final root: nothing to repair |
+| `daefno` | LOC `-ner` (subdominant) | `daefnoner` | dae-fno-ner | daeFnoner | vowel-final root: nothing to repair |
+| `daefno` | INS `-ser` (subdominant) | `daefnoser` | dae-fno-ser | daeFnoser | vowel-final root: nothing to repair |
+| `daefno` | OBL `-le` (subdominant) | `daefnole` | dae-fno-le | daeFnole | vowel-final root: nothing to repair |
+| `daefno` | V1 `-ri` (tonic) | `daefnori` | dae-fno-ri | daeFnori | vowel-final root: nothing to repair |
+| `daefno` | V2 `-ni` (tonic) | `daefnoni` | dae-fno-ni | daeFnoni | vowel-final root: nothing to repair |
 
 ## Do the siblings stay distinct? (why the `<=2 per base` rule is correctness)
 
-**base `thaeumto`**
+**base `tharri`**
 
-- `thaeumtof` vs `thaeumtow` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `thaeumtossa`)
-- `thaeumtof` vs `thaeumtoh` -> distinct in all 9 forms
-- `thaeumtof` vs `thaeumto` -> distinct in all 9 forms
-- `thaeumtow` vs `thaeumtoh` -> distinct in all 9 forms
-- `thaeumtow` vs `thaeumto` -> distinct in all 9 forms
-- `thaeumtoh` vs `thaeumto` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `thaeumtosa`)
+- `tharrif` vs `tharriw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `tharrissa`)
+- `tharrif` vs `tharrih` -> distinct in all 9 forms
+- `tharrif` vs `tharri` -> distinct in all 9 forms
+- `tharriw` vs `tharrih` -> distinct in all 9 forms
+- `tharriw` vs `tharri` -> distinct in all 9 forms
+- `tharrih` vs `tharri` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `tharrisa`)
 
-**base `naeilrou`**
+**base `naljau`**
 
-- `naeilrouf` vs `naeilrouw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `naeilroussa`)
-- `naeilrouf` vs `naeilrouh` -> distinct in all 9 forms
-- `naeilrouf` vs `naeilrou` -> distinct in all 9 forms
-- `naeilrouw` vs `naeilrouh` -> distinct in all 9 forms
-- `naeilrouw` vs `naeilrou` -> distinct in all 9 forms
-- `naeilrouh` vs `naeilrou` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `naeilrousa`)
+- `naljauf` vs `naljauw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `naljaussa`)
+- `naljauf` vs `naljauh` -> distinct in all 9 forms
+- `naljauf` vs `naljau` -> distinct in all 9 forms
+- `naljauw` vs `naljauh` -> distinct in all 9 forms
+- `naljauw` vs `naljau` -> distinct in all 9 forms
+- `naljauh` vs `naljau` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `naljausa`)
 
-**base `donwoi`**
+**base `diwmy`**
 
-- `donwoif` vs `donwoiw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `donwoissa`)
-- `donwoif` vs `donwoih` -> distinct in all 9 forms
-- `donwoif` vs `donwoi` -> distinct in all 9 forms
-- `donwoiw` vs `donwoih` -> distinct in all 9 forms
-- `donwoiw` vs `donwoi` -> distinct in all 9 forms
-- `donwoih` vs `donwoi` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `donwoisa`)
+- `diwmyf` vs `diwmyw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `diwmyssa`)
+- `diwmyf` vs `diwmyh` -> distinct in all 9 forms
+- `diwmyf` vs `diwmy` -> distinct in all 9 forms
+- `diwmyw` vs `diwmyh` -> distinct in all 9 forms
+- `diwmyw` vs `diwmy` -> distinct in all 9 forms
+- `diwmyh` vs `diwmy` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `diwmysa`)
 
-**base `shasgeu`**
+**base `sulsi`**
 
-- `shasgeuf` vs `shasgeuw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `shasgeussa`)
-- `shasgeuf` vs `shasgeuh` -> distinct in all 9 forms
-- `shasgeuf` vs `shasgeu` -> distinct in all 9 forms
-- `shasgeuw` vs `shasgeuh` -> distinct in all 9 forms
-- `shasgeuw` vs `shasgeu` -> distinct in all 9 forms
-- `shasgeuh` vs `shasgeu` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `shasgeusa`)
+- `sulsif` vs `sulsiw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `sulsissa`)
+- `sulsif` vs `sulsih` -> distinct in all 9 forms
+- `sulsif` vs `sulsi` -> distinct in all 9 forms
+- `sulsiw` vs `sulsih` -> distinct in all 9 forms
+- `sulsiw` vs `sulsi` -> distinct in all 9 forms
+- `sulsih` vs `sulsi` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `sulsisa`)
 
-**base `waesgei`**
+**base `thywe`**
 
-- `waesgeif` vs `waesgeiw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `waesgeissa`)
-- `waesgeif` vs `waesgeih` -> distinct in all 9 forms
-- `waesgeif` vs `waesgei` -> distinct in all 9 forms
-- `waesgeiw` vs `waesgeih` -> distinct in all 9 forms
-- `waesgeiw` vs `waesgei` -> distinct in all 9 forms
-- `waesgeih` vs `waesgei` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `waesgeisa`)
+- `thywef` vs `thywew` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `thywessa`)
+- `thywef` vs `thyweh` -> distinct in all 9 forms
+- `thywef` vs `thywe` -> distinct in all 9 forms
+- `thywew` vs `thyweh` -> distinct in all 9 forms
+- `thywew` vs `thywe` -> distinct in all 9 forms
+- `thyweh` vs `thywe` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `thywesa`)
 
-**base `daengou`**
+**base `daefno`**
 
-- `daengouf` vs `daengouw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `daengoussa`)
-- `daengouf` vs `daengouh` -> distinct in all 9 forms
-- `daengouf` vs `daengou` -> distinct in all 9 forms
-- `daengouw` vs `daengouh` -> distinct in all 9 forms
-- `daengouw` vs `daengou` -> distinct in all 9 forms
-- `daengouh` vs `daengou` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `daengousa`)
+- `daefnof` vs `daefnow` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `daefnossa`)
+- `daefnof` vs `daefnoh` -> distinct in all 9 forms
+- `daefnof` vs `daefno` -> distinct in all 9 forms
+- `daefnow` vs `daefnoh` -> distinct in all 9 forms
+- `daefnow` vs `daefno` -> distinct in all 9 forms
+- `daefnoh` vs `daefno` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `daefnosa`)
 
 **tier 3 (copied vowel) never fired** -- M3a is fully determined by tiers 1-2 for the current suffix set (all 9 start with `m n l r s`).
 
