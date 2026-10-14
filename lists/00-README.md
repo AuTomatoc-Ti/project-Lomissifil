@@ -62,8 +62,9 @@ python3 tools/syllabify.py --stats          # histogram of a whole list: syllabl
 ```
 
 `--stats` on the current pack (2026-10-14): **26,751 forms, 100% two-syllable, 0 illegal, 17.0%
-stressed on a digraph, 9.8% `sh`/`ng`-ambiguous**. ⚠️ The 100% is a finding, not a detail — read
-`../decision/03-open-questions.md` §0 items 21-22.
+stressed on a digraph, 11.0% read as ONE phoneme (`sh`/`ng`, P6), and 0 `nk` spellings**. Three of
+those are findings, not details — read `../decision/03-open-questions.md` §0 items 21-24 (21 is now
+**DECIDED = P6**; the `0 nk` line is what item 24 is about).
 
 It is the **same 48 bases with the same numbering** as `../audio/roots-index.txt`. It is generated, so
 **never annotate it** — the picks belong in `picks.md`. Two things it flags, both genuine open/undecided

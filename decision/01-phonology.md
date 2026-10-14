@@ -28,10 +28,16 @@ Status: locked. Numbering (`V*`, `C*`, `P*`, `N1`) matches the original discussi
 >   (/t͡ʃ/) has no partner; fricatives, nasals and sonorants are untouched.
 > - **(R-b) Base forms always use the voiced letter.** No root may be coined with `p t k` in its
 >   base form, or its soft form would collide with another root's hard form (a homophone). This
->   also protects the ~16-consonant affix-identity alphabet.
+>   also protects the ~16-consonant affix-identity alphabet. ⚠️ **AMENDED by P6:** the fixed sequence
+>   **`nk`** (= coda `n` + the `/g/` phoneme) is a **required** hard spelling inside a base form. The
+>   collision this rule guards against cannot occur there (`nka` = /n.g…/ vs `nga` = /ŋ…/ are
+>   different phoneme sequences).
 > - **(R-c) Register boundary.** Plain text and the dictionary are voiced **only**; hard spellings
 >   live in notation/performance text and in actual singing. A lookup therefore never misses:
->   `losdo` is the headword, `losto` its hard realisation (P5).
+>   `losdo` is the headword, `losto` its hard realisation (P5). ⚠️ **AMENDED by P6:** `nk` is a
+>   *required* hard spelling, so the letter `k` may appear in the dictionary form — but only inside
+>   that fixed sequence, and it is a **spelling rule**, not a register choice (the performer still
+>   chooses freely how to voice it, unless P6's open sub-question is settled the other way).
 > **Count consistency:** **16** is the figure already used in `05` (`|C| = 16 distinctive
 > consonants`; and `pr br tr dr kr gr` = **3** distinctive clusters, since `p/b`, `t/d`, `k/g` are
 > one phoneme each), and `04`'s "14" is the same rule on the older 17-letter inventory. **No
@@ -70,6 +76,18 @@ the sound /v/ is written `w`.
 >    cannot begin with a coda, and 3 consonants between vowels are not a legal shape); the
 >    voicing knob applies normally (`losdo` ~ `losto`); and **no syllable ever begins with
 >    `st`** — every syllable starts with a single consonant or one of the 11 clusters above.
+> 5. **P6 — the `sh` / `ng` reading, and the `nk` rule.** Medial `sh` and `ng` are **always one
+>    phoneme** (`sh` = /ʃ/, `ng` = /ŋ/). The competing coda+onset readings (`as-ha`, `son-ga`) were
+>    also legal but **spelled identically**, so one spelling covered two phoneme sequences — in 9.8%
+>    of the coining pool — and a score could not tell the singer which phoneme to sing. **Fix: a
+>    wanted coda `n` + onset `/g/` sequence MUST be written `nk`** (the hard letter of /g/), which
+>    makes the spelling→phoneme map bijective again. `nk` is **not** a cluster: it is coda `n` +
+>    onset `k`, read exactly as P5 reads `st`. `/s/` + `/h/` has no such escape and is therefore
+>    **unspellable (illegal)** — no suffix begins with `h`, so morphology can never need it.
+>    ⚠️ **R-b / R-c are amended** (see §1): `nk` is a required hard spelling, so it appears in the
+>    dictionary too — a *spelling rule*, not a register choice. ⚠️ **Still open:** whether that `k`
+>    is spelling-only (the soft/hard knob stays free there) or a real conditioned devoicing.
+>    Full consequences + the open sub-question: `00-README.md` **P6**.
 
 ## 2. Vowels — 7 phonemes
 

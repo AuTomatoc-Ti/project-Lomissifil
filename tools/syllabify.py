@@ -22,11 +22,13 @@ RULES IMPLEMENTED (all already locked; nothing new is invented here)
     Anything that does not split legally is reported as an ERROR / 'illegal' -- the inputs are
     supposed to be legal, so a failure means a bug HERE, not a bad word (fail loud).
 
-TWO ORTHOGRAPHY AMBIGUITIES THIS SCRIPT REPORTS (it does not silently pick one)
-    `sh` can be the single phoneme /S/ (a-sha) or coda s + onset h (as-ha) -- both legal.
-    `ng` can be the single phoneme /N/ (so-nga)  or coda n + onset g (son-ga) -- both legal.
-    `th` is NOT ambiguous (a coda can never be `t`), and `ae` is NOT ambiguous (adjacent
-    nuclei are illegal, so `ae` is always the one vowel). Rows that hit `sh`/`ng` are flagged.
+READING (P6, author's ruling 2026-10-14)
+    Medial `sh` and `ng` are ALWAYS ONE phoneme: /S/ and /N/. The sequence **coda `n` + onset
+    /g/** is written **`nk`** (the hard letter), so `manka` = man-ka, while a form containing
+    `ng` means /N/ there. `nk` is NOT a cluster: coda `n` + onset `k`, read exactly as P5
+    reads `st`. Because the coda+onset reading of `sh` is gone, **/s/ + /h/ has no spelling
+    at all** and is illegal by ruling. (`th` was never ambiguous -- a coda can never be `t`;
+    `ae` is not either -- adjacent nuclei are illegal.)
 
 USAGE
     python3 tools/syllabify.py --check                  # verify against the reference words
@@ -53,20 +55,22 @@ CODA = set("mnlrs")
 WORD_FINAL = CODA | {"f", "w", "h"}
 
 
-def tokenize(word, merge_digraphs=True):
-    """-> [('C', text) | ('V', text)] or None if some letter sequence is not readable."""
+def tokenize(word):
+    """-> [('C', text) | ('V', text)] or None if some letter sequence is not readable.
+
+    `sh` / `th` / `ng` are read as ONE consonant (P6): a digraph, never C + C.
+    """
     toks, i = [], 0
     while i < len(word):
-        if merge_digraphs:
-            hit = None
-            for d in CONS_DIGRAPHS:
-                if word.startswith(d, i):
-                    hit = d
-                    break
-            if hit:
-                toks.append(("C", hit))
-                i += len(hit)
-                continue
+        hit = None
+        for d in CONS_DIGRAPHS:
+            if word.startswith(d, i):
+                hit = d
+                break
+        if hit:
+            toks.append(("C", hit))
+            i += len(hit)
+            continue
         ch = word[i]
         if ch in VOWELS:
             hit = None
@@ -112,9 +116,9 @@ def split_run(run):
     return best
 
 
-def parse(word, merge_digraphs=True):
+def parse(word):
     """-> list of syllables, or None when the form does not split legally."""
-    toks = tokenize(word, merge_digraphs)
+    toks = tokenize(word)
     if toks is None:
         return None
     i = 0
@@ -159,24 +163,20 @@ def parse(word, merge_digraphs=True):
 
 
 def analyse(word):
-    """-> dict(syllables, stressed, stress_syllable, ambiguous, illegal).
+    """-> dict(syllables, stressed, stress_syllable, p6, illegal).
 
-    The merged reading (sh = one sound, ng = one sound) is shown, because 01-phonology.md's
-    `songa` example implies it; `ambiguous` says the coda+onset reading also parses.
+    `p6` marks the P6 sequence `nk` (= coda `n` + the /g/ phoneme). Worth showing on a sheet:
+    that `k` is a spelling rule, not the performance voicing knob.
     """
-    sylls = parse(word, merge_digraphs=True)
+    sylls = parse(word)
     if sylls is None:
         return {"syllables": None, "stressed": None, "stress_syllable": None,
-                "ambiguous": False, "illegal": True}
-    amb = False
-    if "sh" in word or "ng" in word:
-        other = parse(word, merge_digraphs=False)
-        amb = other is not None and other != sylls
+                "p6": False, "illegal": True}
     si = 0 if len(sylls) == 1 else 1                 # P4: 2nd syllable of the root
     out = list(sylls)
     out[si] = out[si][0].upper() + out[si][1:]       # N1: capital on the syllable's 1st letter
     return {"syllables": sylls, "stressed": "".join(out), "stress_syllable": si,
-            "ambiguous": amb, "illegal": False}
+            "p6": "nk" in word, "illegal": False}
 
 
 def note_for(an):
@@ -184,9 +184,8 @@ def note_for(an):
     if an["syllables"] and an["syllables"][an["stress_syllable"]].startswith(
             ("sh", "th", "ng", "ae")):
         notes.append("stress capital lands on a DIGRAPH (convention OPEN: 03 section C)")
-    if an["ambiguous"]:
-        notes.append("ambiguous spelling: `sh`/`ng` can also be coda+onset "
-                     "(shown as ONE sound here)")
+    if an["p6"]:
+        notes.append("`nk` = coda n + /g/ (P6 spelling rule, not the voicing knob)")
     return "; ".join(notes)
 
 
@@ -198,7 +197,8 @@ REFERENCE = [                                        # every split the docs stat
     ("austareus", "aus-ta-reus"),                    # 03-open-questions.md section C
 ]
 REFERENCE_NO_EXPECTATION = ["aurorius"]              # a name; no split is documented
-PROBES = ["shia", "nga", "songa", "thas", "iufa", "pra", "afmara", "asma", "fmara"]
+PROBES = ["shia", "nga", "songa", "thas", "iufa", "pra", "afmara", "asma", "fmara",
+          "manka", "asha", "sangka"]
 
 
 def check():
@@ -262,15 +262,15 @@ roots, so pick **at most one** from the `{+f, +w}` pair and **at most one** from
 > Sound-only. R3 is PARKED, so assign **no meanings** (decision/03-open-questions.md section 0
 > item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
 
-## Two things this sheet flags
+## Reading rule (P6) - and the one flag left
 
-- **`stress capital lands on a DIGRAPH`** - the stressed syllable starts with `sh` / `th` / `ng`
-  / `ae`, i.e. one sound written with two letters, and N1 has not been settled for that case yet
-  (it is an open item). The `stress` column capitalises the first letter; treat it as provisional.
-- **`ambiguous spelling`** - `sh` can be the single /S/ (a-sha) or coda `s` + onset `h` (as-ha),
-  and `ng` can be the single /N/ (so-nga) or coda `n` + onset `g` (son-ga); both readings are
-  legal. The shown split uses the single-sound reading (what 01-phonology.md's `songa` implies).
-  If a picked form stays ambiguous, the language needs a rule later.
+**`sh` and `ng` are ALWAYS one phoneme** (`sh` = the *sh* of *ship*, `ng` = the *ng* of *sing*) - that
+is `P6`, ruled 2026-10-14. So a row containing `ng` never means "n then g": the sequence **coda `n` +
+/g/** is written **`nk`** instead, and nothing below needs a guess.
+
+The one flag left is **`stress capital lands on a DIGRAPH`**: the stressed syllable starts with
+`sh` / `th` / `ng` / `ae` - one sound written with two letters - and N1 has no rule for that case yet
+(it is an open item). The `stress` column capitalises the first letter; treat it as provisional.
 
 Also: `stress` is only the DEFAULT (P4). A composer may overwrite it in notation - that is
 performance, not a different word.
@@ -287,6 +287,8 @@ SHEET_FOOTER = """
 - It does not cover the **M3a seam** (a root-final `f` / `w` / `h` in front of a case suffix,
   always unstressed) - that layer is unjudged, see `../decision/03-open-questions.md` section 0
   item 20.
+- It cannot show the **/n/ + /g/ (`nk`) class** of candidates: the pool was packed before `P6`
+  existed and contains no `nk` spelling at all (`03-open-questions.md` section 0 item 24).
 - It does not say which form is a good word. That is the pick, and it is yours to make.
 """
 
@@ -295,7 +297,7 @@ def stats(src):
     """Histogram over a whole list: syllable counts + the two flags. Read-only."""
     with open(src, encoding="utf-8") as fh:
         words = [ln.strip() for ln in fh if ln.strip() and not ln.startswith("#")]
-    hist, illegal, dig, amb = {}, 0, 0, 0
+    hist, illegal, dig, nk, reads = {}, 0, 0, 0, 0
     for w in words:
         an = analyse(w)
         if an["illegal"]:
@@ -305,15 +307,19 @@ def stats(src):
         hist[k] = hist.get(k, 0) + 1
         if an["syllables"][an["stress_syllable"]].startswith(("sh", "th", "ng", "ae")):
             dig += 1
-        if an["ambiguous"]:
-            amb += 1
+        if an["p6"]:
+            nk += 1
+        if "sh" in w[1:] or "ng" in w[1:]:
+            reads += 1
     n = float(len(words)) or 1.0
     print("forms: %d   (%s)" % (len(words), src))
     for k in sorted(hist):
         print("  %d syllable(s) %8d  %5.1f%%" % (k, hist[k], 100.0 * hist[k] / n))
-    print("  illegal           %8d" % illegal)
-    print("  stress on digraph %8d  %5.1f%%" % (dig, 100.0 * dig / n))
-    print("  ambiguous sh/ng   %8d  %5.1f%%" % (amb, 100.0 * amb / n))
+    print("  illegal                            %8d" % illegal)
+    print("  stress on a digraph                %8d  %5.1f%%" % (dig, 100.0 * dig / n))
+    print("  reads as ONE phoneme (sh/ng, P6)   %8d  %5.1f%%" % (reads, 100.0 * reads / n))
+    print("  `nk` spellings (coda n + /g/, P6)  %8d  %5.1f%%   <- 0 = pool predates P6 (03 item 24)"
+          % (nk, 100.0 * nk / n))
     return 1 if illegal else 0
 
 

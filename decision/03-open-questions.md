@@ -100,17 +100,21 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     covered by that round, so it stays unjudged by ear.
 
 **G. NEW — raised by running the first audition material (2026-10-14, needs a ruling)**
-21. **`sh` and `ng` are HOMOGRAPHIC and both readings are legal.** `a-sha` /ʃ/ vs `as-ha` (coda `s` +
-    onset `h`), and `so-nga` /ŋ/ vs `son-ga` (coda `n` + onset `g`). The phoneme sequences differ, so a
-    single spelling covers two different words. Measured on the current pack
-    (`tools/syllabify.py --stats`): **2,630 of 26,751 bases (9.8%)**; in the 192-row audition sheet,
-    **16 rows**. `th` is NOT affected (a coda can never be `t`), and `ae` is NOT affected (adjacent
-    nuclei are illegal). Options: (a) a **coining rule** — never coin a root that needs one of the two
-    readings (loses ~10% of the pool); (b) **fix the reading** — declare that medial `sh`/`ng` is
-    ALWAYS the single phoneme (`lists/picks-sheet.md` already reads it that way, following
-    `01-phonology.md`'s `songa`); (c) a notation/orthography change (needs a symbol → hits goal 3).
-    ⚠️ Until this is ruled, a picked form containing `sh`/`ng` is a **sound-string whose phoneme
-    sequence is not yet fixed**.
+21. ~~**`sh` and `ng` are HOMOGRAPHIC and both readings are legal.**~~ — **DECIDED = `P6` (author,
+    2026-10-14): fix the reading.** Medial `sh`/`ng` are **always one phoneme** (`/ʃ/`, `/ŋ/`), and a
+    wanted **coda `n` + onset `/g/`** sequence **must be written `nk`**. Full row + consequences:
+    `00-README.md` P6 (bijective spelling again; `/s/`+`/h/` becomes unspellable; `nk` = coda `n` +
+    onset `k`, **not** a cluster; **R-b/R-c amended**; no locked asset affected — none of the six
+    reference words contains `sh`/`ng`, and no suffix onset is `h` or `g`, so neither affected
+    sequence can ever arise in morphology). **The one open sub-question:** is the `k` of `nk`
+    **spelling-only** (the soft/hard knob stays free there, so `[n.ga]` is still singable) or a real
+    **conditioned devoicing** (only `[n.ka]`)? C2b says the knob is *free and unconditioned*; the
+    author's stated motive ("make our k-g pair work like 濁音清化 in real languages") points at the
+    conditioned reading. **Do not build on either reading until it is settled.**
+    ⚠️ **Data consequence (do not miss):** the current pack (`lists/roots-bases-current.txt`) contains
+    **no `nk` spelling at all**, so the `/n/`+`/g/` sequences P6 legalises are **absent from the
+    candidate pool**, and its 1,071 `ng` strings now all mean `/ŋ/`. Regenerating the pool (the sha in
+    `lists/00-README.md` and the sheet's sample both change) is a follow-up — see §0 item 24.
 22. **The first coining batch contains NO 1-syllable root — and R1 says 1-syllable roots are
     frequent.** `--stats` over `lists/roots-bases-current.txt`: **26,751 forms, 100.0% two-syllable,
     0 illegal**. The pack covers the **2-syllable core** (the 4 main shapes + the 4 hiatus leaps); the
@@ -124,6 +128,11 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     `ar-gon-na` / `aus-ta-reus`), `--sheet` (the audition sheet) and `--stats`. It reproduces every
     split the docs state; the one bug it caught was an onset set missing the hard spellings
     `p t k` (needed because `austareus` is C2-exempt).
+24. **Pool regeneration after P6** (`enumerate_roots.py` must emit coda `n` + onset `/g/` as **`nk`**,
+    otherwise the candidate space is missing a whole (small) class of legal roots, and its `ng` strings
+    are the only spelling that class ever gets). ⚠️ **Timing:** this changes the pack's sha *and* the
+    audition sheet's 48-base sample, so run it **either before the pick round starts, or after it
+    finishes** — never in the middle, or the author's pick numbers stop matching the sheet.
 
 ## A. M1 — affix direction (DECIDED, **PROVISIONAL**)
 

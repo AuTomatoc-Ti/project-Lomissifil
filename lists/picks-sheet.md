@@ -35,15 +35,15 @@ roots, so pick **at most one** from the `{+f, +w}` pair and **at most one** from
 > Sound-only. R3 is PARKED, so assign **no meanings** (decision/03-open-questions.md section 0
 > item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
 
-## Two things this sheet flags
+## Reading rule (P6) - and the one flag left
 
-- **`stress capital lands on a DIGRAPH`** - the stressed syllable starts with `sh` / `th` / `ng`
-  / `ae`, i.e. one sound written with two letters, and N1 has not been settled for that case yet
-  (it is an open item). The `stress` column capitalises the first letter; treat it as provisional.
-- **`ambiguous spelling`** - `sh` can be the single /S/ (a-sha) or coda `s` + onset `h` (as-ha),
-  and `ng` can be the single /N/ (so-nga) or coda `n` + onset `g` (son-ga); both readings are
-  legal. The shown split uses the single-sound reading (what 01-phonology.md's `songa` implies).
-  If a picked form stays ambiguous, the language needs a rule later.
+**`sh` and `ng` are ALWAYS one phoneme** (`sh` = the *sh* of *ship*, `ng` = the *ng* of *sing*) - that
+is `P6`, ruled 2026-10-14. So a row containing `ng` never means "n then g": the sequence **coda `n` +
+/g/** is written **`nk`** instead, and nothing below needs a guess.
+
+The one flag left is **`stress capital lands on a DIGRAPH`**: the stressed syllable starts with
+`sh` / `th` / `ng` / `ae` - one sound written with two letters - and N1 has no rule for that case yet
+(it is an open item). The `stress` column capitalises the first letter; treat it as provisional.
 
 Also: `stress` is only the DEFAULT (P4). A composer may overwrite it in notation - that is
 performance, not a different word.
@@ -122,10 +122,10 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 | 58 | meuneu | meuneuw | meu-neuw | meuNeuw |  |
 | 59 | meuneu | meuneuh | meu-neuh | meuNeuh |  |
 | 60 | meuneu | meuneu | meu-neu | meuNeu |  |
-| 61 | grinngeu | grinngeuf | grin-ngeuf | grinNgeuf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 62 | grinngeu | grinngeuw | grin-ngeuw | grinNgeuw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 63 | grinngeu | grinngeuh | grin-ngeuh | grinNgeuh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 64 | grinngeu | grinngeu | grin-ngeu | grinNgeu | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
+| 61 | grinngeu | grinngeuf | grin-ngeuf | grinNgeuf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 62 | grinngeu | grinngeuw | grin-ngeuw | grinNgeuw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 63 | grinngeu | grinngeuh | grin-ngeuh | grinNgeuh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 64 | grinngeu | grinngeu | grin-ngeu | grinNgeu | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
 
 ## roots-03.wav  (numbered 65-96)
 
@@ -147,10 +147,10 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 | 78 | jeijau | jeijauw | jei-jauw | jeiJauw |  |
 | 79 | jeijau | jeijauh | jei-jauh | jeiJauh |  |
 | 80 | jeijau | jeijau | jei-jau | jeiJau |  |
-| 81 | wurshi | wurshif | wur-shif | wurShif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 82 | wurshi | wurshiw | wur-shiw | wurShiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 83 | wurshi | wurshih | wur-shih | wurShih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 84 | wurshi | wurshi | wur-shi | wurShi | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
+| 81 | wurshi | wurshif | wur-shif | wurShif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 82 | wurshi | wurshiw | wur-shiw | wurShiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 83 | wurshi | wurshih | wur-shih | wurShih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 84 | wurshi | wurshi | wur-shi | wurShi | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
 | 85 | gildu | gilduf | gil-duf | gilDuf |  |
 | 86 | gildu | gilduw | gil-duw | gilDuw |  |
 | 87 | gildu | gilduh | gil-duh | gilDuh |  |
@@ -205,10 +205,10 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 
 | # | base | form | syllables | stress (P4/N1) | note |
 |---|---|---|---|---|---|
-| 129 | mangi | mangif | ma-ngif | maNgif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 130 | mangi | mangiw | ma-ngiw | maNgiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 131 | mangi | mangih | ma-ngih | maNgih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 132 | mangi | mangi | ma-ngi | maNgi | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
+| 129 | mangi | mangif | ma-ngif | maNgif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 130 | mangi | mangiw | ma-ngiw | maNgiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 131 | mangi | mangih | ma-ngih | maNgih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 132 | mangi | mangi | ma-ngi | maNgi | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
 | 133 | wenci | wencif | wen-cif | wenCif |  |
 | 134 | wenci | wenciw | wen-ciw | wenCiw |  |
 | 135 | wenci | wencih | wen-cih | wenCih |  |
@@ -262,10 +262,10 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 | 178 | draibrai | draibraiw | drai-braiw | draiBraiw |  |
 | 179 | draibrai | draibraih | drai-braih | draiBraih |  |
 | 180 | draibrai | draibrai | drai-brai | draiBrai |  |
-| 181 | braisshei | braissheif | brais-sheif | braisSheif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 182 | braisshei | braissheiw | brais-sheiw | braisSheiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 183 | braisshei | braissheih | brais-sheih | braisSheih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
-| 184 | braisshei | braisshei | brais-shei | braisShei | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); ambiguous spelling: `sh`/`ng` can also be coda+onset (shown as ONE sound here) |
+| 181 | braisshei | braissheif | brais-sheif | braisSheif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 182 | braisshei | braissheiw | brais-sheiw | braisSheiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 183 | braisshei | braissheih | brais-sheih | braisSheih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 184 | braisshei | braisshei | brais-shei | braisShei | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
 | 185 | sheiga | sheigaf | shei-gaf | sheiGaf |  |
 | 186 | sheiga | sheigaw | shei-gaw | sheiGaw |  |
 | 187 | sheiga | sheigah | shei-gah | sheiGah |  |
@@ -283,4 +283,6 @@ Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, s
 - It does not cover the **M3a seam** (a root-final `f` / `w` / `h` in front of a case suffix,
   always unstressed) - that layer is unjudged, see `../decision/03-open-questions.md` section 0
   item 20.
+- It cannot show the **/n/ + /g/ (`nk`) class** of candidates: the pool was packed before `P6`
+  existed and contains no `nk` spelling at all (`03-open-questions.md` section 0 item 24).
 - It does not say which form is a good word. That is the pick, and it is yours to make.
