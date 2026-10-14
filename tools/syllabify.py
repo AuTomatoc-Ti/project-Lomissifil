@@ -92,13 +92,16 @@ def tokenize(word):
     return toks
 
 
-def is_onset(toks, after_open):
+def is_onset(toks, after_open, word_initial=False):
+    """P2: a stop+`r` cluster may sit in any onset position but must NEVER touch another
+    consonant -- so it is legal word-initially or after an OPEN syllable, never after a coda.
+    `fm fn hm hn wm wn jm jn` are VCV-only (never word-initial)."""
     if len(toks) == 1:
         return toks[0] in ONSET1
     if len(toks) == 2:
         j = "".join(toks)
         if j in ONSET_CLUSTER:
-            return True
+            return True if word_initial else after_open
         return j in ONSET_VCV and after_open
     return False
 
@@ -129,7 +132,7 @@ def parse(word):
         i += 1
     if i == len(toks):
         return None                                  # no nucleus at all
-    if initial and not is_onset(initial, after_open=False):
+    if initial and not is_onset(initial, after_open=False, word_initial=True):
         return None                                  # illegal word-initial onset
     groups = []                                      # [(nucleus, consonant run after it)]
     while i < len(toks):
