@@ -156,8 +156,9 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
 
 The design-level mechanism now exists: **`06-neutrality.md`** (three axes — sound / grammar /
 word-building — one row per sub-area, each mapped to its closest single donor or marked *no donor*,
-plus a **dominance check**). Result: **PASS** — top donor Finnish ≈20%, **~48% of sub-areas have no
-donor**, and the grammar's centre (the grade/chord system) is entirely original. ⚠️ **Living rule:**
+plus a **dominance check**). Result: **PASS** — top donor Finnish at 8/38 rows (21%) inclusive, 4/38
+(11%) strict, so **no language comes near the 1/3 ceiling**; **42% of the counted rows have no donor
+at all**; and the grammar's centre (the grade/chord system) is entirely original. ⚠️ **Living rule:**
 every future decision must add its rows. Two halves are still open:
 26. **The loanword mechanism (word level) — spec only; execution is blocked on meanings.** A word is a
     "loanword" only *relative to a meaning*, and coining is sound-only (R3 parked), so this **cannot
@@ -402,8 +403,8 @@ Two things that listening did **not** settle, and the author has not commented o
 - **Lexicon generation strategy + a neutrality check** (avoid loanwords / not too much like any one
   language) — ~~goal 2 has no mechanism~~ → **the design-level mechanism now EXISTS (2026-10-14):
   `06-neutrality.md`, the donor ledger** (three axes — sound / grammar / word-building — one row per
-  sub-area, + a dominance check; result: PASS, top donor Finnish ≈20%, **~48% of sub-areas have no
-  donor**). Two halves remain open and are listed as §0 items 26–27: **loanwords** (needs meanings;
+  sub-area, + a dominance check; result: PASS — top donor Finnish 8/38 rows inclusive / 4/38 strict,
+  **42% of the rows have no donor**). Two halves remain open and are listed as §0 items 26–27: **loanwords** (needs meanings;
   spec written, execution scheduled) and a **statistical sound fingerprint** (needs the author's
   reference-language list). ⚠️ Only **6 reference words** exist, which still blocks the textbook.
 - **Prosody ↔ melody mapping** — *material now exists*: the grade system (H1–H7) plus the

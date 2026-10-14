@@ -10,9 +10,10 @@ Until 2026-10-14 this goal had **no mechanism at all** — only the goal stateme
 
 ## What this document is (and how it is used)
 
-1. **A ledger.** Every designed sub-area, on three axes — **A. Sound**, **B. Grammar**,
-   **C. Word-building** — gets one row: what WE decided, which single natural language is the
-   *closest* donor (if any), how strong that resemblance is, and where it is recorded.
+1. **A ledger.** Every designed sub-area, on three axes — **A. Sound** (18 rows), **B. Grammar**
+   (11 rows), **C. Word-building** (10 rows) = **39 rows** — gets one row: what WE decided, which
+   single natural language is the *closest* donor (if any), how strong that resemblance is, and where
+   it is recorded.
 2. **A dominance check.** If one language is the closest donor in too many rows, the language *is*
    that language's clone with extra steps. Strength labels used below:
    **same pattern** (a natural language does essentially the same) · **close** (very similar, a
@@ -86,25 +87,41 @@ Until 2026-10-14 this goal had **no mechanism at all** — only the goal stateme
 
 ## The dominance check
 
-Counting the rows above (35 sub-areas; a row may name more than one donor):
+**Counted rows: 38** (39 sub-areas minus **B11**, which is not designed yet). The rules of the count
+are stated so it can be audited:
 
-| donor | rows where it is the closest single donor | share |
+- **donor row** = at least one natural language is named as its closest donor (**19** rows:
+  A1 A3 A6 A7 A8 A9 A10 A11 A12 A14 A16 B1 B4 B5 B6 C1 C2 C5 C6);
+- **single-donor row** = exactly one language is the *closest* (**9** of those: A1 A3 A6 A10 A11 A14
+  A16 B6 C6) — the other 10 are ties;
+- **universal row** = no single donor because the pattern is too widespread to be one (**3**:
+  A18 B7 B10);
+- **no-donor row** = original; nothing in the reference set does this (**16**:
+  A2 A4 A5 A13 A15 A17 B2 B3 B8 B9 C3 C4 C7 C8 C9 C10).
+
+| donor | rows where it is one of the closest donors | share of 38 |
 |---|---|---|
-| **Finnish** | A1, A3(loose), A6(loose), A14, C1, C2(loose), C5(loose) | ~7 (20%) |
-| **Latin / IE** | A12(loose), B1, B4, B5, B7 | ~5 (14%) |
-| **Turkish** | C1, C2(loose), C5(loose), B6 | ~4 (11%) |
-| **Japanese** | C1, C6(loose), B7, B10 | ~4 (11%) |
-| **German** | A7, A9(loose) | ~2 (6%) |
-| **Polish** | A7, A16(loose) | ~2 (6%) |
-| English / Italian / Albanian / Old English / Chinese | A8, A11, A9, A10, A17 | ≤2 each |
-| **no donor (original)** | A2, A4, A5, A13, A15, A17, B2, B3, B8, B9, + OBL in B1, C3, C4, C7, C8, C9, C10 | **~17 (≈48%)** |
+| **Finnish** | A1 A3 A6 A9 A14 C1 C2 C5 | 8 (21%) |
+| **Latin / IE** | A12 B1 B4 B5 | 4 (11%) |
+| **Turkish** | B6 C1 C2 C5 | 4 (11%) |
+| **Japanese** | A11 C1 C6 | 3 (8%) |
+| **Italian** | A9 A11 A12 | 3 (8%) |
+| **Polish** | A7 A9 A16 | 3 (8%) |
+| **German** | A7 A9 | 2 (5%) |
+| English · Albanian · Old English | A8 · A8 · A10 | ≤1 each |
+| **no donor (original)** | the 16 rows above | **16 (42%)** |
+| **no single donor (universal)** | the 3 rows above | 3 (8%) |
 
-**Proposed thresholds (the author may reset them):** no single language may be the closest donor in
-more than **1/3** of the rows, and the **original share should stay ≥ 1/4**.
+**Strict reading (only the single closest donor per row counts): the maximum is Finnish at 4/38
+(≈11%)**, and **9 rows have a unique closest donor at all**.
 
-**Current result: PASS on both, comfortably.** The top donor is Finnish at ~20%; about **half of the
-sub-areas have no donor at all**; and the mechanism that carries the grammar (B2 + B3, the grade and
-chord system) is entirely original. Put plainly: this is a pastiche whose *centre* is invented.
+**Proposed thresholds (the author may reset them):** no single language may be one of the closest
+donors in more than **1/3** of the rows, and the **original share should stay ≥ 1/4**.
+
+**Current result: PASS, comfortably, on every reading.** Top donor Finnish at 8/38 (21%) inclusive or
+4/38 (11%) strict; the original share is **42%**; and the mechanism that carries the grammar
+(B2 + B3, the grade and chord system) is entirely original. Put plainly: this is a pastiche whose
+*centre* is invented.
 
 **Where the exposure actually is: the SOUND axis — and especially the SPELLING.** Grammar and
 word-building are balanced; the sound is where one language (Finnish vowels + a Germanic/English
