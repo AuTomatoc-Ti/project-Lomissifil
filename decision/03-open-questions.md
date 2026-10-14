@@ -129,9 +129,13 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     `ar-gon-na` / `aus-ta-reus`), `--sheet` (the audition sheet) and `--stats`. It reproduces every
     split the docs state; the one bug it caught was an onset set missing the hard spellings
     `p t k` (needed because `austareus` is C2-exempt).
-24. **Pool regeneration after P6** — the emitter is **already fixed and verified**; only the re-emission
-    is pending. What `enumerate_roots.py` now does on the P6 configs (and only there: `legacy-*` /
-    `singles-*` keep `p6=False` so they still reproduce `05`'s 48,020 / 220,500 / 264,600):
+24. **Pool regeneration after P6** — ✅ **DONE: re-emitted 2026-10-14** (`--pack --config current
+    --seeds 4`, run *before* the pick round because the author chose "re-emit first, then pick"):
+    **26,484 bases**, sha1 `f532e58e…`, **0 duplicate lines, 0 P6-illegal spellings, 2,142 (8.1%) P6
+    hard spellings**, and the sheet was regenerated from it. The count equals the **unique** line count
+    of the pre-P6 file (26,751 − 267) — confirming the only real change was de-duplication +
+    respelling. What `enumerate_roots.py` does on the P6 configs (and only there: `legacy-*` /
+    `singles-*` keep `p6=False`, so they still reproduce `05`'s 48,020 / 220,500 / 264,600):
     (i) a **nasal coda + stop is emitted with the HARD letter** (`mb`→`mp`, `nb`→`np`, `md`→`mt`,
     `nd`→`nt`, `mg`→`mk`, `ng`→`nk`); (ii) the **`/s/` + `/h/` fill is excluded** (no spelling exists);
     (iii) `dist1` uses a distance alphabet that **includes `p t k`**, or a pair differing by `b`~`p`
@@ -143,9 +147,10 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     different phoneme sequences that shared one spelling (`manga` was both /maŋa/ and /man.ga/), i.e.
     **pairs at distance 0** in a pack that advertises pairwise distance ≥ 2, plus **1,338 (5.0%)**
     P6-illegal spellings. Both vanish on re-emission.
-    ⚠️ **Timing:** re-emission changes the pack's sha *and* the audition sheet's 48-base sample, so run
-    it **either before the pick round starts, or after it finishes** — never in the middle, or the
-    author's pick numbers stop matching the sheet.
+    ⚠️ **Timing — already respected:** the re-emission changed the sheet's 48-base sample, so it was
+    run **before** the pick round started, exactly as required. The old numbering is gone;
+    `../audio/roots-index.txt` is a separate, **frozen** record of the pre-P6 pool and its numbers do
+    not map onto the new sheet.
 25. ~~**Scope of the P6 devoicing**~~ — **DECIDED (author, 2026-10-14): the full natural class.**
     Any stop `/b d g/` after a **nasal coda** `/m/` or `/n/` is obligatorily `[p t k]`, and **the
     spelling shows it**: `mb`→`mp`, `nb`→`np`, `md`→`mt`, `nd`→`nt`, `mg`→`mk`, `ng`→`nk`. Chosen over

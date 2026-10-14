@@ -14,14 +14,14 @@ these files are machine-produced, whereas everything else here is prose (`.md`).
 
 | | |
 |---|---|
-| lines | **26,751** bases |
-| sha1 | `2cedb3f520e0b63c1494f51ec9bcb106a32c431f` (was mislabelled *sha256*; a 40-hex digest is a **sha1** — verified 2026-10-14) |
-| sha256 | `57f683f25c5521eaead632005c9fb5a9714fd7bd9c87686ddbe31938d4c08205` |
+| lines | **26,484** bases |
+| sha1 | `f532e58e3cfe45e66835a615eebc7a3b0f1a38e0` |
+| sha256 | `7404a917639955801aea18d195070ad8f68b0cb19ebcb04150478d530906dab3` |
 | encoding | ASCII, lowercase `a`–`z` only, one base per line, **sorted** |
 | config | `current` — 15 nuclei · O1=18 · O2=27 · O2c=16 · codas `m n l r s` |
 | base space | **453,150** (4 main shapes) + 76 leaps = **453,226** — P6 (2026-10-14); the older `457,425 / 457,501` family predates the `/s/`+`/h/` exclusion, see `../decision/05-root-shape-limit.md` P6 UPDATE |
 | selection | greedy packing, pairwise **segment-distance ≥ 2**, best of 4 seeds |
-| ⇒ coined roots | **~53,502** — each base yields exactly **2** roots (see below) |
+| ⇒ coined roots | **~52,968** — each base yields exactly **2** roots (see below) |
 
 Regenerate with exactly:
 
@@ -31,7 +31,10 @@ python3 tools/enumerate_roots.py --pack --config current --seeds 4 --emit lists/
 
 **Reproducibility (honest caveat).** The winning pack is **seed 0 = the unshuffled order**, so the
 file is deterministic *for this command*. If you pass **more** seeds a shuffled order may beat it
-and the file will legitimately differ — that is a better pack, not a bug.
+and the file will legitimately differ — that is a better pack, not a bug. (Confirmed on the P6
+re-emission: seed 0 → **26,484**; seeds 1-3 → 21,4xx each. Seed 0 also reproduces exactly the
+*unique* line count of the pre-P6 file, i.e. the only real change was dropping its 267 duplicates and
+respelling under P6.)
 
 ### A base is NOT yet a root
 
@@ -61,14 +64,14 @@ python3 tools/syllabify.py --check          # verifies the splitter against the 
 python3 tools/syllabify.py --stats          # histogram of a whole list: syllables + both flags
 ```
 
-`--stats` on the current pack (2026-10-14): **26,751 forms, 100% two-syllable, 0 illegal, 17.0%
-stressed on a digraph, 11.0% read as ONE phoneme (`sh`/`ng`, P6), 534 with a P6 hard spelling, and
-1,338 (5.0%) ILLEGAL under P6 — they spell a nasal coda + soft stop (`mb nb md nd mg`) and must be
-respelled (`namgae` → `namkae`)**. ⚠️ **The pack PREDATES P6 and is due for regeneration** (§0 items
-21-24): besides those 1,338 spellings it also contains **267 duplicate lines** (two different phoneme
-sequences that shared one spelling — `manga` was both /maŋa/ and /man.ga/, i.e. distance 0 in a pack
-that claims pairwise ≥ 2). **Both defects are fixed in `tools/enumerate_roots.py`**; the file just has
-not been re-emitted yet.
+`--stats` on the current pack (re-emitted 2026-10-14, after P6): **26,484 forms, 100% two-syllable,
+0 illegal, 15.1% stressed on a digraph, 9.1% read as ONE phoneme (`sh`/`ng`, P6), 2,142 (8.1%) with a
+P6 hard spelling (`mp np mt nt mk nk`), and 0 ILLEGAL under P6**. The pack is **clean**: no duplicate
+spellings, no P6-illegal forms. (The *previous* file — `26,751` bases, sha1 `2cedb3f5…` — predated P6:
+it held **1,338** P6-illegal spellings and **267 duplicate lines** = pairs at distance 0, which
+contradicted the "pairwise ≥ 2" claim below. Both defects are gone; the old file is in git history.)
+⚠️ It is still **100% two-syllable**: the pack covers the 2-syllable core only, so it contains **no
+`roi`-class short root** — see `../decision/03-open-questions.md` §0 item 22.
 
 It is the **same 48 bases with the same numbering** as `../audio/roots-index.txt`. It is generated, so
 **never annotate it** — the picks belong in `picks.md`. Two things it flags, both genuine open/undecided

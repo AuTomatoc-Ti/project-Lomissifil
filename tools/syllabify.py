@@ -260,8 +260,9 @@ python3 tools/syllabify.py --sheet > lists/picks-sheet.md
 ```
 
 Any annotation written in this file is **lost** on regeneration. **Picks go in `lists/picks.md`.**
-The row numbers are the same as `../audio/roots-index.txt` (same seed, same sample), so a pick can
-be recorded as a number in either file.
+The numbers are **this sheet's own** sample of the current pool. ⚠️ The audio run of 2026-10-14
+(`../audio/roots-index.txt`) was a **different, frozen** sample of the pre-P6 pool: its numbers do
+NOT correspond to these, and `audio/` must never be regenerated (`../audio/00-README.md`).
 
 ## How to read a row
 
@@ -364,8 +365,10 @@ def sheet(src, bases_n, per_file, seed):
         all_bases = [ln.strip() for ln in fh if ln.strip() and not ln.startswith("#")]
     bases = random.Random(seed).sample(all_bases, min(bases_n, len(all_bases)))
     out = [SHEET_HEADER]
-    out.append("Source: `%s` (%d packed bases); sample %d bases, seed %d - the SAME sample as\n"
-               "`../audio/roots-index.txt`.\n\n" % (src, len(all_bases), len(bases), seed))
+    out.append("Source: `%s` (%d packed bases); sample %d bases, seed %d.\n"
+               "! The audio run of 2026-10-14 (`../audio/roots-index.txt`) used a DIFFERENT sample\n"
+               "(the pre-P6 pool) and is frozen - its numbers are not comparable with these.\n\n"
+               % (src, len(all_bases), len(bases), seed))
     n = 0
     bad = 0
     for fi in range(0, len(bases), per_file):

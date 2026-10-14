@@ -7,8 +7,9 @@ python3 tools/syllabify.py --sheet > lists/picks-sheet.md
 ```
 
 Any annotation written in this file is **lost** on regeneration. **Picks go in `lists/picks.md`.**
-The row numbers are the same as `../audio/roots-index.txt` (same seed, same sample), so a pick can
-be recorded as a number in either file.
+The numbers are **this sheet's own** sample of the current pool. ⚠️ The audio run of 2026-10-14
+(`../audio/roots-index.txt`) was a **different, frozen** sample of the pre-P6 pool: its numbers do
+NOT correspond to these, and `audio/` must never be regenerated (`../audio/00-README.md`).
 
 ## How to read a row
 
@@ -57,230 +58,231 @@ performance, not a different word.
 
 ---
 
-Source: `lists/roots-bases-current.txt` (26751 packed bases); sample 48 bases, seed 20261014 - the SAME sample as
-`../audio/roots-index.txt`.
+Source: `lists/roots-bases-current.txt` (26484 packed bases); sample 48 bases, seed 20261014.
+! The audio run of 2026-10-14 (`../audio/roots-index.txt`) used a DIFFERENT sample
+(the pre-P6 pool) and is frozen - its numbers are not comparable with these.
 
 ## roots-01.wav  (numbered 1-32)
 
 | # | base | form | syllables | stress (P4/N1) | note |
 |---|---|---|---|---|---|
-| 1 | thastho | thasthof | thas-thof | thasThof | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 2 | thastho | thasthow | thas-thow | thasThow | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 3 | thastho | thasthoh | thas-thoh | thasThoh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 4 | thastho | thastho | thas-tho | thasTho | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 5 | namgae | namgaef | nam-gaef | namGaef | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 6 | namgae | namgaew | nam-gaew | namGaew | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 7 | namgae | namgaeh | nam-gaeh | namGaeh | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 8 | namgae | namgae | nam-gae | namGae | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 9 | dobrae | dobraef | do-braef | doBraef |  |
-| 10 | dobrae | dobraew | do-braew | doBraew |  |
-| 11 | dobrae | dobraeh | do-braeh | doBraeh |  |
-| 12 | dobrae | dobrae | do-brae | doBrae |  |
-| 13 | sumtho | sumthof | sum-thof | sumThof | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
-| 14 | sumtho | sumthow | sum-thow | sumThow | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
-| 15 | sumtho | sumthoh | sum-thoh | sumThoh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
-| 16 | sumtho | sumtho | sum-tho | sumTho | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
-| 17 | ujmu | ujmuf | u-jmuf | uJmuf |  |
-| 18 | ujmu | ujmuw | u-jmuw | uJmuw |  |
-| 19 | ujmu | ujmuh | u-jmuh | uJmuh |  |
-| 20 | ujmu | ujmu | u-jmu | uJmu |  |
-| 21 | daehno | daehnof | dae-hnof | daeHnof |  |
-| 22 | daehno | daehnow | dae-hnow | daeHnow |  |
-| 23 | daehno | daehnoh | dae-hnoh | daeHnoh |  |
-| 24 | daehno | daehno | dae-hno | daeHno |  |
-| 25 | woursaeu | woursaeuf | wour-saeuf | wourSaeuf |  |
-| 26 | woursaeu | woursaeuw | wour-saeuw | wourSaeuw |  |
-| 27 | woursaeu | woursaeuh | wour-saeuh | wourSaeuh |  |
-| 28 | woursaeu | woursaeu | wour-saeu | wourSaeu |  |
-| 29 | leubraei | leubraeif | leu-braeif | leuBraeif |  |
-| 30 | leubraei | leubraeiw | leu-braeiw | leuBraeiw |  |
-| 31 | leubraei | leubraeih | leu-braeih | leuBraeih |  |
-| 32 | leubraei | leubraei | leu-braei | leuBraei |  |
+| 1 | thaeumto | thaeumtof | thaeum-tof | thaeumTof | P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 2 | thaeumto | thaeumtow | thaeum-tow | thaeumTow | P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 3 | thaeumto | thaeumtoh | thaeum-toh | thaeumToh | P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 4 | thaeumto | thaeumto | thaeum-to | thaeumTo | P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 5 | naeilrou | naeilrouf | naeil-rouf | naeilRouf |  |
+| 6 | naeilrou | naeilrouw | naeil-rouw | naeilRouw |  |
+| 7 | naeilrou | naeilrouh | naeil-rouh | naeilRouh |  |
+| 8 | naeilrou | naeilrou | naeil-rou | naeilRou |  |
+| 9 | donwoi | donwoif | don-woif | donWoif |  |
+| 10 | donwoi | donwoiw | don-woiw | donWoiw |  |
+| 11 | donwoi | donwoih | don-woih | donWoih |  |
+| 12 | donwoi | donwoi | don-woi | donWoi |  |
+| 13 | shasgeu | shasgeuf | shas-geuf | shasGeuf |  |
+| 14 | shasgeu | shasgeuw | shas-geuw | shasGeuw |  |
+| 15 | shasgeu | shasgeuh | shas-geuh | shasGeuh |  |
+| 16 | shasgeu | shasgeu | shas-geu | shasGeu |  |
+| 17 | waesgei | waesgeif | waes-geif | waesGeif |  |
+| 18 | waesgei | waesgeiw | waes-geiw | waesGeiw |  |
+| 19 | waesgei | waesgeih | waes-geih | waesGeih |  |
+| 20 | waesgei | waesgei | waes-gei | waesGei |  |
+| 21 | daengou | daengouf | dae-ngouf | daeNgouf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 22 | daengou | daengouw | dae-ngouw | daeNgouw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 23 | daengou | daengouh | dae-ngouh | daeNgouh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 24 | daengou | daengou | dae-ngou | daeNgou | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 25 | yrgy | yrgyf | yr-gyf | yrGyf |  |
+| 26 | yrgy | yrgyw | yr-gyw | yrGyw |  |
+| 27 | yrgy | yrgyh | yr-gyh | yrGyh |  |
+| 28 | yrgy | yrgy | yr-gy | yrGy |  |
+| 29 | lirlai | lirlaif | lir-laif | lirLaif |  |
+| 30 | lirlai | lirlaiw | lir-laiw | lirLaiw |  |
+| 31 | lirlai | lirlaih | lir-laih | lirLaih |  |
+| 32 | lirlai | lirlai | lir-lai | lirLai |  |
 
 ## roots-02.wav  (numbered 33-64)
 
 | # | base | form | syllables | stress (P4/N1) | note |
 |---|---|---|---|---|---|
-| 33 | oillo | oillof | oil-lof | oilLof |  |
-| 34 | oillo | oillow | oil-low | oilLow |  |
-| 35 | oillo | oilloh | oil-loh | oilLoh |  |
-| 36 | oillo | oillo | oil-lo | oilLo |  |
-| 37 | maeijnei | maeijneif | maei-jneif | maeiJneif |  |
-| 38 | maeijnei | maeijneiw | maei-jneiw | maeiJneiw |  |
-| 39 | maeijnei | maeijneih | maei-jneih | maeiJneih |  |
-| 40 | maeijnei | maeijnei | maei-jnei | maeiJnei |  |
-| 41 | graemdae | graemdaef | graem-daef | graemDaef | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 42 | graemdae | graemdaew | graem-daew | graemDaew | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 43 | graemdae | graemdaeh | graem-daeh | graemDaeh | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 44 | graemdae | graemdae | graem-dae | graemDae | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 45 | rouswaei | rouswaeif | rous-waeif | rousWaeif |  |
-| 46 | rouswaei | rouswaeiw | rous-waeiw | rousWaeiw |  |
-| 47 | rouswaei | rouswaeih | rous-waeih | rousWaeih |  |
-| 48 | rouswaei | rouswaei | rous-waei | rousWaei |  |
-| 49 | grortheu | grortheuf | gror-theuf | grorTheuf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 50 | grortheu | grortheuw | gror-theuw | grorTheuw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 51 | grortheu | grortheuh | gror-theuh | grorTheuh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 52 | grortheu | grortheu | gror-theu | grorTheu | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 53 | goumneu | goumneuf | goum-neuf | goumNeuf |  |
-| 54 | goumneu | goumneuw | goum-neuw | goumNeuw |  |
-| 55 | goumneu | goumneuh | goum-neuh | goumNeuh |  |
-| 56 | goumneu | goumneu | goum-neu | goumNeu |  |
-| 57 | meuneu | meuneuf | meu-neuf | meuNeuf |  |
-| 58 | meuneu | meuneuw | meu-neuw | meuNeuw |  |
-| 59 | meuneu | meuneuh | meu-neuh | meuNeuh |  |
-| 60 | meuneu | meuneu | meu-neu | meuNeu |  |
-| 61 | grinngeu | grinngeuf | grin-ngeuf | grinNgeuf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 62 | grinngeu | grinngeuw | grin-ngeuw | grinNgeuw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 63 | grinngeu | grinngeuh | grin-ngeuh | grinNgeuh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 64 | grinngeu | grinngeu | grin-ngeu | grinNgeu | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 33 | ralsaei | ralsaeif | ral-saeif | ralSaeif |  |
+| 34 | ralsaei | ralsaeiw | ral-saeiw | ralSaeiw |  |
+| 35 | ralsaei | ralsaeih | ral-saeih | ralSaeih |  |
+| 36 | ralsaei | ralsaei | ral-saei | ralSaei |  |
+| 37 | maeusshaei | maeusshaeif | maeus-shaeif | maeusShaeif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 38 | maeusshaei | maeusshaeiw | maeus-shaeiw | maeusShaeiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 39 | maeusshaei | maeusshaeih | maeus-shaeih | maeusShaeih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 40 | maeusshaei | maeusshaei | maeus-shaei | maeusShaei | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 41 | graeimthae | graeimthaef | graeim-thaef | graeimThaef | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 42 | graeimthae | graeimthaew | graeim-thaew | graeimThaew | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 43 | graeimthae | graeimthaeh | graeim-thaeh | graeimThaeh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 44 | graeimthae | graeimthae | graeim-thae | graeimThae | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 45 | sajmeu | sajmeuf | sa-jmeuf | saJmeuf |  |
+| 46 | sajmeu | sajmeuw | sa-jmeuw | saJmeuw |  |
+| 47 | sajmeu | sajmeuh | sa-jmeuh | saJmeuh |  |
+| 48 | sajmeu | sajmeu | sa-jmeu | saJmeu |  |
+| 49 | groubrou | groubrouf | grou-brouf | grouBrouf |  |
+| 50 | groubrou | groubrouw | grou-brouw | grouBrouw |  |
+| 51 | groubrou | groubrouh | grou-brouh | grouBrouh |  |
+| 52 | groubrou | groubrou | grou-brou | grouBrou |  |
+| 53 | gunlo | gunlof | gun-lof | gunLof |  |
+| 54 | gunlo | gunlow | gun-low | gunLow |  |
+| 55 | gunlo | gunloh | gun-loh | gunLoh |  |
+| 56 | gunlo | gunlo | gun-lo | gunLo |  |
+| 57 | momheu | momheuf | mom-heuf | momHeuf |  |
+| 58 | momheu | momheuw | mom-heuw | momHeuw |  |
+| 59 | momheu | momheuh | mom-heuh | momHeuh |  |
+| 60 | momheu | momheu | mom-heu | momHeu |  |
+| 61 | groseu | groseuf | gro-seuf | groSeuf |  |
+| 62 | groseu | groseuw | gro-seuw | groSeuw |  |
+| 63 | groseu | groseuh | gro-seuh | groSeuh |  |
+| 64 | groseu | groseu | gro-seu | groSeu |  |
 
 ## roots-03.wav  (numbered 65-96)
 
 | # | base | form | syllables | stress (P4/N1) | note |
 |---|---|---|---|---|---|
-| 65 | wifeu | wifeuf | wi-feuf | wiFeuf |  |
-| 66 | wifeu | wifeuw | wi-feuw | wiFeuw |  |
-| 67 | wifeu | wifeuh | wi-feuh | wiFeuh |  |
-| 68 | wifeu | wifeu | wi-feu | wiFeu |  |
-| 69 | daeilfeu | daeilfeuf | daeil-feuf | daeilFeuf |  |
-| 70 | daeilfeu | daeilfeuw | daeil-feuw | daeilFeuw |  |
-| 71 | daeilfeu | daeilfeuh | daeil-feuh | daeilFeuh |  |
-| 72 | daeilfeu | daeilfeu | daeil-feu | daeilFeu |  |
-| 73 | nalne | nalnef | nal-nef | nalNef |  |
-| 74 | nalne | nalnew | nal-new | nalNew |  |
-| 75 | nalne | nalneh | nal-neh | nalNeh |  |
-| 76 | nalne | nalne | nal-ne | nalNe |  |
-| 77 | jeijau | jeijauf | jei-jauf | jeiJauf |  |
-| 78 | jeijau | jeijauw | jei-jauw | jeiJauw |  |
-| 79 | jeijau | jeijauh | jei-jauh | jeiJauh |  |
-| 80 | jeijau | jeijau | jei-jau | jeiJau |  |
-| 81 | wurshi | wurshif | wur-shif | wurShif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 82 | wurshi | wurshiw | wur-shiw | wurShiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 83 | wurshi | wurshih | wur-shih | wurShih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 84 | wurshi | wurshi | wur-shi | wurShi | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 85 | gildu | gilduf | gil-duf | gilDuf |  |
-| 86 | gildu | gilduw | gil-duw | gilDuw |  |
-| 87 | gildu | gilduh | gil-duh | gilDuh |  |
-| 88 | gildu | gildu | gil-du | gilDu |  |
-| 89 | jinci | jincif | jin-cif | jinCif |  |
-| 90 | jinci | jinciw | jin-ciw | jinCiw |  |
-| 91 | jinci | jincih | jin-cih | jinCih |  |
-| 92 | jinci | jinci | jin-ci | jinCi |  |
-| 93 | jausgae | jausgaef | jaus-gaef | jausGaef |  |
-| 94 | jausgae | jausgaew | jaus-gaew | jausGaew |  |
-| 95 | jausgae | jausgaeh | jaus-gaeh | jausGaeh |  |
-| 96 | jausgae | jausgae | jaus-gae | jausGae |  |
+| 65 | woisjaeu | woisjaeuf | wois-jaeuf | woisJaeuf |  |
+| 66 | woisjaeu | woisjaeuw | wois-jaeuw | woisJaeuw |  |
+| 67 | woisjaeu | woisjaeuh | wois-jaeuh | woisJaeuh |  |
+| 68 | woisjaeu | woisjaeu | wois-jaeu | woisJaeu |  |
+| 69 | daeirnau | daeirnauf | daeir-nauf | daeirNauf |  |
+| 70 | daeirnau | daeirnauw | daeir-nauw | daeirNauw |  |
+| 71 | daeirnau | daeirnauh | daeir-nauh | daeirNauh |  |
+| 72 | daeirnau | daeirnau | daeir-nau | daeirNau |  |
+| 73 | naeilbei | naeilbeif | naeil-beif | naeilBeif |  |
+| 74 | naeilbei | naeilbeiw | naeil-beiw | naeilBeiw |  |
+| 75 | naeilbei | naeilbeih | naeil-beih | naeilBeih |  |
+| 76 | naeilbei | naeilbei | naeil-bei | naeilBei |  |
+| 77 | jeungeu | jeungeuf | jeu-ngeuf | jeuNgeuf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 78 | jeungeu | jeungeuw | jeu-ngeuw | jeuNgeuw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 79 | jeungeu | jeungeuh | jeu-ngeuh | jeuNgeuh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 80 | jeungeu | jeungeu | jeu-ngeu | jeuNgeu | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 81 | golsoi | golsoif | gol-soif | golSoif |  |
+| 82 | golsoi | golsoiw | gol-soiw | golSoiw |  |
+| 83 | golsoi | golsoih | gol-soih | golSoih |  |
+| 84 | golsoi | golsoi | gol-soi | golSoi |  |
+| 85 | joicei | joiceif | joi-ceif | joiCeif |  |
+| 86 | joicei | joiceiw | joi-ceiw | joiCeiw |  |
+| 87 | joicei | joiceih | joi-ceih | joiCeih |  |
+| 88 | joicei | joicei | joi-cei | joiCei |  |
+| 89 | jeimjei | jeimjeif | jeim-jeif | jeimJeif |  |
+| 90 | jeimjei | jeimjeiw | jeim-jeiw | jeimJeiw |  |
+| 91 | jeimjei | jeimjeih | jeim-jeih | jeimJeih |  |
+| 92 | jeimjei | jeimjei | jeim-jei | jeimJei |  |
+| 93 | foildo | foildof | foil-dof | foilDof |  |
+| 94 | foildo | foildow | foil-dow | foilDow |  |
+| 95 | foildo | foildoh | foil-doh | foilDoh |  |
+| 96 | foildo | foildo | foil-do | foilDo |  |
 
 ## roots-04.wav  (numbered 97-128)
 
 | # | base | form | syllables | stress (P4/N1) | note |
 |---|---|---|---|---|---|
-| 97 | foljy | foljyf | fol-jyf | folJyf |  |
-| 98 | foljy | foljyw | fol-jyw | folJyw |  |
-| 99 | foljy | foljyh | fol-jyh | folJyh |  |
-| 100 | foljy | foljy | fol-jy | folJy |  |
-| 101 | eimlaeu | eimlaeuf | eim-laeuf | eimLaeuf |  |
-| 102 | eimlaeu | eimlaeuw | eim-laeuw | eimLaeuw |  |
-| 103 | eimlaeu | eimlaeuh | eim-laeuh | eimLaeuh |  |
-| 104 | eimlaeu | eimlaeu | eim-laeu | eimLaeu |  |
-| 105 | bysseu | bysseuf | bys-seuf | bysSeuf |  |
-| 106 | bysseu | bysseuw | bys-seuw | bysSeuw |  |
-| 107 | bysseu | bysseuh | bys-seuh | bysSeuh |  |
-| 108 | bysseu | bysseu | bys-seu | bysSeu |  |
-| 109 | shefaeu | shefaeuf | she-faeuf | sheFaeuf |  |
-| 110 | shefaeu | shefaeuw | she-faeuw | sheFaeuw |  |
-| 111 | shefaeu | shefaeuh | she-faeuh | sheFaeuh |  |
-| 112 | shefaeu | shefaeu | she-faeu | sheFaeu |  |
-| 113 | joibri | joibrif | joi-brif | joiBrif |  |
-| 114 | joibri | joibriw | joi-briw | joiBriw |  |
-| 115 | joibri | joibrih | joi-brih | joiBrih |  |
-| 116 | joibri | joibri | joi-bri | joiBri |  |
-| 117 | sheucou | sheucouf | sheu-couf | sheuCouf |  |
-| 118 | sheucou | sheucouw | sheu-couw | sheuCouw |  |
-| 119 | sheucou | sheucouh | sheu-couh | sheuCouh |  |
-| 120 | sheucou | sheucou | sheu-cou | sheuCou |  |
-| 121 | gomthou | gomthouf | gom-thouf | gomThouf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
-| 122 | gomthou | gomthouw | gom-thouw | gomThouw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
-| 123 | gomthou | gomthouh | gom-thouh | gomThouh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
-| 124 | gomthou | gomthou | gom-thou | gomThou | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
-| 125 | seinsoi | seinsoif | sein-soif | seinSoif |  |
-| 126 | seinsoi | seinsoiw | sein-soiw | seinSoiw |  |
-| 127 | seinsoi | seinsoih | sein-soih | seinSoih |  |
-| 128 | seinsoi | seinsoi | sein-soi | seinSoi |  |
+| 97 | eulhu | eulhuf | eul-huf | eulHuf |  |
+| 98 | eulhu | eulhuw | eul-huw | eulHuw |  |
+| 99 | eulhu | eulhuh | eul-huh | eulHuh |  |
+| 100 | eulhu | eulhu | eul-hu | eulHu |  |
+| 101 | brahma | brahmaf | bra-hmaf | braHmaf |  |
+| 102 | brahma | brahmaw | bra-hmaw | braHmaw |  |
+| 103 | brahma | brahmah | bra-hmah | braHmah |  |
+| 104 | brahma | brahma | bra-hma | braHma |  |
+| 105 | sheunheu | sheunheuf | sheun-heuf | sheunHeuf |  |
+| 106 | sheunheu | sheunheuw | sheun-heuw | sheunHeuw |  |
+| 107 | sheunheu | sheunheuh | sheun-heuh | sheunHeuh |  |
+| 108 | sheunheu | sheunheu | sheun-heu | sheunHeu |  |
+| 109 | jounpe | jounpef | joun-pef | jounPef | P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 110 | jounpe | jounpew | joun-pew | jounPew | P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 111 | jounpe | jounpeh | joun-peh | jounPeh | P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 112 | jounpe | jounpe | joun-pe | jounPe | P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 113 | shonshi | shonshif | shon-shif | shonShif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 114 | shonshi | shonshiw | shon-shiw | shonShiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 115 | shonshi | shonshih | shon-shih | shonShih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 116 | shonshi | shonshi | shon-shi | shonShi | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 117 | goinngy | goinngyf | goin-ngyf | goinNgyf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 118 | goinngy | goinngyw | goin-ngyw | goinNgyw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 119 | goinngy | goinngyh | goin-ngyh | goinNgyh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 120 | goinngy | goinngy | goin-ngy | goinNgy | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 121 | sisshei | sissheif | sis-sheif | sisSheif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 122 | sisshei | sissheiw | sis-sheiw | sisSheiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 123 | sisshei | sissheih | sis-sheih | sisSheih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 124 | sisshei | sisshei | sis-shei | sisShei | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 125 | maeilsha | maeilshaf | maeil-shaf | maeilShaf | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 126 | maeilsha | maeilshaw | maeil-shaw | maeilShaw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 127 | maeilsha | maeilshah | maeil-shah | maeilShah | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
+| 128 | maeilsha | maeilsha | maeil-sha | maeilSha | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
 
 ## roots-05.wav  (numbered 129-160)
 
 | # | base | form | syllables | stress (P4/N1) | note |
 |---|---|---|---|---|---|
-| 129 | mangi | mangif | ma-ngif | maNgif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 130 | mangi | mangiw | ma-ngiw | maNgiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 131 | mangi | mangih | ma-ngih | maNgih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 132 | mangi | mangi | ma-ngi | maNgi | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 133 | wenci | wencif | wen-cif | wenCif |  |
-| 134 | wenci | wenciw | wen-ciw | wenCiw |  |
-| 135 | wenci | wencih | wen-cih | wenCih |  |
-| 136 | wenci | wenci | wen-ci | wenCi |  |
-| 137 | roldai | roldaif | rol-daif | rolDaif |  |
-| 138 | roldai | roldaiw | rol-daiw | rolDaiw |  |
-| 139 | roldai | roldaih | rol-daih | rolDaih |  |
-| 140 | roldai | roldai | rol-dai | rolDai |  |
-| 141 | nurfeu | nurfeuf | nur-feuf | nurFeuf |  |
-| 142 | nurfeu | nurfeuw | nur-feuw | nurFeuw |  |
-| 143 | nurfeu | nurfeuh | nur-feuh | nurFeuh |  |
-| 144 | nurfeu | nurfeu | nur-feu | nurFeu |  |
-| 145 | rora | roraf | ro-raf | roRaf |  |
-| 146 | rora | roraw | ro-raw | roRaw |  |
-| 147 | rora | rorah | ro-rah | roRah |  |
-| 148 | rora | rora | ro-ra | roRa |  |
-| 149 | hoindu | hoinduf | hoin-duf | hoinDuf | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 150 | hoindu | hoinduw | hoin-duw | hoinDuw | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 151 | hoindu | hoinduh | hoin-duh | hoinDuh | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 152 | hoindu | hoindu | hoin-du | hoinDu | ILLEGAL under P6: a stop after a nasal coda must be written with its hard letter (`mb`->`mp`, `nb`->`np`, `md`->`mt`, `nd`->`nt`, `mg`->`mk`) |
-| 153 | gonny | gonnyf | gon-nyf | gonNyf |  |
-| 154 | gonny | gonnyw | gon-nyw | gonNyw |  |
-| 155 | gonny | gonnyh | gon-nyh | gonNyh |  |
-| 156 | gonny | gonny | gon-ny | gonNy |  |
-| 157 | waulny | waulnyf | waul-nyf | waulNyf |  |
-| 158 | waulny | waulnyw | waul-nyw | waulNyw |  |
-| 159 | waulny | waulnyh | waul-nyh | waulNyh |  |
-| 160 | waulny | waulny | waul-ny | waulNy |  |
+| 129 | willu | willuf | wil-luf | wilLuf |  |
+| 130 | willu | willuw | wil-luw | wilLuw |  |
+| 131 | willu | willuh | wil-luh | wilLuh |  |
+| 132 | willu | willu | wil-lu | wilLu |  |
+| 133 | roumju | roumjuf | roum-juf | roumJuf |  |
+| 134 | roumju | roumjuw | roum-juw | roumJuw |  |
+| 135 | roumju | roumjuh | roum-juh | roumJuh |  |
+| 136 | roumju | roumju | roum-ju | roumJu |  |
+| 137 | orlai | orlaif | or-laif | orLaif |  |
+| 138 | orlai | orlaiw | or-laiw | orLaiw |  |
+| 139 | orlai | orlaih | or-laih | orLaih |  |
+| 140 | orlai | orlai | or-lai | orLai |  |
+| 141 | rousjy | rousjyf | rous-jyf | rousJyf |  |
+| 142 | rousjy | rousjyw | rous-jyw | rousJyw |  |
+| 143 | rousjy | rousjyh | rous-jyh | rousJyh |  |
+| 144 | rousjy | rousjy | rous-jy | rousJy |  |
+| 145 | housroi | housroif | hous-roif | housRoif |  |
+| 146 | housroi | housroiw | hous-roiw | housRoiw |  |
+| 147 | housroi | housroih | hous-roih | housRoih |  |
+| 148 | housroi | housroi | hous-roi | housRoi |  |
+| 149 | goirbeu | goirbeuf | goir-beuf | goirBeuf |  |
+| 150 | goirbeu | goirbeuw | goir-beuw | goirBeuw |  |
+| 151 | goirbeu | goirbeuh | goir-beuh | goirBeuh |  |
+| 152 | goirbeu | goirbeu | goir-beu | goirBeu |  |
+| 153 | weiwau | weiwauf | wei-wauf | weiWauf |  |
+| 154 | weiwau | weiwauw | wei-wauw | weiWauw |  |
+| 155 | weiwau | weiwauh | wei-wauh | weiWauh |  |
+| 156 | weiwau | weiwau | wei-wau | weiWau |  |
+| 157 | feusfy | feusfyf | feus-fyf | feusFyf |  |
+| 158 | feusfy | feusfyw | feus-fyw | feusFyw |  |
+| 159 | feusfy | feusfyh | feus-fyh | feusFyh |  |
+| 160 | feusfy | feusfy | feus-fy | feusFy |  |
 
 ## roots-06.wav  (numbered 161-192)
 
 | # | base | form | syllables | stress (P4/N1) | note |
 |---|---|---|---|---|---|
-| 161 | feisna | feisnaf | feis-naf | feisNaf |  |
-| 162 | feisna | feisnaw | feis-naw | feisNaw |  |
-| 163 | feisna | feisnah | feis-nah | feisNah |  |
-| 164 | feisna | feisna | feis-na | feisNa |  |
-| 165 | thowai | thowaif | tho-waif | thoWaif |  |
-| 166 | thowai | thowaiw | tho-waiw | thoWaiw |  |
-| 167 | thowai | thowaih | tho-waih | thoWaih |  |
-| 168 | thowai | thowai | tho-wai | thoWai |  |
-| 169 | jaeilleu | jaeilleuf | jaeil-leuf | jaeilLeuf |  |
-| 170 | jaeilleu | jaeilleuw | jaeil-leuw | jaeilLeuw |  |
-| 171 | jaeilleu | jaeilleuh | jaeil-leuh | jaeilLeuh |  |
-| 172 | jaeilleu | jaeilleu | jaeil-leu | jaeilLeu |  |
-| 173 | neunca | neuncaf | neun-caf | neunCaf |  |
-| 174 | neunca | neuncaw | neun-caw | neunCaw |  |
-| 175 | neunca | neuncah | neun-cah | neunCah |  |
-| 176 | neunca | neunca | neun-ca | neunCa |  |
-| 177 | draibrai | draibraif | drai-braif | draiBraif |  |
-| 178 | draibrai | draibraiw | drai-braiw | draiBraiw |  |
-| 179 | draibrai | draibraih | drai-braih | draiBraih |  |
-| 180 | draibrai | draibrai | drai-brai | draiBrai |  |
-| 181 | braisshei | braissheif | brais-sheif | braisSheif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 182 | braisshei | braissheiw | brais-sheiw | braisSheiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 183 | braisshei | braissheih | brais-sheih | braisSheih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 184 | braisshei | braisshei | brais-shei | braisShei | stress capital lands on a DIGRAPH (convention OPEN: 03 section C) |
-| 185 | sheiga | sheigaf | shei-gaf | sheiGaf |  |
-| 186 | sheiga | sheigaw | shei-gaw | sheiGaw |  |
-| 187 | sheiga | sheigah | shei-gah | sheiGah |  |
-| 188 | sheiga | sheiga | shei-ga | sheiGa |  |
-| 189 | graeuco | graeucof | graeu-cof | graeuCof |  |
-| 190 | graeuco | graeucow | graeu-cow | graeuCow |  |
-| 191 | graeuco | graeucoh | graeu-coh | graeuCoh |  |
-| 192 | graeuco | graeuco | graeu-co | graeuCo |  |
+| 161 | thunthi | thunthif | thun-thif | thunThif | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 162 | thunthi | thunthiw | thun-thiw | thunThiw | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 163 | thunthi | thunthih | thun-thih | thunThih | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 164 | thunthi | thunthi | thun-thi | thunThi | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 165 | jaeuri | jaeurif | jaeu-rif | jaeuRif |  |
+| 166 | jaeuri | jaeuriw | jaeu-riw | jaeuRiw |  |
+| 167 | jaeuri | jaeurih | jaeu-rih | jaeuRih |  |
+| 168 | jaeuri | jaeuri | jaeu-ri | jaeuRi |  |
+| 169 | nomu | nomuf | no-muf | noMuf |  |
+| 170 | nomu | nomuw | no-muw | noMuw |  |
+| 171 | nomu | nomuh | no-muh | noMuh |  |
+| 172 | nomu | nomu | no-mu | noMu |  |
+| 173 | drairgai | drairgaif | drair-gaif | drairGaif |  |
+| 174 | drairgai | drairgaiw | drair-gaiw | drairGaiw |  |
+| 175 | drairgai | drairgaih | drair-gaih | drairGaih |  |
+| 176 | drairgai | drairgai | drair-gai | drairGai |  |
+| 177 | braulbei | braulbeif | braul-beif | braulBeif |  |
+| 178 | braulbei | braulbeiw | braul-beiw | braulBeiw |  |
+| 179 | braulbei | braulbeih | braul-beih | braulBeih |  |
+| 180 | braulbei | braulbei | braul-bei | braulBei |  |
+| 181 | shinthe | shinthef | shin-thef | shinThef | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 182 | shinthe | shinthew | shin-thew | shinThew | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 183 | shinthe | shintheh | shin-theh | shinTheh | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 184 | shinthe | shinthe | shin-the | shinThe | stress capital lands on a DIGRAPH (convention OPEN: 03 section C); P6: nasal coda + stop = obligatorily [p t k] (the soft/hard knob does not apply) |
+| 185 | grailcoi | grailcoif | grail-coif | grailCoif |  |
+| 186 | grailcoi | grailcoiw | grail-coiw | grailCoiw |  |
+| 187 | grailcoi | grailcoih | grail-coih | grailCoih |  |
+| 188 | grailcoi | grailcoi | grail-coi | grailCoi |  |
+| 189 | drisse | drissef | dris-sef | drisSef |  |
+| 190 | drisse | drissew | dris-sew | drisSew |  |
+| 191 | drisse | drisseh | dris-seh | drisSeh |  |
+| 192 | drisse | drisse | dris-se | drisSe |  |
 
 
 ---
