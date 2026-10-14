@@ -338,6 +338,10 @@ negation scope = item 8). **Two gaps had no owner at all:**
     form — (b) to settle `V1`/`V2`, or a **single** patient-promoting suffix (one syllable) if a morphological
     "spotlight any argument" is wanted; note that `S3`'s topic slot plus free order **already provide that
     function pragmatically, at zero cost**. **Author decision needed.**
+    ⚠️ **UPDATE (same session): the author's own `V1`/`V2` design — "V1 = there IS an instigator, V2 = there is
+    NO instigator" (Georgian-inspired) — is recorded as `M5c`, and it IS this item's option (b) or the safe
+    voice reading.** What remains to rule is therefore narrow: **in a V2 clause, does the participant keep NOM
+    (plain accusative) or take ACC (split-S)?**
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**

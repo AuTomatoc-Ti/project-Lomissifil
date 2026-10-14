@@ -28,8 +28,13 @@
 - aldem (face) — author wrote `altem`; voiced per C2 (R-b). R6: `-m` ✓ ends in `e`
 - sym (god) — R6: `-m` ✓ ends in `y`; stays ONE syllable (a chant word)
 - os (have) — R6: an `-s` root for a 1-syllable VERB-related word
-- res (be) — same class as `os` (1-syllable, verb-related). ⚠️ their verb class (V1 `-ri` / V2 `-ni`)
-  is not decided yet
+- res (be) — same class as `os` (1-syllable, verb-related). ⚠️ the old note said their verb class
+  (V1 `-ri` / V2 `-ni`) "is not decided yet" — **now the shape of the answer exists (`M5c`,
+  author's design 2026-10-14, Georgian-inspired): V1 = "there IS an instigator", V2 = "there is NO
+  instigator"**, so V1/V2 are two forms of the SAME root (a mediopassive alternation), not classes a
+  root belongs to. `os` / `res` denote states ⇒ no instigator ⇒ **V2**. The remaining sub-question is
+  whether a V2 clause's participant keeps NOM (⇒ plain accusative, V2 is a voice) or takes ACC
+  (⇒ split-S / active-stative, see `03-open-questions.md` item 32(b))
 
 # bare root — batch 1 (author's own roots, 2026-10-14; checked by `../tools/check_roots.py`)
 # ⚠️ Spelling follows C2/R-b: the DICTIONARY form uses the VOICED stop, so a hard realisation is
