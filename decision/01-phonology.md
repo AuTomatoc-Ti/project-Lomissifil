@@ -175,15 +175,20 @@ read as stressed.)*
 - **Coda (P3):** only `m n l r s`.
 - **Geminates:** `ss nn ll mm rr ww` — **intervocalic only**, never word-final
   (`argonna` OK, `argonn` NO). `argonna` = `ar-gon-na` is valid.
-- **Word-final — TWO layers (author's ruling 2026-10-14; A1 and R1 are NOT in conflict):**
-  - a **bare root** may end in `∅` (a vowel) **or** `f` / `v` / `h` — this is `R1`'s **area rule**;
-    it may **not** end in `m n l r s`. **Mechanism (author's ruling 2026-10-14):** the area rule is
-    **two independent binary choices** — one picks a **fricative** from `{f, v}`, the other picks
-    **either `h` or nothing** — so every base yields **exactly 2** bare roots: one from the
-    `{f,v}` branch and one from the `{h,∅}` branch (base `lafi` → `lafif`/`lafiw`, and `lafih`/`lafi`).
+- **Word-final — TWO layers (author's rulings 2026-10-14; A1 and R1 are NOT in conflict; `s` added by `R4`):**
+  - a **bare root** may end in `∅` (a vowel) **or** `f` / `v` / `h` / **`s`** — this is `R1`'s **area
+    rule**; it may **not** end in `m n l r` (nor in a stop). **Mechanism:** the area rule is
+    **two independent choices** — one picks a **fricative** from `{f, v}`, the other picks **one of
+    `{∅, h, s}`** (**R4**, 2026-10-14, added `s`; before that it was `{h, ∅}`) — so every base yields
+    **exactly 2** bare roots: one from the `{f,v}` branch and one from the `{∅,h,s}` branch (base
+    `lafi` → `lafif`/`lafiw`, and `lafi`/`lafih`/`lafis`). ⚠️ **`s` is RESERVED**: the author's note
+    says it will later mark an adjective / adverb / exceptional case (R3's class logic), so an
+    `s`-final root may be coined now but its meaning slot is held. ⚠️ `s` needs **no M3a repair**,
+    because it is already a coda (P3) — that is true only of `s` among the bare-root finals.
     **Spelling:** the `/v/` member is written `w` — `v` is the *vibrato* mark and not a letter, so a
     /v/-final root is `…w` (e.g. `lafiw`), never `…v` (see `02-notation.md`).
-    The raw *form* space is therefore 4 per base, while the **coined** space is **2 per base**.
+    The raw *form* space is therefore **6 per base** (2 fricative × 3 B-options), while the
+    **coined** space is **2 per base**.
     The two siblings differ in one segment only, so a pair is **exempt** from the
     distance-`>= 2` guideline (R2: the area rule is *hard*, the consonant-distance guideline *soft*).
     **The branch choice is NOT free texture (author's ruling, 2026-10-14 = `R3`):** the branch

@@ -31,8 +31,8 @@
 - orgi (heart)
 - noih (emptiness)
 - sefmeh (world)
-- singoi (solitude) ⚠️ P6: `ng` is one phoneme /N/, so this reads /si.ŋoi/; if /sin.goi/ was meant,
-  the spelling must be `sinkoi`
+- sinkoi (solitude) — author's choice 2026-10-14: /sin.goi/, so the spelling MUST be `sinkoi`
+  (P6: `ng` is one phoneme /N/; `singoi` would read /si.ŋoi/)
 - desa (the making; author wrote `tesa`, voiced per C2)
 - thyma (think)
 - walu (wood)

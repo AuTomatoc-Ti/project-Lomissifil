@@ -186,6 +186,24 @@ every future decision must add its rows. Two halves are still open:
     languages count as "others" (the same list the sound fingerprint would use; `06-neutrality.md`
     already names 16 for the *sound* side, but a word list is a different input).
     **Owner:** ongoing — run it whenever a batch of meanings is assigned.
+28. **The 5 held words + the deferred `m`/`r` question (author's ruling ③, 2026-10-14).** `R4` legalised
+    `s`-final bare roots, which **immediately released `os` (have) and `res` (be)**. Still **held**
+    (they need `m`/`r` finals, which stay illegal): **`ar` (from) · `mer` (with) · `esgim` (foot) ·
+    `altem` (face) · `sym` (god)** — recorded in `../lists/proposed.md`. Two clean ways to admit them,
+    **not yet chosen**:
+    (a) **a function-word carve-out** — `H5` already says function words are a **separate class that
+    takes NO suffixes**, and the bare-root final rule exists *because* bare roots must host suffixes ⇒
+    for a suffixless class the constraint has no purpose. This would admit **`ar` / `mer`** immediately
+    and gives `H5`'s class its first two members. (The three nouns cannot use it — they take case
+    suffixes.)
+    (b) **the `m`/`r` extension** (the earlier options ①/②: add `m`/`r`, or the whole coda set
+    `m n l r s`) — deferred by the author, but note it is **mechanically cheap** for the same reason
+    `s` was: `m`, `r`, `n`, `l` are all codas (P3), so **no M3a repair** is needed. Its real cost is
+    goal i (word-final `m`/`r`/`s` are among the commonest finals world-wide ⇒ the "signature" flavour
+    of our endings dilutes). ⚠️ If (b) is ever taken, the **donor ledger** should get a
+    "word-final consonants" row updated, and the fingerprint re-measured.
+    A third route for the three nouns: a **+vowel respelling** (`esgima`, `aldema`, `syma`), which keeps
+    them legal today at the cost of their sound.
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**

@@ -148,7 +148,7 @@ def profile(src):
              if ln.strip() and not ln.startswith("#")]
     forms = []
     for b in bases:
-        forms += [b + "f", b + "w", b + "h", b]
+        forms += [b + "f", b + "w", b + "h", b + "s", b]
     n = len(forms)
     syl_hist, finals = {}, {}
     open_n = closed = 0
@@ -193,7 +193,7 @@ def profile(src):
             else:
                 open_n += 1
     tot_syl = open_n + closed
-    print("forms: %d  (4 per base; bases: %d)" % (n, len(bases)))
+    print("forms: %d  (5 per base; bases: %d)" % (n, len(bases)))
     print("mean length %.2f letters   vowel letters %d/%d = %.1f%%"
           % (sum(len(f) for f in forms) / float(n), nuc_len, sum(len(f) for f in forms),
              100.0 * nuc_len / sum(len(f) for f in forms)))
@@ -255,7 +255,7 @@ def english(src, sample):
              if ln.strip() and not ln.startswith("#")]
     forms = []
     for b in bases:
-        forms += [b + "f", b + "w", b + "h", b]
+        forms += [b + "f", b + "w", b + "h", b + "s", b]
     print("dictionary: %s (%d entries, lowercased)" % (ENGLISH_DICT, len(words)))
     print("forms tested: %d" % len(forms))
     exact = [f for f in forms if f in words]

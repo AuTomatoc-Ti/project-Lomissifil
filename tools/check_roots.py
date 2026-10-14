@@ -32,8 +32,8 @@ import syllabify as S                      # noqa: E402
 FORM_RE = re.compile(r"^[a-z]{1,12}$")     # a hand-written file contains prose too: ignore it
 
 VOWELS = set("aeiouy")
-AREA_FINALS = ("f", "w", "h")              # A1 layer 1 today
-PROPOSED_FINALS = ("m", "r", "s")          # the author's note 1
+AREA_FINALS = ("f", "w", "h", "s")         # A1 layer 1 after R4 (2026-10-14: `s` was added)
+PROPOSED_FINALS = ("m", "r")               # the author's note 1, still DEFERRED (n/l were never asked for)
 HARD = set("ptk")
 
 
@@ -94,8 +94,9 @@ def report(forms, pool, words):
             notes.append("**ILLEGAL spelling** (phonotactics)")
         last = form[-1]
         if last in PROPOSED_FINALS:
-            notes.append("**breaks A1 layer 1**: a bare root may not end in `%s` (allowed today: "
-                         "a vowel, `f`, `w`, `h`) -- this is exactly the author's note 1" % last)
+            notes.append("**breaks A1 layer 1**: a bare root may not end in `%s` (allowed since R4: "
+                         "a vowel, `f`, `w`, `h`, `s`) -- this is the DEFERRED part of the author's "
+                         "note 1 (03-open-questions.md section 0 item 28)" % last)
         elif last not in VOWELS and last not in AREA_FINALS:
             notes.append("**breaks A1 layer 1**: ends in `%s`" % last)
         # R-b: no hard stop letter (p t k) in a base form -- but `th` is the FRICATIVE /T/ (one
@@ -114,7 +115,7 @@ def report(forms, pool, words):
         syl = "-".join(an["syllables"]) if an["syllables"] else "-"
         st = an["stressed"] or "-"
         b = base_of(form)
-        sibs = [b + "f", b + "w", b, b + "h"]
+        sibs = [b + "f", b + "w", b + "h", b + "s", b]
         d1 = [p for p in pool if lev_at_most(form, p, 1)]
         print("### `%s`%s" % (form, ("  -- *%s*" % gloss) if gloss else ""))
         print("  syllables %-14s stress %-14s   siblings: %s" % (syl, st, " ".join(sibs)))

@@ -285,9 +285,10 @@ a diphthong (`ai au ei eu oi ou aei aeu`) is ONE syllable, a hiatus (`iu yu ia y
 
 ## Rules for the pick (R1/R3)
 
-Every group of 4 rows is ONE base: `+f` | `+w` (= /v/) | `+h` | bare. A base yields **exactly 2**
+Every group of 5 rows is ONE base: `+f` | `+w` (= /v/) | `+h` | `+s` | bare. A base yields **exactly 2**
 roots, so pick **at most one** from the `{+f, +w}` pair and **at most one** from the
-`{+h, bare}` pair.
+`{+h, +s, bare}` trio. (`+s` is new in **R4**; the `s` branch is RESERVED for a future
+adjective / adverb / exceptional-case job, so its meaning slot is held.)
 
 > Sound-only. R3 is PARKED, so assign **no meanings** (decision/03-open-questions.md section 0
 > item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
@@ -382,7 +383,7 @@ def sheet(src, bases_n, per_file, seed):
         out.append("| # | base | form | syllables | stress (P4/N1) | note |\n"
                    "|---|---|---|---|---|---|\n")
         for b in chunk:
-            for form in (b + "f", b + "w", b + "h", b):
+            for form in (b + "f", b + "w", b + "h", b + "s", b):
                 n += 1
                 an = analyse(form)
                 if an["illegal"]:

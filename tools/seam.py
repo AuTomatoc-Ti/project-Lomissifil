@@ -43,7 +43,7 @@ SUFFIXES = [("NOM", "zero", ""), ("ACC", "dominant", "na"), ("GEN", "dominant", 
             ("DAT", "subdominant", "me"), ("LOC", "subdominant", "ner"),
             ("INS", "subdominant", "ser"), ("OBL", "subdominant", "le"),
             ("V1", "tonic", "ri"), ("V2", "tonic", "ni")]
-FINALS = ("f", "w", "h")
+FINALS = ("f", "w", "h", "s")              # R4 added `s` (it is a coda, so no M3a repair is needed)
 TIER1_ONSETS = ("m", "n")                  # + f/w/h = fm fn hm hn wm wn (the VCV-only clusters)
 TIER2 = {("f", "s"): "ss", ("w", "s"): "ss", ("h", "s"): "s",
          ("f", "r"): "rr", ("w", "r"): "rr", ("h", "r"): "r",
@@ -137,7 +137,9 @@ tier. Sound values: `a` dark *father* · `ae` bright *cat* · `e`/`o` close-mid 
 doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) is TWO.
 
 > ⚠️ **The "at most 2 roots per base" rule of `picks.md` is a CORRECTNESS rule, not a nicety.**
-> Within one branch you may pick either `+f` **or** `+w` (and either `+h` **or** bare) -- never both.
+> Within one branch you may pick either `+f` **or** `+w` (and either `+h`, `+s` **or** bare) -- never
+> both. (`+s` is new in **R4**: `s` is RESERVED for a future adjective/adverb/exceptional-case job, so a
+> `+s` root is ordinary in sound but its meaning slot is held.)
 > The last section of this file shows, for every base on the sheet, exactly which case forms would
 > collide. Sound-only: assign **no meanings** (R3 parked).
 

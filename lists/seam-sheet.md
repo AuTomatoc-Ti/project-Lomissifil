@@ -45,7 +45,9 @@ tier. Sound values: `a` dark *father* · `ae` bright *cat* · `e`/`o` close-mid 
 doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) is TWO.
 
 > ⚠️ **The "at most 2 roots per base" rule of `picks.md` is a CORRECTNESS rule, not a nicety.**
-> Within one branch you may pick either `+f` **or** `+w` (and either `+h` **or** bare) -- never both.
+> Within one branch you may pick either `+f` **or** `+w` (and either `+h`, `+s` **or** bare) -- never
+> both. (`+s` is new in **R4**: `s` is RESERVED for a future adjective/adverb/exceptional-case job, so a
+> `+s` root is ordinary in sound but its meaning slot is held.)
 > The last section of this file shows, for every base on the sheet, exactly which case forms would
 > collide. Sound-only: assign **no meanings** (R3 parked).
 
@@ -81,6 +83,15 @@ doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) 
 | `tharrih` | OBL `-le` (subdominant) | `tharrile` | thar-ri-le | tharRile | tier 2 sync: h+l -> l |
 | `tharrih` | V1 `-ri` (tonic) | `tharriri` | thar-ri-ri | tharRiri | tier 2 sync: h+r -> r |
 | `tharrih` | V2 `-ni` (tonic) | `tharrihni` | thar-ri-hni | tharRihni | tier 1: `hn` is a legal VCV cluster |
+| `tharris` | NOM `-` (zero) | `tharris` | thar-ris | tharRis | NOM = zero suffix |
+| `tharris` | ACC `-na` (dominant) | `tharrisna` | thar-ris-na | tharRisna | tier 1: `sn` is a legal VCV cluster |
+| `tharris` | GEN `-sa` (dominant) | `tharrisisa` | thar-ri-si-sa | tharRisisa | tier 3: copied vowel `i` inserted |
+| `tharris` | DAT `-me` (subdominant) | `tharrisme` | thar-ris-me | tharRisme | tier 1: `sm` is a legal VCV cluster |
+| `tharris` | LOC `-ner` (subdominant) | `tharrisner` | thar-ris-ner | tharRisner | tier 1: `sn` is a legal VCV cluster |
+| `tharris` | INS `-ser` (subdominant) | `tharrisiser` | thar-ri-si-ser | tharRisiser | tier 3: copied vowel `i` inserted |
+| `tharris` | OBL `-le` (subdominant) | `tharrisile` | thar-ri-si-le | tharRisile | tier 3: copied vowel `i` inserted |
+| `tharris` | V1 `-ri` (tonic) | `tharrisiri` | thar-ri-si-ri | tharRisiri | tier 3: copied vowel `i` inserted |
+| `tharris` | V2 `-ni` (tonic) | `tharrisni` | thar-ris-ni | tharRisni | tier 1: `sn` is a legal VCV cluster |
 | `tharri` | NOM `-` (zero) | `tharri` | thar-ri | tharRi | NOM = zero suffix |
 | `tharri` | ACC `-na` (dominant) | `tharrina` | thar-ri-na | tharRina | vowel-final root: nothing to repair |
 | `tharri` | GEN `-sa` (dominant) | `tharrisa` | thar-ri-sa | tharRisa | vowel-final root: nothing to repair |
@@ -122,6 +133,15 @@ doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) 
 | `naljauh` | OBL `-le` (subdominant) | `naljaule` | nal-jau-le | nalJaule | tier 2 sync: h+l -> l |
 | `naljauh` | V1 `-ri` (tonic) | `naljauri` | nal-jau-ri | nalJauri | tier 2 sync: h+r -> r |
 | `naljauh` | V2 `-ni` (tonic) | `naljauhni` | nal-jau-hni | nalJauhni | tier 1: `hn` is a legal VCV cluster |
+| `naljaus` | NOM `-` (zero) | `naljaus` | nal-jaus | nalJaus | NOM = zero suffix |
+| `naljaus` | ACC `-na` (dominant) | `naljausna` | nal-jaus-na | nalJausna | tier 1: `sn` is a legal VCV cluster |
+| `naljaus` | GEN `-sa` (dominant) | `naljausausa` | nal-jau-sau-sa | nalJausausa | tier 3: copied vowel `au` inserted |
+| `naljaus` | DAT `-me` (subdominant) | `naljausme` | nal-jaus-me | nalJausme | tier 1: `sm` is a legal VCV cluster |
+| `naljaus` | LOC `-ner` (subdominant) | `naljausner` | nal-jaus-ner | nalJausner | tier 1: `sn` is a legal VCV cluster |
+| `naljaus` | INS `-ser` (subdominant) | `naljausauser` | nal-jau-sau-ser | nalJausauser | tier 3: copied vowel `au` inserted |
+| `naljaus` | OBL `-le` (subdominant) | `naljausaule` | nal-jau-sau-le | nalJausaule | tier 3: copied vowel `au` inserted |
+| `naljaus` | V1 `-ri` (tonic) | `naljausauri` | nal-jau-sau-ri | nalJausauri | tier 3: copied vowel `au` inserted |
+| `naljaus` | V2 `-ni` (tonic) | `naljausni` | nal-jaus-ni | nalJausni | tier 1: `sn` is a legal VCV cluster |
 | `naljau` | NOM `-` (zero) | `naljau` | nal-jau | nalJau | NOM = zero suffix |
 | `naljau` | ACC `-na` (dominant) | `naljauna` | nal-jau-na | nalJauna | vowel-final root: nothing to repair |
 | `naljau` | GEN `-sa` (dominant) | `naljausa` | nal-jau-sa | nalJausa | vowel-final root: nothing to repair |
@@ -163,6 +183,15 @@ doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) 
 | `diwmyh` | OBL `-le` (subdominant) | `diwmyle` | di-wmy-le | diWmyle | tier 2 sync: h+l -> l |
 | `diwmyh` | V1 `-ri` (tonic) | `diwmyri` | di-wmy-ri | diWmyri | tier 2 sync: h+r -> r |
 | `diwmyh` | V2 `-ni` (tonic) | `diwmyhni` | di-wmy-hni | diWmyhni | tier 1: `hn` is a legal VCV cluster |
+| `diwmys` | NOM `-` (zero) | `diwmys` | di-wmys | diWmys | NOM = zero suffix |
+| `diwmys` | ACC `-na` (dominant) | `diwmysna` | di-wmys-na | diWmysna | tier 1: `sn` is a legal VCV cluster |
+| `diwmys` | GEN `-sa` (dominant) | `diwmysysa` | di-wmy-sy-sa | diWmysysa | tier 3: copied vowel `y` inserted |
+| `diwmys` | DAT `-me` (subdominant) | `diwmysme` | di-wmys-me | diWmysme | tier 1: `sm` is a legal VCV cluster |
+| `diwmys` | LOC `-ner` (subdominant) | `diwmysner` | di-wmys-ner | diWmysner | tier 1: `sn` is a legal VCV cluster |
+| `diwmys` | INS `-ser` (subdominant) | `diwmysyser` | di-wmy-sy-ser | diWmysyser | tier 3: copied vowel `y` inserted |
+| `diwmys` | OBL `-le` (subdominant) | `diwmysyle` | di-wmy-sy-le | diWmysyle | tier 3: copied vowel `y` inserted |
+| `diwmys` | V1 `-ri` (tonic) | `diwmysyri` | di-wmy-sy-ri | diWmysyri | tier 3: copied vowel `y` inserted |
+| `diwmys` | V2 `-ni` (tonic) | `diwmysni` | di-wmys-ni | diWmysni | tier 1: `sn` is a legal VCV cluster |
 | `diwmy` | NOM `-` (zero) | `diwmy` | di-wmy | diWmy | NOM = zero suffix |
 | `diwmy` | ACC `-na` (dominant) | `diwmyna` | di-wmy-na | diWmyna | vowel-final root: nothing to repair |
 | `diwmy` | GEN `-sa` (dominant) | `diwmysa` | di-wmy-sa | diWmysa | vowel-final root: nothing to repair |
@@ -204,6 +233,15 @@ doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) 
 | `sulsih` | OBL `-le` (subdominant) | `sulsile` | sul-si-le | sulSile | tier 2 sync: h+l -> l |
 | `sulsih` | V1 `-ri` (tonic) | `sulsiri` | sul-si-ri | sulSiri | tier 2 sync: h+r -> r |
 | `sulsih` | V2 `-ni` (tonic) | `sulsihni` | sul-si-hni | sulSihni | tier 1: `hn` is a legal VCV cluster |
+| `sulsis` | NOM `-` (zero) | `sulsis` | sul-sis | sulSis | NOM = zero suffix |
+| `sulsis` | ACC `-na` (dominant) | `sulsisna` | sul-sis-na | sulSisna | tier 1: `sn` is a legal VCV cluster |
+| `sulsis` | GEN `-sa` (dominant) | `sulsisisa` | sul-si-si-sa | sulSisisa | tier 3: copied vowel `i` inserted |
+| `sulsis` | DAT `-me` (subdominant) | `sulsisme` | sul-sis-me | sulSisme | tier 1: `sm` is a legal VCV cluster |
+| `sulsis` | LOC `-ner` (subdominant) | `sulsisner` | sul-sis-ner | sulSisner | tier 1: `sn` is a legal VCV cluster |
+| `sulsis` | INS `-ser` (subdominant) | `sulsisiser` | sul-si-si-ser | sulSisiser | tier 3: copied vowel `i` inserted |
+| `sulsis` | OBL `-le` (subdominant) | `sulsisile` | sul-si-si-le | sulSisile | tier 3: copied vowel `i` inserted |
+| `sulsis` | V1 `-ri` (tonic) | `sulsisiri` | sul-si-si-ri | sulSisiri | tier 3: copied vowel `i` inserted |
+| `sulsis` | V2 `-ni` (tonic) | `sulsisni` | sul-sis-ni | sulSisni | tier 1: `sn` is a legal VCV cluster |
 | `sulsi` | NOM `-` (zero) | `sulsi` | sul-si | sulSi | NOM = zero suffix |
 | `sulsi` | ACC `-na` (dominant) | `sulsina` | sul-si-na | sulSina | vowel-final root: nothing to repair |
 | `sulsi` | GEN `-sa` (dominant) | `sulsisa` | sul-si-sa | sulSisa | vowel-final root: nothing to repair |
@@ -245,6 +283,15 @@ doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) 
 | `thyweh` | OBL `-le` (subdominant) | `thywele` | thy-we-le | thyWele | tier 2 sync: h+l -> l |
 | `thyweh` | V1 `-ri` (tonic) | `thyweri` | thy-we-ri | thyWeri | tier 2 sync: h+r -> r |
 | `thyweh` | V2 `-ni` (tonic) | `thywehni` | thy-we-hni | thyWehni | tier 1: `hn` is a legal VCV cluster |
+| `thywes` | NOM `-` (zero) | `thywes` | thy-wes | thyWes | NOM = zero suffix |
+| `thywes` | ACC `-na` (dominant) | `thywesna` | thy-wes-na | thyWesna | tier 1: `sn` is a legal VCV cluster |
+| `thywes` | GEN `-sa` (dominant) | `thywesesa` | thy-we-se-sa | thyWesesa | tier 3: copied vowel `e` inserted |
+| `thywes` | DAT `-me` (subdominant) | `thywesme` | thy-wes-me | thyWesme | tier 1: `sm` is a legal VCV cluster |
+| `thywes` | LOC `-ner` (subdominant) | `thywesner` | thy-wes-ner | thyWesner | tier 1: `sn` is a legal VCV cluster |
+| `thywes` | INS `-ser` (subdominant) | `thyweseser` | thy-we-se-ser | thyWeseser | tier 3: copied vowel `e` inserted |
+| `thywes` | OBL `-le` (subdominant) | `thywesele` | thy-we-se-le | thyWesele | tier 3: copied vowel `e` inserted |
+| `thywes` | V1 `-ri` (tonic) | `thyweseri` | thy-we-se-ri | thyWeseri | tier 3: copied vowel `e` inserted |
+| `thywes` | V2 `-ni` (tonic) | `thywesni` | thy-wes-ni | thyWesni | tier 1: `sn` is a legal VCV cluster |
 | `thywe` | NOM `-` (zero) | `thywe` | thy-we | thyWe | NOM = zero suffix |
 | `thywe` | ACC `-na` (dominant) | `thywena` | thy-we-na | thyWena | vowel-final root: nothing to repair |
 | `thywe` | GEN `-sa` (dominant) | `thywesa` | thy-we-sa | thyWesa | vowel-final root: nothing to repair |
@@ -286,6 +333,15 @@ doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) 
 | `daefnoh` | OBL `-le` (subdominant) | `daefnole` | dae-fno-le | daeFnole | tier 2 sync: h+l -> l |
 | `daefnoh` | V1 `-ri` (tonic) | `daefnori` | dae-fno-ri | daeFnori | tier 2 sync: h+r -> r |
 | `daefnoh` | V2 `-ni` (tonic) | `daefnohni` | dae-fno-hni | daeFnohni | tier 1: `hn` is a legal VCV cluster |
+| `daefnos` | NOM `-` (zero) | `daefnos` | dae-fnos | daeFnos | NOM = zero suffix |
+| `daefnos` | ACC `-na` (dominant) | `daefnosna` | dae-fnos-na | daeFnosna | tier 1: `sn` is a legal VCV cluster |
+| `daefnos` | GEN `-sa` (dominant) | `daefnososa` | dae-fno-so-sa | daeFnososa | tier 3: copied vowel `o` inserted |
+| `daefnos` | DAT `-me` (subdominant) | `daefnosme` | dae-fnos-me | daeFnosme | tier 1: `sm` is a legal VCV cluster |
+| `daefnos` | LOC `-ner` (subdominant) | `daefnosner` | dae-fnos-ner | daeFnosner | tier 1: `sn` is a legal VCV cluster |
+| `daefnos` | INS `-ser` (subdominant) | `daefnososer` | dae-fno-so-ser | daeFnososer | tier 3: copied vowel `o` inserted |
+| `daefnos` | OBL `-le` (subdominant) | `daefnosole` | dae-fno-so-le | daeFnosole | tier 3: copied vowel `o` inserted |
+| `daefnos` | V1 `-ri` (tonic) | `daefnosori` | dae-fno-so-ri | daeFnosori | tier 3: copied vowel `o` inserted |
+| `daefnos` | V2 `-ni` (tonic) | `daefnosni` | dae-fnos-ni | daeFnosni | tier 1: `sn` is a legal VCV cluster |
 | `daefno` | NOM `-` (zero) | `daefno` | dae-fno | daeFno | NOM = zero suffix |
 | `daefno` | ACC `-na` (dominant) | `daefnona` | dae-fno-na | daeFnona | vowel-final root: nothing to repair |
 | `daefno` | GEN `-sa` (dominant) | `daefnosa` | dae-fno-sa | daeFnosa | vowel-final root: nothing to repair |
@@ -302,57 +358,81 @@ doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) 
 
 - `tharrif` vs `tharriw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `tharrissa`)
 - `tharrif` vs `tharrih` -> distinct in all 9 forms
+- `tharrif` vs `tharris` -> distinct in all 9 forms
 - `tharrif` vs `tharri` -> distinct in all 9 forms
 - `tharriw` vs `tharrih` -> distinct in all 9 forms
+- `tharriw` vs `tharris` -> distinct in all 9 forms
 - `tharriw` vs `tharri` -> distinct in all 9 forms
+- `tharrih` vs `tharris` -> distinct in all 9 forms
 - `tharrih` vs `tharri` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `tharrisa`)
+- `tharris` vs `tharri` -> distinct in all 9 forms
 
 **base `naljau`**
 
 - `naljauf` vs `naljauw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `naljaussa`)
 - `naljauf` vs `naljauh` -> distinct in all 9 forms
+- `naljauf` vs `naljaus` -> distinct in all 9 forms
 - `naljauf` vs `naljau` -> distinct in all 9 forms
 - `naljauw` vs `naljauh` -> distinct in all 9 forms
+- `naljauw` vs `naljaus` -> distinct in all 9 forms
 - `naljauw` vs `naljau` -> distinct in all 9 forms
+- `naljauh` vs `naljaus` -> distinct in all 9 forms
 - `naljauh` vs `naljau` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `naljausa`)
+- `naljaus` vs `naljau` -> distinct in all 9 forms
 
 **base `diwmy`**
 
 - `diwmyf` vs `diwmyw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `diwmyssa`)
 - `diwmyf` vs `diwmyh` -> distinct in all 9 forms
+- `diwmyf` vs `diwmys` -> distinct in all 9 forms
 - `diwmyf` vs `diwmy` -> distinct in all 9 forms
 - `diwmyw` vs `diwmyh` -> distinct in all 9 forms
+- `diwmyw` vs `diwmys` -> distinct in all 9 forms
 - `diwmyw` vs `diwmy` -> distinct in all 9 forms
+- `diwmyh` vs `diwmys` -> distinct in all 9 forms
 - `diwmyh` vs `diwmy` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `diwmysa`)
+- `diwmys` vs `diwmy` -> distinct in all 9 forms
 
 **base `sulsi`**
 
 - `sulsif` vs `sulsiw` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `sulsissa`)
 - `sulsif` vs `sulsih` -> distinct in all 9 forms
+- `sulsif` vs `sulsis` -> distinct in all 9 forms
 - `sulsif` vs `sulsi` -> distinct in all 9 forms
 - `sulsiw` vs `sulsih` -> distinct in all 9 forms
+- `sulsiw` vs `sulsis` -> distinct in all 9 forms
 - `sulsiw` vs `sulsi` -> distinct in all 9 forms
+- `sulsih` vs `sulsis` -> distinct in all 9 forms
 - `sulsih` vs `sulsi` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `sulsisa`)
+- `sulsis` vs `sulsi` -> distinct in all 9 forms
 
 **base `thywe`**
 
 - `thywef` vs `thywew` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `thywessa`)
 - `thywef` vs `thyweh` -> distinct in all 9 forms
+- `thywef` vs `thywes` -> distinct in all 9 forms
 - `thywef` vs `thywe` -> distinct in all 9 forms
 - `thywew` vs `thyweh` -> distinct in all 9 forms
+- `thywew` vs `thywes` -> distinct in all 9 forms
 - `thywew` vs `thywe` -> distinct in all 9 forms
+- `thyweh` vs `thywes` -> distinct in all 9 forms
 - `thyweh` vs `thywe` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `thywesa`)
+- `thywes` vs `thywe` -> distinct in all 9 forms
 
 **base `daefno`**
 
 - `daefnof` vs `daefnow` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `daefnossa`)
 - `daefnof` vs `daefnoh` -> distinct in all 9 forms
+- `daefnof` vs `daefnos` -> distinct in all 9 forms
 - `daefnof` vs `daefno` -> distinct in all 9 forms
 - `daefnow` vs `daefnoh` -> distinct in all 9 forms
+- `daefnow` vs `daefnos` -> distinct in all 9 forms
 - `daefnow` vs `daefno` -> distinct in all 9 forms
+- `daefnoh` vs `daefnos` -> distinct in all 9 forms
 - `daefnoh` vs `daefno` -> **COLLIDE in GEN, INS, OBL, V1** (e.g. both become `daefnosa`)
+- `daefnos` vs `daefno` -> distinct in all 9 forms
 
-**tier 3 (copied vowel) never fired** -- M3a is fully determined by tiers 1-2 for the current suffix set (all 9 start with `m n l r s`).
+**tier 3 (copied vowel) fired 24 time(s):** tharris+GEN, tharris+INS, tharris+OBL, tharris+V1, naljaus+GEN, naljaus+INS, naljaus+OBL, naljaus+V1
 
 
 ---

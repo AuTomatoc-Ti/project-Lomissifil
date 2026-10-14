@@ -283,7 +283,7 @@ def report(cfg, name):
             print("  3-syllable  %-18s = %10s" % (k, format(v, ",")))
     # R1 area rule (author's ruling 2026-10-14): two INDEPENDENT binary choices --
     # a fricative from {f,v}, and {h, nothing} -- so a base yields exactly 2 bare roots.
-    print("  area rule: raw finals space = 4 x bases = %s ;  COINED roots = 2 x bases = %s"
+    print("  area rule: raw finals space = 6 x bases = %s ;  COINED roots = 2 x bases = %s"
           % (format(4 * c["total_all"], ","), format(2 * c["total_all"], ",")))
     print()
     return c
@@ -313,12 +313,14 @@ def main():
         print("=" * 78)
         print("area-rule siblings: %d packed bases sampled from %d in %s"
               % (len(pick), len(bases), a.src))
-        print("  base        {f,/v/} branch           {h,empty} branch")
+        print("  base        {f,/v/} branch                    {h,s,empty} branch")
         for b in pick:
             # SPELLING: the /v/ member is written `w` -- `v` is the VIBRATO mark, not a
             # letter (02-notation.md), so a /v/-final root is `...w` (e.g. `lafiw`), never `...v`.
-            print("  %-11s %-11s %-11s %-11s %-11s" % (b, b + "f", b + "w", b + "h", b))
-        print("  -> exactly TWO of the four become roots: ONE from {f,v}, ONE from {h,empty}")
+            # R4 (2026-10-14) added `s` to the second branch; it is RESERVED for a future job.
+            print("  %-11s %-11s %-11s %-11s %-11s %-11s"
+                  % (b, b + "f", b + "w", b + "h", b + "s", b))
+        print("  -> exactly TWO of the six become roots: ONE from {f,v}, ONE from {h,s,empty}")
         return
 
     names = list(CONFIGS) if (a.config in (None, "all")) else [a.config]

@@ -135,7 +135,8 @@ guess sticks. That is a usable instruction for the textbook and for the first ve
 
 The ledger above is qualitative. This section is the **measured** half, produced by
 `python3 tools/fingerprint.py --profile | --similarity | --english` on
-`lists/roots-bases-current.txt` (all four area-rule sibling forms, 105,936 forms).
+`lists/roots-bases-current.txt` (all **five** area-rule sibling forms per base — `+f`, `+w`, `+h`,
+`+s`, bare — i.e. 133,845 forms, re-measured after **R4** added the `s` branch).
 
 ### The reference set (author's ruling, 2026-10-14)
 
@@ -146,16 +147,16 @@ The ledger above is qualitative. This section is the **measured** half, produced
 
 ### Measured structural profile (no external data involved)
 
-| measure | value | reads as |
+| measure | value (5 forms per base, **after R4**) | reads as |
 |---|---|---|
-| mean length | **7.42** letters | long-ish (the area-rule finals add a letter) |
-| vowel letters | **46.7%** | vowel-rich (Romance-ish; English ≈ 39%) |
-| syllables per word | 100% two | the pool is the 2-syllable core (§0 item 22) |
-| **open-syllable rate** | **26.2%** (closed 73.8%) | **low** — decisively not a CV-only language |
-| forms containing an onset cluster | **25.2%** | clusters are a *mainstream* feature here, not a garnish |
-| word-final | **75.0% `f`/`w`/`h`** (area rule), 25.0% vowel | the area rule dominates the sound of the word's end |
-| digraph spelling (`sh`/`th`/`ng`) | **24.0%** | a quarter of all candidates |
-| P6 hard spelling (`mp np mt nt mk nk`) | **8.1%** | matches the 6-of-90-fills estimate |
+| mean length | **7.43** letters | long-ish (the area-rule finals add a letter) |
+| vowel letters | **46.4%** | vowel-rich (Romance-ish; English ≈ 39%) |
+| syllables per word | 98.9% two, 1.1% one | the pool is the 2-syllable core + the 285 short roots (§0 item 22, closed) |
+| **open-syllable rate** | **23.7%** (closed 76.3%) | **low** — decisively not a CV-only language |
+| forms containing an onset cluster | **25.1%** | clusters are a *mainstream* feature here, not a garnish |
+| word-final | **60.0% `f`/`w`/`h`**, **20.0% `s`** (R4), 20.0% vowel | the area rule dominates word endings; R4 added the `s` slice |
+| digraph spelling (`sh`/`th`/`ng`) | **23.9%** | a quarter of all candidates |
+| P6 hard spelling (`mp np mt nt mk nk`) | **8.0%** | matches the 6-of-90-fills estimate |
 | inventory actually used | onsets **30** · nuclei **15/15** · codas **5/5** (+`f/w/h` finals) | nothing in the locked palette is starved; `k`/`p`/`t` appear **only** as P6 hard spellings |
 
 ### Similarity to the 16 reference languages (Jaccard over 15 typological features)
@@ -190,7 +191,10 @@ Three things follow, and the first one is the surprise:
 
 ### Coincidence with a real English dictionary (`/usr/share/dict/words`, 234,428 entries)
 
-- **exact matches: 143 of 105,936 (0.135%)** — and most are archaic/technical because Webster's 2nd
+- **exact matches: 421 of 133,845 (0.315%)** — ⚠️ **this more than DOUBLED when `R4` added the `s`
+  branch** (before R4: 143 of 105,936 = 0.135%), because `+s` produces many plural-looking strings.
+  That is a **measurable neutrality cost of R4** and worth remembering if the `m`/`r` extension is ever
+  considered (§0 item 28). Most hits are archaic/technical because Webster's 2nd
   is huge (`aba`, `agrah`, `branta`, `brolga`, `cothy`, `cumshaw`, `gade`, `galga`, `inro`, `lemna`,
   `mabi`, `nummi`, `rompu`, `thonga`…). The ones that a listener would actually recognise as English
   words — `age · bounce · carry · dine · dome · elbow · fishy · follow · geisha · granny · grassy ·

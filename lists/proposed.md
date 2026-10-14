@@ -70,3 +70,25 @@ The **multilingual** half of the loanword check still needs the author's referen
 **Pool membership:** only 5 of the 35 were already in the candidate pool — i.e. 30 of the author's
 roots are **new**, invented by ear, and 27 of them passed every locked rule on the first try.
 
+## R4 update (2026-10-14, the author chose ③)
+
+`R4` added **`s`** to the area rule ⇒ a bare root may now end in `∅` / `f` / `w` / `h` / **`s`**:
+
+- ✅ **`os` (have)** and **`res` (be)** are now **legal** — `res` passes every rule; `os` carries only the
+  English-word warning. **Both are ready for the reference list** on the author's word.
+- ❌ Still **held** (they need `m` / `r`, deferred by ③): **`ar` (from) · `mer` (with) · `esgim` (foot) ·
+  `altem` (face) · `sym` (god)`**. Two clean routes are written up in
+  `../decision/03-open-questions.md` §0 item 28: (a) a **function-word carve-out** for the two
+  prepositions (H5's class takes no suffixes, which is the *only* reason the bare-root final rule
+  exists); (b) the **`m`/`r` extension** — now **measured to be mechanically free** (`m`/`r` are codas,
+  so no M3a repair is needed), its cost being goal i (word-final `m`/`r` are among the commonest
+  finals world-wide).
+- Every base now has **5 raw forms** (`+f` `+w` `+h` `+s` bare) and still **2 coined roots** (one per
+  branch) — the sheets and the menu were regenerated: `menu.md` now shows **100 `+s` rows**.
+- ⚠️ **New measurement, a cost of R4:** the English-dictionary collision rate **doubled**
+  (0.135% → **0.315%** of forms), because `+s` produces plural-looking strings
+  (`../decision/06-neutrality.md`).
+- ✅ **A property that supports the author's `s` plan** (measured in `seam-sheet.md`): inside the B
+  branch, `∅` and `h` **collide** in GEN/INS/OBL/V1, but **`s` is distinct from every sibling in all
+  9 forms** — so `s` is a *reliable* class marker, exactly what an adjective/adverb marker needs.
+

@@ -21,7 +21,9 @@ the generated `.txt` data files must stay machine-produced (`00-README.md`).
   `e`=/e/, `i`=/i/, `w`=/v/, `sh`=/ʃ/, `th`=/θ/, `c`=/t͡ʃ/).
 - Each **group of 4 = one base**, in a fixed order: `+f` | `+w` (/v/) | `+h` | bare.
 - By **R1/R3** a base yields **exactly 2** roots: **at most one** from the `{+f, +w}` pair and
-  **at most one** from the `{+h, bare}` pair. ⚠️ **This is a CORRECTNESS rule, not a style
+  **at most one** from the `{+h, +s, bare}` trio (**R4** added `+s`; `s` is RESERVED for a future
+  adjective/adverb/exceptional-case job, so a `+s` pick's meaning slot is held). ⚠️ **This is a
+  CORRECTNESS rule, not a style
   preference.** The two members of a *branch* are alternatives for one slot, and their suffixed forms
   **collide**: `+f` vs `+w` (and `+h` vs bare) become **identical in GEN, INS, OBL and V1** — measured
   in `seam-sheet.md` ("Do the siblings stay distinct?"), because tier 2 syncs `f`/`w` into `ss`/`rr`/
