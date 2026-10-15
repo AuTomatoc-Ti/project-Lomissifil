@@ -28,7 +28,7 @@ T = {
 }
 
 
-def inventory(v2_coda):
+def inventory(v2_coda, v2_onset="l"):
     """role -> (onset or None, grade or None, coda)."""
     return {
         "NOM": (None, None, ""),      # zero suffix
@@ -40,7 +40,7 @@ def inventory(v2_coda):
         "INS": ("s", "sub", "r"),
         "OBL": ("l", "sub", ""),
         "V1":  ("r", "tonic", ""),
-        "V2":  ("l", "tonic", "r" if v2_coda else ""),
+        "V2":  (v2_onset, "tonic", "r" if v2_coda else ""),
     }
 
 
@@ -53,9 +53,9 @@ def surface(onset, grade, coda, trio):
 
 
 def main():
-    v2_coda = "--v2-coda" in sys.argv[1:]
-    inv = inventory(v2_coda)
-    print("V2 = " + ("l + tonic + coda r" if v2_coda else "l + tonic") + "\n")
+    v2_coda = "--v2-coda" in sys.argv[1:]; v2_onset = next((x.split("=",1)[1] for x in sys.argv[1:] if x.startswith("--v2-onset=")), "l")
+    inv = inventory(v2_coda, v2_onset)
+    print("V2 = " + v2_onset + " + tonic" + (" + coda r" if v2_coda else "") + "\n")
     header = f"{'trigger':6} | " + " | ".join(f"{r:>5}" for r in inv)
     print(header)
     print("-" * len(header))
