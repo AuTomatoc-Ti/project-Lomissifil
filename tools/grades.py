@@ -17,6 +17,7 @@ Usage:
   python3 tools/grades.py thyma V1                     -> thymara  (V1, I)
   python3 tools/grades.py sefmeh ACC                   -> sefmehna (ACC, V)
   python3 tools/grades.py hosda MOD --head=sefmeh      -> hosdahes (MOD, IV)
+       (--head takes the head's ROOT, per H4: a suffixed head would give the wrong class)
   python3 tools/grades.py hosda MOD,ACC --head=sefmeh  -> hosdahesna (MOD IV + ACC V)
   python3 tools/grades.py --selftest                   -> reproduce the known-good forms
 
