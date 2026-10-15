@@ -13,14 +13,14 @@ root-based ones (`sefmehna` → `sefMehna`, `res`+`-ri` → `Resri`).
 
 ## Line 1 — the minimal clause (chord I–I)
 
-    orGi thyMAri
+    orGi thyMAra
     heart think-V1
     "the heart thinks"
 
 | word | syllables | how it is built |
 |---|---|---|
 | `orgi` (heart) | or-gi | **NOM = zero suffix** (`M4a`) |
-| `thymari` | thy-ma-ri | **V1** = `r` + the grade vowel. The trigger is `thyma`'s last nucleus `y`, which **counts as `i`** for the grade system ⇒ tonic ⇒ `ri` |
+| `thymara` | thy-ma-ri | **V1** = `r` + the grade vowel. The trigger is the root's **last syllable** nucleus: `thyma` = `thy-ma` ⇒ **`a`** (back) ⇒ tonic = `a` ⇒ **`ra`**. ⚠️ An earlier version of this file read the trigger as the `y`; **the author caught the error (2026-10-14)**. The surface vowel changed; the chord did **not** (V1 is tonic = I either way). |
 
 Chords: NOM = **I**, V1 = **I** ⇒ **I–I**. `H2` predicts that a clause with **no dominant-category
 word cannot half-cadence** — this line is exactly that case, and it is musically apt: "the heart
@@ -28,21 +28,21 @@ thinks" does not resolve anywhere.
 
 ## Line 2 — the design's signature cadence (I–V–I)
 
-    orGi sefMehna thyMAri
+    orGi sefMehna thyMAra
     heart world-ACC think-V1
     "the heart thinks the world"
 
 | form | syllables | what happens |
 |---|---|---|
 | `sefmehna` | se-fme-**hna** | **the `M3a` seam, tier 1**: `sefmeh` (an `h`-final root) + `-na` ⇒ the `hn` **VCV cluster**: the two consonants become ONE onset — no repair, no extra vowel |
-| `thymari` | thy-ma-ri | V1, tonic, as above |
+| `thymara` | thy-ma-ri | V1, tonic, as above |
 
 Chords: I → **V** (ACC = dominant) → I ⇒ **I–V–I, the perfect cadence** the whole design was aimed at
-(`S2` + `H2`). Note the stress: `orGi` · `sefMehna` · `thyMAri` — the root's syllable always wins.
+(`S2` + `H2`). Note the stress: `orGi` · `sefMehna` · `thyMAra` — the root's syllable always wins.
 
 ## Line 3 — an adjective, default order (a modifier is IV: the pre-dominant)
 
-    orGi hosDahes sefMehna thyMAri
+    orGi hosDahes sefMehna thyMAra
     heart certain-MOD world-ACC think-V1
     "the heart thinks the certain world"
 
@@ -56,7 +56,7 @@ Chords: NOM **I** + modifier **IV** + ACC **V** + V1 **I** ⇒ **I–IV–V–I*
 
 ## Line 4 — the same content, scrambled (the displaced modifier)
 
-    sefMehna hosDahesna thyMAri orGi
+    sefMehna hosDahesna thyMAra orGi
     world-ACC certain-MOD-ACC think-V1 heart
 
 Chords: **V–V–I–I** — `M2c` says the **outermost** suffix sounds a word's chord, so once the displaced modifier also takes its CASE suffix its chord is the case's (**V** for ACC), not its own IV.
@@ -69,7 +69,7 @@ ambiguous — that is the poet's choice, not a defect.
 
 ## Line 5 — negation (chord I–I–V, deliberately unresolved)
 
-    orGi thyMAri mei
+    orGi thyMAra mei
     heart think-V1 not
     "the heart does not think"
 
@@ -79,7 +79,7 @@ musically. (Whether a *function word* carries a performance stress at all is **u
 
 ## Line 6 — the topic slot (`S3`) and the absent person (`M5b`), ruled 2026-10-14
 
-    a orGi sefMehna thyMAri
+    a orGi sefMehna thyMAra
     (article, colour `a`) heart world-ACC think-V1
     "as for the heart — it thinks the world" (colour `a` = brave / energetic / angry)
 
@@ -90,7 +90,7 @@ our only decoder (§F).
 
 Two things this line shows about what is **not** needed:
 
-- a **subjectless** clause such as `sefMehna thyMAri` ("…thinks the world") was **always legal** —
+- a **subjectless** clause such as `sefMehna thyMAra` ("…thinks the world") was **always legal** —
   `S2`'s verb-final order is a *preferred* default, not a requirement, and with no verb agreement
   nothing forces a subject to be spoken. `S3` rule (2) merely writes down what an omitted argument
   refers to;
@@ -100,25 +100,25 @@ Two things this line shows about what is **not** needed:
 
 ## Line 7 — the split-S pair (`M5c` + `S4`, ruled 2026-10-14)
 
-    orgi thyMAri                 heart-AG think-V1        "the heart thinks"
-    orgina Resle                 heart-PT be-V2           "the heart is"
+    orgi thyMAra                 heart-AG think-V1        "the heart thinks"
+    orgina Resne                 heart-PT be-V2           "the heart is"
 
 The **same noun in two different cases**, because the **verb form** says whether there is an
-instigator: `V1` (`-ri`) = there IS one, `V2` (`-le`, since `res` is `e`-final) = there is NONE. So
+instigator: `V1` (`-ri`) = there IS one, `V2` (`-ne`, since `res` is `e`-final) = there is NONE. So
 `orgi` is the **AG**(ent) and `orgina` the **PT**(atient) — active–stative, **split-S** (`S4`). Both
-forms pass `tools/check_roots.py` (`--forms orgi,orgina,resne,thymari`), and stress is root-based:
-`orGi` · `ORgina` · `thyMAri` · `RESle` (a one-syllable root keeps its own stress).
+forms pass `tools/check_roots.py` (`--forms orgi,orgina,resne,thymara`), and stress is root-based:
+`orGi` · `ORgina` · `thyMAra` · `RESle` (a one-syllable root keeps its own stress).
 
 ⚠️ **This is not a grammar curiosity — it is a chord choice.** `H2` makes the AG/NOM word **tonic
 (I)** and the PT/ACC word **dominant (V)**, so:
 
 | the poet writes | the clause sounds |
 |---|---|
-| `orgi thyMAri` (V1) | **I–I** — no dominant anywhere, so it cannot half-cadence |
-| `orgina Resle` (V2) | **V–I** — it *opens* on the tension and resolves; a perfect cadence with no opening tonic |
-| `orGi sefMehna thyMAri` (V1, transitive) | **I–V–I** — the signature cadence |
+| `orgi thyMAra` (V1) | **I–I** — no dominant anywhere, so it cannot half-cadence |
+| `orgina Resne` (V2) | **V–I** — it *opens* on the tension and resolves; a perfect cadence with no opening tonic |
+| `orGi sefMehna thyMAra` (V1, transitive) | **I–V–I** — the signature cadence |
 
-⚠️ **OPEN (`M5d`):** with `V2` = `l` + tonic, its form for `e`/`o`-final roots is **IDENTICAL to OBL** (`res` ⇒ `resle` = be-OBL or be-V2). The proposed fix is a coda: `V2` = `l` + tonic + `r` ⇒ **`RESler`** — verified collision-free by `tools/check_suffixes.py --v2-coda`.
+✅ **Settled (`M5d`, same day):** `V2` stays `n` + tonic, so there is no OBL clash (`OBL` moved to `-ler`/`-lor` instead). The verb form here is **`RESne`**.
 
 Picking `-ri` or `-ne`/`-ni` is therefore picking how the line **starts** harmonically — the cheapest
 expressive tool in the language, and it costs **one suffix the language already owns**.
@@ -132,7 +132,7 @@ expressive tool in the language, and it costs **one suffix the language already 
 | 3 | **tense / aspect** | every line above is present/imperfect only; `ima` (now) is a root, but there is **no tense morphology** | `M5`/`M5a` (open) |
 | 4 | **noun predicate / copula** | "the world is certain" — `res` (be) exists as a root, but how a predicate is built is undefined (`Resri`? a bare noun?) | `M5`/`M6` (open) |
 | 5 | **questions** | nothing exists yet | `M6` (open) |
-| 6 | **verb valency** | line 1 uses `thymari` intransitively, line 2 transitively; *partly* answered by `M5c`/`S4` (`V1` = agentive, may be transitive; `V2` = patientive, no A) - but **which roots may appear in which form** is still open | `M5` (open) |
+| 6 | **verb valency** | line 1 uses `thymara` intransitively, line 2 transitively; *partly* answered by `M5c`/`S4` (`V1` = agentive, may be transitive; `V2` = patientive, no A) - but **which roots may appear in which form** is still open | `M5` (open) |
 | 7 | **"towards / go-to"** | `ar` (from) exists; the other half of `03` §0 item 8 has no word | §0 item 8 (half open) |
 | 8 | **negation scope** | "does not think" ✓ vs "it is not the heart that thinks" ✗ | §0 item 8 (open) |
 | 9 | **stress on function words** | `mei` is one syllable and `P4` speaks only of *roots*, so a particle's stress is undefined | §0 item 30 |
@@ -144,7 +144,7 @@ It is a **grammatical** demonstration, not an aesthetic verdict. **Nobody has he
 synthesiser was rejected (`03` §0 item 19) and the audition method is the author **reading the written
 forms aloud**. So the next audible step is literally this: read lines 1–7 out loud and see whether the
 seam (`sefMehna`), the agreement (`hosDahas`), the topic marker (`a orGi …`) and the negation ending
-(`… thyMAri mei`) sound like what you want. If they do not, the failure will be **in the seam or in the
+(`… thyMAra mei`) sound like what you want. If they do not, the failure will be **in the seam or in the
 colour system**, not in the word order — and that is precisely what this test was built to find out.
 
 
