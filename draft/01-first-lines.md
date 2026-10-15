@@ -40,16 +40,17 @@ thinks" does not resolve anywhere.
 Chords: I → **V** (ACC = dominant) → I ⇒ **I–V–I, the perfect cadence** the whole design was aimed at
 (`S2` + `H2`). Note the stress: `orGi` · `sefMehna` · `thyMAri` — the root's syllable always wins.
 
-## Line 3 — an adjective, default order (the adjacency rule, clarified 2026-10-14)
+## Line 3 — an adjective, default order (the `-s` ending is always there; the CASE is the knob)
 
-    orGi hosDah sefMehna thyMAri
-    heart certain world-ACC think-V1
+    orGi hosDahas sefMehna thyMAri
+    heart certain-AGR world-ACC think-V1
     "the heart thinks the certain world"
 
 - `hosdah` is a **vowel-final adjective**, so it is coined as an **`h`-class root** (`hosda` → `hosdah`,
   `R6`); in NOM it would simply be `hosdah`, with no ending at all (item 29, cell (iii)).
-- ⚠️ **CLARIFIED by the author (2026-10-14): POSITION decides — not case marking, and not clause order.** A modifier (adjective *or* adverb) standing **immediately before its head** needs **no ending at all**, in any clause order (SVO / SOV / scrambled), and in a **chain** (`adj1-adj2-N`) neither modifier needs one. So here it is simply `hosdah`.
-- The **agreeing ending** (`-V s`, the vowel copied from the head's outermost suffix) appears only when the modifier is **displaced** from its head — and there it may also take the **case suffix** (`hosDahasna sefMehna`), which is exactly Line 4's job. The rule is therefore **local adjacency**, not a global order type.
+- ⚠️ **CLARIFIED by the author (2026-10-14): POSITION decides — not case marking, and not clause order.** A modifier (adjective *or* adverb) standing **immediately before its head** needs **no CASE ending**, in any clause order (SVO / SOV / scrambled), and in a **chain** (`adj1-adj2-N`) neither modifier needs a case suffix (the `-s` ending is still there). So the ending here is **`hosDahas`** — the `-s` is ALWAYS there; the CASE is the positional knob.
+- The **agreeing ending** (`-V s`, the vowel copied from the head's outermost suffix) is **always present**; the **case suffix** appears only when the modifier is **displaced** from its head — and there it may also take the **case suffix** (`hosDahasna sefMehna`), which is exactly Line 4's job. The rule is therefore **local adjacency**, not a global order type.
+- ⚠️ **Still open (item 34):** before a **NOM** head (zero suffix) there is no suffix vowel to copy, so what `V` is in the always-present `-Vs` is **undefined** — and that blocks the commonest modifier phrase ("the certain heart").
 
 ## Line 4 — the same content, scrambled (the displaced modifier)
 

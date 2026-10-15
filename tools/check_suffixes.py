@@ -13,7 +13,7 @@ morpheme, then reports:
 Run it after ANY change to the suffix inventory.
 
   python3 tools/check_suffixes.py            # V2 = l + tonic            (author, 2026-10-14)
-  python3 tools/check_suffixes.py --v2-coda  # V2 = l + tonic + coda r   (proposed fix)
+  Defaults = the AUTHOR-RULED inventory (2026-10-14): V2 = n + tonic; OBL = l + subdominant + coda r.  Any candidate can be tested with --v2-onset=X [--v2-coda].
 """
 import sys
 
@@ -28,7 +28,7 @@ T = {
 }
 
 
-def inventory(v2_coda, v2_onset="l"):
+def inventory(v2_coda, v2_onset="n"):
     """role -> (onset or None, grade or None, coda)."""
     return {
         "NOM": (None, None, ""),      # zero suffix
@@ -38,7 +38,7 @@ def inventory(v2_coda, v2_onset="l"):
         "DAT": ("m", "sub", ""),
         "LOC": ("n", "sub", "r"),
         "INS": ("s", "sub", "r"),
-        "OBL": ("l", "sub", ""),
+        "OBL": ("l", "sub", "r"),
         "V1":  ("r", "tonic", ""),
         "V2":  (v2_onset, "tonic", "r" if v2_coda else ""),
     }
@@ -53,7 +53,7 @@ def surface(onset, grade, coda, trio):
 
 
 def main():
-    v2_coda = "--v2-coda" in sys.argv[1:]; v2_onset = next((x.split("=",1)[1] for x in sys.argv[1:] if x.startswith("--v2-onset=")), "l")
+    v2_coda = "--v2-coda" in sys.argv[1:]; v2_onset = next((x.split("=",1)[1] for x in sys.argv[1:] if x.startswith("--v2-onset=")), "n")
     inv = inventory(v2_coda, v2_onset)
     print("V2 = " + v2_onset + " + tonic" + (" + coda r" if v2_coda else "") + "\n")
     header = f"{'trigger':6} | " + " | ".join(f"{r:>5}" for r in inv)
