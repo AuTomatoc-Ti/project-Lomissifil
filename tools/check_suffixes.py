@@ -39,6 +39,7 @@ def inventory(v2_coda, v2_onset="n"):
         "LOC": ("n", "sub", "r"),
         "INS": ("s", "sub", "r"),
         "OBL": ("l", "sub", "r"),
+        "MOD": ("s", "sub", ""),  # adj/adv ending: root(+h) + subdominant + s  (author, 2026-10-14)
         "V1":  ("r", "tonic", ""),
         "V2":  (v2_onset, "tonic", "r" if v2_coda else ""),
     }

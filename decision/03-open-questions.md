@@ -279,7 +279,7 @@ every future decision must add its rows. Two halves are still open:
     so a phrase is **audibly** one colour while the analytic labels stay per-word;
     ✅ **SETTLED from the author's own wording: the cased form is REQUIRED when the adjective is
     separated from its head**
-    ⚠️ **SUPERSEDED later the same day by the author's clarification:** the axis is **local adjacency**, NOT case marking and NOT sentence order (SVO/SOV/anything). A modifier **immediately before its head** needs **no ending at all**, and in a chain (`adj1-adj2-N`) neither modifier needs one; the ending appears only when the modifier is **displaced** from its head. ("only need adding when sequence is mixed"), and freely available
+    ⚠️ **SUPERSEDED later the same day by the author's clarification:** the axis is **local adjacency**, NOT case marking and NOT sentence order (SVO/SOV/anything). A modifier **immediately before its head** needs **no ending at all**, and in a chain (`adj1-adj2-N`) neither modifier needs one; the ending appears only when the modifier is **displaced** from its head. ⚠️ **AND REPLACED again (author, same day) by `H9`:** the copying mechanism is gone — a modifier takes the **SUBDOMINANT** vowel of the head's front/back class (`e` front / `o` back, `V ∈ {e,o}`), so a modifier is always **IV-grade** and item 34 is resolved. ("only need adding when sequence is mixed"), and freely available
     otherwise as a stylistic choice (veto allowed);
     (ii) the **lexicon gains a part-of-speech field**, because a NOM adjective and a NOM noun are
     shape-identical — word class is a lexical fact here (as in Latin), not an audible shape;
@@ -338,7 +338,7 @@ negation scope = item 8). **Two gaps had no owner at all:**
     **Agent's recommendation:** keep NOM-ACC (it *is* the cadence) and take the Austronesian idea in its cheap
     form — (b) to settle `V1`/`V2`, or a **single** patient-promoting suffix (one syllable) if a morphological
     "spotlight any argument" is wanted; note that `S3`'s topic slot plus free order **already provide that
-    function pragmatically, at zero cost**. **Author decision needed.**
+    function pragmatically, at zero cost**. **Author decision needed.** ✅ **RESOLVED by `H9` (same day):** `V` is no longer copied from a suffix vowel at all — it is the **subdominant** vowel of the head's front/back class (`e` front, `o` back), so a NOM head is no problem (`hosdahes orgi`). ⚠️ **One micro-choice remains:** is front/back taken from the head's **ROOT** (H4's trigger → `hosdahes sefMehna`) or from the head's **whole word** including its case suffix (`-na` is back → `hosdahos sefMehna`)? **Agent recommends the ROOT** (H4), so the modifier's colour never flips with the case.
     ⚠️ **UPDATE (same session): the author's own `V1`/`V2` design — "V1 = there IS an instigator, V2 = there is
     NO instigator" (Georgian-inspired) — is recorded as `M5c`, and it IS this item's option (b) or the safe
     voice reading.** What remains to rule is therefore narrow: **in a V2 clause, does the participant keep NOM

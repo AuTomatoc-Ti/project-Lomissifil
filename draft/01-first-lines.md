@@ -40,22 +40,26 @@ thinks" does not resolve anywhere.
 Chords: I → **V** (ACC = dominant) → I ⇒ **I–V–I, the perfect cadence** the whole design was aimed at
 (`S2` + `H2`). Note the stress: `orGi` · `sefMehna` · `thyMAri` — the root's syllable always wins.
 
-## Line 3 — an adjective, default order (the `-s` ending is always there; the CASE is the knob)
+## Line 3 — an adjective, default order (a modifier is IV: the pre-dominant)
 
-    orGi hosDahas sefMehna thyMAri
-    heart certain-AGR world-ACC think-V1
+    orGi hosDahes sefMehna thyMAri
+    heart certain-MOD world-ACC think-V1
     "the heart thinks the certain world"
+
+Chords: NOM **I** + modifier **IV** + ACC **V** + V1 **I** ⇒ **I–IV–V–I** — the complete classical progression, reached by adding one adjective (`H9`). (Line 2, without the adjective, was a bare **I–V–I**.)
 
 - `hosdah` is a **vowel-final adjective**, so it is coined as an **`h`-class root** (`hosda` → `hosdah`,
   `R6`); in NOM it would simply be `hosdah`, with no ending at all (item 29, cell (iii)).
-- ⚠️ **CLARIFIED by the author (2026-10-14): POSITION decides — not case marking, and not clause order.** A modifier (adjective *or* adverb) standing **immediately before its head** needs **no CASE ending**, in any clause order (SVO / SOV / scrambled), and in a **chain** (`adj1-adj2-N`) neither modifier needs a case suffix (the `-s` ending is still there). So the ending here is **`hosDahas`** — the `-s` is ALWAYS there; the CASE is the positional knob.
-- The **agreeing ending** (`-V s`, the vowel copied from the head's outermost suffix) is **always present**; the **case suffix** appears only when the modifier is **displaced** from its head — and there it may also take the **case suffix** (`hosDahasna sefMehna`), which is exactly Line 4's job. The rule is therefore **local adjacency**, not a global order type.
-- ⚠️ **Still open (item 34):** before a **NOM** head (zero suffix) there is no suffix vowel to copy, so what `V` is in the always-present `-Vs` is **undefined** — and that blocks the commonest modifier phrase ("the certain heart").
+- ⚠️ **CLARIFIED by the author (2026-10-14): POSITION decides — not case marking, and not clause order.** A modifier (adjective *or* adverb) standing **immediately before its head** needs **no CASE ending**, in any clause order (SVO / SOV / scrambled), and in a **chain** (`adj1-adj2-N`) neither modifier needs a case suffix (the `-s` ending is still there). So the ending here is **`hosDahes`**: the `-s` is ALWAYS there, and its vowel is the **subdominant** of the head's class (`sefmeh` is front ⇒ `e`), i.e. a modifier is always **IV** (`H9`). What is positional is the **CASE** suffix.
+- The modifier ending (`-V s`, its vowel the head's class subdominant's outermost suffix) is **always present**; the **case suffix** appears only when the modifier is **displaced** from its head — and there it may also take the **case suffix** (`hosDahasna sefMehna`), which is exactly Line 4's job. The rule is therefore **local adjacency**, not a global order type.
+- ✅ **`H9` also closes item 34:** because `V` is no longer copied from the head's *suffix* vowel, a **NOM** head is no problem (`hosDahes orGi` = "the certain heart") — only the head's front/back class matters. ⚠️ Micro-choice: taken from the head's **root** (recommended, `H4`) or from its whole word (item 34).
 
 ## Line 4 — the same content, scrambled (the displaced modifier)
 
-    sefMehna hosDahasna thyMAri orGi
-    world-ACC certain-AGR-ACC think-V1 heart
+    sefMehna hosDahesna thyMAri orGi
+    world-ACC certain-MOD-ACC think-V1 heart
+
+Chords: **V–V–I–I** — `M2c` says the **outermost** suffix sounds a word's chord, so once the displaced modifier also takes its CASE suffix its chord is the case's (**V** for ACC), not its own IV.
     "the world — the certain one — the heart thinks" (the same statement, poetically re-ordered)
 
 Both the noun and the adjective now carry ACC, so the listener can **re-pair** them across the scramble.
