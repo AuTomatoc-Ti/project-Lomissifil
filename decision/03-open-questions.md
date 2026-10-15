@@ -278,7 +278,8 @@ every future decision must add its rows. Two halves are still open:
     view: the chord label is *relational to each word's own root* (the standing caveat in `00-README`),
     so a phrase is **audibly** one colour while the analytic labels stay per-word;
     ✅ **SETTLED from the author's own wording: the cased form is REQUIRED when the adjective is
-    separated from its head** ("only need adding when sequence is mixed"), and freely available
+    separated from its head**
+    ⚠️ **SUPERSEDED later the same day by the author's clarification:** the axis is **local adjacency**, NOT case marking and NOT sentence order (SVO/SOV/anything). A modifier **immediately before its head** needs **no ending at all**, and in a chain (`adj1-adj2-N`) neither modifier needs one; the ending appears only when the modifier is **displaced** from its head. ("only need adding when sequence is mixed"), and freely available
     otherwise as a stylistic choice (veto allowed);
     (ii) the **lexicon gains a part-of-speech field**, because a NOM adjective and a NOM noun are
     shape-identical — word class is a lexical fact here (as in Latin), not an audible shape;
@@ -341,7 +342,8 @@ negation scope = item 8). **Two gaps had no owner at all:**
     ⚠️ **UPDATE (same session): the author's own `V1`/`V2` design — "V1 = there IS an instigator, V2 = there is
     NO instigator" (Georgian-inspired) — is recorded as `M5c`, and it IS this item's option (b) or the safe
     voice reading.** What remains to rule is therefore narrow: **in a V2 clause, does the participant keep NOM
-    (plain accusative) or take ACC (split-S)?**
+    (plain accusative) or take ACC (split-S)?
+33. **ONE modifier class, or a separate adjective vs adverb?** Asked by the author 2026-10-14 ("do we need to separate the adj/adv? if not separate, will it cause any problem (bc Chinese and English also separate)?"). **Agent's recommendation: keep ONE class (modifier).** Evidence: (a) our mechanism is already identical for both — `root(+h) + V + s`, immediately before the head — so no form requires a split; (b) a separate ADJ/ADV is a European/Latin inheritance, and the two named languages do not really split them either: English's `-ly` is derivational and optional ("run fast"), and Chinese's 的 / 地 are **homophonous** (/də/), i.e. a *writing* convention rather than a spoken distinction; (c) roots here are already POS-neutral, so merging modifiers is consistent with the design; (d) **no ambiguity arises**, because the **head** disambiguates (`modifier + noun` = adjective, `modifier + verb` = adverb) — the only place it could bite is a chain in front of a word that is itself ambiguous, exactly the `V0` issue in `M5d`. ⚠️ Derived here: a modifier is **harmonically transparent** — it copies its head's vowel, hence its head's chord, so `adj + N` is ONE chord (the noun's) and a chain adds none. **Author confirmation needed.****
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**

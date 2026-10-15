@@ -40,21 +40,18 @@ thinks" does not resolve anywhere.
 Chords: I → **V** (ACC = dominant) → I ⇒ **I–V–I, the perfect cadence** the whole design was aimed at
 (`S2` + `H2`). Note the stress: `orGi` · `sefMehna` · `thyMAri` — the root's syllable always wins.
 
-## Line 3 — an adjective, default order (the case KNOB, refinement of 2026-10-14)
+## Line 3 — an adjective, default order (the adjacency rule, clarified 2026-10-14)
 
-    orGi hosDahas sefMehna thyMAri
-    heart certain-AGR world-ACC think-V1
+    orGi hosDah sefMehna thyMAri
+    heart certain world-ACC think-V1
     "the heart thinks the certain world"
 
 - `hosdah` is a **vowel-final adjective**, so it is coined as an **`h`-class root** (`hosda` → `hosdah`,
   `R6`); in NOM it would simply be `hosdah`, with no ending at all (item 29, cell (iii)).
-- Here it modifies a **case-marked** head, so it takes the **agreeing ending only**: the head's suffix
-  vowel is `a` (ACC = dominant, after the front root `sefmeh`) ⇒ `hosdahas`.
-- **It does NOT take the case suffix.** That is the author's refinement: in the default order the
-  adjacency already says which noun it belongs to, and case on the adjective would be **pure redundancy
-  in song**. The case on an adjective is a **knob** — used only when the order is mixed.
+- ⚠️ **CLARIFIED by the author (2026-10-14): POSITION decides — not case marking, and not clause order.** A modifier (adjective *or* adverb) standing **immediately before its head** needs **no ending at all**, in any clause order (SVO / SOV / scrambled), and in a **chain** (`adj1-adj2-N`) neither modifier needs one. So here it is simply `hosdah`.
+- The **agreeing ending** (`-V s`, the vowel copied from the head's outermost suffix) appears only when the modifier is **displaced** from its head — and there it may also take the **case suffix** (`hosDahasna sefMehna`), which is exactly Line 4's job. The rule is therefore **local adjacency**, not a global order type.
 
-## Line 4 — the same content, scrambled (why the knob exists)
+## Line 4 — the same content, scrambled (the displaced modifier)
 
     sefMehna hosDahasna thyMAri orGi
     world-ACC certain-AGR-ACC think-V1 heart
@@ -99,13 +96,13 @@ Two things this line shows about what is **not** needed:
 ## Line 7 — the split-S pair (`M5c` + `S4`, ruled 2026-10-14)
 
     orgi thyMAri                 heart-AG think-V1        "the heart thinks"
-    orgina Resne                 heart-PT be-V2           "the heart is"
+    orgina Resle                 heart-PT be-V2           "the heart is"
 
 The **same noun in two different cases**, because the **verb form** says whether there is an
-instigator: `V1` (`-ri`) = there IS one, `V2` (`-ne`, since `res` is `e`-final) = there is NONE. So
+instigator: `V1` (`-ri`) = there IS one, `V2` (`-le`, since `res` is `e`-final) = there is NONE. So
 `orgi` is the **AG**(ent) and `orgina` the **PT**(atient) — active–stative, **split-S** (`S4`). Both
 forms pass `tools/check_roots.py` (`--forms orgi,orgina,resne,thymari`), and stress is root-based:
-`orGi` · `ORgina` · `thyMAri` · `RESne` (a one-syllable root keeps its own stress).
+`orGi` · `ORgina` · `thyMAri` · `RESle` (a one-syllable root keeps its own stress).
 
 ⚠️ **This is not a grammar curiosity — it is a chord choice.** `H2` makes the AG/NOM word **tonic
 (I)** and the PT/ACC word **dominant (V)**, so:
@@ -113,8 +110,10 @@ forms pass `tools/check_roots.py` (`--forms orgi,orgina,resne,thymari`), and str
 | the poet writes | the clause sounds |
 |---|---|
 | `orgi thyMAri` (V1) | **I–I** — no dominant anywhere, so it cannot half-cadence |
-| `orgina Resne` (V2) | **V–I** — it *opens* on the tension and resolves; a perfect cadence with no opening tonic |
+| `orgina Resle` (V2) | **V–I** — it *opens* on the tension and resolves; a perfect cadence with no opening tonic |
 | `orGi sefMehna thyMAri` (V1, transitive) | **I–V–I** — the signature cadence |
+
+⚠️ **OPEN (`M5d`):** with `V2` = `l` + tonic, its form for `e`/`o`-final roots is **IDENTICAL to OBL** (`res` ⇒ `resle` = be-OBL or be-V2). The proposed fix is a coda: `V2` = `l` + tonic + `r` ⇒ **`RESler`** — verified collision-free by `tools/check_suffixes.py --v2-coda`.
 
 Picking `-ri` or `-ne`/`-ni` is therefore picking how the line **starts** harmonically — the cheapest
 expressive tool in the language, and it costs **one suffix the language already owns**.
