@@ -73,4 +73,6 @@ python3 tools/seam.py        > data/generated/seam-sheet.md
 
 Checkers: `python3 tools/syllabify.py --check`, `python3 tools/check_roots.py`,
 `python3 tools/check_suffixes.py`, `python3 tools/grades.py --selftest`,
+`python3 tools/clause.py --selftest` (a whole clause: cases, chords, class warnings),
+`python3 tools/neutrality.py --selftest` (the donor ledger, recounted from the table itself),
 `python3 tools/fingerprint.py --profile`.

@@ -53,7 +53,10 @@ ONSET1 = {"b", "d", "g", "p", "t", "k", "m", "n", "l", "r", "f", "w", "s", "h", 
 ONSET_CLUSTER = {"pr", "br", "tr", "dr", "kr", "gr"}
 ONSET_VCV = {"fm", "fn", "hm", "hn", "wm", "wn", "jm", "jn"}
 CODA = set("mnlrs")
-WORD_FINAL = CODA | {"f", "w", "h"}
+WORD_FINAL = CODA | {"f", "w", "h", "b", "d", "g"}   # the stops are the ONE exception of A1/P3: only
+# the EVIDENTIAL suffix (`M5f`) may end a word that way (ruled 2026-10-15, the author's narrow option).
+# A syllabifier cannot see morphemes, so it must accept them; `tools/clause.py` enforces the real rule
+# ("a stop-final word must be a verb carrying an evidential").
 
 
 def tokenize(word):
@@ -107,11 +110,17 @@ def is_onset(toks, after_open, word_initial=False):
 
 
 def split_run(run):
-    """(coda, onset) for the consonant run between two nuclei; maximal onset wins."""
+    """(coda, onset) for the consonant run between two nuclei; maximal onset wins.
+
+    ⚠️ A coda is exactly ONE consonant from P3's set (`m n l r s`) -- NOT any string over it. The old
+    version only checked `all(c in CODA)`, which let two-consonant codas through and so accepted
+    three-consonant runs like `resr-sa`; P5 states plainly that "3 consonants between vowels are not a
+    legal shape". FIXED 2026-10-15.
+    """
     best = None
     for k in range(len(run) + 1):
         coda, onset = run[:k], run[k:]
-        if any(c not in CODA for c in coda):
+        if len(coda) > 1 or any(c not in CODA for c in coda):
             continue
         if onset and not is_onset(onset, after_open=(k == 0)):
             continue

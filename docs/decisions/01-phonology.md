@@ -200,6 +200,14 @@ read as stressed.)*
   - **any word** (i.e. including every suffixed / derived form) may end in `∅`, `f`, `v`, `h`
     **or** `m n l r s` (the P3 coda set);
   - voiced/voiceless stops never end a word (`p t k` are performance spellings of `b d g` anyway — C2);
+  - ⚠️ **ONE EXCEPTION (ruled 2026-10-15, `M5f`): the EVIDENTIAL suffix may end in a stop**, and only
+    there — the author's deliberately narrow option (iii) (the alternative was to licence final stops in
+    every word). With the natural, expected **word-final devoicing** (`g` → `[k]`, `d` → `[t]`,
+    `b` → `[p]`) the dictionary spelling keeps the VOICED letter, so `R-c`'s promise — the written form
+    predicts the sound — still holds. ⚠️ The restriction itself is **not** expressible in the
+    syllabifier (it sees no morphemes) ⇒ `WORD_FINAL` accepts a final stop, and the real rule ("a
+    stop-final word must be a verb carrying an evidential") is enforced at word level in
+    `tools/clause.py`;
   - consequence: `los` is **not** a legal bare root while `laf` is, and `-ner` / `-ser` are legal
     because they are *word*-final, not *bare-root*-final.
 - **No adjacent vowels** beyond sections 3 and 4: if two vowels would meet illegally,
@@ -217,8 +225,10 @@ read as stressed.)*
   (implies a head-final tendency). **⚠️ PROVISIONAL** — the author has flagged this as a temporary
   working assumption to be re-tested once more grammar exists (it was also the (circular) justification
   once offered for choosing suffixes). See `00-README.md` P4d.
-- In notation the stress is written as a CAPITAL on the **first letter of the stressed
-  syllable** (`losdo` -> `losDo`; `argonna` -> `arGonna`, hardened `arKonna`).
+- In notation the stress is written as a CAPITAL on the **last onset letter before the stressed
+  nucleus** (N1, **amended 2026-10-15**: the capital marks the ROOT's stressed syllable, so a
+  consonant the `M3a` seam moved into it is not capitalised — `sefmehna` -> `sefMehna`) —
+  (`losdo` -> `losDo`; `argonna` -> `arGonna`, hardened `arKonna`; both unchanged by that amendment).
 
 ## 7. Evidence from the existing reference words
 

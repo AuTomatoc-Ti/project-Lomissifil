@@ -18,7 +18,7 @@
 
 | Technique | Mark | Example |
 |---|---|---|
-| **Stress** | CAPITAL on the **first letter of the stressed syllable** (N1) | `argonna` → `arGonna` (syllable `gon`) |
+| **Stress** | CAPITAL on the **last onset letter before the stressed nucleus** (N1, **amended 2026-10-15**: the capital marks the ROOT's stressed syllable, so a consonant the `M3a` seam moved into it is not capitalised) | `argonna` → `arGonna` (syllable `gon`); `sefmehna` → `sefMehna` (stressed syll. `fme`, the seam-moved `h` is in the next one) |
 | **Length / sustain** | double the **last letter of the vowel grapheme** | `a`→`aa`, `ae`→`aee`, `o`→`oo`, `i`→`ii` |
 | **Vibrato** | `v` immediately after the vowel | `a` → `av` |
 

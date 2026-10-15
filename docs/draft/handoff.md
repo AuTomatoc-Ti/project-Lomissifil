@@ -86,6 +86,60 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
 
 ## Where it stands / exact next step
 
+- ⚠️ **2026-10-15 — START HERE. The bullets BELOW this one are the earlier state, and several are now
+  OUT OF DATE** (they are kept as history; this bullet is authoritative). The **verb is complete** and
+  the tooling changed.
+- **The SEVEN decisions of the 2026-10-15 session** (logged in `../decisions/00-README.md`; the ONLY
+  pending list is still `../decisions/03-open-questions.md` §0):
+  - **`M4b` — NUMBER: zero morphology.** No plural suffix at all; when number must be explicit the route
+    is **lexical** (the root `esa` "the all", or numerals if they are ever designed — the lexicon has
+    **no numerals**). ⇒ the language marks **neither person (`M5b`) nor number**.
+  - **`M4c` — the ASPECT paradigm, 4 values, carried by the finite syllable's CODA**:
+    **`0 simple`** (no coda, tonic) · **`I progressive`** (`s`, dominant) · **`II perfect`** (`m`,
+    tonic) · **`III`** (`m`, dominant — the author's own category: *"complete at a reference moment
+    that is never now, so the contrary holds now"*, i.e. a **discontinuous** aspect, both directions;
+    the closest documented thing is Plungian's *discontinuous past*).
+  - **`M5a` — TENSE IS CANCELLED** ("avoid too close to Indo-European"). Time is a **modifier word**
+    (`ima`, positional scope, clause-initial by default ⇒ it frames the sentence) ⇒ the verb's
+    morphology is **aspect + evidential** only, and `H2`'s "verbs are always tonic" is now conditional.
+  - **`M5e` — the `V0` reading rule + the root CLASS system `I`/`II`/`D`** (plus the noun default
+    `II*`): a bare `V0` verb claims nothing and the agentivity is read **off the participant's case**;
+    the class is **advisory** and lives in `reference/example.md`'s **CLASS & POS section** (36 roots).
+  - **`M5f` — EVIDENTIALITY, 4 values, an OUTER syllable ending in the one licensed stop**:
+    `witnessed` `-sVg` · `inferred` `-mVd` · `surmised` `-nVg` · `reported` `-lVb`. The vowel is **`IV`**
+    (subdominant) **by default and HARMONISES to dominant after a dominant aspect**; a bare `V0` root
+    may carry one too (aspect may not); a word-final stop exists **only** here (`A1`/`P3`'s one
+    exception). The **interrogative shift** (statement → the speaker's evidence, question → the
+    hearer's) is typologically real (*egophoricity*) and is **person-free** here — needs pronouns (`M6`).
+  - **`M5g` — MOOD: the IMPERATIVE is the only mood SUFFIX (`-lVn`, always DOMINANT = chord `V`), and it is mutually exclusive with the evidential; every other attitude rides `H8`'s lone VOWEL WORD** — its 7 colours (`A` anger/bravery · `AE` disgust · `O` awe/surprise = the mirative · `E` joy/searching · `I` grief/loneliness · `U` calm/mercy · `Y` fear/mystery) cost ZERO morphemes and split themselves along the bright/dark texture knob. **Prohibitive** = imperative + `mei`; **interrogative is NOT a mood** (`M6`); subjunctive/hortative deferred.
+  - **`S5` — function-word POSITION is a principle:** relational words PREPOSE (`ar` "from", `mer`
+    "with"), operators POSTPOSE (`mei`; any future tense/aspect particle).
+  - Also: **`N1` AMENDED** (the stress capital marks the ROOT's stressed syllable ⇒ `sefMehna`, not
+    `seFmehna`; `data/generated/seam-sheet.md` regenerated), and §0 items **31** (clause tool), **35**,
+    **36**.
+- **Identity budget — CURRENT (this is now the binding constraint):** by `(onset, coda)` **15 of the 30
+  are used** (7 nominal/finite + the aspect's `(r,s) (r,m) (n,s) (n,m)` + the evidentials' `(s,g) (m,d)
+  (n,g) (l,b)`); by **triples** (a triple = onset + coda + GRADE, and the harmony gives each evidential
+  two variants) **≈22 of 30 are spoken for ⇒ only ~8 triples are free**. **⇒ the "23 of 30 free" claim
+  further down is OUT OF DATE**: the next category (MOOD) must be planned against the **triples**.
+  (Counting is not automated yet — a `tools/` addition would be welcome.)
+- **New tools this session (each with `--selftest` / `--check`, all green):** `tools/clause.py` (a whole
+  clause: cases, chords, class warnings, 8 N1 pins) · `tools/neutrality.py` (recounts the donor ledger
+  from the table itself, prints the thresholds and the headroom — **top donor Finnish 8/43 = 18.6%**,
+  original 39.5%, headroom +9 / +21) · `tools/paradigm.py` (the **270-form verb paradigm** (finite x aspect x evidential OR mood) →
+  `data/generated/verb-paradigm.md`). Plus **bug fixes** in `tools/seam.py` (suffix vowels were
+  hard-coded for one trigger class; a vowel was inserted after `s`/`m`/`r`-final roots, which ARE codas
+  ⇒ `res`+`-sog` was `reseseg`, now `resseg`) and `tools/syllabify.py` (`WORD_FINAL` accepts the
+  evidential's stop).
+- **Still open (short list):** the **time vocabulary** (only `ima`;
+  a future word could double as §0 item 8's missing *towards*) · the **irregular-aspect policy** (must
+  become a closed whitelist) · the **`§F` read-aloud test** (the author's method; the paradigm sheet is
+  the material) · the **`ae` trigger class has NO lexicon root** · `tools/clause.py` still needs the
+  **stop-final** and **harmony** checks · `tools/check_roots.py` needs a `--word` mode (it judges
+  suffixed forms as bare roots) · **`split_run()` in `tools/syllabify.py` accepts multi-consonant codas
+  (`resr-sa`), which P5 forbids** · the 6 classes awaiting the author's veto · `forah` (burn) is
+  uncoined.
+
 - Phonology, notation and the **vowel-colour ("grade") system** are in place; morphology and the
   opening of syntax are done.
 - **⚠️ Read first:** the terminology warning at the top of `docs/decisions/00-README.md` (no tone/pitch —
@@ -112,7 +166,10 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   INS IV · `s`+`r` / OBL IV · `l`; verbs V1 I · `r`, V2 I · `n`. **23 of 30 identity shapes are still
   free** (7 skeletons used: `n s m nr sr l r`; NOM's *zero* suffix is not one of the 30) — this file
   previously said "24", an off-by-one, now corrected against `../decisions/00-README.md` M4a and `03` §0 item 14.
-- **➡️ PATH CHANGED, 2026-10-14 (this session): do NOT jump straight to M4b.** The agreed order is
+- ~~**➡️ PATH CHANGED, 2026-10-14 (this session): do NOT jump straight to M4b.**~~ — ⚠️ **DONE
+  2026-10-15: M4b AND M4c AND M5a AND M5e AND M5f were all ruled in one session** (see the START HERE
+  bullet at the top of this section), and the "slot-budget question" was asked and answered: the aspect
+  and the evidential spent the budget (~8 triples left). ~~The agreed order is
   0) the **M1 re-test** by ear, 1) the `05` recompute (**DONE** — see `05`'s UPDATE section),
   2) two author rulings (below), 3) the **first coining + audition round**, 4) *then* M4b — and M4b
   must be asked as a **slot-budget** question, not one label at a time: 30 suffix identities have to

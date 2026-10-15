@@ -112,7 +112,13 @@ def base_of(form):
 
 
 def report(forms, pool, words):
-    """Per-form verdicts + a summary. Function words (R5) are judged by A1's 'any word' layer."""
+    """Per-form verdicts + a summary. Function words (R5) are judged by A1's 'any word' layer.
+
+    `--word` switches the A1 test from **layer 1 (a BARE ROOT)** to **layer 2 (any WORD, including every
+    suffixed form)**: layer 2 also allows `n`/`l` as finals, and the evidential licence (`M5f`) adds the
+    stops `b`/`d`/`g`. Without it, every suffixed form in the list earns a false "breaks A1 layer 1".
+    """
+    word_mode = "--word" in sys.argv
     stats = {"n": 0, "legal": 0, "a1": 0, "rb": 0, "en": 0, "s": 0}
     for form, gloss, section in forms:
         stats["n"] += 1
@@ -129,6 +135,13 @@ def report(forms, pool, words):
         elif is_func:
             notes.append("function word (**R5**): it takes no suffixes, so the bare-root final rule "
                          "has no purpose for it -- A1's 'any word' layer applies")
+        elif word_mode:
+            if last not in VOWELS and last not in AREA_FINALS + ("n", "l", "b", "d", "g"):
+                stats["a1"] += 1
+                notes.append("**breaks A1 layer 2**: no WORD may end in `%s`" % last)
+            elif last in ("b", "d", "g"):
+                notes.append("A1 layer 2 (WORD): a stop may end a word **only** as the evidential "
+                             "suffix (`M5f`) -- the morpheme-wise check lives in `tools/clause.py`")
         elif last in PROPOSED_FINALS:
             stats["a1"] += 1
             notes.append("**breaks A1 layer 1**: a bare root may not end in `%s` (allowed since R4: "
@@ -203,6 +216,9 @@ def main():
     ap.add_argument("--src", default="data/hand/proposed.md")
     ap.add_argument("--pool", default="data/generated/roots-bases-current.txt")
     ap.add_argument("--forms", default=None, help="check these instead (comma separated)")
+    ap.add_argument("--word", action="store_true",
+                    help="judge the forms as WORDS (A1 layer 2: `n`/`l` and the evidential's licensed "
+                         "stop are legal finals), not as bare roots")
     a = ap.parse_args()
     if a.forms:
         forms = [(f.strip(), "", "ad-hoc") for f in a.forms.split(",") if f.strip()]

@@ -6,20 +6,56 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
 **this list is the single place to check what is still pending.**
 
 **A. Small rulings the author should confirm (low stakes, but blocking small things)**
-1. **`l` seam row — adopted by necessity.** Because OBL = `-le` exists, the missing M3a row is applied
+1. **`l` seam row — adopted by necessity.** Because OBL has onset `l` (the suffix is now `-ler`/`-lor`, M5d), the missing M3a row is applied
    as `{f,v}`+`l` → `ll`, `h`+`l` → `l`. *Veto if wrong.*
 2. **tier-3 `y` copy.** When the root's last vowel is `y` and tier 3 inserts a copied vowel, does it come
    out as `y` (putting `y` outside a root, against H3) or as `i`?
 3. **`NOM = zero suffix`** (the demo implies it; never explicitly confirmed) ✅ **CONFIRMED (S4, 2026-10-14).**
 4. **One-letter capital rule (H8).** A one-letter vowel word with a capital is read as **VOC**, not as a
    stress mark — confirm.
-5. **Emotional vowel table (H8)** is still an *example* list, not a locked one — confirm or revise.
+5. ~~**Emotional vowel table (H8)** is still an *example* list, not a locked one — confirm or revise.~~
+   — ✅ **CLOSED (author, 2026-10-15, `M5g`): the table is LOCKED, as the ATTITUDE / mood layer** (the
+   device's **third** use, alongside the article and the VOC). The 7 colours, their meanings and their
+   automatic split along the locked bright/dark texture knob are in `00-README.md`'s `H8` row; the only
+   sub-item left open is whether a *function word's* stress is defined as **stressed** (§0 item 30),
+   which would make the attitude word the most audible item in the clause.
 
 **B. Grammar decisions still open**
-6. **M4b — grade labels for the inner/non-role categories** (number, tense, aspect, mood, person).
-   **Currently unanswered** (the author deferred it). Sub-question: **is NUMBER suffixed at all?**
-7. **M5a — the verb's outermost suffix.** Does tense/aspect/mood decide a verb's chord, or does the
-   class/finite ending stay outermost so verbs remain permanently tonic? (M2c makes this unavoidable.)
+6. **M4b — grade labels for the inner/non-role categories.** ⚠️ **The list has SHRUNK:** `person` is dead
+   (`M5b`), and `negation` is a postposed **particle**, not a suffix (`S1`), so M4b is really
+   **{number, tense, aspect, mood}**. **NUMBER — RESOLVED (author, 2026-10-15): NO number morphology.**
+   Number is marked by **a separate word** (the author's "A with C"): zero suffixes, so `M3b`'s 30-shape
+   identity budget is untouched, **no extra unstressed syllable** is added (`P4c` keeps the stress on the
+   root and the unstressed tail is where sung intelligibility dies first — §F), and **no noun chord
+   changes** (a noun's chord stays its CASE's, `M2c`). ⚠️ **Still open inside number:** *which* word (a
+   new R5 function word · the existing root `esa` "the all" · a new root · or design the NUMERALS first —
+   **⚠️ FINAL (author, 2026-10-15, same session): number is ZERO-marked and there is NO dedicated number
+   word** — an intermediate step ("coin a new R5 function word") was **superseded within the same
+   session**. Explicit number, when wanted, is **lexical**: the existing root `esa` ("the all"), or
+   numerals **if they are ever designed** (the lexicon has **no numerals at all** and none are planned —
+   that gap is recorded here rather than left implicit). So the language marks **neither person
+   (`M5b`) nor number**, consistent with `B10` ("no gender, no grammatical agreement"), and the lexicon
+   stays at **41 words**.
+   **TENSE / ASPECT / MOOD are NOT answered, and cannot be** before `M5a` (item 7): if such a suffix sat
+   OUTSIDE the finite ending, `M2c` would make the verb's chord the tense's grade and **`H2`'s "verbs are
+   always tonic" would break** — the `I–V–I` signature would become tense-dependent.
+7. ~~**M5a — the verb's outermost suffix.**~~ — ✅ **RULED (author, 2026-10-15, option (b)): TENSE /
+   ASPECT / MOOD sits OUTERMOST, and the verb's chord becomes THAT category's grade.** Consequences:
+   (a) **`H2` is amended** — its "verbs are always tonic" holds only while no TAM suffix is present, and
+   a clause's progression is now a function of tense/aspect/mood (the point of the choice: the poet gains
+   a chord change per TAM); (b) **every TAM category now needs a grade label** — that is the LAST piece of
+   **`M4b`** (item 6), and it is now unblocked; (c) each TAM morpheme needs **its own consonant shape**
+   from `M3b`'s 30 (23 free), because `H3`'s coining rule forbids telling two morphemes apart by
+   tonic-vs-subdominant alone (for an `e`/`o`-final root tonic = subdominant, so those two can never carry
+   the distinction — the `M5d` lesson); (d) `tools/grades.py` will need the new morphemes in its `SKEL`
+   table when they are coined.
+   ✅ **PART-DONE (same session):** TENSE was **cancelled** (item 6) and **ASPECT is now RULED as `M4c`**
+   — 4 aspects (`0` simple · `I` progressive · `II` perfect · `III` the author's "completed at a
+   non-present moment"); the grade labels are **tonic** (simple/perfect) vs **dominant**
+   (progressive/III); the surface is a **word-final coda**, so `M3b` needs no change and only
+   **4 of 30** identities are spent (19 free). ⇒ The only grade-label question left is **MOOD**, and
+   `tools/grades.py` / `tools/clause.py` still need the new forms implemented (a `SKEL` entry per
+   aspect + the coda slot).
 8. **Negation scope.** `X mei` is *constituent* negation; sentence negation must be defined explicitly so
    "I do not love you" and "it is not you I love" cannot collide. Also outstanding: the **separate
    mechanism for "from" / "towards (go-to)"** the author promised (ABL was dropped in favour of it).
@@ -304,10 +340,15 @@ negation scope = item 8). **Two gaps had no owner at all:**
     particle's grade is a label that is not sounded. So `mei` (one syllable) has **no defined stress** —
     small, but it appears in every negative clause. Options: stress it like a root (the 2nd-syllable
     rule is meaningless for a one-syllable word), never stress it, or leave it to the composer.
-31. **There is no CLAUSE-LEVEL tool.** The five lines of the integration test were assembled **by hand**
-    and verified word by word; nothing composes a clause, checks its chord progression (`I–V–I`), or
-    verifies agreement across words. A `tools/clause.py` would be the natural next tool — and it is what
-    would let the author write **hundreds** of demo lines instead of five.
+31. ~~**There is no CLAUSE-LEVEL tool.**~~ — ✅ **DONE (2026-10-15): `tools/clause.py`**
+    (`--selftest` reproduces 10 clauses; it reads the lexicon's CLASS & POS section). It reports each
+    word's reading (root + morphemes), its case, its chord (`I–V–I`), the clause's agentivity reading,
+    and the **advisory class warnings** of `M5e`, and it marks the stressed forms **from the ROOT**
+    (`P4c`). Honest limits: it cannot check tense/aspect/mood (M5a), pronouns (M6), number (M4b),
+    negation scope or scrambling limits — those layers do not exist yet — and it cannot resolve
+    `M5d`'s clause-final bare-word ambiguity (it prints the reading *and* the note). Still missing from
+    the original wish: it only **reads** a clause you wrote, it does not compose one, and there is no
+    corpus runner yet.
 32. **CASE ALIGNMENT (格配列) — never explicitly decided; the design is de facto NOMINATIVE–ACCUSATIVE — ✅ **DECIDED (S4, 2026-10-14): active–stative / split-S, chosen as option (B) below.**
     Raised by the author 2026-10-14 ("what is our language using? what if we use 南島型?"). **Evidence for the
     status quo:** in `M4a` NOM is the **zero** suffix and ACC is `-na`; the S of an intransitive and the A of a
@@ -348,6 +389,31 @@ negation scope = item 8). **Two gaps had no owner at all:**
     (plain accusative) or take ACC (split-S)?
 33. **ONE modifier class, or a separate adjective vs adverb?** Asked by the author 2026-10-14 ("do we need to separate the adj/adv? if not separate, will it cause any problem (bc Chinese and English also separate)?"). **Agent's recommendation: keep ONE class (modifier).** Evidence: (a) our mechanism is already identical for both — `root(+h) + V + s`, immediately before the head — so no form requires a split; (b) a separate ADJ/ADV is a European/Latin inheritance, and the two named languages do not really split them either: English's `-ly` is derivational and optional ("run fast"), and Chinese's 的 / 地 are **homophonous** (/də/), i.e. a *writing* convention rather than a spoken distinction; (c) roots here are already POS-neutral, so merging modifiers is consistent with the design; (d) **no ambiguity arises**, because the **head** disambiguates (`modifier + noun` = adjective, `modifier + verb` = adverb) — the only place it could bite is a chain in front of a word that is itself ambiguous, exactly the `V0` issue in `M5d`. ⚠️ Derived here: a modifier is **harmonically transparent** — it copies its head's vowel, hence its head's chord, so `adj + N` is ONE chord (the noun's) and a chain adds none. **Author confirmation needed.**
 34. **A modifier before a NOM head: which vowel does the always-present `-Vs` take?** Raised by the author's ruling (2026-10-14) that a modifier/adverb **always** carries its `-s` ending, and that only the **CASE** suffix is the positional knob. The ending's vowel `V` is *copied* from the head — fine when the head carries a suffix vowel (`sefmehna` ⇒ `hosdahas`) — but a **NOM head has the ZERO suffix**, so there is no suffix vowel to copy. Candidates: the head WORD's own last vowel (`orgi` ⇒ `hosdahis`), a fixed default vowel, or the modifier's own last vowel. ⚠️ This blocks the most common modifier phrase ("the certain heart"), so it should be ruled before the next demo line. **Author decision needed.****
+35. ~~**NOTATION CONFLICT — the stress capital when the `M3a` seam MOVES a consonant.**~~ — ✅ **RULED
+    2026-10-15 (option b): the capital marks the ROOT's stressed syllable, so a consonant the seam moved
+    into it does NOT carry it — `sefMehna`, not `seFmehna`.** Implemented the same day: **`N1` amended**
+    (`00-README.md`, `01-phonology.md` §6, `02-notation.md` — the capital sits on the **last onset letter
+    before the nucleus**; a consonant digraph `sh`/`th`/`ng` is ONE unit so its first letter is
+    capitalised; a vowel-initial syllable capitalises the nucleus); `tools/seam.py` gained
+    `cap_index()`/`body_for()` and its `mark()` now implements it; `data/generated/seam-sheet.md` was
+    regenerated; `tools/clause.py` pins **8 cases** in `--selftest` (`sefmehna` → `sefMehna`,
+    `hosdahesna` → `hosDahesna`, `argonna` → `arGonna`, `orGina`, `Resne`, `waLunu`, `foRahna`,
+    `foRara`). So the draft's `sefMehna` was **right**, and its double-capital slips `ORgina` / `RESle` /
+    `RESne` / `thyMAra` were fixed in place (→ `orGina` / `Resne` / `thyMara`). ⚠️ **Sub-case left open:**
+    the amendment also moves the capital in a stressed syllable that begins with a NON-seam cluster
+    (`pr br tr dr kr gr`; a root like `kupra` ⇒ `kupRa`) — the code applies ONE rule, not a seam special
+    case. Veto if you want it restricted to seam-moved consonants only.
+36. **The `M5e` class annotations — what is still open.** **(a) Six proposed classes await the author's
+    veto**: `argonna` (proposed `I`), `onla` (`I`), `roi` (`II`), `asdo` (`II`), `eli` (`II`), `noih`
+    (`II`); the other 30 rows are ruled (`../hand/class-proposal.md`). **(b) 15 roots are `II*`** (the
+    noun default) because they have **no verb sense at all**; giving them one IS the valency question,
+    §0 **item 10** — and `reference/example.md`'s `POS` column is its first piece. **(c) The
+    machine-readable shape of a `D` row**: today a `D` row is a bare **label**, so `tools/clause.py`
+    warns on *nothing* for those roots (it accepts both framings). Whether a `D` row should instead
+    carry a **list of the allowed frames** (`forah: D{ACC, NOM+ACC}`) is now decidable, because the
+    clause tool that would use it exists. **(d)** The **instrumental** reading ("use N") has no default
+    and no decision.
+
 27. ~~**A statistical sound fingerprint**~~ — ✅ **DONE (2026-10-14): `tools/fingerprint.py`**
     (`--profile` / `--similarity` / `--english`), with the reference set **decided** by the author =
     the 10 ledger donors **plus Mandarin, Cantonese, Indonesian/Malay, Māori, Hawaiian and Quechua**
@@ -458,12 +524,19 @@ Two things that listening did **not** settle, and the author has not commented o
   appear, **as redundant cues** (deliberately: they are the answer to the §F sung-intelligibility
   risk). The author's clarification: the colour is **relational** — the contrast between the suffix
   vowel and the **root's last vowel** — so the same suffix vowel can be *tonic* in one word and
+> ⚠️ **SNAPSHOT — the tables and counts in this section are HAND-COPIED from the decision log and they
+> DRIFT.** The authoritative sources are: `00-README.md`'s decision rows (`M4a`, `M4c`, `M5f`, `M5g`,
+> `S4`…), `tools/grades.py` (the verb morphology, machine-read), `reference/example.md`'s CLASS & POS
+> section (the root classes) and `tools/neutrality.py` (the ledger counts). Verified occurrences of
+> stale copies were found and marked here on 2026-10-15 (the old OBL `-le` and the M4a-era identity
+> count). **When a shape or a count changes, grep this file for it.**
+
   *dominant* in another. In a noun, the outermost slot is the case, so a noun's chord = its case's
   function.
 - **M4 — the case inventory: DECIDED + table complete (M4a).** **NOM** I · zero · `lati` / **ACC** V · `n` ·
   `-na` / **GEN** V · `s` · `-sa` / **DAT** IV · `m` · `-me` / **LOC** IV · `n`+`r` · `-ner` / **INS** IV ·
-  `s`+`r` · `-ser` / **OBL** IV · `l` · `-le`. Verbs: **V1** I · `r` · `-ri` / **V2** I · `n` · `-ni` (same
-  skeleton as ACC — distinguished by grade alone, which H3's coining rule allows). **7 of 30 identities used** (the 6 noun cases + V1`r`; V2 re-uses ACC's `n`). ⚠️ The OBL choice forces the **`l` row of the M3a seam** (`{f,v}`+`l` → `ll`, `h`+`l` → `l`) —
+  `s`+`r` · `-ser` / **OBL** IV · `l`+sub+`r` · `-ler`/`-lor` (AMENDED by M5d: the bare -le is gone). Verbs: **V1** I · `r` · `-ri` / **V2** I · `n` · `-ni` (same
+  skeleton as ACC — distinguished by grade alone, which H3's coining rule allows). **STALE: the figure after this is the M4a-era count** - **7 of 30 identities used** (the 6 noun cases + V1`r`; V2 re-uses ACC's `n`). ⚠️ The OBL choice forces the **`l` row of the M3a seam** (`{f,v}`+`l` → `ll`, `h`+`l` → `l`) —
   adopted by necessity. ⚠️ **Grade balance — CORRECTED (author's challenge):** 1·2·4 (I·V·IV), and the
   agent's "OBL is high-frequency" claim is **withdrawn** — with six cases covering the normal roles, the
   else-case is plausibly low-frequency; and the *frequent* cases (NOM/ACC/GEN) already carry the I-vs-V

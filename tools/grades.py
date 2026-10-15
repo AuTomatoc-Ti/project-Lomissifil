@@ -25,7 +25,13 @@ Limits (honest): the script CONCATENATES; it does not implement M3a's seam spell
 (root-final f/v/h + l) or the M3b cluster whitelist, so a hand check is still needed
 for consonant-final roots in the seam cases.
 """
+import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# ⚠️ `seam` imports `grades` too, but only USES it at call time (and this module's tables are defined
+# below without calling anything), so the circular import is benign -- `verb()` needs the M3a seam.
+import seam as SEAM                        # noqa: E402
 
 # H3 (FINAL): trigger class -> (tonic, subdominant, dominant)
 GRADE = {
@@ -112,6 +118,63 @@ def build(root, morphemes, head=None):
         out += sfx.replace("-", "")
         parts.append((m, sfx, CHORD[m]))
     return out, parts
+
+
+# ── THE VERB ENDING (M4a finite + M4c aspect + M5f evidential) -------------------------------------
+# The ONE implementation of the verb morphology: `root + (r|n) + V(aspect grade) + coda(∅|s|m) +
+# (evidential onset + V + licensed stop)`. `tools/paradigm.py` and `tools/clause.py` both call `verb()`.
+ASPECT = {"simple": ("", "tonic"),           # M4c: 0 simple
+          "progressive": ("s", "dom"),       #      I progressive
+          "perfect": ("m", "tonic"),         #      II perfect
+          "III": ("m", "dom")}               #      III (the author's discontinuous aspect)
+EVIDENTIAL = {"witnessed": ("s", "g"),       # M5f: the four values; the value lives in onset + stop
+              "inferred": ("m", "d"),
+              "surmised": ("n", "g"),
+              "reported": ("l", "b")}
+MOOD = {"imperative": ("l", "n")}            # M5g: onset + coda; the GRADE is always dominant (chord V)
+FINITE_CONSONANT = {"V0": "", "V1": "r", "V2": "n"}
+
+
+def trigger(root):
+    """-> (tonic, subdominant, dominant) for the root's trigger class (H3/H4)."""
+    return GRADE[trigger_class(root)]
+
+
+def verb(root, finite="V0", aspect="simple", evid=None, mood=None):
+    """The whole verb ending. -> (surface, note), or (None, why) when the combination is illegal.
+
+    * `finite` ∈ {`V0`, `V1`, `V2`}; **`V0` takes no aspect** (`M5f`) -- it may carry an evidential or a
+      mood.
+    * `aspect` ∈ `ASPECT` (`M4c`); its coda rides the finite syllable.
+    * `evid` ∈ `EVIDENTIAL` (or None, `M5f`): its vowel is the class **subdominant** (chord `IV`), but
+      it **harmonises to dominant when the aspect is dominant** (the author's ruling: the aspect's
+      chord signal outweighs the evidential's). The licensed stop (`g`/`d`/`b`) is what makes a
+      stop-final word uniquely an evidential-bearing verb (§`M5f`, `A1`'s one exception).
+    * `mood` ∈ `MOOD` (or None, `M5g`): the outermost syllable, **always dominant** (chord `V`), and
+      **mutually exclusive with the evidential** -- a command is not reported. `n` is a legal
+      word-final consonant, so the imperative needs **no** licence extension.
+    * the M3a seam is applied where the ROOT meets the first suffix; everything after is a coda plus an
+      onset, i.e. a legal medial CC by `M3b`'s promise.
+
+    This is deliberately the ONLY place the verb ending is computed (no second copy to drift).
+    """
+    tonic, sub, dom = trigger(root)
+    if evid and mood:
+        return None, "mood and evidential are mutually exclusive (M5g)"
+    cons = FINITE_CONSONANT[finite]
+    coda, grade_name = ASPECT[aspect]
+    if not cons and (coda or aspect != "simple"):
+        return None, "V0 takes no aspect (M5f): use V1 or V2"
+    body = cons + {"tonic": tonic, "sub": sub, "dom": dom}[grade_name] + coda if cons else ""
+    if evid:
+        eon, estop = EVIDENTIAL[evid]
+        body += eon + (dom if grade_name == "dom" else sub) + estop
+    if mood:
+        mon, mcoda = MOOD[mood]
+        body += mon + dom + mcoda
+    if not body:
+        return root, "V0 + simple = the bare root"
+    return SEAM.seam(root, body)[0], "seam applied where the root meets the first suffix"
 
 
 SELFTEST = [   # (root, morphemes, head, expected)

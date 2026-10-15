@@ -20,10 +20,12 @@ The tool also prints, for every pair of siblings, whether their suffixed forms s
 coining rule "**exactly 2 roots per base, one per branch**" is what keeps them apart, so violating
 the at-most-two rule of `data/hand/picks.md` would create homophones in GEN/INS/V1/OBL.
 
-Reading a row: `syllables` uses `-` between syllables; the CAPITAL sits on the first letter of the
-stressed syllable, and the stress is counted **from the ROOT** (P4c: affixes never move it) -- which
-is why a one-syllable root keeps its stress on its own syllable while a two-syllable root stresses
-its second.
+Reading a row: `syllables` uses `-` between syllables; the CAPITAL sits on the **last onset letter
+before the stressed nucleus** (N1, **AMENDED 2026-10-15**: a consonant the M3a seam moved into the
+syllable does not carry it, so `sefmehna` is `sefMehna` and not `seFmehna`; a consonant digraph
+`sh`/`th`/`ng` counts as one unit, so its first letter is capitalised), and the stress is counted
+**from the ROOT** (P4c: affixes never move it) -- which is why a one-syllable root keeps its stress on
+its own syllable while a two-syllable root stresses its second.
 
 USAGE
     python3 tools/seam.py > data/generated/seam-sheet.md
@@ -37,12 +39,21 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import syllabify as S                      # noqa: E402
+import grades as G                         # noqa: E402
 
 # M4a (nouns) + the two verb classes. NOM is the zero suffix.
-SUFFIXES = [("NOM", "zero", ""), ("ACC", "dominant", "na"), ("GEN", "dominant", "sa"),
-            ("DAT", "subdominant", "me"), ("LOC", "subdominant", "ner"),
-            ("INS", "subdominant", "ser"), ("OBL", "subdominant", "le"),
-            ("V1", "tonic", "ri"), ("V2", "tonic", "ni")]
+# ⚠️ The BODY is COMPUTED from grades.py, never hardcoded: the grade vowel follows the ROOT's last
+# syllable nucleus (H3/H4), so a hardcoded list is right for one trigger class only. (Found 2026-10-15:
+# this table used to print `-ri` for every root and the pre-`M5d` `OBL` `-le`; for an `o`-final root
+# the correct forms are `V1 -ro` and `OBL -lor`.)
+SUFFIXES = [("NOM", "zero"), ("ACC", "dominant"), ("GEN", "dominant"), ("DAT", "subdominant"),
+            ("LOC", "subdominant"), ("INS", "subdominant"), ("OBL", "subdominant"),
+            ("V1", "tonic"), ("V2", "tonic")]
+
+
+def body_for(root, name):
+    """The suffix body (without the dash) that M4a + H3/H4 give THIS root for this morpheme."""
+    return G.suffix(name, G.trigger_class(root)).lstrip("-")
 FINALS = ("f", "w", "h", "s", "m", "r")    # R4 added `s`; R6 added `m` and `r` -- all are codas,
                                            # so none of them needs an M3a repair
 TIER1_ONSETS = ("m", "n")                  # + f/w/h = fm fn hm hn wm wn (the VCV-only clusters)
@@ -64,6 +75,13 @@ def seam(root, suf):
     fin = root[-1]
     if fin not in FINALS:
         return root + suf, 0, "vowel-final root: nothing to repair"
+    if fin in ("s", "m", "r"):
+        # ⚠️ `s`/`m`/`r` ARE codas (P3), so `root + onset` is already a legal medial CC and M3a's
+        # repair tiers do not apply to them (M3a is about f/w/h, the area-rule finals that are NOT
+        # codas). An identical pair simply spells as a geminate. FIXED 2026-10-15: this branch used to
+        # fall through to tier 3 and insert a vowel (`res`+`-sog` came out `reseseg` instead of
+        # `resseg`; `01-first-lines.md` already assumed the correct behaviour: `res`+`-ri` -> `Resri`).
+        return root + suf, 0, "coda-final root (`s`/`m`/`r` is a P3 coda): legal medial CC, no repair"
     onset = suf[0]
     if onset in TIER1_ONSETS:
         return root + suf, 1, "tier 1: `%s%s` is a legal VCV cluster" % (fin, onset)
@@ -80,13 +98,35 @@ def stress_index(root):
     return 1 if syl and len(syl) >= 2 else 0
 
 
+VOWELS = "aeiouy"
+DIGRAPHS = ("sh", "th", "ng")
+
+
+def cap_index(syllable):
+    """N1 (AMENDED 2026-10-15): the capital marks the ROOT's stressed syllable, so a consonant the
+    M3a seam moved into that syllable does not carry it -- `sefmehna` (se-fme-hna, stressed `fme`) is
+    written `sefMehna`, not `seFmehna`. Concretely: the capital sits on the **last onset letter
+    before the nucleus**; a consonant digraph (`sh`/`th`/`ng`) is one unit, so its FIRST letter is
+    capitalised (`Sha`), and a vowel-initial syllable capitalises the nucleus.
+
+    -> index of the letter to capitalise."""
+    nu = next((k for k, ch in enumerate(syllable) if ch in VOWELS), 0)
+    onset = syllable[:nu]
+    if not onset:
+        return nu                               # vowel-initial: the nucleus carries the capital
+    if onset[:2] in DIGRAPHS:
+        return 0                                # `sh`/`th`/`ng` is ONE unit -> its first letter
+    return nu - 1                               # the onset letter next to the nucleus
+
+
 def mark(form, root):
     an = S.analyse(form)
     if not an["syllables"]:
         return None
     syls = list(an["syllables"])
     i = min(stress_index(root), len(syls) - 1)
-    syls[i] = syls[i][0].upper() + syls[i][1:]
+    k = cap_index(syls[i])
+    syls[i] = syls[i][:k] + syls[i][k].upper() + syls[i][k + 1:]
     return syls, "-".join(an["syllables"]), "".join(syls)
 
 
@@ -166,12 +206,12 @@ def distinctness(roots):
     joined = {}
     for r in roots:
         joined[r] = {}
-        for name, grade, body in SUFFIXES:
-            joined[r][name] = seam(r, body)[0]
+        for name, grade in SUFFIXES:
+            joined[r][name] = seam(r, body_for(r, name))[0]
     out = []
     for i in range(len(roots)):
         for j in range(i + 1, len(roots)):
-            clash = [name for name, _, _ in SUFFIXES
+            clash = [name for name, _ in SUFFIXES
                      if joined[roots[i]][name] == joined[roots[j]][name]]
             out.append((roots[i], roots[j], clash))
     return out
@@ -189,7 +229,8 @@ def sheet(src, n_bases, seed):
         out.append("| root | suffix | form | syllables | stress | seam |\n"
                    "|---|---|---|---|---|---|\n")
         for r in roots:
-            for name, grade, body in SUFFIXES:
+            for name, grade in SUFFIXES:
+                body = body_for(r, name)
                 form, tier, note = seam(r, body)
                 mk = mark(form, r)
                 if tier == 3:
@@ -209,7 +250,7 @@ def sheet(src, n_bases, seed):
         for r1, r2, clash in distinctness(roots):
             if clash:
                 out.append("- `%s` vs `%s` -> **COLLIDE in %s** (e.g. both become `%s`)\n"
-                           % (r1, r2, ", ".join(clash), seam(r1, "sa")[0]))
+                           % (r1, r2, ", ".join(clash), seam(r1, body_for(r1, clash[0]))[0]))
             else:
                 out.append("- `%s` vs `%s` -> distinct in all 9 forms\n" % (r1, r2))
         out.append("\n")

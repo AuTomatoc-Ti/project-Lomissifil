@@ -373,7 +373,7 @@ Which one is the word's chord?
 | **DAT** | IV | `m` (changed from `-nem`) | `-me` |
 | **LOC** | IV | `n` + coda `r` | `-ner` |
 | **INS** | IV | `s` + coda `r` | `-ser` |
-| **OBL** | IV | `l` (collision fix) | `-le` |
+| **OBL** | IV | `l` (collision fix) | `-le` ⚠️ **SUPERSEDED (`M5d`, 2026-10-14): OBL = `l` + subdominant + **`r`** = `-ler`/`-lor`; the bare `-le` is gone. The M3a `l` seam row it forced STILL stands (the onset is still `l`)** |
 | **Verb 1** | I | `r` | `-ri` |
 | **Verb 2** | I | `n` | `-ni` |
 
