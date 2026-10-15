@@ -1,10 +1,10 @@
-# draft/01-first-lines.md — the first lines (integration test, 2026-10-14)
+# docs/draft/01-first-lines.md — the first lines (integration test, 2026-10-14)
 
 **What this is.** The first *integrated* test of the locked layers: NOM/ACC case marking (`M4a`), the
 grade/chord system (`H1`–`H8`), the `M3a` seam, the `M2b`/`M2c` suffix rules, adjective agreement
 (item 29), the topic slot (`S3`) and negation (`S1`). Every clause below uses **only** words from
-`../reference/example.md` (the project's rule), and **every FORM was checked mechanically** with
-`python3 ../tools/check_roots.py --forms …` — all of them pass the locked rules (none needed a repair
+`../../reference/example.md` (the project's rule), and **every FORM was checked mechanically** with
+`python3 ../../tools/check_roots.py --forms …` — all of them pass the locked rules (none needed a repair
 except the seam, which is by design).
 
 ⚠️ **Stress is counted from the ROOT** (`P4c`), so a suffix never steals it and a **one-syllable root

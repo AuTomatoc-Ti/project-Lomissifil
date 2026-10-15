@@ -4,11 +4,13 @@
 
 - A **constructed language**. **"Lomissifil" is only the PROJECT name**; the language
   itself is unnamed.
-- Layout: `decision/` = locked design + open questions, `draft/` = scratch,
-  `reference/example.md` = the only words allowed in examples, `textbook/` = FINAL publication-ready docs only (working notes go in `draft/` - author convention 2026-10-14),
-  `tools/` = scripts (`enumerate_roots.py` = counts + distance>=2 packer + root emitter;
-  `audition_m1.py` = the M1 A/B WAVs).
-- The repo **is** a git repo (branch `main`, remote `origin`); one commit so far (`62960c8`).
+- Layout (after the **2026-10-15 tidy-up**): `docs/decisions` = locked design + open questions,
+  `docs/draft` = scratch, `data/` = generated + hand-written data, `reference/example.md` = the only
+  words allowed in examples, `tools` = the scripts, `archive/` = retired material. `textbook/` is a
+  location convention (**FINAL, publication-ready docs only**; working notes go in `docs/draft`,
+  author convention 2026-10-14) — the folder does not exist yet. **The full map is the repo-root
+  `README.md`.**
+- The repo **is** a git repo (branch `main`, remote `origin`).
 
 ## The author's brief
 
@@ -25,22 +27,22 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   missed. Do **not** batch many questions.
 - Per topic the pattern is: gather evidence from existing material -> propose->
   **surface conflicts instead of averaging them** -> the author chooses -> lock it and
-  record it in `decision/`.
+  record it in `docs/decisions`.
 - Decisions are numbered in the order they were asked: `V*` = vowels, `C*` = consonants,
-  `P*` = phonotactics/stress, `N1` = notation. See `decision/00-README.md` for the log.
+  `P*` = phonotactics/stress, `N1` = notation. See `docs/decisions/00-README.md` for the log.
 
 ## Hard constraints (do not violate)
 
 - **NO tone/pitch exists in this language, and it never *sounds* chords.** "tonic / subdominant /
   dominant" are **metaphors** for three relational **vowel-colour** classes. Never write or reason as
   if the grammar produces audible harmony — see the terminology warning at the top of
-  `decision/00-README.md`.
+  `docs/decisions/00-README.md`.
 - **ASCII letters only, no custom symbols**, anywhere (goal 3).
 - Examples may **only** use words already in `reference/example.md` — which is **no longer a blocker**:
-  it holds 2 names + **31 roots** since 2026-10-14 (batch 1, the author's own list, checked by
-  `../tools/check_roots.py`). Real sentences still need the **verb morphology** (M5/M5a), the
-  **function words** (H5's separate class — the 8 in `../lists/proposed.md` await the area-rule
-  ruling), and the case/number slots (M4b).
+  it holds 2 names + 3 function words + **36 roots** = **41 words** (batches 1–2, the author's own list,
+  checked by `../../tools/check_roots.py`), and the first integrated clauses already run — see
+  `01-first-lines.md`. Still missing for teaching: the case/number slots (M4b), tense/aspect/mood (M5a),
+  pronouns/questions (M6) and the function-word grammar (H5).
 - Goal 2: avoid loanwords; do not let the language resemble any single natural language
   too closely.
 
@@ -53,43 +55,45 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   `espeak-ng -v fi -s 130 -w /tmp/out.wav "le li ly lä la lo lu"` (Finnish maps almost 1:1 onto the
   vowel system; the IPA path `"[[...]]"` never worked with `-v fi`).
 - **Consequences — do not lose these:**
-  - `audio/` is now a **frozen historical record**: its `roots-*.wav` and `01`–`05` predate the
-    rejection. `tools/audition_m1.py` / `tools/audition_roots.py` are **historical — do not re-run**.
-  - The **M1 full re-test** (real suffixed vs prefixed words, `../decision/03-open-questions.md` §A.2)
+  - the `audio/` folder is **gone**: the `.wav` files were **never committed** (`*.wav` is git-ignored)
+    and it arrived empty at the 2026-10-15 tidy-up. The retired-audition history now lives in
+    `../../archive/README.md`; `tools/archive/audition_m1.py` / `tools/archive/audition_roots.py` are
+    **historical — do not re-run**.
+  - The **M1 full re-test** (real suffixed vs prefixed words, `../decisions/03-open-questions.md` §A.2)
     can **no longer** be done from WAVs — it must be done **live** (author reads / sings the written
     forms).
-  - **A replacement method for judging beauty is OPEN** (`03-open-questions.md` §0 item 19). Until it
+  - **A replacement method for judging beauty is OPEN** (`../decisions/03-open-questions.md` §0 item 19). Until it
     exists, goal i ("beautiful to hear") cannot be tested at all.
 - `say`, `ffmpeg`, `python3` are present. The audition `.wav` files are git-ignored (`*.wav`);
   `/tmp/lomissifil-audition/` is **not** canonical.
 - **Root legality, syllables + stress:** `python3 tools/syllabify.py --check` (verifies the splitter
-  against the reference words), `--sheet` (writes `../lists/picks-sheet.md`), `--stats` (histogram of a
+  against the reference words), `--sheet` (writes `../../data/generated/picks-sheet.md`), `--stats` (histogram of a
   pool: syllable counts, digraph-stress rate, P6 hard spellings, P6-illegal forms).
 - **Goal-2 measurement:** `python3 tools/fingerprint.py --profile | --similarity | --english` — the
-  measured half of `../decision/06-neutrality.md`: structural profile of the candidate material,
+  measured half of `../decisions/06-neutrality.md`: structural profile of the candidate material,
   Jaccard similarity against **16 hand-coded reference languages**, and coincidence with the real
   English dictionary `/usr/share/dict/words`. ⚠️ The reference vectors are hand-coded; audit them in
   the tool (`REF`).
-- **Coining menu:** `python3 tools/menu.py > ../lists/menu.md` — the candidate pool grouped by initial
+- **Coining menu:** `python3 tools/menu.py > ../../data/generated/menu.md` — the candidate pool grouped by initial
   onset and first vowel, **ranked by an auditable bias** (+2 for the un-donated features: area-rule
   final, the `fm`-class cluster, a hiatus leap; +1 for an onset cluster; −2 if the form is a real
   English word). `--group th --per 6` browses one sound in depth. Weights: `score()` in the tool.
-- **M3a seam, read aloud:** `python3 tools/seam.py > ../lists/seam-sheet.md` — a root + all 9 suffixes
+- **M3a seam, read aloud:** `python3 tools/seam.py > ../../data/generated/seam-sheet.md` — a root + all 9 suffixes
   with the seam tier that fired and the root-based stress. This is the **audition method that replaced
   the synthesiser** (the author reads the written forms aloud): tier 3 is dormant for the current
-  suffix set, and the within-branch alternatives collide in GEN/INS/OBL/V1 — which is why `picks.md`'s
+  suffix set, and the within-branch alternatives collide in GEN/INS/OBL/V1 — which is why `../../data/hand/picks.md`'s
   "at most 2 roots per base" rule is correctness, not style.
 
 ## Where it stands / exact next step
 
 - Phonology, notation and the **vowel-colour ("grade") system** are in place; morphology and the
   opening of syntax are done.
-- **⚠️ Read first:** the terminology warning at the top of `decision/00-README.md` (no tone/pitch —
-  "chords" are metaphors) and **`03-open-questions.md` §0 — the canonical pending list**.
+- **⚠️ Read first:** the terminology warning at the top of `docs/decisions/00-README.md` (no tone/pitch —
+  "chords" are metaphors) and **`../decisions/03-open-questions.md` §0 — the canonical pending list**.
 - **`M1` is DECIDED but PROVISIONAL = SUFFIXES** (author's call, risk accepted). The
   earlier "head-final hint" argument for it was **circular** — the hint *is* P4d, which
   is itself provisional. **P4d is PROVISIONAL too.** ✅ **2026-10-14: the M1 smoke test PASSED
-  by ear** (author listened to `tools/audition_m1.py`'s WAVs and judged the suffix direction good).
+  by ear** (author listened to `tools/archive/audition_m1.py`'s WAVs and judged the suffix direction good).
   M1 therefore now HAS independent evidence — but only early perceptual evidence; the **full
   re-test** (real suffixed vs prefixed words, once M2–M5 exist) is **still pending**.
 - Settled along the way: **P5** (`st` = coda `s` + onset `t`/`d`; `losdo` legal, knob applies),
@@ -107,7 +111,7 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
 - **The case table (M4a):** NOM I · zero / ACC V · `n` / GEN V · `s` / DAT IV · `m` / LOC IV · `n`+`r` /
   INS IV · `s`+`r` / OBL IV · `l`; verbs V1 I · `r`, V2 I · `n`. **23 of 30 identity shapes are still
   free** (7 skeletons used: `n s m nr sr l r`; NOM's *zero* suffix is not one of the 30) — this file
-  previously said "24", an off-by-one, now corrected against `00-README.md` M4a and `03` §0 item 14.
+  previously said "24", an off-by-one, now corrected against `../decisions/00-README.md` M4a and `03` §0 item 14.
 - **➡️ PATH CHANGED, 2026-10-14 (this session): do NOT jump straight to M4b.** The agreed order is
   0) the **M1 re-test** by ear, 1) the `05` recompute (**DONE** — see `05`'s UPDATE section),
   2) two author rulings (below), 3) the **first coining + audition round**, 4) *then* M4b — and M4b
@@ -124,7 +128,7 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   so every base yields **exactly 2** bare roots (one per branch). ⇒ the coining unit for step 3 is a
   **base + its 2 siblings**, and the `20,025` mutually-far bases ⇒ **~40,050 coined roots**.
 - ⏸️ **PARKED by the author (2026-10-14):** what do the two siblings of a pair **mean** to each other?
-  Direction = **C** (the branches carry grammatical meaning → `00-README.md` R3), but the author then
+  Direction = **C** (the branches carry grammatical meaning → `../decisions/00-README.md` R3), but the author then
   **dropped** the content question (*"skip this first"*). ⇒ **coinage stays SOUND-ONLY** for now: do
   not assign pair semantics and do not build on R3. See `03` §0 item 14.
 - ~~**Small inconsistency left over (not blocking):** R1 also allows a **word-initial stop+`r`
@@ -146,13 +150,13 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   a bare root, per the 2026-10-14 ruling); 3-syllable `CVCVCV` = 12,960,000 lower bound — all on the
   locked inventory).
 - **New artefacts this session:** `tools/enumerate_roots.py` (counts + distance >= 2 packer +
-  legal-root emitter; `--emit` writes 20,025 mutually-far roots) and `tools/audition_m1.py`
+  legal-root emitter; `--emit` writes 20,025 mutually-far roots) and `tools/archive/audition_m1.py`
   (writes the M1 A/B WAVs to `/tmp/lomissifil-audition/`).
 - **Step 3 material is now READABLE without audio** (2026-10-14): three generated files, all from the
-  same pool — `lists/menu.md` (the biased, auditable coining menu: `tools/menu.py`),
-  `lists/picks-sheet.md` (48 bases x 4 forms with syllables + default stress: `tools/syllabify.py`),
-  `lists/seam-sheet.md` (a root + all 9 suffixes, to be **read aloud** — the audition method that
-  replaced the synthesiser: `tools/seam.py`). Picks go in `lists/picks.md`.
+  same pool — `data/generated/menu.md` (the biased, auditable coining menu: `tools/menu.py`),
+  `data/generated/picks-sheet.md` (48 bases x 7 forms with syllables + default stress: `tools/syllabify.py`),
+  `data/generated/seam-sheet.md` (a root + all 9 suffixes, to be **read aloud** — the audition method that
+  replaced the synthesiser: `tools/seam.py`). Picks go in `data/hand/picks.md`.
   ✅ The pool was **re-emitted after P6 AND now includes the 1-syllable class**: **26,769 bases =
   26,484 two-syllable + 285 one-syllable** (§0 items 22 and 24 both closed), 0 duplicates, 0 illegal
   spellings. ⚠️ The 1-syllable class is **exempt from the soft distance ≥ 2 rule** (it would keep only
@@ -164,7 +168,7 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
   *hears* each word's case suffix, and case suffixes are unstressed, one syllable, and often one vowel
   apart (`-na` / `-ni` / `-no`). Mitigations already in place: the grade vowel is a redundant cue; the
   consonant shape carries identity; the notation can mark length on a suffix. See
-  `03-open-questions.md` §F.
+  `../decisions/03-open-questions.md` §F.
 
 ## Glossary of the author's own terms
 
@@ -175,6 +179,6 @@ vocals · ethereal nostalgic folk**. Standing priority order (from `.clinerules/
 
 ## Location convention (author, 2026-10-14)
 
-- **`textbook/` = FINAL, publication-ready documentation only.**
-- **Working / integration-test material lives in `draft/`** — e.g. `draft/01-first-lines.md` (the integration test: Lines 1–6 plus the split-S pair).
-- ⚠️ **Process correction (agent, same day):** two agent commits (e.g. `d5feae9`) carry a PROCESS NOTE claiming the integration-test file was never committed and was then overwritten — **that was wrong and is withdrawn.** The file had simply been moved to `draft/` by the author, so the agent's edit was a *creation at the vacated path*. **No content was ever lost.** The lesson that does stand: after a file moves, check its tracked state with `git ls-files` / `git status`; and prefer python or insert_line edits (they fail loudly) over blind whole-file replaces.
+- **`textbook/` = FINAL, publication-ready documentation only** — a **location convention for now**; the folder does not exist yet (working notes live in `docs/draft`).
+- **Working / integration-test material lives in `docs/draft`** — e.g. `docs/draft/01-first-lines.md` (the integration test: Lines 1–6 plus the split-S pair).
+- ⚠️ **Process correction (agent, same day):** two agent commits (e.g. `d5feae9`) carry a PROCESS NOTE claiming the integration-test file was never committed and was then overwritten — **that was wrong and is withdrawn.** The file had simply been moved to `docs/draft` by the author, so the agent's edit was a *creation at the vacated path*. **No content was ever lost.** The lesson that does stand: after a file moves, check its tracked state with `git ls-files` / `git status`; and prefer python or insert_line edits (they fail loudly) over blind whole-file replaces.

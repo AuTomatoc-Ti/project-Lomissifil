@@ -42,7 +42,7 @@
 # bare root — batch 1 (author's own roots, 2026-10-14; checked by `../tools/check_roots.py`)
 # ⚠️ Spelling follows C2/R-b: the DICTIONARY form uses the VOICED stop, so a hard realisation is
 # written `basdo` here and may still be sung `basto` (the voicing knob). Glosses are PROVISIONAL
-# until the loanword check runs (decision/03-open-questions.md §0 item 26).
+# until the loanword check runs (docs/decisions/03-open-questions.md §0 item 26).
 - aba (seed)
 - asdo (knowledge)
 - basdo (—; author wrote `basto`, voiced per C2)

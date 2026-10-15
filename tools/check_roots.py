@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check an author's proposed roots against the LOCKED rules, mechanically.
 
-Reads a hand-written file (default `../lists/proposed.md`, format `form, gloss`), and for every
+Reads a hand-written file (default `../data/hand/proposed.md`, format `form, gloss`), and for every
 entry reports:
 
   legality      `syllabify.analyse()` -- is the spelling phonotactically legal at all?
@@ -16,7 +16,7 @@ entry reports:
                 few, because "differ by >= 2 segments" is R2's SOFT guideline
   siblings      the four raw area-rule members of its base (2 fricative + the {h,none,...} branch)
                 and which of them are safe to coin together (never both of one branch -- those
-                collide in GEN/INS/OBL/V1, measured in seam-sheet.md)
+                collide in GEN/INS/OBL/V1, measured in data/generated/seam-sheet.md)
 
 Nothing here writes to `reference/example.md`: passing is a report, the author decides.
 
@@ -200,8 +200,8 @@ def report(forms, pool, words):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", default="lists/proposed.md")
-    ap.add_argument("--pool", default="lists/roots-bases-current.txt")
+    ap.add_argument("--src", default="data/hand/proposed.md")
+    ap.add_argument("--pool", default="data/generated/roots-bases-current.txt")
     ap.add_argument("--forms", default=None, help="check these instead (comma separated)")
     a = ap.parse_args()
     if a.forms:

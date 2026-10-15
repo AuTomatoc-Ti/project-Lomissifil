@@ -2,7 +2,7 @@
 """M1 direction smoke-test: SUFFIXES vs PREFIXES.
 
 M1 (affix direction) is DECIDED but PROVISIONAL, and its reversal cost is the
-highest in the project (draft/handoff.md; decision/03-open-questions.md section A).
+highest in the project (docs/draft/handoff.md; docs/decisions/03-open-questions.md section A).
 Section A states that a direction smoke-test is possible *now* with
 non-semantic sound-strings -- which 02-notation.md explicitly allows.
 
@@ -14,7 +14,7 @@ root's last-syllable nucleus by H3/H4.
 Nothing here is a sentence and no meaning is claimed.
 
 Output: /tmp/lomissifil-audition/*.wav  (espeak-ng -v fi, the engine verified in
-draft/handoff.md) + a printed listening guide.
+docs/draft/handoff.md) + a printed listening guide.
 """
 
 import os

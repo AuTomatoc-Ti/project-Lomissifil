@@ -1,15 +1,15 @@
-# lists/picks-sheet.md - GENERATED audition sheet. DO NOT ANNOTATE HERE.
+# data/generated/picks-sheet.md - GENERATED audition sheet. DO NOT ANNOTATE HERE.
 
 Regenerate with:
 
 ```
-python3 tools/syllabify.py --sheet > lists/picks-sheet.md
+python3 tools/syllabify.py --sheet > data/generated/picks-sheet.md
 ```
 
-Any annotation written in this file is **lost** on regeneration. **Picks go in `lists/picks.md`.**
-The numbers are **this sheet's own** sample of the current pool. ⚠️ The audio run of 2026-10-14
-(`../audio/roots-index.txt`) was a **different, frozen** sample of the pre-P6 pool: its numbers do
-NOT correspond to these, and `audio/` must never be regenerated (`../audio/00-README.md`).
+Any annotation written in this file is **lost** on regeneration. **Picks go in `data/hand/picks.md`.**
+The numbers are **this sheet's own** sample of the current (post-P6) pool. ⚠️ A retired audio run of
+2026-10-14 used a **different, frozen** pre-P6 sample: its numbers do NOT correspond to these, and the
+synthesiser is rejected for good (`../../archive/README.md`).
 
 ## How to read a row
 
@@ -34,8 +34,8 @@ Every group of 7 rows is ONE base: `+f` | `+w` (= /v/) | `+h` | `+s` | `+m` | `+
 `{+h, +s, +m, +r, bare}` group. (`+s` is reserved for adjective/adverb duty, `+m` suits front-vowel
 roots, `+r` is for function words -- **R4**/**R6**.)
 
-> Sound-only. R3 is PARKED, so assign **no meanings** (decision/03-open-questions.md section 0
-> item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
+> Sound-only. R3 is PARKED, so assign **no meanings** (../../docs/decisions/03-open-questions.md section 0
+> item 14). A pick is not a word; `../../reference/example.md` stays the only source for examples.
 
 ## Reading rules (P6) - and the two flags left
 
@@ -59,8 +59,8 @@ performance, not a different word.
 
 ---
 
-Source: `lists/roots-bases-current.txt` (26769 packed bases); sample 48 bases, seed 20261014.
-! The audio run of 2026-10-14 (`../audio/roots-index.txt`) used a DIFFERENT sample
+Source: `data/generated/roots-bases-current.txt` (26769 packed bases); sample 48 bases, seed 20261014.
+! A retired audio run of 2026-10-14 used a DIFFERENT sample
 (the pre-P6 pool) and is frozen - its numbers are not comparable with these.
 
 ## roots-01.wav  (numbered 1-32)
@@ -435,8 +435,8 @@ Source: `lists/roots-bases-current.txt` (26769 packed bases); sample 48 bases, s
 ## What this sheet does NOT do
 
 - It does not cover the **M3a seam** (a root-final `f` / `w` / `h` in front of a case suffix,
-  always unstressed) - that layer is unjudged, see `../decision/03-open-questions.md` section 0
+  always unstressed) - that layer is unjudged, see `../docs/decisions/03-open-questions.md` section 0
   item 20.
 - It cannot show the **/n/ + /g/ (`nk`) class** of candidates: the pool was packed before `P6`
-  existed and contains no `nk` spelling at all (`03-open-questions.md` section 0 item 24).
+  existed and contains no `nk` spelling at all (`../../docs/decisions/03-open-questions.md` section 0 item 24).
 - It does not say which form is a good word. That is the pick, and it is yours to make.

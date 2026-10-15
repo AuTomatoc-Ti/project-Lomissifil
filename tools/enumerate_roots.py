@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Root-capacity enumerator for the Lomissifil conlang.
 
-Recomputes the numbers in decision/05-root-shape-limit.md FROM THE LOCKED
-PHONOLOGY (decision/01-phonology.md) instead of by hand.  Action item 4 in
-decision/00-README.md asks for exactly this.
+Recomputes the numbers in docs/decisions/05-root-shape-limit.md FROM THE LOCKED
+PHONOLOGY (docs/decisions/01-phonology.md) instead of by hand.  Action item 4 in
+docs/decisions/00-README.md asks for exactly this.
 
 Rule set actually implemented (printed on every run, never assumed):
 
@@ -300,7 +300,7 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="cap the packing input (debug)")
     ap.add_argument("--pairs", type=int, default=0,
                     help="step 3: print N packed bases with their 4 area-rule sibling forms")
-    ap.add_argument("--src", default="lists/roots-bases-current.txt",
+    ap.add_argument("--src", default="data/generated/roots-bases-current.txt",
                     help="packed-base list used by --pairs (the committed canonical list; "
                          "the old /tmp default was wiped on reboot)")
     a = ap.parse_args()

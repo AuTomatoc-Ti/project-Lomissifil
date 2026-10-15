@@ -33,7 +33,7 @@ def say(fname, text):
 def main():
     global OUT
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", default="lists/roots-bases-current.txt",
+    ap.add_argument("--src", default="data/generated/roots-bases-current.txt",
                     help="packed base list, one base per line ('#' lines are skipped)")
     ap.add_argument("--bases", type=int, default=48, help="how many bases to audition")
     ap.add_argument("--per-file", type=int, default=8, help="bases per WAV")

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Goal-2 instrument 2: the SOUND-axis fingerprint (see decision/06-neutrality.md).
+"""Goal-2 instrument 2: the SOUND-axis fingerprint (see docs/decisions/06-neutrality.md).
 
 The donor ledger (06-neutrality.md) is qualitative and it concluded that the exposure sits on the
 sound axis, especially the SPELLING. This script puts numbers on that axis. Three modes:
@@ -291,7 +291,7 @@ def main():
     ap.add_argument("--profile", action="store_true", help="measured structure of the material")
     ap.add_argument("--english", action="store_true", help="coincidence with an English dictionary")
     ap.add_argument("--similarity", action="store_true", help="Jaccard vs 16 reference languages")
-    ap.add_argument("--src", default="lists/roots-bases-current.txt")
+    ap.add_argument("--src", default="data/generated/roots-bases-current.txt")
     ap.add_argument("--sample", type=int, default=4000)
     a = ap.parse_args()
     ran = False

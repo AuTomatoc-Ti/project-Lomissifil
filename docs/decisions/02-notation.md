@@ -99,5 +99,6 @@ see `03-open-questions.md`.
 ## Example-making rule (from `.clinerules/colang.md`)
 
 Examples for **decisions and the textbook** may **only** use words that already exist
-in `reference/example.md`. Today that is just 2 names + 4 roots, so real sentences are
-not yet possible — use clearly-labelled *non-semantic sound-strings* for phonology demos.
+in `reference/example.md`. Today that is 2 names + 3 function words + 36 roots = **41 words**, so
+real sentences **are** possible — the first integrated clauses are in `../draft/01-first-lines.md`;
+use clearly-labelled *non-semantic sound-strings* only for phonology demos.

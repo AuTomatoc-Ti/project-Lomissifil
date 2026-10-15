@@ -1,12 +1,12 @@
-# lists/seam-sheet.md - GENERATED: the M3a seam, written out to be READ ALOUD.
+# data/generated/seam-sheet.md - GENERATED: the M3a seam, written out to be READ ALOUD.
 
 Regenerate with:
 
 ```
-python3 tools/seam.py > lists/seam-sheet.md
+python3 tools/seam.py > data/generated/seam-sheet.md
 ```
 
-**No annotations here** (they are lost on regeneration). Notes and verdicts belong in `picks.md` or in
+**No annotations here** (they are lost on regeneration). Notes and verdicts belong in `../hand/picks.md` or in
 the decision log.
 
 ## Why this sheet exists
@@ -14,7 +14,7 @@ the decision log.
 - the **M3a seam** (a root ending in `f`/`w`/`h` meeting a suffix) fires for **3 of every 4** coined
   roots;
 - it lands **unstressed** -- the place where sung intelligibility dies first
-  (`../decision/03-open-questions.md` section F);
+  (`../../docs/decisions/03-open-questions.md` section F);
 - it has **never been judged by ear**, and the synthesiser was rejected (section 0 item 19), so the
   author's method (2026-10-14) is: **read the written forms aloud**.
 
@@ -44,7 +44,7 @@ tier. Sound values: `a` dark *father* · `ae` bright *cat* · `e`/`o` close-mid 
 (`y` = French *u*) · `w` = /v/ · `sh` = *ship* · `th` = *thin* · `c` = *church* · `j` = *yes* ·
 doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) is TWO.
 
-> ⚠️ **The "at most 2 roots per base" rule of `picks.md` is a CORRECTNESS rule, not a nicety.**
+> ⚠️ **The "at most 2 roots per base" rule of `../hand/picks.md` is a CORRECTNESS rule, not a nicety.**
 > Within one branch you may pick either `+f` **or** `+w` (and either `+h`, `+s` **or** bare) -- never
 > both. (`+s` is new in **R4**: `s` is RESERVED for a future adjective/adverb/exceptional-case job, so a
 > `+s` root is ordinary in sound but its meaning slot is held.)

@@ -1,18 +1,18 @@
-# lists/menu.md - GENERATED coining menu. DO NOT ANNOTATE HERE.
+# data/generated/menu.md - GENERATED coining menu. DO NOT ANNOTATE HERE.
 
 Regenerate with:
 
 ```
-python3 tools/menu.py > lists/menu.md
+python3 tools/menu.py > data/generated/menu.md
 ```
 
-**Picks go in `lists/picks.md`** - record the FORM TEXT, not just a number. Any note written in this
+**Picks go in `data/hand/picks.md`** - record the FORM TEXT, not just a number. Any note written in this
 file is lost on regeneration.
 
 ## The ranking is deliberate (author's ruling 2026-10-14)
 
 `tools/fingerprint.py` measured which parts of our sound profile are **un-donated** (see
-`../decision/06-neutrality.md` -> "Measurement"). This menu pushes those to the top:
+`../../docs/decisions/06-neutrality.md` -> "Measurement"). This menu pushes those to the top:
 
 | points | what triggers it | why it counts as ours |
 |---|---|---|
@@ -38,8 +38,8 @@ one** from the `{+f, +w}` pair and **at most one** from the `{+h, +s, +m, +r, ba
 reserved for adjective/adverb duty, `+m` suits front-vowel roots, `+r` is for function words -- see
 **R4**/**R6** in the decision log; the menu prints a soft-rule note when a form breaks one.)
 
-> Sound-only: R3 is PARKED, so assign **no meanings** (`../decision/03-open-questions.md` section 0
-> item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
+> Sound-only: R3 is PARKED, so assign **no meanings** (`../../docs/decisions/03-open-questions.md` section 0
+> item 14). A pick is not a word; `../../reference/example.md` stays the only source for examples.
 
 ---
 ## Top 20 bases - the most "ours" material
@@ -939,7 +939,7 @@ aw ah as am ar abas aba abram ager age agrah agra algor aly ammi amos amor anis 
 
 - It cannot tell you what sounds *beautiful* - that is the part only you can supply.
 - It contains **no 1-syllable (`roi`-class) root**: the pool is the 2-syllable core
-  (`../decision/03-open-questions.md` section 0 item 22). Wanting short roots in this round means
+  (`../../docs/decisions/03-open-questions.md` section 0 item 22). Wanting short roots in this round means
   extending that pool FIRST - which changes the numbering here.
 - It does not test the **M3a seam** (root-final `f`/`w`/`h` + a case suffix, always unstressed) -
   still unjudged (section 0 item 20), and it fires for 3 of every 4 coined roots.

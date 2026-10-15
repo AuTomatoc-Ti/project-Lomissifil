@@ -1,7 +1,7 @@
 # Brainstorm — RAW (author's, unprocessed)
 
 > **STATUS MAP (read this first).** This file is the *scratch* record; the authoritative decisions live in
-> `decision/00-README.md` (decision log) and the pending list in `decision/03-open-questions.md` §0.
+> `docs/decisions/00-README.md` (decision log) and the pending list in `docs/decisions/03-open-questions.md` §0.
 > - §1–§2 — the original brainstorm (front/back vowels, rhyme, harmony/oppositeness). **§2's warning block
 >   is still the key terminology correction.**
 > - §3 — the first "tonic / subdominant / dominant" proposal.
@@ -21,7 +21,7 @@ decided, and do not treat it as a locked layer.
 - Divide the vowels into **front / back**.
 
 > **Agent note:** a front/back division **already exists** in the locked phonology —
-> `01-phonology.md` §2 "bright <-> dark palette": front `{i, e, y, ae}` vs back `{u, o, a}`,
+> `../decisions/01-phonology.md` §2 "bright <-> dark palette": front `{i, e, y, ae}` vs back `{u, o, a}`,
 > used today as an **expressive texture knob** (bright for folk/post-rock, dark for epic/power
 > metal). So the new part is presumably to give that division a **grammatical/structural job**
 > (harmony), not to invent the division itself.
@@ -30,12 +30,12 @@ decided, and do not treat it as a locked layer.
 
 - Emphasise **rhyme** (押韻).
 - **Vowel harmony / "oppositeness"** — ~~to be explained by the author~~ → **explained and largely
-  decided**: it is the three-grade vowel-colour system (§3 onward; `decision/00-README.md` H1–H8).
+  decided**: it is the three-grade vowel-colour system (§3 onward; `docs/decisions/00-README.md` H1–H8).
 
 > **UPDATE:** since then — the scope is **suffixes only, roots free** (**H1**); the mechanic turned out to
 > be the grade system (same vowel / the class's central vowel / the opposite pole, read against the root's
 > last vowel), and it is now largely locked (H2–H7). **Rhyme itself, however, is still undesigned** (see
-> `decision/03-open-questions.md` §0 item 16).
+> `docs/decisions/03-open-questions.md` §0 item 16).
 
 ## Collateral damage to check (agent, recorded while reading, for later discussion)
 
@@ -163,7 +163,7 @@ Author's example progressions (same content, different order):
 
 ### Consequences / risks (agent)
 1. **It commits the language to case marking + FREE WORD ORDER** — a syntax-level commitment
-   (`decision/03-open-questions.md` §F is empty), and it interlocks with M1/M2 and the still
+   (`docs/decisions/03-open-questions.md` §F is empty), and it interlocks with M1/M2 and the still
    PROVISIONAL P4d.
 2. **The table must cover clause-level semantics, not just cases.** Questions, negation and
    non-final/subordinate clauses are exactly where a song must *not* resolve — the table has no

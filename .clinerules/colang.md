@@ -18,8 +18,14 @@ iv. Must sound beautiful specifically across: epic/powerful power metal; emotion
 ---
 
 ## design docs (read before editing)
-- `decision/00-README.md` - index, decision log, action items
-- `decision/01-phonology.md` - sounds, phonotactics, stress
-- `decision/02-notation.md` - spelling policy + expressive notation
-- `decision/03-open-questions.md` - what is not decided yet
-- `draft/handoff.md` - discussion background, tooling, how to continue
+- `README.md` - the map of the whole repo (start here)
+- `docs/decisions/00-README.md` - index, decision log, action items
+- `docs/decisions/01-phonology.md` - sounds, phonotactics, stress
+- `docs/decisions/02-notation.md` - spelling policy + expressive notation
+- `docs/decisions/03-open-questions.md` - what is not decided yet; **§0 is the ONLY list of pending items**
+- `docs/decisions/04-lexicon-capacity.md` - capacity (historical; superseded by `05`)
+- `docs/decisions/05-root-shape-limit.md` - capacity under the tighter root-shape rule
+- `docs/decisions/06-neutrality.md` - the donor ledger (goal 2)
+- `docs/draft/handoff.md` - discussion background, tooling, how to continue
+- `docs/draft/brainstorm.md` - the scratch record of the grade system (H1-H9)
+- `data/README.md` - what the generated data is; **notes go in `data/hand/`**, never in `data/generated/`

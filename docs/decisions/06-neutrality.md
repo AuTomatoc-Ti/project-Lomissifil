@@ -4,7 +4,7 @@ Goal 2 (`.clinerules/colang.md`): *"the language should be neutral (can be inspi
 languages), but must ensure its word and grammar not like other language too much (avoid loan words
 from other language)"*.
 
-Until 2026-10-14 this goal had **no mechanism at all** — only the goal statement (`draft/handoff.md`,
+Until 2026-10-14 this goal had **no mechanism at all** — only the goal statement (`docs/draft/handoff.md`,
 `03-open-questions.md` §F). This file is that mechanism, in the form the author asked for: measure
 **not only the sound, but also the grammar and the word-building**.
 
@@ -137,7 +137,7 @@ guess sticks. That is a usable instruction for the textbook and for the first ve
 
 The ledger above is qualitative. This section is the **measured** half, produced by
 `python3 tools/fingerprint.py --profile | --similarity | --english` on
-`lists/roots-bases-current.txt` (all **five** area-rule sibling forms per base — `+f`, `+w`, `+h`,
+`data/generated/roots-bases-current.txt` (all **five** area-rule sibling forms per base — `+f`, `+w`, `+h`,
 `+s`, bare — i.e. 133,845 forms, re-measured after **R4** added the `s` branch).
 
 ### The reference set (author's ruling, 2026-10-14)
@@ -210,7 +210,7 @@ Three things follow, and the first one is the surprise:
 
 ### This measurement ranks the coining menu
 
-`tools/menu.py` (output: `lists/menu.md`) orders the candidate pool by exactly the un-donated
+`tools/menu.py` (output: `data/generated/menu.md`) orders the candidate pool by exactly the un-donated
 features this section measured: **+2** for an area-rule final (A15), an `fm`-class cluster (A13) or a
 hiatus leap (A4), **+1** for an onset cluster (A12), and **−2** if the form is a real English word.
 So the shortlist the author browses is biased toward material that no reference language has — the

@@ -1,16 +1,23 @@
-# lists/ — generated data (NOT vocabulary)
+# data — design data (NOT vocabulary)
 
-This directory holds **generated** lists: data for the design process, not decisions, and **not**
-the example word list. It is the only place in this repo that holds `.txt` — deliberately, because
-these files are machine-produced, whereas everything else here is prose (`.md`).
+Design data for the process — **not** decisions, and **not** the example word list. This is the only
+place in the repo that holds `.txt`, deliberately: those files are machine-produced, whereas
+everything else here is prose (`.md`).
+
+Two sub-folders, split by **who writes them**:
+
+| folder | who writes it | files |
+|---|---|---|
+| `generated/` | a **script** — overwritten on regeneration, so **never annotate** | `generated/roots-bases-current.txt` · `generated/menu.md` · `generated/picks-sheet.md` · `generated/seam-sheet.md` |
+| `hand/` | a **human** — notes and picks may live here | `hand/picks.md` · `hand/proposed.md` |
 
 > ⚠️ **`reference/example.md` remains the ONLY place words may come from in examples**
-> (`.clinerules/colang.md`). **Nothing in `lists/` is a word yet.**
+> (`.clinerules/colang.md`). **Nothing in `data/` is a word yet.**
 
 > ⚠️ **Annotations written inside a generated file are LOST on regeneration.** Picks therefore live
-> in **`lists/picks.md`** (hand-written, never machine-generated) — never inside the `.txt`.
+> in **`hand/picks.md`** (hand-written, never machine-generated) — never inside the `.txt`.
 
-## `roots-bases-current.txt` — the coining source
+## `generated/roots-bases-current.txt` — the coining source
 
 | | |
 |---|---|
@@ -19,14 +26,14 @@ these files are machine-produced, whereas everything else here is prose (`.md`).
 | sha256 | `2cfb2dfd37b8f0c2ed377aa6cde7a178ddf07decd0d9f923044d64c7a36135e3` |
 | encoding | ASCII, lowercase `a`–`z` only, one base per line, **sorted** |
 | config | `current` — 15 nuclei · O1=18 · O2=27 · O2c=16 · codas `m n l r s` |
-| base space | **453,511** = 453,226 (2-syllable core + leaps) + **285** (1-syllable) — P6 + the 1-syllable class (2026-10-14); the older `457,425 / 457,501` family predates the `/s/`+`/h/` exclusion, see `../decision/05-root-shape-limit.md` P6 UPDATE |
+| base space | **453,511** = 453,226 (2-syllable core + leaps) + **285** (1-syllable) — P6 + the 1-syllable class (2026-10-14); the older `457,425 / 457,501` family predates the `/s/`+`/h/` exclusion, see `../docs/decisions/05-root-shape-limit.md` P6 UPDATE |
 | selection | greedy packing, pairwise **segment-distance ≥ 2**, best of 4 seeds |
 | ⇒ coined roots | **~53,538** — each base yields exactly **2** roots (see below) |
 
 Regenerate with exactly:
 
 ```
-python3 tools/enumerate_roots.py --pack --config current --seeds 4 --emit lists/roots-bases-current.txt
+python3 tools/enumerate_roots.py --pack --config current --seeds 4 --emit data/generated/roots-bases-current.txt
 ```
 
 **Reproducibility (honest caveat).** The winning pack is **seed 0 = the unshuffled order**, so the
@@ -38,7 +45,7 @@ respelling under P6.)
 
 ### A base is NOT yet a root
 
-By **R1 / R3** (`decision/00-README.md`), every base yields **exactly 2** bare roots: one from the
+By **R1 / R3** (`docs/decisions/00-README.md`), every base yields **exactly 2** bare roots: one from the
 `{f, w}` branch and one from the `{h, <nothing>}` branch. (`w` = /v/; the letter **`v` is the
 *vibrato* mark**, not a letter — so a /v/-final root is `…w`, never `…v`.) To see all four raw
 candidates of a base:
@@ -49,17 +56,17 @@ python3 tools/enumerate_roots.py --pairs 20        # samples 20 bases, 4 forms e
 
 > ⚠️ **R3 is PARKED.** The branches *will* carry grammatical meaning, but the content is undecided,
 > so **coinage is SOUND-ONLY for now** — do not assign pair semantics
-> (`decision/03-open-questions.md` §0 item 14).
+> (`docs/decisions/03-open-questions.md` §0 item 14).
 
-## `picks-sheet.md` — the readable form of the same audition (generated `.md`)
+## `generated/picks-sheet.md` — the readable form of the same audition (generated `.md`)
 
-The synthesiser is rejected (`../decision/03-open-questions.md` §0 item 19), so the audition signal is
-now the **written form** — and the raw index (`../audio/roots-index.txt`) shows neither the syllable
-split nor the stress. `picks-sheet.md` adds both, computed by `tools/syllabify.py` from the locked
+The synthesiser is rejected (`../docs/decisions/03-open-questions.md` §0 item 19), so the audition signal is
+now the **written form** — and a bare word list shows neither the syllable split nor the stress.
+`generated/picks-sheet.md` adds both, computed by `tools/syllabify.py` from the locked
 rules (nothing new is invented in that script):
 
 ```
-python3 tools/syllabify.py --sheet > lists/picks-sheet.md
+python3 tools/syllabify.py --sheet > data/generated/picks-sheet.md
 python3 tools/syllabify.py --check          # verifies the splitter against the reference words
 python3 tools/syllabify.py --stats          # histogram of a whole list: syllables + both flags
 ```
@@ -78,21 +85,22 @@ addition). Honest cost: **256 of the 285** short roots do have a distance-1 neig
 (all such pairs involve a one-syllable root). `R1` says 1-syllable roots are *frequent*, so the
 alternative — keeping the guideline and losing 95% of them — was not acceptable.
 
-It is the **same 48 bases with the same numbering** as `../audio/roots-index.txt`. It is generated, so
-**never annotate it** — the picks belong in `picks.md`. Two things it flags, both genuine open/undecided
+It is a **fresh 48-base sample of the current (post-P6) pool**, so its numbering is its own: the
+retired pre-P6 audio sample is gone (`../archive/README.md`) and its numbers do not correspond.
+It is generated, so **never annotate it** — the picks belong in `hand/picks.md`. Two things it flags, both genuine open/undecided
 points rather than script opinions:
 
 - a **stressed syllable that begins with a digraph** (`sh` / `th` / `ng` / `ae`) — N1 has no rule for
   that case yet;
 - **`sh` / `ng` where the coda+onset reading is also legal** (`a-sha` vs `as-ha`, `so-nga` vs `son-ga`).
 
-## `menu.md` — the coining menu (generated; deliberately BIASED)
+## `generated/menu.md` — the coining menu (generated; deliberately BIASED)
 
 The author's ruling (2026-10-14): the menu ranks the pool so that **material nobody else has floats
-to the top**, using the measurement in `../decision/06-neutrality.md` ("Measurement"):
+to the top**, using the measurement in `../docs/decisions/06-neutrality.md` ("Measurement"):
 
 ```
-python3 tools/menu.py > lists/menu.md                 # top 20 + every onset + every first vowel
+python3 tools/menu.py > data/generated/menu.md                 # top 20 + every onset + every first vowel
 python3 tools/menu.py --group th --per 6              # browse one sound in depth
 ```
 
@@ -106,23 +114,23 @@ python3 tools/menu.py --group th --per 6              # browse one sound in dept
 
 Every row shows its reasons, so the ordering can be audited; the weights live in one place
 (`tools/menu.py`, `score()`). The menu also ends with the **English collision list**, so a pick can
-never hit a real English word by accident. It is generated: **picks go in `picks.md`** (record the
+never hit a real English word by accident. It is generated: **picks go in `hand/picks.md`** (record the
 form TEXT, not just the menu's number).
 
-## `seam-sheet.md` — the M3a seam, to be read ALOUD (generated)
+## `generated/seam-sheet.md` — the M3a seam, to be read ALOUD (generated)
 
 The seam (a root ending in `f`/`w`/`h` + a suffix) fires for **3 of every 4** coined roots, lands
 **unstressed**, and has never been judged by ear — and the synthesiser is rejected. The author's
 method (2026-10-14) is therefore **reading the written forms aloud**, and this file is that material:
 
 ```
-python3 tools/seam.py > lists/seam-sheet.md          # 6 bases x (3 finals + bare) x 9 suffixes
+python3 tools/seam.py > data/generated/seam-sheet.md          # 6 bases x (3 finals + bare) x 9 suffixes
 python3 tools/seam.py --bases 12 --seed 7            # more material, another sample
 ```
 
 Each table shows a root with all 9 suffixes (7 cases + 2 verb classes), the **seam tier** that fired,
 and the stress **counted from the root** (P4c — so a suffix never steals the stress). The closing
-section, "Do the siblings stay distinct?", is the reason the `<= 2 per base` rule in `picks.md` is a
+section, "Do the siblings stay distinct?", is the reason the `<= 2 per base` rule in `hand/picks.md` is a
 **correctness** rule: the two alternatives inside one branch collide in GEN/INS/OBL/V1.
 
 ⚠️ It also **verifies** M3a: **tier 3 (the copied vowel) never fires** for the current suffix set,
@@ -131,8 +139,8 @@ fully determined today, and tier 3 is future-proofing for suffixes that do not e
 
 ### What is deliberately NOT here
 
-- The `legacy-mono4` / `legacy-diph4` / `legacy-core` configs reproduce `decision/05`'s own figures
+- The `legacy-mono4` / `legacy-diph4` / `legacy-core` configs reproduce `docs/decisions/05`'s own figures
   (48,020 / 220,500 / 264,600) — **validation only**, not a coining source.
 - Earlier 16,148- and 20,025-base lists existed **only in `/tmp` and were superseded**: they predate
-  the single-onset → cluster model change (`decision/05-root-shape-limit.md`, UPDATE **§6**), so they
+  the single-onset → cluster model change (`docs/decisions/05-root-shape-limit.md`, UPDATE **§6**), so they
   were **not** copied in — they contained **no clusters at all**.

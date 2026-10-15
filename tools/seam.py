@@ -18,7 +18,7 @@ M3a (locked). A root ending in f / w / h meets a suffix whose onset is m n l r s
             suffixes start with m n l r s, and tiers 1-2 cover all 15 combinations).
 The tool also prints, for every pair of siblings, whether their suffixed forms stay distinct: the
 coining rule "**exactly 2 roots per base, one per branch**" is what keeps them apart, so violating
-the at-most-two rule of `lists/picks.md` would create homophones in GEN/INS/V1/OBL.
+the at-most-two rule of `data/hand/picks.md` would create homophones in GEN/INS/V1/OBL.
 
 Reading a row: `syllables` uses `-` between syllables; the CAPITAL sits on the first letter of the
 stressed syllable, and the stress is counted **from the ROOT** (P4c: affixes never move it) -- which
@@ -26,7 +26,7 @@ is why a one-syllable root keeps its stress on its own syllable while a two-syll
 its second.
 
 USAGE
-    python3 tools/seam.py > lists/seam-sheet.md
+    python3 tools/seam.py > data/generated/seam-sheet.md
     python3 tools/seam.py --bases 12 --seed 7
 """
 
@@ -91,15 +91,15 @@ def mark(form, root):
 
 
 HEADER = """\
-# lists/seam-sheet.md - GENERATED: the M3a seam, written out to be READ ALOUD.
+# data/generated/seam-sheet.md - GENERATED: the M3a seam, written out to be READ ALOUD.
 
 Regenerate with:
 
 ```
-python3 tools/seam.py > lists/seam-sheet.md
+python3 tools/seam.py > data/generated/seam-sheet.md
 ```
 
-**No annotations here** (they are lost on regeneration). Notes and verdicts belong in `picks.md` or in
+**No annotations here** (they are lost on regeneration). Notes and verdicts belong in `../hand/picks.md` or in
 the decision log.
 
 ## Why this sheet exists
@@ -107,7 +107,7 @@ the decision log.
 - the **M3a seam** (a root ending in `f`/`w`/`h` meeting a suffix) fires for **3 of every 4** coined
   roots;
 - it lands **unstressed** -- the place where sung intelligibility dies first
-  (`../decision/03-open-questions.md` section F);
+  (`../../docs/decisions/03-open-questions.md` section F);
 - it has **never been judged by ear**, and the synthesiser was rejected (section 0 item 19), so the
   author's method (2026-10-14) is: **read the written forms aloud**.
 
@@ -137,7 +137,7 @@ tier. Sound values: `a` dark *father* · `ae` bright *cat* · `e`/`o` close-mid 
 (`y` = French *u*) · `w` = /v/ · `sh` = *ship* · `th` = *thin* · `c` = *church* · `j` = *yes* ·
 doubled letters = long · a diphthong is ONE syllable, a hiatus (`iu yu ia ya`) is TWO.
 
-> ⚠️ **The "at most 2 roots per base" rule of `picks.md` is a CORRECTNESS rule, not a nicety.**
+> ⚠️ **The "at most 2 roots per base" rule of `../hand/picks.md` is a CORRECTNESS rule, not a nicety.**
 > Within one branch you may pick either `+f` **or** `+w` (and either `+h`, `+s` **or** bare) -- never
 > both. (`+s` is new in **R4**: `s` is RESERVED for a future adjective/adverb/exceptional-case job, so a
 > `+s` root is ordinary in sound but its meaning slot is held.)
@@ -225,7 +225,7 @@ def sheet(src, n_bases, seed):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", default="lists/roots-bases-current.txt")
+    ap.add_argument("--src", default="data/generated/roots-bases-current.txt")
     ap.add_argument("--bases", type=int, default=6, help="bases to write out (4 roots each)")
     ap.add_argument("--seed", type=int, default=20261014)
     a = ap.parse_args()

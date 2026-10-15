@@ -3,7 +3,7 @@
 
 Author's ruling 2026-10-14: the menu is deliberately BIASED, because
 `tools/fingerprint.py` measured which parts of our sound profile are un-donated
-(decision/06-neutrality.md -> "Measurement"):
+(docs/decisions/06-neutrality.md -> "Measurement"):
 
     +2   an AREA-RULE word-final f / w / h       (A15 -- no donor at all)
     +2   a VCV-only cluster fm fn hm hn wm wn jm jn   (A13 -- near-unattested)
@@ -15,7 +15,7 @@ Every point is printed with its reason, so the ranking can be audited and the we
 one place (score() below). This biases the SHORTLIST, never the language: the pool is unchanged.
 
 USAGE
-    python3 tools/menu.py > lists/menu.md
+    python3 tools/menu.py > data/generated/menu.md
     python3 tools/menu.py --group th --per 6      # browse one sound in depth
     python3 tools/menu.py --top 20 --per 3
 """
@@ -78,21 +78,21 @@ def score(form, words):
 
 
 HEADER = """\
-# lists/menu.md - GENERATED coining menu. DO NOT ANNOTATE HERE.
+# data/generated/menu.md - GENERATED coining menu. DO NOT ANNOTATE HERE.
 
 Regenerate with:
 
 ```
-python3 tools/menu.py > lists/menu.md
+python3 tools/menu.py > data/generated/menu.md
 ```
 
-**Picks go in `lists/picks.md`** - record the FORM TEXT, not just a number. Any note written in this
+**Picks go in `data/hand/picks.md`** - record the FORM TEXT, not just a number. Any note written in this
 file is lost on regeneration.
 
 ## The ranking is deliberate (author's ruling 2026-10-14)
 
 `tools/fingerprint.py` measured which parts of our sound profile are **un-donated** (see
-`../decision/06-neutrality.md` -> "Measurement"). This menu pushes those to the top:
+`../../docs/decisions/06-neutrality.md` -> "Measurement"). This menu pushes those to the top:
 
 | points | what triggers it | why it counts as ours |
 |---|---|---|
@@ -118,8 +118,8 @@ one** from the `{+f, +w}` pair and **at most one** from the `{+h, +s, +m, +r, ba
 reserved for adjective/adverb duty, `+m` suits front-vowel roots, `+r` is for function words -- see
 **R4**/**R6** in the decision log; the menu prints a soft-rule note when a form breaks one.)
 
-> Sound-only: R3 is PARKED, so assign **no meanings** (`../decision/03-open-questions.md` section 0
-> item 14). A pick is not a word; `../reference/example.md` stays the only source for examples.
+> Sound-only: R3 is PARKED, so assign **no meanings** (`../../docs/decisions/03-open-questions.md` section 0
+> item 14). A pick is not a word; `../../reference/example.md` stays the only source for examples.
 
 ---
 """
@@ -131,7 +131,7 @@ FOOTER = """
 
 - It cannot tell you what sounds *beautiful* - that is the part only you can supply.
 - It contains **no 1-syllable (`roi`-class) root**: the pool is the 2-syllable core
-  (`../decision/03-open-questions.md` section 0 item 22). Wanting short roots in this round means
+  (`../../docs/decisions/03-open-questions.md` section 0 item 22). Wanting short roots in this round means
   extending that pool FIRST - which changes the numbering here.
 - It does not test the **M3a seam** (root-final `f`/`w`/`h` + a case suffix, always unstressed) -
   still unjudged (section 0 item 20), and it fires for 3 of every 4 coined roots.
@@ -235,7 +235,7 @@ def menu(src, top, per, max_en, group=None, mono_top=12):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", default="lists/roots-bases-current.txt")
+    ap.add_argument("--src", default="data/generated/roots-bases-current.txt")
     ap.add_argument("--top", type=int, default=20, help="bases in the 'most ours' section")
     ap.add_argument("--per", type=int, default=1, help="bases per group in the by-sound sections")
     ap.add_argument("--max-en", type=int, default=200, help="cap on the English-collision list")

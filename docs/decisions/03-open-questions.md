@@ -49,8 +49,10 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     **vowel-final, or `f`/`v`/`h`-final**. `01-phonology.md` §5 now states this explicitly.
 13. **Notation edge cases still open** (§C): length on a diphthong, `rr` as a trill, capital on the `ae`
     digraph, multiple capitals in a word, whether stress marks are allowed in the poetry register.
-14. **Lexicon is still only 6 items** (`reference/example.md`) → real sentences are impossible, which
-    blocks the textbook. Coining rules to obey: R1/R2 shapes, R5-area finals, H3's coining rule
+14. **The lexicon is growing** — `reference/example.md` now holds **41 words** (2 names + 3 function words
+    + 36 roots), and the first integrated clauses already run (`../draft/01-first-lines.md`). What still
+    blocks the textbook is M4b/M5a and the function-word grammar, not the word count.
+    Coining rules to obey: R1/R2 shapes, R5-area finals, H3's coining rule
     (never distinguish two morphemes by tonic-vs-subdominant alone), and the identity budget (**23 of 30**
     suffix shapes still free: 7 used). **NEW (2026-10-14, after the area-rule mechanism was pinned):** what do
     the **two siblings of an area-rule pair** mean to each other? The pair differs by **one segment
@@ -61,7 +63,7 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     grammatical meaning** (`00-README.md` **R3**), but the content question was then **explicitly
     dropped**: *"skip this first, drop it as open question"*. So R3 is **decided in shape, OPEN in
     content, and must not be built on**. **Practical consequence for step 3 (important):** provisional
-    coinage stays **SOUND-ONLY — assign no pair semantics yet** (exactly what `tools/audition_roots.py`
+    coinage stays **SOUND-ONLY — assign no pair semantics yet** (exactly what `tools/archive/audition_roots.py`
     does). Two costs already recorded under R3: the class is **lexical, not productive** (it cannot
     behave like an English derivational suffix), and once the content *is* fixed, coining happens
     **in pairs** (1,000–3,000 roots ≈ 500–1,500 bases × 2).
@@ -82,19 +84,20 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
 **F. Tooling / process (decided)**
 19. **Synthesiser auditioning is REJECTED (author, 2026-10-14) — and it leaves a REAL GAP.**
     `espeak-ng -v fi` output is judged **rough and unneutral** (it forces a Finnish voice onto the
-    language), so **no further WAVs are to be generated — this round or in future**. `audio/` is now a
-    **frozen historical record**, and `tools/audition_m1.py` / `tools/audition_roots.py` are
-    **historical — do not re-run** (see `draft/handoff.md`, tooling section). Consequences:
+    language), so **no further WAVs are to be generated — this round or in future**. The `audio/` folder
+    is **gone** (the `.wav` files were never committed — `../../archive/README.md`), and
+    `tools/archive/audition_m1.py` / `tools/archive/audition_roots.py` are
+    **historical — do not re-run** (see `docs/draft/handoff.md`, tooling section). Consequences:
     (a) **M1's full re-test** ("real suffixed vs prefixed words", §A.2) can **no longer** be done from
     WAVs — it must be done **live** (the author reads / sings the written forms);
-    (b) the roots audition's evidence is now the **written list** (`audio/roots-index.txt`), not the
-    WAVs — picks go to `lists/picks.md`;
+    (b) the roots audition's evidence is now the **written list**, not the WAVs — the pre-P6 audition
+    sample (`roots-index.txt`) is no longer in the repo (`../../archive/README.md`) — picks go to `data/hand/picks.md`;
     (c) ✅ **RESOLVED (author, 2026-10-14): the replacement method is the author READING THE WRITTEN
     FORMS ALOUD** (the orthography is 1:1, so spelling -> sound needs no engine). First application:
-    `../lists/seam-sheet.md`, the M3a seam sheet (`tools/seam.py`). No synthesiser, ever again.
-20. **`lists/picks.md`** is the hand-written home for audition picks (the `.txt` files must stay
-    machine-generated — `lists/00-README.md`). ⚠️ The **M3a seam** is not covered by the bare-root
-    round — but it now has its own material: ✅ **`../lists/seam-sheet.md`** (`tools/seam.py`), which
+    `../../data/generated/seam-sheet.md`, the M3a seam sheet (`tools/seam.py`). No synthesiser, ever again.
+20. **`data/hand/picks.md`** is the hand-written home for audition picks (the `.txt` files must stay
+    machine-generated — `data/README.md`). ⚠️ The **M3a seam** is not covered by the bare-root
+    round — but it now has its own material: ✅ **`../../data/generated/seam-sheet.md`** (`tools/seam.py`), which
     the author reads aloud (item 19c). Two things that tool **verified** while generating it:
     (a) **tier 3 (the copied vowel) NEVER fires** for the current 9 suffixes — all of them start with
     `m n l r s` and tiers 1-2 cover all 15 combinations — so M3a is **fully determined today**, and
@@ -102,7 +105,7 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     (b) ⚠️ **the two alternatives inside one branch collide**: `+f` vs `+w` (and `+h` vs bare) become
     **identical in GEN, INS, OBL and V1** (`thaeumtof` / `thaeumtow` → both `thaeumtossa`), because
     tier 2 syncs `f`/`w` into `ss`/`rr`/`ll` and drops `h`. Cross-branch pairs stay distinct in all 9
-    forms. ⇒ the "**at most 2 roots per base**" rule in `picks.md` is a **CORRECTNESS requirement**,
+    forms. ⇒ the "**at most 2 roots per base**" rule in `data/hand/picks.md` is a **CORRECTNESS requirement**,
     not a style preference: coining both members of one branch would make the paradigm ambiguous.
 
 **G. NEW — raised by running the first audition material (2026-10-14, needs a ruling)**
@@ -118,10 +121,10 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     obligatorily `[k]`, so C2b's "free and unconditioned" knob is **blocked in that one environment**
     (the language's first genuine phonological process). ⚠️ Its **scope** for `/b/` and `/d/` after a
     nasal coda is the next question (item 25), and it blocks the pool regeneration (item 24).
-    ⚠️ **Data consequence (do not miss):** the current pack (`lists/roots-bases-current.txt`) contains
+    ⚠️ **Data consequence (do not miss):** the current pack (`data/generated/roots-bases-current.txt`) contains
     **no `nk` spelling at all**, so the `/n/`+`/g/` sequences P6 legalises are **absent from the
     candidate pool**, and its 1,071 `ng` strings now all mean `/ŋ/`. Regenerating the pool (the sha in
-    `lists/00-README.md` and the sheet's sample both change) is a follow-up — see §0 item 24.
+    `data/README.md` and the sheet's sample both change) is a follow-up — see §0 item 24.
 22. ~~**The first coining batch contains NO 1-syllable root — and R1 says 1-syllable roots are
     frequent.**~~ — ✅ **FIXED (2026-10-14, author's ruling ①).** The emitter now enumerates the
     **1-syllable class** (`mono_forms()`; (optional word-initial onset) × nucleus = **285** vowel-final
@@ -136,7 +139,7 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     (all such pairs involve a 1-syllable root). **Author may veto** — the alternative is losing 95% of
     the short roots.
     Consequence for the menu: short roots no longer vanish behind the higher-scoring 2-syllable bases —
-    `lists/menu.md` has a dedicated `roi`-class section **and** guarantees one short root inside every
+    `data/generated/menu.md` has a dedicated `roi`-class section **and** guarantees one short root inside every
     by-sound group (`--mono N` controls the section size).
 23. **New tooling (not a decision):** `tools/syllabify.py` computes the syllable split + default
     stress for any spelling, with `--check` (verified against `se-li` / `los-do` / `roi` /
@@ -148,7 +151,7 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     **26,484 bases**, sha1 `f532e58e…`, **0 duplicate lines, 0 P6-illegal spellings, 2,142 (8.1%) P6
     hard spellings**, and the sheet was regenerated from it. The count equals the **unique** line count
     of the pre-P6 file (26,751 − 267) — confirming the only real change was de-duplication +
-    respelling. What `enumerate_roots.py` does on the P6 configs (and only there: `legacy-*` /
+    respelling. What `tools/enumerate_roots.py` does on the P6 configs (and only there: `legacy-*` /
     `singles-*` keep `p6=False`, so they still reproduce `05`'s 48,020 / 220,500 / 264,600):
     (i) a **nasal coda + stop is emitted with the HARD letter** (`mb`→`mp`, `nb`→`np`, `md`→`mt`,
     `nd`→`nt`, `mg`→`mk`, `ng`→`nk`); (ii) the **`/s/` + `/h/` fill is excluded** (no spelling exists);
@@ -163,8 +166,8 @@ Last consolidated: after the M4a case table. Sections A–G below hold the histo
     P6-illegal spellings. Both vanish on re-emission.
     ⚠️ **Timing — already respected:** the re-emission changed the sheet's 48-base sample, so it was
     run **before** the pick round started, exactly as required. The old numbering is gone;
-    `../audio/roots-index.txt` is a separate, **frozen** record of the pre-P6 pool and its numbers do
-    not map onto the new sheet.
+    the pre-P6 audition sample (`roots-index.txt`) is a separate, **frozen** record and its numbers do
+    not map onto the new sheet — it is no longer in the repo (`../../archive/README.md`).
 
 **H. Neutrality (goal 2) — the donor ledger and its two remaining halves**
 
@@ -175,13 +178,13 @@ plus a **dominance check**). Result: **PASS** — top donor Finnish at 8/38 rows
 at all**; and the grammar's centre (the grade/chord system) is entirely original. ⚠️ **Living rule:**
 every future decision must add its rows. Two halves are still open:
 26. **The loanword mechanism (word level)** — **partially RUNNABLE since 2026-10-14, because the author
-    started assigning meanings** (`../reference/example.md` batch 1, 31 roots). Spec: **hard reject** =
+    started assigning meanings** (`../../reference/example.md` batch 1, 31 roots). Spec: **hard reject** =
     a coined word whose meaning coincides with a natural-language word within one edit distance
     (*beauty outranks neutrality* does **not** protect those — they would *feel* borrowed);
     **soft warn** = homophony with an unrelated meaning (record, never reject).
     ✅ **The English channel has RUN** (`/usr/share/dict/words`, 234,428 entries) on batch 1: 7 of the
     27 roots are literally English words (`aba`, `basto`→`basdo`, `eli`, `ima`, `hu`, `ila`), all with
-    *unrelated* meanings ⇒ **soft warnings, kept** (results in `../lists/proposed.md`).
+    *unrelated* meanings ⇒ **soft warnings, kept** (results in `../../data/hand/proposed.md`).
     ⚠️ **Still missing:** the **multilingual** reference word list — the author must name which
     languages count as "others" (the same list the sound fingerprint would use; `06-neutrality.md`
     already names 16 for the *sound* side, but a word list is a different input).
@@ -189,7 +192,7 @@ every future decision must add its rows. Two halves are still open:
 28. **The 5 held words + the deferred `m`/`r` question (author's ruling ③, 2026-10-14).** `R4` legalised
     `s`-final bare roots, which **immediately released `os` (have) and `res` (be)**. Still **held**
     (they need `m`/`r` finals, which stay illegal): **`ar` (from) · `mer` (with) · `esgim` (foot) ·
-    `altem` (face) · `sym` (god)** — recorded in `../lists/proposed.md`. Two clean ways to admit them,
+    `altem` (face) · `sym` (god)** — recorded in `../../data/hand/proposed.md`. Two clean ways to admit them,
     **not yet chosen**:
     (a) **a function-word carve-out** — `H5` already says function words are a **separate class that
     takes NO suffixes**, and the bare-root final rule exists *because* bare roots must host suffixes ⇒
@@ -234,8 +237,8 @@ every future decision must add its rows. Two halves are still open:
     **[agreeing vowel]** + **`s`**. Verified: `onla`→`onlahis/onlahas/onlahes/onlahos` ·
     `hosda`→`hosdahas` · `sym`→`symas` · `esgim`→`esgimis` · `sefmeh`→`sefmehis` — every one passes the
     locked rules. ⚠️ **NOTE (agent error found by that check):** a **1-syllable root keeps its own
-    stress** (P4c), so `sym`+`-as` is `SYmas`, not `syMas` — `syllabify.py`'s stress column is only the
-    *bare-root* default, and `seam.py` is the tool that counts from the root.
+    stress** (P4c), so `sym`+`-as` is `SYmas`, not `syMas` — `tools/syllabify.py`'s stress column is only the
+    *bare-root* default, and `tools/seam.py` is the tool that counts from the root.
     *The agreeing vowel*: it copies **the vowel of the WORD's outermost suffix that the adjective
     modifies** (the author's note 1), which — because every suffix vowel is a grade relative to its own
     host — yields exactly the author's four vowels:
@@ -374,7 +377,7 @@ negation scope = item 8). **Two gaps had no owner at all:**
 **M1 = SUFFIXES** (agglutinative, Turkish/Finnish/Japanese style). Recorded as a
 **working assumption to build M2–M7 on**, not as a settled fact.
 
-- ⚠️ **The original rationale was circular.** `draft/handoff.md` recommended suffixes
+- ⚠️ **The original rationale was circular.** `docs/draft/handoff.md` recommended suffixes
   because they "match the head-final hint" — but that hint *is* P4d, which is itself
   provisional. So M1 has **no independent evidence** yet.
 - ⚠️ **Reversal cost is asymmetric.** P4d is cheap to reverse (notation/performance layer
@@ -391,9 +394,9 @@ negation scope = item 8). **Two gaps had no owner at all:**
 
 ### A.1 RE-TEST EVIDENCE — the M1 audition, run 2026-10-14
 
-Tool: `tools/audition_m1.py` (recipe `espeak-ng -v fi -s 130`) — ⚠️ that engine was **later rejected**
+Tool: `tools/archive/audition_m1.py` (recipe `espeak-ng -v fi -s 130`) — ⚠️ that engine was **later rejected**
 as rough and unneutral (§0 item 19), so the script is now **historical: do not re-run**. The WAVs it
-produced are kept in `../audio/` (`01`–`05`). Method: the SAME M4a case morphemes (M3b shape, H3/H4
+produced (`01`–`05`) were never committed (`../../archive/README.md`). Method: the SAME M4a case morphemes (M3b shape, H3/H4
 grade vowels) placed once AFTER the root and once BEFORE it — non-semantic sound-strings.
 
 **STATUS: the author LISTENED on 2026-10-14 and judged it good → §A.2 (M1 stays SUFFIXES).** The
@@ -420,7 +423,7 @@ ears:
 
 ### A.2 SMOKE-TEST RESULT (2026-10-14): **PASSED — M1 stays SUFFIXES**
 
-The author listened to the audition (`tools/audition_m1.py`; the six WAVs in
+The author listened to the audition (`tools/archive/audition_m1.py`; the six WAVs in
 `/tmp/lomissifil-audition/`) and judged it **good**, so the suffix direction survives its first
 perceptual test. ⚠️ **Do not overread the strength:** this is an *early* test on **non-semantic
 sound-strings**, so it clears the **direction itself**, not the morphological system that gets built
